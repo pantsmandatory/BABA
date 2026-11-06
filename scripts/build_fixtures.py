@@ -76,6 +76,15 @@ def ies_links(fx):
     return "".join(out)
 
 
+def cut_sheet_link(sheet):
+    if not sheet.get("url"):
+        return '<div class="muted">Cut sheet not found</div>'
+    out = link(sheet["url"], "📄 " + (sheet.get("title") or "Cut sheet"))
+    if sheet.get("file") and (ROOT / sheet["file"]).exists():
+        out += f' · <a href="{e(sheet["file"])}" download>copy</a>'
+    return f"<div>{out}</div>"
+
+
 def card(fx, sources):
     d = fx["dot"]
     src = sources.get(d["source"], {})
@@ -101,7 +110,7 @@ def card(fx, sources):
 <div><div class="muted small">Order as (3000K · 480V · 70 CRI)</div><div class="cat">{e(fx.get('catalog'))}</div></div>
 <dl class="kv">{kv}</dl>
 <div class="files"><div class="muted small">Downloads</div>
-{link(sheet.get('url'), '📄 ' + (sheet.get('title') or 'Cut sheet')) if sheet.get('url') else '<div class="muted">Cut sheet not found</div>'}
+{cut_sheet_link(sheet)}
 {ies_links(fx)}</div>
 {caveats}
 <details><summary>DOT-listed catalog number ({e(d.get('listed_cct', ''))})</summary><div class="cat">{e(d.get('listed_catalog'))}</div></details>

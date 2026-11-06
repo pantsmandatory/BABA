@@ -23,6 +23,7 @@ First source: TxDOT's Roadway Illumination MPL, "Compliant v5" entries (projects
 | `scripts/build_site.py` | Builds `index.html` and `archive/YYYY-MM-DD.html`. |
 | `data/fixtures.json` | Fixture configurations (catalog number, DOT listing, cut sheet, .ies) and the page filter. |
 | `ies/<manufacturer>/` | Copies of manufacturer .ies files; each entry links to its source. |
+| `cutsheets/<manufacturer>/` | Copies of cut sheets whose official site blocks automated downloads. |
 | `scripts/build_fixtures.py` | Builds `fixtures.html` from `data/fixtures.json`. |
 | `scripts/check_sources.py` | Downloads each DOT list and flags lists that changed since last week. |
 | `.github/workflows/weekly-update.yml` | Runs both scripts every Monday, commits the pages, and opens an issue listing changed DOT lists. |
