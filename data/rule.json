@@ -1,0 +1,12 @@
+{
+  "summary": "FHWA final rule 'Buy America Requirements for Manufactured Products' (FR Doc. 2024-31350, Jan 14, 2025; 23 CFR 635.410) ended FHWA's general waiver for manufactured products.",
+  "key_dates": [
+    {"date": "Oct 1, 2025", "requirement": "Federal-aid projects obligated on or after this date: manufactured products must have final assembly in the United States."},
+    {"date": "Oct 1, 2026", "requirement": "Projects obligated on or after this date: final assembly in the US AND domestic components > 55% of total component cost (iron/steel components count toward the 55%)."}
+  ],
+  "changes_since": "Predominantly iron/steel cabinets or enclosures must meet FHWA iron and steel rules. De minimis waiver: non-compliant products totaling no more than the lesser of $1 million or 5% of total applicable project costs. Confirm current rule status with FHWA before relying on it.",
+  "sources": [
+    "https://www.federalregister.gov/documents/2025/01/14/2024-31350/buy-america-requirements-for-manufactured-products",
+    "https://www.insidegovernmentcontracts.com/2025/01/fhwa-publishes-final-rule-rescinding-longstanding-buy-america-waiver-for-manufactured-products/"
+  ]
+}

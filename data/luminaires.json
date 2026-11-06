@@ -1,0 +1,251 @@
+[
+  {
+    "id": "fl-current-evolve-brand-manufacturer-name-not-confirmed-in-snippet-evolve-erl6-c",
+    "manufacturer": "Current (Evolve brand; manufacturer name not confirmed in snippet)",
+    "model": "Evolve ERL6 Cobra head",
+    "product_type": "Conventional LED roadway luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "Approved Product List (APL), Product Evaluation",
+        "listing_id": "715-005-037",
+        "dot_list_url": "https://pathdev.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Source 1",
+        "url": "https://pathdev.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "notes": "FDOT APL snippet: 'BABA Eligible'; Buy America Category: Electrical/Electronic, Exempt with FHWA Manufactured Product waiver. No manufacturer BABA declaration found. NOTE: seen on an FDOT dev/test host, not the live APL; re-check on the production list.",
+    "last_verified": "2026-11-06"
+  },
+  {
+    "id": "fl-unclear-nv-2-series",
+    "manufacturer": "unclear",
+    "model": "NV-2 Series",
+    "product_type": "Conventional LED roadway luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "Approved Product List (APL), Product Evaluation",
+        "listing_id": "715-005-030",
+        "dot_list_url": "https://pathdev.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Source 1",
+        "url": "https://pathdev.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "notes": "FDOT APL snippet lists as BABA eligible; manufacturer not shown in snippet. NOTE: seen on an FDOT dev/test host, not the live APL; re-check on the production list.",
+    "last_verified": "2026-11-06"
+  },
+  {
+    "id": "fl-holophane-acuity-brands-led-luminaire-esplanade-series-mpl3-memphis-style",
+    "manufacturer": "Holophane (Acuity Brands)",
+    "model": "LED Luminaire Esplanade Series; MPL3 Memphis Style",
+    "product_type": "Decorative/pendant LED roadway luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "Approved Product List (APL), Product Evaluation",
+        "listing_id": "",
+        "dot_list_url": "https://pathdev.fdot.gov/ProductTypes/Index/613"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Source 1",
+        "url": "https://pathdev.fdot.gov/ProductTypes/Index/613"
+      },
+      {
+        "summary": "Source 2",
+        "url": "https://www.acuitybrands.com/-/media/abl/acuitybrands/files/resources/customer-tools/buy-american/buy-american-lighting-solutions-guide.pdf"
+      }
+    ],
+    "notes": "FDOT APL snippet: 'BABA Eligible', category Electrical/Electronic exempt w/ FHWA waiver; some Holophane approvals project-limited (e.g. 'Approved for Project 438386-2 only'). Acuity Buy American guide lists Memphis and Esplanade Tear Drop Large Roadway LED pendants as 'BAA/BABA Compliant' (addresses both Buy America(n) Act and BABA; order with 'BAA' suffix). NOTE: seen on an FDOT dev/test host, not the live APL; re-check on the production list.",
+    "last_verified": "2026-11-06"
+  },
+  {
+    "id": "co-holophane-acuity-brands-ledgend-led-luminaire",
+    "manufacturer": "Holophane (Acuity Brands)",
+    "model": "LEDgend LED luminaire",
+    "product_type": "LED roadway/area (cobra head) luminaire",
+    "states": [
+      {
+        "state": "CO",
+        "list_name": "CDOT Approved Products List (APL)",
+        "listing_id": "CDOT APL #3380",
+        "dot_list_url": "https://codot.gov/content/apl/Form595/3380.pdf"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "manufacturer-declared",
+    "evidence": [
+      {
+        "summary": "Source 1",
+        "url": "https://codot.gov/content/apl/Form595/3380.pdf"
+      },
+      {
+        "summary": "Source 2",
+        "url": "https://www.acuitybrands.com/-/media/abl/acuitybrands/files/resources/customer-tools/buy-american/buy-american-lighting-solutions-guide.pdf"
+      }
+    ],
+    "notes": "Listed on CDOT APL (no BABA flag seen). Acuity Buy American guide lists LEDgend roadway/area lights in its BAA/BABA reference section; snippet unclear whether LEDgend is BAA-only or BAA/BABA compliant.",
+    "last_verified": "2026-11-06"
+  },
+  {
+    "id": "ks-american-electric-lighting-acuity-brands-autobahn-atb0-kdot-entry-atb0-p303-x",
+    "manufacturer": "American Electric Lighting (Acuity Brands)",
+    "model": "Autobahn ATB0 (KDOT entry ATB0-P303-XXXXX)",
+    "product_type": "LED roadway (cobrahead) luminaire",
+    "states": [
+      {
+        "state": "KS",
+        "list_name": "PQL-24.2 (rev. 12/23/24) 'List of Prequalified Roadway Lighting Systems & Equipment and ITS Structural Poles', Bureau of Construction & Materials",
+        "listing_id": "KDOT PQL-24.2, LED-A class",
+        "dot_list_url": "https://ksdot.gov/home/showpublisheddocument/252/638741910029200000"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "manufacturer-declared",
+    "evidence": [
+      {
+        "summary": "Source 1",
+        "url": "https://cd-nc.acuitybrands.com/-/media/abl/acuitybrands/files/resources/customer-tools/buy-american/buy-american-lighting-solutions-guide.pdf"
+      },
+      {
+        "summary": "Source 2",
+        "url": "https://americanelectriclighting.acuitybrands.com/-/media/ABL/AcuityBrands/Files/Resources/Customer-Tools/Buy-American/buy-american-ael-hlp.pdf"
+      },
+      {
+        "summary": "Source 3",
+        "url": "https://electricbargainstores.com/products/autobahn-atb0-1110040"
+      }
+    ],
+    "notes": "Acuity documents (ATB2 sheet; ATB0 listing) state 'Product with the BAA option also qualifies as produced in the United States under the definitions of the Build America, Buy America Act'; Acuity Buy American guide: add 'BAA' to catalog number to address both Buy American Act and BABA. Compliance is option-dependent (BAA suffix), and references BABA/2 CFR 184 definitions rather than FHWA 23 CFR 635.410 explicitly.",
+    "last_verified": "2026-11-06"
+  },
+  {
+    "id": "ks-holophane-acuity-brands-hmao-led-iv-hmled4-kdot-entry-hmled4-pk4",
+    "manufacturer": "Holophane (Acuity Brands)",
+    "model": "HMAO LED IV / HMLED4 (KDOT entry HMLED4-PK4)",
+    "product_type": "LED high mast luminaire",
+    "states": [
+      {
+        "state": "KS",
+        "list_name": "PQL-24.2 (rev. 12/23/24) 'List of Prequalified Roadway Lighting Systems & Equipment and ITS Structural Poles', Bureau of Construction & Materials",
+        "listing_id": "KDOT PQL-24.2, LED Luminaires - High Mast Tower Lighting",
+        "dot_list_url": "https://ksdot.gov/home/showpublisheddocument/252/638741910029200000"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "manufacturer-declared",
+    "evidence": [
+      {
+        "summary": "Source 1",
+        "url": "https://holophane.acuitybrands.com/products/detail/1097313/holophane/hmled4/hmao-led-iv---led-high-mast-lighting"
+      },
+      {
+        "summary": "Source 2",
+        "url": "https://cd-nc.acuitybrands.com/-/media/abl/acuitybrands/files/resources/customer-tools/buy-american/buy-american-lighting-solutions-guide.pdf"
+      }
+    ],
+    "notes": "Acuity product page for HMLED4 shows 'Compliance Listing | BAA, DLC Standard'; Acuity Buy American guide lists HMAO LED IV among BAA/BABA products (add 'BAA' to catalog number where not standard). Configuration-dependent; no FHWA-specific final-assembly/55% statement seen.",
+    "last_verified": "2026-11-06"
+  },
+  {
+    "id": "ks-leotek-greencobra-gcm3-60j-led-a-and-gc2-96g-led-b",
+    "manufacturer": "Leotek",
+    "model": "GreenCobra GCM3-60J (LED-A) and GC2-96G (LED-B)",
+    "product_type": "LED roadway (cobrahead) luminaire",
+    "states": [
+      {
+        "state": "KS",
+        "list_name": "PQL-24.2 (rev. 12/23/24) 'List of Prequalified Roadway Lighting Systems & Equipment and ITS Structural Poles', Bureau of Construction & Materials",
+        "listing_id": "KDOT PQL-24.2, LED-A / LED-B classes",
+        "dot_list_url": "https://ksdot.gov/home/showpublisheddocument/252/638741910029200000"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "manufacturer-declared",
+    "evidence": [
+      {
+        "summary": "Source 1",
+        "url": "https://leotek.com/"
+      }
+    ],
+    "notes": "Weak/family-level only: Leotek homepage says all LEOTEK roadway and traffic lighting products are 'designed and manufactured to support compliance with' BABA and the Buy American Act. No model-specific BABA option found on GCM/GC2 spec sheets in search snippets.",
+    "last_verified": "2026-11-06"
+  },
+  {
+    "id": "mn-cooper-lighting-solutions-streetworks-cst-celesteon-high-mast-area-roadway-mn",
+    "manufacturer": "Cooper Lighting Solutions (Streetworks)",
+    "model": "CST Celesteon (high mast / area-roadway); MnDOT listing e.g. CST-8-4-D-U-T3-4N7-10K-AP-MNDOT",
+    "product_type": "LED high mast / area-roadway luminaire",
+    "states": [
+      {
+        "state": "MN",
+        "list_name": "Approved/Qualified Products - Roadway Lighting - Luminaires (LED Roadway, Underpass, High Mast, 5 Lane Applications, Rest Area)",
+        "listing_id": "",
+        "dot_list_url": "https://www.dot.mn.gov/products/roadwaylighting/ledhighmast2.html"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "manufacturer-declared",
+    "evidence": [
+      {
+        "summary": "Source 1",
+        "url": "https://www.cooperlighting.com/api/assets/v1/file/CLS/content/b36ac27b36e646c486aead6001287eeb/Streetworks-CST-Celesteon-Spec-Sheet.pdf"
+      }
+    ],
+    "notes": "Cooper CST spec sheet offers BABA ordering prefixes: 'BABA' (minimum Government compliance requirement for Build America Buy America), BABAE-CST 'FHWA Exception, for projects funded by Oct 1, 2025', plus a BABAF variant for later-funded projects. Compliance applies only to BABA-prefixed configurations; the MnDOT-listed catalog string has no BABA prefix. Exact BABAF wording re: final assembly / 55% not seen.",
+    "last_verified": "2026-11-06"
+  },
+  {
+    "id": "wi-signify-philips-lumec-roadfocus-plus-cobrahead-rpn-rpm-series-wisdot-659-subm",
+    "manufacturer": "Signify (Philips Lumec)",
+    "model": "RoadFocus Plus cobrahead (RPN/RPM series; WisDOT 659 submittals 6591115/6591120/6591125/6591130 'philips2022')",
+    "product_type": "LED roadway cobrahead luminaire",
+    "states": [
+      {
+        "state": "WI",
+        "list_name": "Electrical Qualified Products List - Section 659 luminaires (approved products)",
+        "listing_id": "WisDOT 659.1115 / 659.1120 / 659.1125 / 659.1130 (inferred from hosted file names)",
+        "dot_list_url": "https://wisconsindot.gov/Documents/doing-bus/eng-consultants/cnslt-rsrces/tools/prods/659/6591125philips2022.pdf"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "manufacturer-declared",
+    "evidence": [
+      {
+        "summary": "Source 1",
+        "url": "https://www.genlyte.com/api/assets/v1/file/Signify/content/b914becf825540cebb55aea500dacd6f/Lumec_RoadFocus_Plus_Medium_Choice_Sheet_RPM.pdf"
+      },
+      {
+        "summary": "Source 2",
+        "url": "https://www.genlyte.com/api/assets/v1/file/Signify/content/e3d12ed1b4a946c7b042ae5c00f32e29/Lumec_RoadFocus_Plus_Nano_Choice_Sheet_RPN.pdf"
+      }
+    ],
+    "notes": "Signify RoadFocus Plus choice sheets offer option 'BABAF' which 'designates the product will meet the standards set by FHWA for BABA and FTA for Buy America'. CAVEAT: sheets also state for FHWA BABA compliance 'applicable projects must be funded by October 1, 2026' - i.e., not shown to meet the >55% component-cost phase for projects obligated on/after Oct 1 2026. Only the BABAF-coded version, not the base catalog numbers on WisDOT file, is covered.",
+    "last_verified": "2026-11-06"
+  }
+]
