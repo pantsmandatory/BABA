@@ -1,0 +1,674 @@
+{
+  "categories": [
+    {
+      "id": "cabinet",
+      "name": "Splice housings for traffic / ITS cabinets",
+      "description": "Rack- and wall-mount housings, splice trays and cassettes that fit inside a signal or ITS field cabinet. These are manufactured products. Corning's catalog marks none of them BABA; FDOT lists them as 'BABA Eligible' for named projects only. Corning's BEAD-BABA hardware (2178 closures, FTH NIDs, GEN III cabinets) is outside-plant broadband gear, not cabinet hardware."
+    },
+    {
+      "id": "mm",
+      "name": "Orange multimode cable (OM1 / OM2)",
+      "description": "Orange is the TIA-598 color for OM1 and OM2; OM3/OM4 are aqua. Only Corning's indoor MIC family ships orange; FREEDM and ALTOS multimode cables are black. Standard Corning jumpers/pigtails checked in eCatalog are flagged 'BEAD/BABA – Not Compliant', so none are listed here."
+    },
+    {
+      "id": "sm",
+      "name": "G.652 single-mode cable",
+      "description": "Corning fiber code E = single-mode OS2 (G.652.D); Z = SMF-28 Ultra (G.652.D and G.657.A1). The code is the 4th character of the part number. Order the '-US' suffix version for BABA builds."
+    }
+  ],
+  "rule_notes_html": [
+    "<strong>Fiber optic cable and optical fiber are construction materials</strong>, not manufactured products (2 CFR 184.3). Every manufacturing step must be in the US: preform fabrication and draw for the fiber, then ribboning, buffering, stranding and jacketing for the cable (2 CFR 184.6(a)(4)–(5)). There is no 55% cost test. <a href=\"https://www.ecfr.gov/current/title-2/subtitle-A/chapter-I/part-184\" target=\"_blank\" rel=\"noopener\">2 CFR 184</a> · <a href=\"https://www.fhwa.dot.gov/construction/contracts/buyam_qa_baba_post10232023.cfm\" target=\"_blank\" rel=\"noopener\">FHWA BABA Q&amp;A</a>",
+    "<strong>Splice housings, cassettes and connectorized jumpers are manufactured products</strong>: US manufacture for projects obligated on or after Oct 1, 2025, plus more than 55% domestic component cost from Oct 1, 2026. Steel cabinets/enclosures must meet the iron and steel rule. <a href=\"https://www.ecfr.gov/current/title-23/chapter-I/subchapter-G/part-635/subpart-D/section-635.410\" target=\"_blank\" rel=\"noopener\">23 CFR 635.410</a>",
+    "<strong>Corning badge:</strong> 'Family-level' means only Corning's company-wide BABAA statement covers it (that page blocks automated access, so its wording here comes from search results). 'Not stated' means Corning publishes no BABA claim for that part. No product here has a part-specific Corning BABA statement."
+  ],
+  "corning_documents": [
+    {
+      "title": "Corning — United States Compliance Documentation (BABAA)",
+      "url": "https://www.corning.com/babaa-products",
+      "note": "Not readable from here (site blocks automated access). Reportedly: all fiber, cable and preform manufacturing in the US; patch panels and brackets listed as waived/de minimis; certificates by request form."
+    },
+    {
+      "title": "Corning eCatalog",
+      "url": "https://ecatalog.corning.com/optical-communications/US/en/",
+      "note": "Part-level spec sheets; BABA SKUs carry a '-US'/'-U' suffix and a 'Compliance: BEAD-BABA' field."
+    },
+    {
+      "title": "FDOT Approved Product List – Fiber Optic Cable",
+      "url": "https://path.fdot.gov/ProductTypes/Index/1015",
+      "note": "Corning ALTOS -US part numbers, 'BABA Eligible: Eligible'."
+    },
+    {
+      "title": "FDOT Approved Product List – Fiber Optic Connection Hardware",
+      "url": "https://path.fdot.gov/ProductTypes/Index/1291",
+      "note": "Corning CCH, SPH, WIC, SCF, cassettes; 'BABA Eligible', project-limited."
+    }
+  ],
+  "products": [
+    {
+      "category": "cabinet",
+      "name": "Closet Connector Housing CCH-01U (1U, 2 panels)",
+      "part_number": "CCH-01U",
+      "fiber": "—",
+      "jacket": "—",
+      "rating": "19-in rack (23-in optional)",
+      "counts": "2 CCH panels/cassettes",
+      "basis": "Manufactured product (23 CFR 635.410): US manufacture; >55% domestic components from Oct 1, 2026",
+      "corning_baba": "not stated",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet CCH-01U",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/CCH-01U.pdf"
+      },
+      "dot_listings": [
+        {
+          "state": "FL",
+          "list_name": "FDOT APL – Fiber Optic Connection Hardware (Spec 633), BABA Eligible: Eligible",
+          "listing_id": "633-004-006 · Approved for listed projects only",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        }
+      ],
+      "evidence": [
+        {
+          "summary": "FDOT APL 633-004-006",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        }
+      ],
+      "notes": [
+        "Can be set up as a modular splice housing.",
+        "Corning's eCatalog shows no BABA/BEAD-BABA flag and no -US variant for this part (checked Nov 2026).",
+        "FDOT approval is per project (e.g. 'Approved for Project 417545-1-52-01 only')."
+      ]
+    },
+    {
+      "category": "cabinet",
+      "name": "Closet Connector Housing CCH-02U (2U, 4 panels)",
+      "part_number": "CCH-02U",
+      "fiber": "—",
+      "jacket": "—",
+      "rating": "19-in rack",
+      "counts": "4 CCH panels/cassettes",
+      "basis": "Manufactured product (23 CFR 635.410): US manufacture; >55% domestic components from Oct 1, 2026",
+      "corning_baba": "not stated",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet CCH-02U",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/CCH-02U.pdf"
+      },
+      "dot_listings": [
+        {
+          "state": "FL",
+          "list_name": "FDOT APL – Fiber Optic Connection Hardware (Spec 633), BABA Eligible: Eligible",
+          "listing_id": "633-004-006 · Approved for listed projects only",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        }
+      ],
+      "evidence": [
+        {
+          "summary": "FDOT APL 633-004-006",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        }
+      ],
+      "notes": [
+        "Corning's eCatalog shows no BABA/BEAD-BABA flag and no -US variant for this part (checked Nov 2026)."
+      ]
+    },
+    {
+      "category": "cabinet",
+      "name": "Closet Connector Housing CCH-04U (4U, 12 panels)",
+      "part_number": "CCH-04U",
+      "fiber": "—",
+      "jacket": "—",
+      "rating": "19-in rack",
+      "counts": "12 CCH panels/cassettes",
+      "basis": "Manufactured product (23 CFR 635.410): US manufacture; >55% domestic components from Oct 1, 2026",
+      "corning_baba": "not stated",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet CCH-04U",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/CCH-04U.pdf"
+      },
+      "dot_listings": [
+        {
+          "state": "FL",
+          "list_name": "FDOT APL – Fiber Optic Connection Hardware (Spec 633), BABA Eligible: Eligible",
+          "listing_id": "633-004-006 · Approved for listed projects only",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        }
+      ],
+      "evidence": [
+        {
+          "summary": "FDOT APL 633-004-006",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        }
+      ],
+      "notes": [
+        "Corning's eCatalog shows no BABA/BEAD-BABA flag and no -US variant for this part (checked Nov 2026)."
+      ]
+    },
+    {
+      "category": "cabinet",
+      "name": "Single Panel Housing SPH-01P (wall mount, built-in splice tray)",
+      "part_number": "SPH-01P",
+      "fiber": "—",
+      "jacket": "—",
+      "rating": "Wall mount",
+      "counts": "1 CCH panel",
+      "basis": "Manufactured product (23 CFR 635.410): US manufacture; >55% domestic components from Oct 1, 2026",
+      "corning_baba": "not stated",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet SPH-01P",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/SPH-01P.pdf"
+      },
+      "dot_listings": [
+        {
+          "state": "FL",
+          "list_name": "FDOT APL – Fiber Optic Connection Hardware (Spec 633), BABA Eligible: Eligible",
+          "listing_id": "633-004-003 · Approved for listed projects only",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        },
+        {
+          "state": "FL",
+          "list_name": "FDOT APL – Fiber Optic Connection Hardware (Spec 633), BABA Eligible: Eligible",
+          "listing_id": "633-004-009 · Approved for listed projects only",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        }
+      ],
+      "evidence": [
+        {
+          "summary": "FDOT APL 633-004-003 / -009",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        }
+      ],
+      "notes": [
+        "Compact option for small signal cabinets.",
+        "Corning's eCatalog shows no BABA/BEAD-BABA flag and no -US variant for this part (checked Nov 2026)."
+      ]
+    },
+    {
+      "category": "cabinet",
+      "name": "Wall-Mountable Connector Housing WCH-02P",
+      "part_number": "WCH-02P (also WCH-04P, WCH-06P)",
+      "fiber": "—",
+      "jacket": "—",
+      "rating": "Wall mount",
+      "counts": "2 panels/cassettes",
+      "basis": "Manufactured product (23 CFR 635.410): US manufacture; >55% domestic components from Oct 1, 2026",
+      "corning_baba": "not stated",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet WCH-02P",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/WCH-02P.pdf"
+      },
+      "dot_listings": [],
+      "evidence": [],
+      "notes": [
+        "Corning's eCatalog shows no BABA/BEAD-BABA flag and no -US variant for this part (checked Nov 2026).",
+        "Not found on a DOT list; FDOT lists the WIC wall-mount center instead."
+      ]
+    },
+    {
+      "category": "cabinet",
+      "name": "Wall-Mountable Interconnect Center WIC-02P / WIC-04P",
+      "part_number": "WIC-02P, WIC-04P",
+      "fiber": "—",
+      "jacket": "—",
+      "rating": "Wall mount",
+      "counts": "2 / 4 panels",
+      "basis": "Manufactured product (23 CFR 635.410): US manufacture; >55% domestic components from Oct 1, 2026",
+      "corning_baba": "not stated",
+      "spec_sheet": {},
+      "dot_listings": [
+        {
+          "state": "FL",
+          "list_name": "FDOT APL – Fiber Optic Connection Hardware (Spec 633), BABA Eligible: Eligible",
+          "listing_id": "633-004-011 · Approved for listed projects only",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        },
+        {
+          "state": "FL",
+          "list_name": "FDOT APL – Fiber Optic Connection Hardware (Spec 633), BABA Eligible: Eligible",
+          "listing_id": "633-004-003 · Approved for listed projects only",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        }
+      ],
+      "evidence": [
+        {
+          "summary": "FDOT APL 633-004-011",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        }
+      ],
+      "notes": [
+        "Spec sheet not verified (corning.com blocks automated access).",
+        "Corning's eCatalog shows no BABA/BEAD-BABA flag and no -US variant for this part (checked Nov 2026)."
+      ]
+    },
+    {
+      "category": "cabinet",
+      "name": "Splice tray and enclosure SCF series",
+      "part_number": "SCF-ST series, SCF-6C series",
+      "fiber": "—",
+      "jacket": "—",
+      "rating": "Tray / enclosure",
+      "counts": "varies",
+      "basis": "Manufactured product (23 CFR 635.410): US manufacture; >55% domestic components from Oct 1, 2026",
+      "corning_baba": "not stated",
+      "spec_sheet": {},
+      "dot_listings": [
+        {
+          "state": "FL",
+          "list_name": "FDOT APL – Fiber Optic Connection Hardware (Spec 633), BABA Eligible: Eligible",
+          "listing_id": "633-004-003 · Approved for listed projects only",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        }
+      ],
+      "evidence": [
+        {
+          "summary": "FDOT APL 633-004-003",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        }
+      ],
+      "notes": [
+        "Spec sheet not verified.",
+        "Corning's eCatalog shows no BABA/BEAD-BABA flag and no -US variant for this part (checked Nov 2026)."
+      ]
+    },
+    {
+      "category": "cabinet",
+      "name": "CCH pigtailed splice cassette, 12F LC UPC",
+      "part_number": "CCH-CS12-A9-P00RE",
+      "fiber": "Single-mode OS2",
+      "jacket": "—",
+      "rating": "Fits CCH / WCH / SPH",
+      "counts": "12F",
+      "basis": "Manufactured product (23 CFR 635.410): US manufacture; >55% domestic components from Oct 1, 2026",
+      "corning_baba": "not stated",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet CCH-CS12-A9-P00RE",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/CCH-CS12-A9-P00RE.pdf"
+      },
+      "dot_listings": [
+        {
+          "state": "FL",
+          "list_name": "FDOT APL – Fiber Optic Connection Hardware (Spec 633), BABA Eligible: Eligible",
+          "listing_id": "633-004-005 · CCH-CS12-59-P00RE (SC); listed projects only",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        }
+      ],
+      "evidence": [
+        {
+          "summary": "FDOT APL 633-004-005",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1291"
+        }
+      ],
+      "notes": [
+        "FDOT lists the SC version (-59-); LC version shown for current catalog.",
+        "Corning's eCatalog shows no BABA/BEAD-BABA flag and no -US variant for this part (checked Nov 2026).",
+        "Pigtails/connectors make this a manufactured product, not a construction material."
+      ]
+    },
+    {
+      "category": "mm",
+      "name": "MIC tight-buffered cable, riser — OM1",
+      "part_number": "0xxK81-3x130-24 (e.g. 012K81-33130-24)",
+      "fiber": "62.5 µm OM1 (code K, perf. 30)",
+      "jacket": "Orange",
+      "rating": "Indoor, OFNR",
+      "counts": "2–24F",
+      "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
+      "corning_baba": "family",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet 012K81-33130-24",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012K81-33130-24.pdf"
+      },
+      "dot_listings": [],
+      "evidence": [
+        {
+          "summary": "Corning BABAA page (unverified)",
+          "url": "https://www.corning.com/babaa-products"
+        },
+        {
+          "summary": "2 CFR 184",
+          "url": "https://www.ecfr.gov/current/title-2/subtitle-A/chapter-I/part-184"
+        }
+      ],
+      "notes": [
+        "Corning's BABAA page (not readable from here; seen in search results only) reportedly lists indoor, indoor/outdoor and outdoor cable as 'Produced in the United States' under 2 CFR 184. No part-level flag in eCatalog.",
+        "No Corning statement found that 62.5 µm fiber is drawn in the US.",
+        "Ask Corning for the '-US' (BABA) version of the part number and a project certificate; standard SKUs may use non-domestic fiber."
+      ]
+    },
+    {
+      "category": "mm",
+      "name": "MIC tight-buffered cable, riser — OM2",
+      "part_number": "0xxT81-3x131-24 (e.g. 012T81-33131-24)",
+      "fiber": "50 µm OM2 (code T, perf. 31)",
+      "jacket": "Orange",
+      "rating": "Indoor, OFNR",
+      "counts": "2–24F",
+      "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
+      "corning_baba": "family",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet 012T81-33131-24",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012T81-33131-24.pdf"
+      },
+      "dot_listings": [],
+      "evidence": [
+        {
+          "summary": "Corning BABAA page (unverified)",
+          "url": "https://www.corning.com/babaa-products"
+        }
+      ],
+      "notes": [
+        "950 MHz·km EMB, 150 m at 10G.",
+        "Corning's BABAA page (not readable from here; seen in search results only) reportedly lists indoor, indoor/outdoor and outdoor cable as 'Produced in the United States' under 2 CFR 184. No part-level flag in eCatalog.",
+        "Ask Corning for the '-US' (BABA) version of the part number and a project certificate; standard SKUs may use non-domestic fiber."
+      ]
+    },
+    {
+      "category": "mm",
+      "name": "MIC tight-buffered cable, plenum — OM1 / OM2",
+      "part_number": "xxxK88-3x130-29 / xxxT88-3x131-29",
+      "fiber": "OM1 (K) / OM2 (T)",
+      "jacket": "Orange",
+      "rating": "Indoor, OFNP",
+      "counts": "2–24F",
+      "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
+      "corning_baba": "family",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet 012K88-33130-29",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012K88-33130-29.pdf"
+      },
+      "dot_listings": [],
+      "evidence": [
+        {
+          "summary": "Corning BABAA page (unverified)",
+          "url": "https://www.corning.com/babaa-products"
+        }
+      ],
+      "notes": [
+        "Corning's BABAA page (not readable from here; seen in search results only) reportedly lists indoor, indoor/outdoor and outdoor cable as 'Produced in the United States' under 2 CFR 184. No part-level flag in eCatalog.",
+        "Ask Corning for the '-US' (BABA) version of the part number and a project certificate; standard SKUs may use non-domestic fiber."
+      ]
+    },
+    {
+      "category": "mm",
+      "name": "MIC unitized tight-buffered, riser / plenum",
+      "part_number": "036K81-61130-24, 036T88-61131-29, 060T88-T3131-29",
+      "fiber": "OM1 (K) / OM2 (T)",
+      "jacket": "Orange",
+      "rating": "Indoor, OFNR / OFNP",
+      "counts": "36–144F",
+      "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
+      "corning_baba": "family",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet 036K81-61130-24",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/036K81-61130-24.pdf"
+      },
+      "dot_listings": [],
+      "evidence": [
+        {
+          "summary": "Corning BABAA page (unverified)",
+          "url": "https://www.corning.com/babaa-products"
+        }
+      ],
+      "notes": [
+        "Corning's BABAA page (not readable from here; seen in search results only) reportedly lists indoor, indoor/outdoor and outdoor cable as 'Produced in the United States' under 2 CFR 184. No part-level flag in eCatalog.",
+        "Ask Corning for the '-US' (BABA) version of the part number and a project certificate; standard SKUs may use non-domestic fiber."
+      ]
+    },
+    {
+      "category": "mm",
+      "name": "MIC tight-buffered, interlocking armored, riser",
+      "part_number": "012K81-33130-A1 (OM1), 012T81-33131-A1 (OM2)",
+      "fiber": "OM1 / OM2",
+      "jacket": "Orange",
+      "rating": "Indoor, OFCR",
+      "counts": "2–24F",
+      "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
+      "corning_baba": "family",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet 012K81-33130-A1",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012K81-33130-A1.pdf"
+      },
+      "dot_listings": [],
+      "evidence": [
+        {
+          "summary": "Corning BABAA page (unverified)",
+          "url": "https://www.corning.com/babaa-products"
+        }
+      ],
+      "notes": [
+        "Corning's BABAA page (not readable from here; seen in search results only) reportedly lists indoor, indoor/outdoor and outdoor cable as 'Produced in the United States' under 2 CFR 184. No part-level flag in eCatalog.",
+        "Aluminum armor is a minor addition; FHWA Q&A Q9 says combined products may be treated as manufactured products — confirm with the DOT.",
+        "Ask Corning for the '-US' (BABA) version of the part number and a project certificate; standard SKUs may use non-domestic fiber."
+      ]
+    },
+    {
+      "category": "sm",
+      "name": "ALTOS loose tube, gel-free, all-dielectric, FastAccess",
+      "part_number": "012ZU4-CS537D20-US, 096ZU4-CR776D20-US, 144ZU4-CS210D20-US, 288EU4-CR826D20-US",
+      "fiber": "SMF-28 Ultra G.652.D/G.657.A1 (Z); OS2 G.652.D (E)",
+      "jacket": "Black",
+      "rating": "Outdoor, aerial/duct",
+      "counts": "12–288F",
+      "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
+      "corning_baba": "family",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet 012EU4-T4101D20 (standard ALTOS)",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012EU4-T4101D20.pdf"
+      },
+      "dot_listings": [
+        {
+          "state": "FL",
+          "list_name": "FDOT APL – Fiber Optic Cable (Spec 633), BABA Eligible: Eligible",
+          "listing_id": "633-002-001 · Construction Material – Optical Fiber; no project limit",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1015"
+        }
+      ],
+      "evidence": [
+        {
+          "summary": "FDOT APL 633-002-001",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1015"
+        },
+        {
+          "summary": "2 CFR 184.6",
+          "url": "https://www.ecfr.gov/current/title-2/subtitle-A/chapter-I/part-184"
+        }
+      ],
+      "notes": [
+        "Strongest evidence on this page: FDOT lists the '-US' part numbers without a project limit.",
+        "The -US suffix marks Corning's BABA build; the standard PN (no -US) is not the listed item."
+      ]
+    },
+    {
+      "category": "sm",
+      "name": "ALTOS Binderless FastAccess",
+      "part_number": "024ZU4-CS538D20-US, 048ZU4-CR689D20-US",
+      "fiber": "SMF-28 Ultra G.652.D/G.657.A1 (Z)",
+      "jacket": "Black",
+      "rating": "Outdoor",
+      "counts": "24–48F listed",
+      "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
+      "corning_baba": "family",
+      "spec_sheet": {},
+      "dot_listings": [
+        {
+          "state": "FL",
+          "list_name": "FDOT APL – Fiber Optic Cable (Spec 633), BABA Eligible: Eligible",
+          "listing_id": "633-002-006 · no project limit",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1015"
+        }
+      ],
+      "evidence": [
+        {
+          "summary": "FDOT APL 633-002-006",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1015"
+        }
+      ],
+      "notes": [
+        "FDOT classes this entry as 'Manufactured Product', inconsistent with its ALTOS entry; 2 CFR 184.3 lists fiber optic cable as a construction material.",
+        "Spec sheet not verified."
+      ]
+    },
+    {
+      "category": "sm",
+      "name": "ALTOS Lite single-jacket single-armored",
+      "part_number": "xxxZUC-T4122D20 / 012EUC-T4101D20",
+      "fiber": "Z or E, G.652.D",
+      "jacket": "Black",
+      "rating": "Outdoor, direct buried",
+      "counts": "12–288F",
+      "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
+      "corning_baba": "family",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet 012ZUC-T4122D20",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012ZUC-T4122D20.pdf"
+      },
+      "dot_listings": [
+        {
+          "state": "FL",
+          "list_name": "FDOT APL – Fiber Optic Cable (Spec 633), BABA Eligible: Eligible",
+          "listing_id": "633-002-002 · Approved for Project 446182-1 only",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1015"
+        }
+      ],
+      "evidence": [
+        {
+          "summary": "FDOT APL 633-002-002",
+          "url": "https://path.fdot.gov/ProductTypes/Index/1015"
+        }
+      ],
+      "notes": [
+        "Corning's BABAA page (not readable from here; seen in search results only) reportedly lists indoor, indoor/outdoor and outdoor cable as 'Produced in the United States' under 2 CFR 184. No part-level flag in eCatalog.",
+        "Ask Corning for the '-US' (BABA) version of the part number and a project certificate; standard SKUs may use non-domestic fiber."
+      ]
+    },
+    {
+      "category": "sm",
+      "name": "FREEDM Loose Tube, riser",
+      "part_number": "024EUF-T4101D20",
+      "fiber": "OS2 G.652.D (E)",
+      "jacket": "Black",
+      "rating": "Indoor/outdoor, OFNR",
+      "counts": "varies",
+      "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
+      "corning_baba": "family",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet 024EUF-T4101D20",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/024EUF-T4101D20.pdf"
+      },
+      "dot_listings": [],
+      "evidence": [
+        {
+          "summary": "Corning BABAA page (unverified)",
+          "url": "https://www.corning.com/babaa-products"
+        }
+      ],
+      "notes": [
+        "Useful for building entry into cabinets without a transition splice.",
+        "Corning's BABAA page (not readable from here; seen in search results only) reportedly lists indoor, indoor/outdoor and outdoor cable as 'Produced in the United States' under 2 CFR 184. No part-level flag in eCatalog.",
+        "Ask Corning for the '-US' (BABA) version of the part number and a project certificate; standard SKUs may use non-domestic fiber."
+      ]
+    },
+    {
+      "category": "sm",
+      "name": "FREEDM One tight-buffered, riser",
+      "part_number": "012E8F-31131-29",
+      "fiber": "OS2 G.652.D (E)",
+      "jacket": "Black",
+      "rating": "Indoor/outdoor",
+      "counts": "varies",
+      "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
+      "corning_baba": "family",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet 012E8F-31131-29",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012E8F-31131-29.pdf"
+      },
+      "dot_listings": [],
+      "evidence": [
+        {
+          "summary": "Corning BABAA page (unverified)",
+          "url": "https://www.corning.com/babaa-products"
+        }
+      ],
+      "notes": [
+        "Corning's BABAA page (not readable from here; seen in search results only) reportedly lists indoor, indoor/outdoor and outdoor cable as 'Produced in the United States' under 2 CFR 184. No part-level flag in eCatalog.",
+        "Ask Corning for the '-US' (BABA) version of the part number and a project certificate; standard SKUs may use non-domestic fiber."
+      ]
+    },
+    {
+      "category": "sm",
+      "name": "SST-Drop, gel-filled single tube",
+      "part_number": "012EB4-14101A20, 001ZB4-14120A20",
+      "fiber": "E or Z, G.652.D",
+      "jacket": "Black",
+      "rating": "Outdoor drop",
+      "counts": "1–12F",
+      "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
+      "corning_baba": "family",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet 012EB4-14101A20",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012EB4-14101A20.pdf"
+      },
+      "dot_listings": [],
+      "evidence": [
+        {
+          "summary": "Corning BABAA page (unverified)",
+          "url": "https://www.corning.com/babaa-products"
+        }
+      ],
+      "notes": [
+        "Corning's catalog has a 'BEAD-BABA' compliance category that includes some SST-Drop SKUs (seen in its search index; not citable). BEAD is NTIA's program, not FHWA.",
+        "Ask Corning for the '-US' (BABA) version of the part number and a project certificate; standard SKUs may use non-domestic fiber."
+      ]
+    },
+    {
+      "category": "sm",
+      "name": "MiniXtend Binderless FastAccess (microduct)",
+      "part_number": "012ZM4-T3F22A20, 144ZM4-T4F22A20",
+      "fiber": "SMF-28 Ultra G.652.D/G.657.A1 (Z)",
+      "jacket": "Black",
+      "rating": "Outdoor, microduct",
+      "counts": "12–144F",
+      "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
+      "corning_baba": "family",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet 012ZM4-T3F22A20",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012ZM4-T3F22A20.pdf"
+      },
+      "dot_listings": [],
+      "evidence": [
+        {
+          "summary": "Corning BABAA page (unverified)",
+          "url": "https://www.corning.com/babaa-products"
+        }
+      ],
+      "notes": [
+        "Corning's BABAA page (not readable from here; seen in search results only) reportedly lists indoor, indoor/outdoor and outdoor cable as 'Produced in the United States' under 2 CFR 184. No part-level flag in eCatalog.",
+        "Ask Corning for the '-US' (BABA) version of the part number and a project certificate; standard SKUs may use non-domestic fiber."
+      ]
+    },
+    {
+      "category": "sm",
+      "name": "RPX Ribbon Cable-250",
+      "part_number": "144EV4-24101D53",
+      "fiber": "OS2 G.652.D (E)",
+      "jacket": "Black",
+      "rating": "Outdoor",
+      "counts": "144F+",
+      "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
+      "corning_baba": "family",
+      "spec_sheet": {
+        "title": "Corning eCatalog spec sheet 144EV4-24101D53",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/144EV4-24101D53.pdf"
+      },
+      "dot_listings": [],
+      "evidence": [
+        {
+          "summary": "Corning BABAA page (unverified)",
+          "url": "https://www.corning.com/babaa-products"
+        }
+      ],
+      "notes": [
+        "Corning's BABAA page (not readable from here; seen in search results only) reportedly lists indoor, indoor/outdoor and outdoor cable as 'Produced in the United States' under 2 CFR 184. No part-level flag in eCatalog.",
+        "Ask Corning for the '-US' (BABA) version of the part number and a project certificate; standard SKUs may use non-domestic fiber."
+      ]
+    }
+  ]
+}

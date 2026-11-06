@@ -33,8 +33,8 @@ document.getElementById('count').textContent=n;}
 q.addEventListener('input',apply);cat.addEventListener('change',apply);
 """ + ROW_JS
 
-HEADERS = ["Product", "Part number / ordering", "Fiber", "Jacket", "Rating", "Counts", "BABA basis",
-           "Corning BABA", "DOT listing", "Spec sheet", "Sources", "Notes"]
+HEADERS = ["Product", "Part number / ordering", "Corning BABA", "DOT listing", "Fiber", "Jacket", "Rating",
+           "Counts", "BABA basis", "Spec sheet", "Sources", "Notes"]
 
 
 def label(key):
@@ -56,13 +56,13 @@ def row(p, cat_id):
         f'<tr data-search="{e(search)}" data-cat="{e(cat_id)}">'
         + td(f"<strong>{e(p.get('name'))}</strong>", "c-l", p.get("name"))
         + td(e(p.get("part_number")), "c-cat mono", p.get("part_number"))
+        + td(label(p.get("corning_baba")), "c-b", p.get("corning_quote"))
+        + td(dot_cell, "c-l", dot_full)
         + td(e(p.get("fiber", "—")), "c-s", p.get("fiber"))
         + td(e(p.get("jacket", "—")), "c-d")
         + td(e(p.get("rating", "—")), "c-s", p.get("rating"))
         + td(e(p.get("counts", "—")), "c-s", p.get("counts"))
-        + td(e(p.get("basis", "—")), "c-s", p.get("basis"))
-        + td(label(p.get("corning_baba")), "c-b", p.get("corning_quote"))
-        + td(dot_cell, "c-l", dot_full)
+        + td(e(p.get("basis", "—").split(" (")[0]), "c-d", p.get("basis"))
         + td(link(sheet.get("url"), "PDF") if sheet.get("url") else "—", "c-d", sheet.get("title"))
         + td(numbered_links(ev), "c-n", " | ".join(x.get("summary", "") for x in ev))
         + td(e(notes), "c-x muted", notes)
@@ -76,6 +76,7 @@ def render(build_date):
     products = data.get("products", [])
     total = len(products)
     stated = sum(1 for p in products if p.get("corning_baba") == "stated")
+    dot_listed = sum(1 for p in products if p.get("dot_listings"))
     cat_opts = "".join(f'<option value="{e(c["id"])}">{e(c["name"])}</option>' for c in cats)
     sections = []
     for c in cats:
@@ -105,7 +106,8 @@ def render(build_date):
 
 <div class="stats">
   <span><b id="count">{total}</b>products</span>
-  <span><b>{stated}</b>with a product-specific Corning BABA statement</span>
+  <span><b>{dot_listed}</b>on a DOT list as BABA eligible</span>
+  <span><b>{stated}</b>with a part-specific Corning BABA statement</span>
   <span><b>{len(cats)}</b>categories</span>
 </div>
 

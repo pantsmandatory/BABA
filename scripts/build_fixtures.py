@@ -139,7 +139,7 @@ def render(build_date):
 <body>
 <main>
 <h1>BABA Fixture Downloads</h1>
-<div class="muted">Luminaires a state DOT lists as Buy America (BABA) compliant, with photometry and cut sheets · Updated {e(build_date)} · <a href="index.html">Compliance index</a></div>
+<div class="muted">Luminaires a state DOT lists as Buy America (BABA) compliant, with photometry and cut sheets · Updated {e(build_date)} · <a href="index.html">Compliance index</a> · <a href="fiber.html">Fiber products</a></div>
 
 <div class="stats">
   <span class="chips">{chips}</span>

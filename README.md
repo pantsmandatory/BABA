@@ -10,7 +10,10 @@ Open `index.html` for the current list. Weekly snapshots are in `archive/`.
 
 `fixtures.html` lists the DOT-certified fixtures with downloadable `.ies` files and manufacturer cut sheets.
 It currently shows only **3000K, 480V, 70 CRI** variants (set by `filter` in `data/fixtures.json`).
-First source: TxDOT's Roadway Illumination MPL, "Compliant v5" entries (projects obligated on/after Oct 1, 2026).
+`fiber.html` lists Corning fiber products with BABA evidence: traffic/ITS cabinet splice housings, orange OM1/OM2
+multimode cable, and G.652 single-mode cable (data in `data/fiber.json`, built by `scripts/build_fiber.py`).
+
+Fixture page first source: TxDOT's Roadway Illumination MPL, "Compliant v5" entries (projects obligated on/after Oct 1, 2026).
 
 ## How it works
 
