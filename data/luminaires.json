@@ -247,5 +247,216 @@
     ],
     "notes": "Signify RoadFocus Plus choice sheets offer option 'BABAF' which 'designates the product will meet the standards set by FHWA for BABA and FTA for Buy America'. CAVEAT: sheets also state for FHWA BABA compliance 'applicable projects must be funded by October 1, 2026' - i.e., not shown to meet the >55% component-cost phase for projects obligated on/after Oct 1 2026. Only the BABAF-coded version, not the base catalog numbers on WisDOT file, is covered.",
     "last_verified": "2026-11-06"
+  },
+  {
+    "id": "tx-cooper-streetworks-archeon-arch1-arch3",
+    "manufacturer": "Cooper Lighting Solutions (Streetworks)",
+    "model": "Archeon ARCH1 / ARCH3 (order with BABA- prefix)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "TX",
+        "list_name": "TxDOT MPL – Roadway Illumination and Electrical Supplies (Sept 1, 2026)",
+        "listing_id": "Table 5, FDMP Status: Compliant v5",
+        "dot_list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "TxDOT MPL (Compliant v5)",
+        "url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      },
+      {
+        "summary": "ARCH1 spec sheet",
+        "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/streetworks-archeon-contemporary-arch1-spec/Streetworks-ARCH1-Spec-Sheet.pdf"
+      },
+      {
+        "summary": "ARCH3 spec sheet",
+        "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/streetworks-archeon-contemporary-arch3-spec/Streetworks-ARCH3-Spec-Sheet.pdf"
+      }
+    ],
+    "notes": "TxDOT 'Compliant v5' = manufacturer certified via TxDOT Gold Star Program for projects obligated on/after Oct 1, 2026 (Phase 2: US final assembly + >55% domestic component cost). Listed configurations are 4000K only. Only the BABA- prefixed TXDOT configurations are v5; BAA- versions are v4 and unprefixed versions need project-level certification.",
+    "last_verified": "2026-11-06"
+  },
+  {
+    "id": "tx-cooper-streetworks-celesteon-cst",
+    "manufacturer": "Cooper Lighting Solutions (Streetworks)",
+    "model": "Celesteon CST-CA8 high mast (order with BAA- prefix)",
+    "product_type": "LED high mast luminaire",
+    "states": [
+      {
+        "state": "TX",
+        "list_name": "TxDOT MPL – Roadway Illumination and Electrical Supplies (Sept 1, 2026)",
+        "listing_id": "Table 24, FDMP Status: Compliant v5",
+        "dot_list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "TxDOT MPL (Compliant v5)",
+        "url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      },
+      {
+        "summary": "CST spec sheet",
+        "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/b36ac27b36e646c486aead6001287eeb/Streetworks-CST-Celesteon-Spec-Sheet.pdf"
+      }
+    ],
+    "notes": "TxDOT 'Compliant v5' = manufacturer certified via TxDOT Gold Star Program for projects obligated on/after Oct 1, 2026 (Phase 2: US final assembly + >55% domestic component cost). Listed configurations are 4000K only.",
+    "last_verified": "2026-11-06"
+  },
+  {
+    "id": "tx-leotek-greencobra-gcj2-gcm3",
+    "manufacturer": "Leotek",
+    "model": "GreenCobra GCJ2 / GCM3 (order with -BABA option)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "TX",
+        "list_name": "TxDOT MPL – Roadway Illumination and Electrical Supplies (Sept 1, 2026)",
+        "listing_id": "Table 6, FDMP Status: Compliant v5",
+        "dot_list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "TxDOT MPL (Compliant v5)",
+        "url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      },
+      {
+        "summary": "GCJ spec sheet",
+        "url": "https://leotek.com/download/263/greencobra-gcj/22404/gcj-j-series-spec-sheet.pdf"
+      },
+      {
+        "summary": "GCM spec sheet",
+        "url": "https://leotek.com/download/264/greencobra-gcm/22506/gcm-j-series-specification-sheet.pdf"
+      }
+    ],
+    "notes": "TxDOT 'Compliant v5' = manufacturer certified via TxDOT Gold Star Program for projects obligated on/after Oct 1, 2026 (Phase 2: US final assembly + >55% domestic component cost). Listed configurations are 4000K only. Leotek sheet: BABA option 'meets Oct. 1, 2026 final US assembly, 55% content material requirements'.",
+    "last_verified": "2026-11-06"
+  },
+  {
+    "id": "tx-ael-autobahn-atb0",
+    "manufacturer": "American Electric Lighting (Acuity Brands)",
+    "model": "Autobahn ATB0 P202 / P303 / P453 (order with BAA option)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "TX",
+        "list_name": "TxDOT MPL – Roadway Illumination and Electrical Supplies (Sept 1, 2026)",
+        "listing_id": "Table 10, FDMP Status: Compliant v5",
+        "dot_list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "TxDOT MPL (Compliant v5)",
+        "url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      },
+      {
+        "summary": "ATB0 spec sheet (Rev. 02/27/26)",
+        "url": "https://img.acuitybrands.com/public-assets/catalog/122046/atb0_.pdf"
+      }
+    ],
+    "notes": "TxDOT 'Compliant v5' = manufacturer certified via TxDOT Gold Star Program for projects obligated on/after Oct 1, 2026 (Phase 2: US final assembly + >55% domestic component cost). Listed configurations are 4000K only. Non-BAA versions need project-level certification.",
+    "last_verified": "2026-11-06"
+  },
+  {
+    "id": "tx-holophane-hmled4",
+    "manufacturer": "Holophane (Acuity Brands)",
+    "model": "HMAO LED IV HMLED4 P25 / P4",
+    "product_type": "LED high mast luminaire",
+    "states": [
+      {
+        "state": "TX",
+        "list_name": "TxDOT MPL – Roadway Illumination and Electrical Supplies (Sept 1, 2026)",
+        "listing_id": "Table 26, FDMP Status: Compliant v5",
+        "dot_list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "TxDOT MPL (Compliant v5)",
+        "url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      },
+      {
+        "summary": "HMLED4 spec sheet (Rev. 10/12/26)",
+        "url": "https://img.acuitybrands.com/public-assets/catalog/1312787/lum_hmled4_.pdf"
+      }
+    ],
+    "notes": "TxDOT 'Compliant v5' = manufacturer certified via TxDOT Gold Star Program for projects obligated on/after Oct 1, 2026 (Phase 2: US final assembly + >55% domestic component cost). Listed configurations are 4000K only.",
+    "last_verified": "2026-11-06"
+  },
+  {
+    "id": "tx-visionaire-rlx3",
+    "manufacturer": "Visionaire Lighting",
+    "model": "RLX-3 Array (70W / 125W)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "TX",
+        "list_name": "TxDOT MPL – Roadway Illumination and Electrical Supplies (Sept 1, 2026)",
+        "listing_id": "Table 12, FDMP Status: Compliant v5",
+        "dot_list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "TxDOT MPL (Compliant v5)",
+        "url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      },
+      {
+        "summary": "RLX-3 spec sheet",
+        "url": "https://visionairelighting.com/lex-cms/download_referral/m-159/7192b4d1d7a5496da619fa2aebe8e53e/rlx-3-ar.pdf"
+      }
+    ],
+    "notes": "TxDOT 'Compliant v5' = manufacturer certified via TxDOT Gold Star Program for projects obligated on/after Oct 1, 2026 (Phase 2: US final assembly + >55% domestic component cost). Listed configurations are 4000K only. Cut sheet has no BABA wording; status rests on TxDOT certification.",
+    "last_verified": "2026-11-06"
+  },
+  {
+    "id": "tx-chm-cled2",
+    "manufacturer": "CHM Lighting",
+    "model": "CLED2 08C / 10C high mast",
+    "product_type": "LED high mast luminaire",
+    "states": [
+      {
+        "state": "TX",
+        "list_name": "TxDOT MPL – Roadway Illumination and Electrical Supplies (Sept 1, 2026)",
+        "listing_id": "Table 29, FDMP Status: Compliant v5",
+        "dot_list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "TxDOT MPL (Compliant v5)",
+        "url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      },
+      {
+        "summary": "CLED2 spec sheet",
+        "url": "https://chmlighting.com/Downloads/SPECS/CHM_SPECSHEET_CLED2.pdf"
+      }
+    ],
+    "notes": "TxDOT 'Compliant v5' = manufacturer certified via TxDOT Gold Star Program for projects obligated on/after Oct 1, 2026 (Phase 2: US final assembly + >55% domestic component cost). Listed configurations are 4000K only. CHM: 'BABA compliant in all package offerings'; made in Fort Worth, TX.",
+    "last_verified": "2026-11-06"
   }
 ]
