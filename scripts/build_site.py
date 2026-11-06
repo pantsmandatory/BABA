@@ -218,7 +218,7 @@ def render(build_date):
 <body>
 <main>
 <h1>BABA Luminaire Index</h1>
-<div class="muted">Roadway &amp; area luminaires on state DOT approved product lists with documented FHWA Buy America compliance · Updated {e(build_date)}</div>
+<div class="muted">Roadway &amp; area luminaires on state DOT approved product lists with documented FHWA Buy America compliance · Updated {e(build_date)} · <a href="fixtures.html">Fixture downloads (.ies + cut sheets)</a></div>
 
 <div class="stats">
   <div class="stat"><b>{len(compliant)}</b>Compliant luminaire entries</div>
@@ -291,7 +291,7 @@ def main():
         ARCHIVE.mkdir(exist_ok=True)
         # Archive pages live one folder down, so point the archive link back up.
         ARCHIVE.joinpath(f"{args.date}.html").write_text(
-            page.replace('href="archive/index.html"', 'href="index.html"'), encoding="utf-8"
+            page.replace('href="archive/index.html"', 'href="index.html"').replace('href="fixtures.html"', 'href="../fixtures.html"'), encoding="utf-8"
         )
         write_archive_index()
     print(f"Built index.html for {args.date}")

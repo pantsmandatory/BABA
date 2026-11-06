@@ -8,6 +8,10 @@ FHWA Buy America (BABA) compliance for manufactured products (23 CFR 635.410):
 
 Open `index.html` for the current list. Weekly snapshots are in `archive/`.
 
+`fixtures.html` lists the DOT-certified fixtures with downloadable `.ies` files and manufacturer cut sheets.
+It currently shows only **3000K, 480V, 70 CRI** variants (set by `filter` in `data/fixtures.json`).
+First source: TxDOT's Roadway Illumination MPL, "Compliant v5" entries (projects obligated on/after Oct 1, 2026).
+
 ## How it works
 
 | File | Purpose |
@@ -17,6 +21,9 @@ Open `index.html` for the current list. Weekly snapshots are in `archive/`.
 | `data/rule.json` | Summary of the federal rule shown at the top of the page. |
 | `data/source_status.json` | Written by the weekly check: content hash and changed/unchanged per list. |
 | `scripts/build_site.py` | Builds `index.html` and `archive/YYYY-MM-DD.html`. |
+| `data/fixtures.json` | Fixture configurations (catalog number, DOT listing, cut sheet, .ies) and the page filter. |
+| `ies/<manufacturer>/` | Copies of manufacturer .ies files; each entry links to its source. |
+| `scripts/build_fixtures.py` | Builds `fixtures.html` from `data/fixtures.json`. |
 | `scripts/check_sources.py` | Downloads each DOT list and flags lists that changed since last week. |
 | `.github/workflows/weekly-update.yml` | Runs both scripts every Monday, commits the pages, and opens an issue listing changed DOT lists. |
 

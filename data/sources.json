@@ -246,7 +246,7 @@
     "url": "https://roads.maryland.gov/OMT/luminares.pdf",
     "luminaire_category": "806 / 950.12 - Luminaires and Lamps, Roadway LED",
     "baba_flag": "unclear",
-    "baba_notes": "QPL PDF (page dated 03/20/2025 per search snippet) shows producer/approval/recertification columns; no BABA column seen in snippet. A 2023 SHA memo revising MSMT 732 (MARV letter) states 'Products may be listed whether they are or are not BABA complaint' \u2014 i.e. listing does not imply BABA compliance. SHA BABA presentation says manufactured-products requirement applies to projects advertised on/after Oct 1 2025; manufacturer certification via statements citing 23 USC 313 and 23 CFR 635.410. PDF contents could not be fetched (host blocked); only search snippets seen.",
+    "baba_notes": "QPL PDF (page dated 03/20/2025 per search snippet) shows producer/approval/recertification columns; no BABA column seen in snippet. A 2023 SHA memo revising MSMT 732 (MARV letter) states 'Products may be listed whether they are or are not BABA complaint' — i.e. listing does not imply BABA compliance. SHA BABA presentation says manufactured-products requirement applies to projects advertised on/after Oct 1 2025; manufacturer certification via statements citing 23 USC 313 and 23 CFR 635.410. PDF contents could not be fetched (host blocked); only search snippets seen.",
     "buy_america_guidance_url": "https://www.roads.maryland.gov/OMT/BABA.pdf",
     "confidence": "medium",
     "last_reviewed": "2026-11-06"
@@ -282,7 +282,7 @@
     "url": "https://www.dot.state.mn.us/products/roadwaylighting/luminaires.html",
     "luminaire_category": "Light Emitting Diode (LED) Roadway Luminaires (also LED Underpass, LED High Mast, LED 5 Lane Applications, LED Rest Area)",
     "baba_flag": "no",
-    "baba_notes": "Search snippets of the pages show manufacturer, model, light loss factor and approval date (e.g., Cooper ARCH3-100-740-U-T3-AP-20MSP-4B-PSC-10X-MNDOT approved 2/3/2025; Cree Lighting entries 8/15/25; Holophane HMLED3/HMLED4 and Cooper CST on high mast page; Cooper XNV2 on underpass page). No Buy America/BABA field observed in snippets. Pages not fetchable directly (host blocked) \u2014 flag 'no' based on snippets only. No MnDOT lighting-specific BABA guidance found.",
+    "baba_notes": "Search snippets of the pages show manufacturer, model, light loss factor and approval date (e.g., Cooper ARCH3-100-740-U-T3-AP-20MSP-4B-PSC-10X-MNDOT approved 2/3/2025; Cree Lighting entries 8/15/25; Holophane HMLED3/HMLED4 and Cooper CST on high mast page; Cooper XNV2 on underpass page). No Buy America/BABA field observed in snippets. Pages not fetchable directly (host blocked) — flag 'no' based on snippets only. No MnDOT lighting-specific BABA guidance found.",
     "buy_america_guidance_url": "",
     "confidence": "medium",
     "last_reviewed": "2026-11-06"
@@ -519,12 +519,12 @@
     "state": "TX",
     "agency": "Texas Department of Transportation",
     "list_name": "Material Producer List (MPL) - Roadway Illumination and Electrical Supplies",
-    "url": "https://www.txdot.gov/content/dam/docs/mpl/riaes.pdf",
+    "url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
     "luminaire_category": "Item 610 - LED Roadway Luminaires (DMS-11011); Item 614 - LED High Mast Luminaires",
-    "baba_flag": "unclear",
-    "baba_notes": "Search snippets of riaes.pdf (dated Mar 7 2025 in snippet; may since be updated) show no Buy America/final-assembly flag; PDF could not be fetched (txdot.gov blocked). Visible entries include Trastar 'Duralight' models. TxDOT Buy America page notes removal of manufactured product waiver for projects obligated after Oct 2025.",
+    "baba_flag": "yes",
+    "baba_notes": "MPL edition Sept 1, 2026 has an \"FDMP Status\" column per model. \"Compliant v5\" = manufacturer certified via TxDOT Gold Star Program for projects obligated on/after Oct 1, 2026 (Phase 2); \"Compliant v4\" = Oct 1, 2025 - Sept 30, 2026 only; \"Project Level Certification Required\" = not pre-certified. v5 luminaires at 480V: Cooper ARCH/CST, Leotek GCJ2/GCM3 (-BABA), Acuity ATB0 (BAA) and HMLED4, Visionaire RLX-3, CHM CLED2 - all listed at 4000K. See fixtures.html.",
     "buy_america_guidance_url": "https://www.txdot.gov/business/resources/materials/buy-america.html",
-    "confidence": "medium",
+    "confidence": "high",
     "last_reviewed": "2026-11-06"
   },
   {

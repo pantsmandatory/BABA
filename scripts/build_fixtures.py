@@ -88,7 +88,7 @@ def card(fx, sources):
         ("DOT use", d.get("application")),
         ("Optics", fx.get("distribution")),
         ("Input", fx.get("watts") and f"{fx['watts']} W"),
-        ("Output", fx.get("lumens") and f"{fx['lumens']:,} lm"),
+        ("Output", fx.get("lumens") and ("≈ " if fx.get("lumens_estimated") else "") + f"{fx['lumens']:,} lm"),
         ("CCT / CRI", f"{fx['cct']}K · {fx['cri']} CRI"),
         ("Voltage", f"{fx['voltage']}V"),
     ]
