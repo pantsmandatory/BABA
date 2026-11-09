@@ -30,6 +30,7 @@ BASIS_BADGE = {"as-listed": ("As listed", "ok"), "cct-swapped": ("CCT swapped", 
 FOCUS_BADGE = {
     "twin": ("Phase 2 listed at 120–277V · 480V not printed", "warn"),
     "family": ("Family flagged · this optic/voltage not listed", "warn"),
+    "mfr-option": ("Mfr. BABA option (D1) · no DOT listing", "info"),
     "none": ("No DOT Phase 2 statement", "bad"),
 }
 
@@ -173,7 +174,8 @@ def focus_section(data):
 <p class="small muted">Requested search: 480V, 3000K, about 20,000 lumens in Type II and Type III, and high mast at about 250–500W.
 <strong>None of these exact 480V configurations is printed on a state DOT list with a Phase 2 statement</strong>, so they are kept out of
 the table above. The Status column says how close each one is, and the DOT column quotes what each list says. The only Current
-row a DOT prints at 480V with a Phase 2 statement is Caltrans ERL2H12D530DGRAYBL251, in the table above. No state DOT states
+row a DOT prints at 480V with a Phase 2 statement is Caltrans ERL2H12D530DGRAYBL251, in the table above. The Gen 7 ERL2 rows use
+Current's own "D1 = BABA Compliant" ordering suffix, which is a manufacturer option to verify with the factory, not a DOT statement. No state DOT states
 Phase 2 for any Cree Lighting luminaire. Get the manufacturer's Buy America certification for the exact catalog number.</p>
 """
     for group in dict.fromkeys(f["group"] for f in rows):

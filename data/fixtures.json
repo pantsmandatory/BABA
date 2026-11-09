@@ -3256,6 +3256,306 @@
       "notes": "Catalog string follows the Caltrans listing with H swapped in for 0*. .ies is the 3000K/70 CRI file; watts are the published 120–277V value. The Gen 7 ERL2 sheet (OLP3249) adds an ordering suffix \"D1 = BABA Compliant\" and says to contact the factory to verify the configuration."
     },
     {
+      "id": "cur-erl2g7-h-20b7-30-d1",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 7) · D1 BABA option",
+      "use": "Roadway",
+      "catalog": "ERL2-H-20-B7-30-D-GRAY-D1",
+      "optic": "Type II (B7)",
+      "voltage": "347–480V (H)",
+      "watts": 141,
+      "lumens": 19200,
+      "status": "mfr-option",
+      "evidence": "Manufacturer option, not a DOT listing: the Gen 7 ERL2 spec sheet offers ordering suffix \"D1 = BABA Compliant\" and says \"BABA compliant configurations available. D1 must be placed at the end of ordering nomenclature. Please contact factory to verify if specific configuration is compliant.\" No state DOT list reviewed prints a Gen 7 (x7 optic) ERL2 catalog number. Caltrans AML (last edit 11/8/2026) flags Gen 5 ERL2 rows as Phase 2 at 120–277V. FDOT APL 715-005-017 (ERLC/ERL1/ERL2): \"BABA Eligible\", no phase. TxDOT MPL: Project Level Certification Required. ALDOT List IV-6: ERL2_5_xx_xx_40_GRAY coded N1.",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 7 spec sheet (OLP3249, rev 07/23/25)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3249_ERL2_Gen7.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_20B730________.ies",
+          "lumcat": "ERL2_20B730________",
+          "lumens": 19200,
+          "watts": 141.0,
+          "source_url": "https://cdn.currentlighting.com/raw/upload/site/ies/ERL2_x7_Distribution.zip",
+          "note": "from Current ERL2 x7 Distribution .zip, issued 6/06/2025"
+        }
+      ],
+      "notes": "Catalog string built from the Gen 7 ordering guide: H = 347–480V, 30 = 3000K 70 CRI, D = top ANSI 7-pin with shorting cap, GRAY, D1 last. Add other options (A, R/T, etc.) before D1. A fixed 480V code (5) also exists. Watts are the .ies value; the spec sheet bases wattage on 120–277V."
+    },
+    {
+      "id": "cur-erl2g7-h-20c7-30-d1",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 7) · D1 BABA option",
+      "use": "Roadway",
+      "catalog": "ERL2-H-20-C7-30-D-GRAY-D1",
+      "optic": "Type III (C7)",
+      "voltage": "347–480V (H)",
+      "watts": 141,
+      "lumens": 19200,
+      "status": "mfr-option",
+      "evidence": "Manufacturer option, not a DOT listing: the Gen 7 ERL2 spec sheet offers ordering suffix \"D1 = BABA Compliant\" and says \"BABA compliant configurations available. D1 must be placed at the end of ordering nomenclature. Please contact factory to verify if specific configuration is compliant.\" No state DOT list reviewed prints a Gen 7 (x7 optic) ERL2 catalog number. Caltrans AML (last edit 11/8/2026) flags Gen 5 ERL2 rows as Phase 2 at 120–277V. FDOT APL 715-005-017 (ERLC/ERL1/ERL2): \"BABA Eligible\", no phase. TxDOT MPL: Project Level Certification Required. ALDOT List IV-6: ERL2_5_xx_xx_40_GRAY coded N1.",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 7 spec sheet (OLP3249, rev 07/23/25)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3249_ERL2_Gen7.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_20C730________.ies",
+          "lumcat": "ERL2_20C730________",
+          "lumens": 19200,
+          "watts": 141.0,
+          "source_url": "https://cdn.currentlighting.com/raw/upload/site/ies/ERL2_x7_Distribution.zip",
+          "note": "from Current ERL2 x7 Distribution .zip, issued 6/06/2025"
+        }
+      ],
+      "notes": "Catalog string built from the Gen 7 ordering guide: H = 347–480V, 30 = 3000K 70 CRI, D = top ANSI 7-pin with shorting cap, GRAY, D1 last. Add other options (A, R/T, etc.) before D1. A fixed 480V code (5) also exists. Watts are the .ies value; the spec sheet bases wattage on 120–277V."
+    },
+    {
+      "id": "cur-erl2g7-h-21b7-30-d1",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 7) · D1 BABA option",
+      "use": "Roadway",
+      "catalog": "ERL2-H-21-B7-30-D-GRAY-D1",
+      "optic": "Type II (B7)",
+      "voltage": "347–480V (H)",
+      "watts": 150,
+      "lumens": 20100,
+      "status": "mfr-option",
+      "evidence": "Manufacturer option, not a DOT listing: the Gen 7 ERL2 spec sheet offers ordering suffix \"D1 = BABA Compliant\" and says \"BABA compliant configurations available. D1 must be placed at the end of ordering nomenclature. Please contact factory to verify if specific configuration is compliant.\" No state DOT list reviewed prints a Gen 7 (x7 optic) ERL2 catalog number. Caltrans AML (last edit 11/8/2026) flags Gen 5 ERL2 rows as Phase 2 at 120–277V. FDOT APL 715-005-017 (ERLC/ERL1/ERL2): \"BABA Eligible\", no phase. TxDOT MPL: Project Level Certification Required. ALDOT List IV-6: ERL2_5_xx_xx_40_GRAY coded N1.",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 7 spec sheet (OLP3249, rev 07/23/25)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3249_ERL2_Gen7.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_21B730________.ies",
+          "lumcat": "ERL2_21B730________",
+          "lumens": 20100,
+          "watts": 150.0,
+          "source_url": "https://cdn.currentlighting.com/raw/upload/site/ies/ERL2_x7_Distribution.zip",
+          "note": "from Current ERL2 x7 Distribution .zip, issued 6/06/2025"
+        }
+      ],
+      "notes": "Catalog string built from the Gen 7 ordering guide: H = 347–480V, 30 = 3000K 70 CRI, D = top ANSI 7-pin with shorting cap, GRAY, D1 last. Add other options (A, R/T, etc.) before D1. A fixed 480V code (5) also exists. Watts are the .ies value; the spec sheet bases wattage on 120–277V."
+    },
+    {
+      "id": "cur-erl2g7-h-21c7-30-d1",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 7) · D1 BABA option",
+      "use": "Roadway",
+      "catalog": "ERL2-H-21-C7-30-D-GRAY-D1",
+      "optic": "Type III (C7)",
+      "voltage": "347–480V (H)",
+      "watts": 150,
+      "lumens": 20100,
+      "status": "mfr-option",
+      "evidence": "Manufacturer option, not a DOT listing: the Gen 7 ERL2 spec sheet offers ordering suffix \"D1 = BABA Compliant\" and says \"BABA compliant configurations available. D1 must be placed at the end of ordering nomenclature. Please contact factory to verify if specific configuration is compliant.\" No state DOT list reviewed prints a Gen 7 (x7 optic) ERL2 catalog number. Caltrans AML (last edit 11/8/2026) flags Gen 5 ERL2 rows as Phase 2 at 120–277V. FDOT APL 715-005-017 (ERLC/ERL1/ERL2): \"BABA Eligible\", no phase. TxDOT MPL: Project Level Certification Required. ALDOT List IV-6: ERL2_5_xx_xx_40_GRAY coded N1.",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 7 spec sheet (OLP3249, rev 07/23/25)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3249_ERL2_Gen7.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_21C730________.ies",
+          "lumcat": "ERL2_21C730________",
+          "lumens": 20100,
+          "watts": 150.0,
+          "source_url": "https://cdn.currentlighting.com/raw/upload/site/ies/ERL2_x7_Distribution.zip",
+          "note": "from Current ERL2 x7 Distribution .zip, issued 6/06/2025"
+        }
+      ],
+      "notes": "Catalog string built from the Gen 7 ordering guide: H = 347–480V, 30 = 3000K 70 CRI, D = top ANSI 7-pin with shorting cap, GRAY, D1 last. Add other options (A, R/T, etc.) before D1. A fixed 480V code (5) also exists. Watts are the .ies value; the spec sheet bases wattage on 120–277V."
+    },
+    {
+      "id": "cur-erl2g7-h-22b7-30-d1",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 7) · D1 BABA option",
+      "use": "Roadway",
+      "catalog": "ERL2-H-22-B7-30-D-GRAY-D1",
+      "optic": "Type II (B7)",
+      "voltage": "347–480V (H)",
+      "watts": 160,
+      "lumens": 21100,
+      "status": "mfr-option",
+      "evidence": "Manufacturer option, not a DOT listing: the Gen 7 ERL2 spec sheet offers ordering suffix \"D1 = BABA Compliant\" and says \"BABA compliant configurations available. D1 must be placed at the end of ordering nomenclature. Please contact factory to verify if specific configuration is compliant.\" No state DOT list reviewed prints a Gen 7 (x7 optic) ERL2 catalog number. Caltrans AML (last edit 11/8/2026) flags Gen 5 ERL2 rows as Phase 2 at 120–277V. FDOT APL 715-005-017 (ERLC/ERL1/ERL2): \"BABA Eligible\", no phase. TxDOT MPL: Project Level Certification Required. ALDOT List IV-6: ERL2_5_xx_xx_40_GRAY coded N1.",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 7 spec sheet (OLP3249, rev 07/23/25)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3249_ERL2_Gen7.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_22B730________.ies",
+          "lumcat": "ERL2_22B730________",
+          "lumens": 21100,
+          "watts": 160.0,
+          "source_url": "https://cdn.currentlighting.com/raw/upload/site/ies/ERL2_x7_Distribution.zip",
+          "note": "from Current ERL2 x7 Distribution .zip, issued 6/06/2025"
+        }
+      ],
+      "notes": "Catalog string built from the Gen 7 ordering guide: H = 347–480V, 30 = 3000K 70 CRI, D = top ANSI 7-pin with shorting cap, GRAY, D1 last. Add other options (A, R/T, etc.) before D1. A fixed 480V code (5) also exists. Watts are the .ies value; the spec sheet bases wattage on 120–277V."
+    },
+    {
+      "id": "cur-erl2g7-h-22c7-30-d1",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 7) · D1 BABA option",
+      "use": "Roadway",
+      "catalog": "ERL2-H-22-C7-30-D-GRAY-D1",
+      "optic": "Type III (C7)",
+      "voltage": "347–480V (H)",
+      "watts": 160,
+      "lumens": 21100,
+      "status": "mfr-option",
+      "evidence": "Manufacturer option, not a DOT listing: the Gen 7 ERL2 spec sheet offers ordering suffix \"D1 = BABA Compliant\" and says \"BABA compliant configurations available. D1 must be placed at the end of ordering nomenclature. Please contact factory to verify if specific configuration is compliant.\" No state DOT list reviewed prints a Gen 7 (x7 optic) ERL2 catalog number. Caltrans AML (last edit 11/8/2026) flags Gen 5 ERL2 rows as Phase 2 at 120–277V. FDOT APL 715-005-017 (ERLC/ERL1/ERL2): \"BABA Eligible\", no phase. TxDOT MPL: Project Level Certification Required. ALDOT List IV-6: ERL2_5_xx_xx_40_GRAY coded N1.",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 7 spec sheet (OLP3249, rev 07/23/25)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3249_ERL2_Gen7.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_22C730________.ies",
+          "lumcat": "ERL2_22C730________",
+          "lumens": 21100,
+          "watts": 160.0,
+          "source_url": "https://cdn.currentlighting.com/raw/upload/site/ies/ERL2_x7_Distribution.zip",
+          "note": "from Current ERL2 x7 Distribution .zip, issued 6/06/2025"
+        }
+      ],
+      "notes": "Catalog string built from the Gen 7 ordering guide: H = 347–480V, 30 = 3000K 70 CRI, D = top ANSI 7-pin with shorting cap, GRAY, D1 last. Add other options (A, R/T, etc.) before D1. A fixed 480V code (5) also exists. Watts are the .ies value; the spec sheet bases wattage on 120–277V."
+    },
+    {
+      "id": "cur-erl2g7-h-23b7-30-d1",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 7) · D1 BABA option",
+      "use": "Roadway",
+      "catalog": "ERL2-H-23-B7-30-D-GRAY-D1",
+      "optic": "Type II (B7)",
+      "voltage": "347–480V (H)",
+      "watts": 169,
+      "lumens": 22100,
+      "status": "mfr-option",
+      "evidence": "Manufacturer option, not a DOT listing: the Gen 7 ERL2 spec sheet offers ordering suffix \"D1 = BABA Compliant\" and says \"BABA compliant configurations available. D1 must be placed at the end of ordering nomenclature. Please contact factory to verify if specific configuration is compliant.\" No state DOT list reviewed prints a Gen 7 (x7 optic) ERL2 catalog number. Caltrans AML (last edit 11/8/2026) flags Gen 5 ERL2 rows as Phase 2 at 120–277V. FDOT APL 715-005-017 (ERLC/ERL1/ERL2): \"BABA Eligible\", no phase. TxDOT MPL: Project Level Certification Required. ALDOT List IV-6: ERL2_5_xx_xx_40_GRAY coded N1.",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 7 spec sheet (OLP3249, rev 07/23/25)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3249_ERL2_Gen7.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_23B730________.ies",
+          "lumcat": "ERL2_23B730________",
+          "lumens": 22100,
+          "watts": 169.0,
+          "source_url": "https://cdn.currentlighting.com/raw/upload/site/ies/ERL2_x7_Distribution.zip",
+          "note": "from Current ERL2 x7 Distribution .zip, issued 6/06/2025"
+        }
+      ],
+      "notes": "Catalog string built from the Gen 7 ordering guide: H = 347–480V, 30 = 3000K 70 CRI, D = top ANSI 7-pin with shorting cap, GRAY, D1 last. Add other options (A, R/T, etc.) before D1. A fixed 480V code (5) also exists. Watts are the .ies value; the spec sheet bases wattage on 120–277V."
+    },
+    {
+      "id": "cur-erl2g7-h-23c7-30-d1",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 7) · D1 BABA option",
+      "use": "Roadway",
+      "catalog": "ERL2-H-23-C7-30-D-GRAY-D1",
+      "optic": "Type III (C7)",
+      "voltage": "347–480V (H)",
+      "watts": 169,
+      "lumens": 22100,
+      "status": "mfr-option",
+      "evidence": "Manufacturer option, not a DOT listing: the Gen 7 ERL2 spec sheet offers ordering suffix \"D1 = BABA Compliant\" and says \"BABA compliant configurations available. D1 must be placed at the end of ordering nomenclature. Please contact factory to verify if specific configuration is compliant.\" No state DOT list reviewed prints a Gen 7 (x7 optic) ERL2 catalog number. Caltrans AML (last edit 11/8/2026) flags Gen 5 ERL2 rows as Phase 2 at 120–277V. FDOT APL 715-005-017 (ERLC/ERL1/ERL2): \"BABA Eligible\", no phase. TxDOT MPL: Project Level Certification Required. ALDOT List IV-6: ERL2_5_xx_xx_40_GRAY coded N1.",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 7 spec sheet (OLP3249, rev 07/23/25)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3249_ERL2_Gen7.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_23C730________.ies",
+          "lumcat": "ERL2_23C730________",
+          "lumens": 22100,
+          "watts": 169.0,
+          "source_url": "https://cdn.currentlighting.com/raw/upload/site/ies/ERL2_x7_Distribution.zip",
+          "note": "from Current ERL2 x7 Distribution .zip, issued 6/06/2025"
+        }
+      ],
+      "notes": "Catalog string built from the Gen 7 ordering guide: H = 347–480V, 30 = 3000K 70 CRI, D = top ANSI 7-pin with shorting cap, GRAY, D1 last. Add other options (A, R/T, etc.) before D1. A fixed 480V code (5) also exists. Watts are the .ies value; the spec sheet bases wattage on 120–277V."
+    },
+    {
+      "id": "cur-erl2g7-h-22k7-30-d1",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 7) · D1 BABA option",
+      "use": "Roadway",
+      "catalog": "ERL2-H-22-K7-30-D-GRAY-D1",
+      "optic": "Type II, visual comfort lens (K7)",
+      "voltage": "347–480V (H)",
+      "watts": 160,
+      "lumens": 19622,
+      "status": "mfr-option",
+      "evidence": "Manufacturer option, not a DOT listing: the Gen 7 ERL2 spec sheet offers ordering suffix \"D1 = BABA Compliant\" and says \"BABA compliant configurations available. D1 must be placed at the end of ordering nomenclature. Please contact factory to verify if specific configuration is compliant.\" No state DOT list reviewed prints a Gen 7 (x7 optic) ERL2 catalog number. Caltrans AML (last edit 11/8/2026) flags Gen 5 ERL2 rows as Phase 2 at 120–277V. FDOT APL 715-005-017 (ERLC/ERL1/ERL2): \"BABA Eligible\", no phase. TxDOT MPL: Project Level Certification Required. ALDOT List IV-6: ERL2_5_xx_xx_40_GRAY coded N1.",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 7 spec sheet (OLP3249, rev 07/23/25)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3249_ERL2_Gen7.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_22K730________.ies",
+          "lumcat": "ERL2_22K730________",
+          "lumens": 19622,
+          "watts": 160.0,
+          "source_url": "https://cdn.currentlighting.com/raw/upload/site/ies/ERL2_x7_Distribution.zip",
+          "note": "from Current ERL2 x7 Distribution .zip, issued 6/06/2025"
+        }
+      ],
+      "notes": "Catalog string built from the Gen 7 ordering guide: H = 347–480V, 30 = 3000K 70 CRI, D = top ANSI 7-pin with shorting cap, GRAY, D1 last. Add other options (A, R/T, etc.) before D1. A fixed 480V code (5) also exists. Watts are the .ies value; the spec sheet bases wattage on 120–277V."
+    },
+    {
+      "id": "cur-erl2g7-h-22l7-30-d1",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 7) · D1 BABA option",
+      "use": "Roadway",
+      "catalog": "ERL2-H-22-L7-30-D-GRAY-D1",
+      "optic": "Type III, visual comfort lens (L7)",
+      "voltage": "347–480V (H)",
+      "watts": 160,
+      "lumens": 19623,
+      "status": "mfr-option",
+      "evidence": "Manufacturer option, not a DOT listing: the Gen 7 ERL2 spec sheet offers ordering suffix \"D1 = BABA Compliant\" and says \"BABA compliant configurations available. D1 must be placed at the end of ordering nomenclature. Please contact factory to verify if specific configuration is compliant.\" No state DOT list reviewed prints a Gen 7 (x7 optic) ERL2 catalog number. Caltrans AML (last edit 11/8/2026) flags Gen 5 ERL2 rows as Phase 2 at 120–277V. FDOT APL 715-005-017 (ERLC/ERL1/ERL2): \"BABA Eligible\", no phase. TxDOT MPL: Project Level Certification Required. ALDOT List IV-6: ERL2_5_xx_xx_40_GRAY coded N1.",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 7 spec sheet (OLP3249, rev 07/23/25)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3249_ERL2_Gen7.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_22L730________.ies",
+          "lumcat": "ERL2_22L730________",
+          "lumens": 19623,
+          "watts": 160.0,
+          "source_url": "https://cdn.currentlighting.com/raw/upload/site/ies/ERL2_x7_Distribution.zip",
+          "note": "from Current ERL2 x7 Distribution .zip, issued 6/06/2025"
+        }
+      ],
+      "notes": "Catalog string built from the Gen 7 ordering guide: H = 347–480V, 30 = 3000K 70 CRI, D = top ANSI 7-pin with shorting cap, GRAY, D1 last. Add other options (A, R/T, etc.) before D1. A fixed 480V code (5) also exists. Watts are the .ies value; the spec sheet bases wattage on 120–277V."
+    },
+    {
       "id": "cur-erhm02-5-30c3-730",
       "group": "Current Lighting",
       "manufacturer": "Current Lighting",

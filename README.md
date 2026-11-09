@@ -21,7 +21,8 @@ or for project-level certification were removed on 2026-11-09 and are kept, unre
 
 `fixtures-3k.html` also has a **Current Lighting and Cree Lighting** section (`focus` in `data/fixtures.json`): 480V 3000K
 roadway (about 20,000 lm, Type II/III) and high mast (about 250–500W) configurations with `.ies` files in `ies/current/` and
-`ies/cree/`, each with what the state DOT lists actually say. None of those exact configurations has a DOT Phase 2 statement.
+`ies/cree/`, each with what the state DOT lists actually say. None of those exact configurations has a DOT Phase 2 statement. Gen 7 ERL2 rows carry Current's
+"D1 = BABA Compliant" ordering suffix (manufacturer option, no DOT listing).
 
 Fixture page first source: TxDOT's Roadway Illumination MPL, "Compliant v5" entries (projects obligated on/after Oct 1, 2026).
 
