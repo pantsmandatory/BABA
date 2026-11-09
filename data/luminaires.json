@@ -462,7 +462,7 @@
   {
     "id": "st480-al-iv6-2026-11-cooper-lighting-solutions-archeon",
     "manufacturer": "Cooper Lighting Solutions",
-    "model": "Archeon (4 listed 480V configurations)",
+    "model": "Archeon (4 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -487,7 +487,7 @@
   {
     "id": "st480-al-iv6-2026-11-acuity-brands-autobahn-atb",
     "manufacturer": "Acuity Brands",
-    "model": "Autobahn ATB (2 listed 480V configurations)",
+    "model": "Autobahn ATB (2 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -512,7 +512,7 @@
   {
     "id": "st480-al-iv6-2026-11-cooper-lighting-solutions-galleon",
     "manufacturer": "Cooper Lighting Solutions",
-    "model": "Galleon (2 listed 480V configurations)",
+    "model": "Galleon (2 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -537,7 +537,7 @@
   {
     "id": "st480-al-iv6-2026-11-acuity-brands-mongoose-led-medium-mgledm",
     "manufacturer": "Acuity Brands",
-    "model": "Mongoose LED Medium MGLEDM (1 listed 480V configuration)",
+    "model": "Mongoose LED Medium MGLEDM (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -562,7 +562,7 @@
   {
     "id": "st480-al-iv6-2026-11-cooper-lighting-solutions-navion",
     "manufacturer": "Cooper Lighting Solutions",
-    "model": "Navion (2 listed 480V configurations)",
+    "model": "Navion (2 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -587,7 +587,7 @@
   {
     "id": "st480-al-iv6-2026-11-acuity-brands-hmao-led-hmled-",
     "manufacturer": "Acuity Brands",
-    "model": "HMAO LED (HMLED) (1 listed 480V configuration)",
+    "model": "HMAO LED (HMLED) (1 configuration on the list)",
     "product_type": "LED high mast luminaire",
     "states": [
       {
@@ -612,7 +612,7 @@
   {
     "id": "st480-al-iv6-2026-11-cooper-lighting-solutions-galleon-wallpack-upw",
     "manufacturer": "Cooper Lighting Solutions",
-    "model": "Galleon Wallpack UPW (1 listed 480V configuration)",
+    "model": "Galleon Wallpack UPW (1 configuration on the list)",
     "product_type": "LED underpass luminaire",
     "states": [
       {
@@ -637,7 +637,7 @@
   {
     "id": "st480-al-iv6-2026-11-acuity-brands-wall-connect-led-wcng",
     "manufacturer": "Acuity Brands",
-    "model": "Wall Connect LED WCNG (1 listed 480V configuration)",
+    "model": "Wall Connect LED WCNG (1 configuration on the list)",
     "product_type": "LED underpass luminaire",
     "states": [
       {
@@ -662,7 +662,7 @@
   {
     "id": "st480-fl-apl-led-cooper-lighting-solutions-archeon",
     "manufacturer": "Cooper Lighting Solutions",
-    "model": "Archeon (1 listed 480V configuration)",
+    "model": "Archeon (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -687,7 +687,7 @@
   {
     "id": "st480-fl-apl-led-cooper-lighting-solutions-archeon-contemporary-arch1-arch2-arch3-arch4",
     "manufacturer": "Cooper Lighting Solutions",
-    "model": "Archeon Contemporary ARCH1/ARCH2/ARCH3/ARCH4 (1 listed 480V configuration)",
+    "model": "Archeon Contemporary ARCH1/ARCH2/ARCH3/ARCH4 (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -712,7 +712,7 @@
   {
     "id": "st480-fl-apl-led-american-electric-acuity-brands-autobahn",
     "manufacturer": "American Electric (Acuity Brands)",
-    "model": "Autobahn (1 listed 480V configuration)",
+    "model": "Autobahn (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -737,7 +737,7 @@
   {
     "id": "st480-fl-apl-led-leotek-greencobra",
     "manufacturer": "Leotek",
-    "model": "GreenCobra (1 listed 480V configuration)",
+    "model": "GreenCobra (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -762,7 +762,7 @@
   {
     "id": "st480-fl-apl-led-acuity-brands-mongoose-medium-mgledm",
     "manufacturer": "Acuity Brands",
-    "model": "Mongoose Medium MGLEDM (1 listed 480V configuration)",
+    "model": "Mongoose Medium MGLEDM (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -787,7 +787,7 @@
   {
     "id": "st480-fl-apl-led-cooper-lighting-solutions-navion",
     "manufacturer": "Cooper Lighting Solutions",
-    "model": "Navion (1 listed 480V configuration)",
+    "model": "Navion (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -812,7 +812,7 @@
   {
     "id": "st480-fl-apl-led-current-lighting-evolve-erls",
     "manufacturer": "Current Lighting",
-    "model": "Evolve ERLS (1 listed 480V configuration)",
+    "model": "Evolve ERLS (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -837,7 +837,7 @@
   {
     "id": "st480-fl-apl-led-chm-lighting-cled2",
     "manufacturer": "CHM Lighting",
-    "model": "CLED2 (1 listed 480V configuration)",
+    "model": "CLED2 (1 configuration on the list)",
     "product_type": "LED high mast luminaire",
     "states": [
       {
@@ -862,7 +862,7 @@
   {
     "id": "st480-fl-apl-led-signify-north-america-corporation-highfocus",
     "manufacturer": "Signify North America Corporation",
-    "model": "HighFocus (1 listed 480V configuration)",
+    "model": "HighFocus (1 configuration on the list)",
     "product_type": "LED high mast luminaire",
     "states": [
       {
@@ -887,7 +887,7 @@
   {
     "id": "st480-fl-apl-led-acuity-brands-hmled4",
     "manufacturer": "Acuity Brands",
-    "model": "HMLED4 (1 listed 480V configuration)",
+    "model": "HMLED4 (1 configuration on the list)",
     "product_type": "LED high mast luminaire",
     "states": [
       {
@@ -912,7 +912,7 @@
   {
     "id": "st480-nc-apl-led-chm-lighting-cled2",
     "manufacturer": "CHM Lighting",
-    "model": "CLED2 (1 listed 480V configuration)",
+    "model": "CLED2 (1 configuration on the list)",
     "product_type": "LED high mast luminaire",
     "states": [
       {
@@ -937,7 +937,7 @@
   {
     "id": "st480-pa-b15-2026-11-acuity-brands-autobahn-atb0",
     "manufacturer": "Acuity Brands",
-    "model": "Autobahn ATB0 (1 listed 480V configuration)",
+    "model": "Autobahn ATB0 (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -962,7 +962,7 @@
   {
     "id": "st480-pa-b15-2026-11-acuity-brands-autobahn-atb2",
     "manufacturer": "Acuity Brands",
-    "model": "Autobahn ATB2 (1 listed 480V configuration)",
+    "model": "Autobahn ATB2 (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -987,7 +987,7 @@
   {
     "id": "st480-mo-apl-2026-06-acuity-brands-autobahn-atb0",
     "manufacturer": "Acuity Brands",
-    "model": "Autobahn ATB0 (2 listed 480V configurations)",
+    "model": "Autobahn ATB0 (2 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1012,7 +1012,7 @@
   {
     "id": "st480-ca-aml-led-eoi-esufa",
     "manufacturer": "EOI",
-    "model": "ESUFA (1 listed 480V configuration)",
+    "model": "ESUFA (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1037,7 +1037,7 @@
   {
     "id": "st480-ca-aml-led-ge-lighting-erl2",
     "manufacturer": "GE Lighting",
-    "model": "ERL2 (1 listed 480V configuration)",
+    "model": "ERL2 (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1062,7 +1062,7 @@
   {
     "id": "st480-ca-aml-led-leotek-ec3",
     "manufacturer": "Leotek",
-    "model": "EC3 (1 listed 480V configuration)",
+    "model": "EC3 (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1087,7 +1087,7 @@
   {
     "id": "st480-ca-aml-led-solarmax-smx-wie-ll5",
     "manufacturer": "SolarMax",
-    "model": "SMX-WiE LL5 (10 listed 480V configurations)",
+    "model": "SMX-WiE LL5 (10 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1112,7 +1112,7 @@
   {
     "id": "st480-ca-aml-led-acuity-brands-atb0",
     "manufacturer": "Acuity Brands",
-    "model": "ATB0 (8 listed 480V configurations)",
+    "model": "ATB0 (8 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1137,7 +1137,7 @@
   {
     "id": "st480-ca-aml-led-current-lighting-erl2",
     "manufacturer": "Current Lighting",
-    "model": "ERL2 (5 listed 480V configurations)",
+    "model": "ERL2 (5 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1162,7 +1162,7 @@
   {
     "id": "st480-ca-aml-led-leotek-gcl1",
     "manufacturer": "Leotek",
-    "model": "GCL1 (3 listed 480V configurations)",
+    "model": "GCL1 (3 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1187,7 +1187,7 @@
   {
     "id": "st480-ca-aml-led-current-lighting-erl1",
     "manufacturer": "Current Lighting",
-    "model": "ERL1 (5 listed 480V configurations)",
+    "model": "ERL1 (5 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1212,7 +1212,7 @@
   {
     "id": "st480-ca-aml-led-leotek-gcm3",
     "manufacturer": "Leotek",
-    "model": "GCM3 (1 listed 480V configuration)",
+    "model": "GCM3 (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1237,7 +1237,7 @@
   {
     "id": "st480-ca-aml-led-leotek-gcj2",
     "manufacturer": "Leotek",
-    "model": "GCJ2 (1 listed 480V configuration)",
+    "model": "GCJ2 (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1262,7 +1262,7 @@
   {
     "id": "st480-ca-aml-led-acuity-brands-atb2",
     "manufacturer": "Acuity Brands",
-    "model": "ATB2 (2 listed 480V configurations)",
+    "model": "ATB2 (2 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1287,7 +1287,7 @@
   {
     "id": "st480-ca-aml-led-leotek-gc2",
     "manufacturer": "Leotek",
-    "model": "GC2 (3 listed 480V configurations)",
+    "model": "GC2 (3 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1312,7 +1312,7 @@
   {
     "id": "st480-ca-aml-led-leotek-gcj3",
     "manufacturer": "Leotek",
-    "model": "GCJ3 (1 listed 480V configuration)",
+    "model": "GCJ3 (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1337,7 +1337,7 @@
   {
     "id": "st480-ca-aml-led-leotek-gcj4",
     "manufacturer": "Leotek",
-    "model": "GCJ4 (1 listed 480V configuration)",
+    "model": "GCJ4 (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1362,7 +1362,7 @@
   {
     "id": "st480-wa-eapl-2026-10-acuity-brands-atb2",
     "manufacturer": "Acuity Brands",
-    "model": "ATB2 (7 listed 480V configurations)",
+    "model": "ATB2 (7 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1387,7 +1387,7 @@
   {
     "id": "st480-wa-eapl-2026-10-acuity-brands-acm",
     "manufacturer": "Acuity Brands",
-    "model": "ACM (2 listed 480V configurations)",
+    "model": "ACM (2 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1412,7 +1412,7 @@
   {
     "id": "st480-wa-eapl-2026-10-acuity-brands-atbm",
     "manufacturer": "Acuity Brands",
-    "model": "ATBM (1 listed 480V configuration)",
+    "model": "ATBM (1 configuration on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {
@@ -1437,7 +1437,7 @@
   {
     "id": "st480-wa-eapl-2026-10-acuity-brands-acl",
     "manufacturer": "Acuity Brands",
-    "model": "ACL (2 listed 480V configurations)",
+    "model": "ACL (2 configurations on the list)",
     "product_type": "LED roadway luminaire",
     "states": [
       {

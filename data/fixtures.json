@@ -1783,7 +1783,7 @@
       "cct": 4000,
       "cri": null,
       "voltage": 480,
-      "voltage_inferred": false,
+      "voltage_inferred": true,
       "catalog": "HMLEDx-xx-4K-AH-G-xx",
       "distribution": "unspecified",
       "watts": "unspecified",
@@ -1803,6 +1803,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Y2 (legend: \"Y = Yes. Item is BABA compliant.\" / \"Y2 = Manufactured Product\")",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: AH (Holophane auto-sensing 347/480V per older Holophane cut sheet; current HMLED4 uses HVOLT) - decode medium confidence",
         "Phase inferred: legend distinguishes N2 = \"Complies with 'final assembly requirement' but does not meet October 1, 2026, '55% rule'\" from Y; Y2 in the Nov 5 2026 revision therefore read as meeting both final assembly and 55% rule.  Date approved 01/16. Product name on list: HMAO LED."
       ]
     },
@@ -1835,7 +1836,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Y2 (legend: \"Y = Yes. Item is BABA compliant.\" / \"Y2 = Manufactured Product\")",
-        "480V not shown on the listing; inferred: x (voltage not fixed; Navion family offers 8 = 480V)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: x (voltage not fixed; Navion family offers 8 = 480V)",
         "Phase inferred: legend distinguishes N2 = \"Complies with 'final assembly requirement' but does not meet October 1, 2026, '55% rule'\" from Y; Y2 in the Nov 5 2026 revision therefore read as meeting both final assembly and 55% rule. Voltage left open in listing; included because family offers 480V. Date approved 07/15. Product name on list: NAVION."
       ]
     },
@@ -1932,7 +1933,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Y2 (legend: \"Y = Yes. Item is BABA compliant.\" / \"Y2 = Manufactured Product\")",
-        "480V not shown on the listing; inferred: x (voltage not fixed; Archeon offers 8 = 480V)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: x (voltage not fixed; Archeon offers 8 = 480V)",
         "Phase inferred: legend distinguishes N2 = \"Complies with 'final assembly requirement' but does not meet October 1, 2026, '55% rule'\" from Y; Y2 in the Nov 5 2026 revision therefore read as meeting both final assembly and 55% rule. Utility-pole refit table; voltage open. Date approved 5/19. Product name on list: ARCHEON."
       ]
     },
@@ -1965,7 +1966,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Y2 (legend: \"Y = Yes. Item is BABA compliant.\" / \"Y2 = Manufactured Product\")",
-        "480V not shown on the listing; inferred: x (voltage not fixed; Archeon offers 8 = 480V)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: x (voltage not fixed; Archeon offers 8 = 480V)",
         "Phase inferred: legend distinguishes N2 = \"Complies with 'final assembly requirement' but does not meet October 1, 2026, '55% rule'\" from Y; Y2 in the Nov 5 2026 revision therefore read as meeting both final assembly and 55% rule. Utility-pole refit table; voltage open. Date approved 5/19. Product name on list: ARCHEON."
       ]
     },
@@ -1998,7 +1999,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: BABA Eligible: Eligible; Limitation: \"BABA Approved for job lettings on or before December 31, 2026.\"",
-        "480V not shown on the listing; inferred: not listed on APL; family offers 480V (Cooper code 8; e.g. ALDOT ARCH-x-PA3-xxx-740-8-xx)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (Cooper code 8; e.g. ALDOT ARCH-x-PA3-xxx-740-8-xx)",
         "No CCT on the listing. APL entry is family-level; no CCT on listing",
         "Phase1: Eligible only for lettings through 12/31/2026 (time-limited; not shown as meeting 55% rule beyond that). Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
       ]
@@ -2032,7 +2033,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: BABA Eligible: Eligible; no limitation listed",
-        "480V not shown on the listing; inferred: not listed on APL; family offers 480V (TxDOT MPL lists BABA-ARCH1/ARCH3 at 480V per user context)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (TxDOT MPL lists BABA-ARCH1/ARCH3 at 480V per user context)",
         "No CCT on the listing. APL entry is family-level; no CCT on listing",
         "Approval date 7/22/2025. Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
       ]
@@ -2066,7 +2067,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: BABA Eligible: Eligible; no limitation listed",
-        "480V not shown on the listing; inferred: not listed on APL; family offers 480V (ALDOT ATBx-x-480)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (ALDOT ATBx-x-480)",
         "No CCT on the listing. APL entry is family-level; no CCT on listing",
         "APL comments: \"ATB0 & ATB2 require catalog number ATB#-P### (check \"P\" designation).\" \"All models require highest surge protection option and Osram, Nichia, or Cree brand LEDs.\" Approval 6/7/2016. Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
       ]
@@ -2100,7 +2101,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: BABA Eligible: Eligible; Limitation: \"BABA Approved for job lettings on or before December 31, 2026.\"",
-        "480V not shown on the listing; inferred: not listed on APL; family offers HV 347-480V (ALDOT GC2-96G-HV)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers HV 347-480V (ALDOT GC2-96G-HV)",
         "No CCT on the listing. APL entry is family-level; no CCT on listing",
         "Phase1: Eligible only for lettings through 12/31/2026 (time-limited; not shown as meeting 55% rule beyond that). Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
       ]
@@ -2134,7 +2135,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: BABA Eligible: Eligible; no limitation listed",
-        "480V not shown on the listing; inferred: not listed on APL; family offers 480V (ALDOT MGLEDM-xx-4K-480)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (ALDOT MGLEDM-xx-4K-480)",
         "No CCT on the listing. APL entry is family-level; no CCT on listing",
         " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
       ]
@@ -2168,7 +2169,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: BABA Eligible: Eligible; no limitation listed",
-        "480V not shown on the listing; inferred: not listed on APL; family offers 8 = 480V (Cooper Navion spec sheet)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 8 = 480V (Cooper Navion spec sheet)",
         "No CCT on the listing. APL entry is family-level; no CCT on listing",
         " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
       ]
@@ -2202,7 +2203,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: BABA Eligible: Eligible; no limitation listed",
-        "480V not shown on the listing; inferred: not listed on APL; ERLS voltage options include 347-480V and 277-480V (Current product listing per search snippet)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; ERLS voltage options include 347-480V and 277-480V (Current product listing per search snippet)",
         "No CCT on the listing. APL entry is family-level; no CCT on listing",
         " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
       ]
@@ -2236,7 +2237,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: BABA Eligible: Eligible; Limitation: \"BABA Approved for job lettings on or before December 31, 2026.\"",
-        "480V not shown on the listing; inferred: not listed on APL; 480V capability per TxDOT MPL CHM CLED2 (user context); CHM voltage code not confirmed",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; 480V capability per TxDOT MPL CHM CLED2 (user context); CHM voltage code not confirmed",
         "No CCT on the listing. APL entry is family-level; no CCT on listing",
         "Phase1: Eligible only for lettings through 12/31/2026 (time-limited; not shown as meeting 55% rule beyond that). Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
       ]
@@ -2270,7 +2271,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: BABA Eligible: Eligible; no limitation listed",
-        "480V not shown on the listing; inferred: not listed on APL; family offers 480V (ALDOT HFL-xxxx-G2-xxx-480-DMG)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (ALDOT HFL-xxxx-G2-xxx-480-DMG)",
         "No CCT on the listing. APL entry is family-level; no CCT on listing",
         " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
       ]
@@ -2304,7 +2305,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: BABA Eligible: Eligible; no limitation listed",
-        "480V not shown on the listing; inferred: not listed on APL; HMLED4 offers HVOLT 347-480V / XVOLT 277-480V (Acuity spec sheet per search snippet)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; HMLED4 offers HVOLT 347-480V / XVOLT 277-480V (Acuity spec sheet per search snippet)",
         "No CCT on the listing. APL entry is family-level; no CCT on listing",
         " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
       ]
@@ -2338,7 +2339,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: BABA: Compliant",
-        "480V not shown on the listing; inferred: X (voltage code not decoded; CLED2 family 480V-capable per TxDOT MPL)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: X (voltage code not decoded; CLED2 family 480V-capable per TxDOT MPL)",
         "Status: \"Approved for Provisional Use\". APL has a BABA column with values Compliant / Not Compliant / Unknown; no phase detail."
       ]
     },
@@ -2351,7 +2352,7 @@
       "cct": "unspecified",
       "cri": null,
       "voltage": 480,
-      "voltage_inferred": false,
+      "voltage_inferred": true,
       "catalog": "Autobahn ATB0",
       "distribution": "not listed",
       "watts": "not listed",
@@ -2371,6 +2372,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Product must be ordered with the BAA option to receive BABA/BAA product certification of the completed manufactured product.",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: List gives no voltage. ATB0 catalog voltage options: MVOLT 120-277V, 347, 480 ('480 480V'), XVOLT 277V-480V (XVOLT only with P452/P453/P454; 480V not with P201). BAA option = 'Buy America(n) Act Compliant'.",
         "No CCT on the listing. List gives no CCT. ATB0 spec sheet (Rev. 12/19/22, copy fetched from ppm.opkansas.org/wiki/images/TRF_PQL_SL_CAT_AmericanElectric_AutobahnATB0ClassE.pdf): '(Blank) 4000K CCT, 70 CRI Min.'; '3K 3000K CCT' optional. Default = 4000K.",
         "Family-level listing ('Conventional LED Luminaire'); DMSCF column 'No'. BABA eligibility is conditional on ordering the BAA option; Bulletin 15 gives no Phase 1/Phase 2 (Oct 2026 / 55%) detail. 480V capability and CCT come from the manufacturer catalog, not the PennDOT list."
       ]
@@ -2384,7 +2386,7 @@
       "cct": "unspecified",
       "cri": null,
       "voltage": 480,
-      "voltage_inferred": false,
+      "voltage_inferred": true,
       "catalog": "Autobahn ATB2",
       "distribution": "not listed",
       "watts": "not listed",
@@ -2404,6 +2406,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Product must be ordered with the BAA option to receive BABA/BAA product certification of the completed manufactured product.",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: List gives no voltage. ATB2 catalog voltage options: MVOLT 120-277V, 347, 480 ('480 480V'), XVOLT 277V-480V (XVOLT only with P601/P602). Catalog: 'BABA - Build America Buy America: Product with the BAA option also ... Build America, Buy America Act' and 'qualifies as manufactured in the United States under DOT Buy America regulations'.",
         "No CCT on the listing. List gives no CCT. ATB2 spec sheet (Rev. 04/16/24, copy fetched from connect.ncdot.gov .../AEL ATB2 Luminaire.pdf): '(Blank) 4000K CCT, 70 CRI Min.'; '3K 3000K CCT' optional. Default = 4000K.",
         "Family-level listing ('Conventional LED Luminaire'); DMSCF column 'No'. BABA eligibility is conditional on ordering the BAA option; Bulletin 15 gives no Phase 1/Phase 2 (Oct 2026 / 55%) detail. 480V capability and CCT come from the manufacturer catalog, not the PennDOT list."
       ]
@@ -2565,7 +2568,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 6/30/2028"
       ]
     },
@@ -2578,7 +2581,7 @@
       "cct": 3000,
       "cri": 70,
       "voltage": 480,
-      "voltage_inferred": false,
+      "voltage_inferred": true,
       "catalog": "SMX-134WiE-XV-LL5-00-3070-T302-P",
       "distribution": null,
       "watts": 134,
@@ -2598,6 +2601,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: XV (SolarMax: 120-480VAC, 134W only per SolarMax spec sheet snippet)",
         "AML authorization expires 6/30/2028"
       ]
     },
@@ -2641,8 +2645,8 @@
       "product_type": "LED roadway luminaire",
       "cct": 3000,
       "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
+      "voltage": "120-277",
+      "voltage_inferred": false,
       "catalog": "Conventional Highway - ERL2-0*-23E5-30-D-GRAY-BL ; Expressway - ERL2-0*-21E5-30-D-GRAY-BL",
       "distribution": null,
       "watts": "177/160",
@@ -2661,8 +2665,8 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
+        "Current voltage code 0 = 120–277V (H = 347–480V), so this listing is not a 480V configuration.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: '0*' voltage placeholder in listed code (ERL '0' = 120-277V); 480V version uses voltage code 'H' (e.g. WSDOT E-APL lists ERL1-H/ERL2-H as 480V)",
         "480V capability inferred from manufacturer voltage code H (listed on WSDOT E-APL); Caltrans row lists the 0* (120-277V) code - confirm the 480V H-code is covered by this AML authorization; AML authorization expires 6/1/2029"
       ]
     },
@@ -2695,7 +2699,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
       ]
     },
@@ -2728,7 +2732,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
         "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
       ]
     },
@@ -2772,8 +2776,8 @@
       "product_type": "LED roadway luminaire",
       "cct": 3000,
       "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
+      "voltage": "120-277",
+      "voltage_inferred": false,
       "catalog": "ERL2-0*-18E5-30-D-GRAY-BL",
       "distribution": null,
       "watts": 130,
@@ -2792,8 +2796,8 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
+        "Current voltage code 0 = 120–277V (H = 347–480V), so this listing is not a 480V configuration.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: '0*' voltage placeholder in listed code (ERL '0' = 120-277V); 480V version uses voltage code 'H' (e.g. WSDOT E-APL lists ERL1-H/ERL2-H as 480V)",
         "480V capability inferred from manufacturer voltage code H (listed on WSDOT E-APL); Caltrans row lists the 0* (120-277V) code - confirm the 480V H-code is covered by this AML authorization; AML authorization expires 6/1/2029"
       ]
     },
@@ -2826,7 +2830,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
       ]
     },
@@ -2859,7 +2863,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
         "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
       ]
     },
@@ -2903,8 +2907,8 @@
       "product_type": "LED roadway luminaire",
       "cct": 3000,
       "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
+      "voltage": "120-277",
+      "voltage_inferred": false,
       "catalog": "ERL2-0*-21D5-30-D-GRAY-BL",
       "distribution": null,
       "watts": 160,
@@ -2923,8 +2927,8 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
+        "Current voltage code 0 = 120–277V (H = 347–480V), so this listing is not a 480V configuration.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: '0*' voltage placeholder in listed code (ERL '0' = 120-277V); 480V version uses voltage code 'H' (e.g. WSDOT E-APL lists ERL1-H/ERL2-H as 480V)",
         "480V capability inferred from manufacturer voltage code H (listed on WSDOT E-APL); Caltrans row lists the 0* (120-277V) code - confirm the 480V H-code is covered by this AML authorization; AML authorization expires 6/1/2029"
       ]
     },
@@ -2957,7 +2961,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
       ]
     },
@@ -3001,8 +3005,8 @@
       "product_type": "LED roadway luminaire",
       "cct": 3000,
       "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
+      "voltage": "120-277",
+      "voltage_inferred": false,
       "catalog": "ERL1-0*-16D530-D-GRAY-BL",
       "distribution": null,
       "watts": 130,
@@ -3021,8 +3025,8 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
+        "Current voltage code 0 = 120–277V (H = 347–480V), so this listing is not a 480V configuration.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: '0*' voltage placeholder in listed code (ERL '0' = 120-277V); 480V version uses voltage code 'H' (e.g. WSDOT E-APL lists ERL1-H/ERL2-H as 480V)",
         "480V capability inferred from manufacturer voltage code H (listed on WSDOT E-APL); Caltrans row lists the 0* (120-277V) code - confirm the 480V H-code is covered by this AML authorization; AML authorization expires 6/1/2029"
       ]
     },
@@ -3055,7 +3059,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
       ]
     },
@@ -3088,7 +3092,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
         "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
       ]
     },
@@ -3132,8 +3136,8 @@
       "product_type": "LED roadway luminaire",
       "cct": 3000,
       "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
+      "voltage": "120-277",
+      "voltage_inferred": false,
       "catalog": "ERL1-0*-06D5-30-D-GRAY-BL",
       "distribution": null,
       "watts": 46,
@@ -3152,8 +3156,8 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
+        "Current voltage code 0 = 120–277V (H = 347–480V), so this listing is not a 480V configuration.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: '0*' voltage placeholder in listed code (ERL '0' = 120-277V); 480V version uses voltage code 'H' (e.g. WSDOT E-APL lists ERL1-H/ERL2-H as 480V)",
         "480V capability inferred from manufacturer voltage code H (listed on WSDOT E-APL); Caltrans row lists the 0* (120-277V) code - confirm the 480V H-code is covered by this AML authorization; AML authorization expires 6/1/2029"
       ]
     },
@@ -3186,7 +3190,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
       ]
     },
@@ -3219,7 +3223,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
         "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
       ]
     },
@@ -3263,8 +3267,8 @@
       "product_type": "LED roadway luminaire",
       "cct": 3000,
       "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
+      "voltage": "120-277",
+      "voltage_inferred": false,
       "catalog": "ERL2-0*32D5-30-D-GRAY-BL",
       "distribution": null,
       "watts": 265,
@@ -3283,8 +3287,8 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
+        "Current voltage code 0 = 120–277V (H = 347–480V), so this listing is not a 480V configuration.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: '0*' voltage placeholder in listed code (ERL '0' = 120-277V); 480V version uses voltage code 'H' (e.g. WSDOT E-APL lists ERL1-H/ERL2-H as 480V)",
         "480V capability inferred from manufacturer voltage code H (listed on WSDOT E-APL); Caltrans row lists the 0* (120-277V) code - confirm the 480V H-code is covered by this AML authorization; AML authorization expires 6/1/2029"
       ]
     },
@@ -3317,7 +3321,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
       ]
     },
@@ -3350,7 +3354,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
         "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
       ]
     },
@@ -3394,8 +3398,8 @@
       "product_type": "LED roadway luminaire",
       "cct": 3000,
       "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
+      "voltage": "120-277",
+      "voltage_inferred": false,
       "catalog": "ERL2-0*-27E5-30-D-GRAY-BL",
       "distribution": null,
       "watts": 212,
@@ -3414,8 +3418,8 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
+        "Current voltage code 0 = 120–277V (H = 347–480V), so this listing is not a 480V configuration.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: '0*' voltage placeholder in listed code (ERL '0' = 120-277V); 480V version uses voltage code 'H' (e.g. WSDOT E-APL lists ERL1-H/ERL2-H as 480V)",
         "480V capability inferred from manufacturer voltage code H (listed on WSDOT E-APL); Caltrans row lists the 0* (120-277V) code - confirm the 480V H-code is covered by this AML authorization; AML authorization expires 6/1/2029"
       ]
     },
@@ -3448,7 +3452,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
       ]
     },
@@ -3481,7 +3485,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
         "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
       ]
     },
@@ -3525,8 +3529,8 @@
       "product_type": "LED roadway luminaire",
       "cct": 3000,
       "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
+      "voltage": "120-277",
+      "voltage_inferred": false,
       "catalog": "ERL1-0*-09D5-30-D-GRAY-BL",
       "distribution": null,
       "watts": 68,
@@ -3545,8 +3549,8 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
+        "Current voltage code 0 = 120–277V (H = 347–480V), so this listing is not a 480V configuration.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: '0*' voltage placeholder in listed code (ERL '0' = 120-277V); 480V version uses voltage code 'H' (e.g. WSDOT E-APL lists ERL1-H/ERL2-H as 480V)",
         "480V capability inferred from manufacturer voltage code H (listed on WSDOT E-APL); Caltrans row lists the 0* (120-277V) code - confirm the 480V H-code is covered by this AML authorization; AML authorization expires 6/1/2029"
       ]
     },
@@ -3579,7 +3583,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
       ]
     },
@@ -3612,7 +3616,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
         "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
       ]
     },
@@ -3677,7 +3681,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
       ]
     },
@@ -3710,7 +3714,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
         "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
       ]
     },
@@ -3722,8 +3726,8 @@
       "product_type": "LED roadway luminaire",
       "cct": 3000,
       "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
+      "voltage": "120-277",
+      "voltage_inferred": false,
       "catalog": "ERL1-0*-16D5-30-D-GRAY-BL",
       "distribution": null,
       "watts": 130,
@@ -3742,8 +3746,8 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
+        "Current voltage code 0 = 120–277V (H = 347–480V), so this listing is not a 480V configuration.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: '0*' voltage placeholder in listed code (ERL '0' = 120-277V); 480V version uses voltage code 'H' (e.g. WSDOT E-APL lists ERL1-H/ERL2-H as 480V)",
         "480V capability inferred from manufacturer voltage code H (listed on WSDOT E-APL); Caltrans row lists the 0* (120-277V) code - confirm the 480V H-code is covered by this AML authorization; AML authorization expires 6/1/2029"
       ]
     },
@@ -3787,8 +3791,8 @@
       "product_type": "LED roadway luminaire",
       "cct": 3000,
       "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
+      "voltage": "120-277",
+      "voltage_inferred": false,
       "catalog": "ERL1-0*-11D5-30-D-GRAY-BL",
       "distribution": null,
       "watts": 87,
@@ -3807,8 +3811,8 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
+        "Current voltage code 0 = 120–277V (H = 347–480V), so this listing is not a 480V configuration.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: '0*' voltage placeholder in listed code (ERL '0' = 120-277V); 480V version uses voltage code 'H' (e.g. WSDOT E-APL lists ERL1-H/ERL2-H as 480V)",
         "480V capability inferred from manufacturer voltage code H (listed on WSDOT E-APL); Caltrans row lists the 0* (120-277V) code - confirm the 480V H-code is covered by this AML authorization; AML authorization expires 6/1/2029"
       ]
     },
@@ -3841,7 +3845,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
       ]
     },
@@ -3874,7 +3878,7 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "480V not shown on the listing; inferred: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
         "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
       ]
     },

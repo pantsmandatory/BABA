@@ -106,7 +106,7 @@ def row(fx, sources, show_listed, main):
     lm = (("≈" if fx.get("lumens_estimated") else "") + f"{lumens:,}") if isinstance(lumens, (int, float)) else "—"
     watts = fx.get("watts")
     notes = " · ".join(fx.get("caveats", []))
-    volt = "480V*" if fx.get("voltage_inferred") else "480V"
+    volt = "not shown" if fx.get("voltage_inferred") else "480V"
     search = " ".join(str(x) for x in [fx.get("manufacturer"), fx.get("brand"), fx.get("family"), fx.get("catalog"),
                                        d.get("listed_catalog"), kind, st, STATE_NAMES.get(st, ""), notes] if x).lower()
     who = fx.get("manufacturer", "") + (f' · {fx["brand"]}' if fx.get("brand") else "")
@@ -121,7 +121,7 @@ def row(fx, sources, show_listed, main):
         + td(e(kind), "c-d")
         + td(e(fx.get("catalog")), "c-cat mono", fx.get("catalog"))
         + td(badge_for(BASIS_BADGE, fx.get("basis")), "c-b")
-        + td(e(volt), "c-d", "Inferred from the manufacturer's voltage code; not shown on the DOT listing" if fx.get("voltage_inferred") else None)
+        + td(e(volt), "c-d", "Not shown on the DOT listing (placeholder voltage code); 480V is only an available option for the family" if fx.get("voltage_inferred") else None)
         + td(e(fx.get("distribution") or "—"), "c-s", fx.get("distribution"))
         + td(e(watts if watts not in (None, "") else "—"), "num")
         + td(e(lm), "num", "Estimated" if fx.get("lumens_estimated") else None)
@@ -149,8 +149,9 @@ def nav(current):
 def render(build_date, data, view):
     flt = view["filter"]
     sources = {s["id"]: s for s in data.get("sources", [])}
-    shown = sorted((f for f in data["fixtures"] if matches(f, flt)), key=sort_key)
-    family = sorted((f for f in data["fixtures"] if f.get("cct") == "unspecified" and f.get("voltage") == 480), key=sort_key)
+    shown = sorted((f for f in data["fixtures"] if matches(f, flt) and not f.get("voltage_inferred")), key=sort_key)
+    family = sorted((f for f in data["fixtures"] if f.get("voltage") == 480 and
+                     (f.get("cct") == "unspecified" or (f.get("cct") == flt["cct"] and f.get("voltage_inferred")))), key=sort_key)
     both = shown + family
     types = sorted({f.get("product_type") for f in both})
     type_opts = "".join(f'<option value="{e(t)}">{e(t)}</option>' for t in types)
@@ -206,7 +207,7 @@ def render(build_date, data, view):
     ("eligible-unspecified", "DOT flags it BABA/BAA without saying which phase"),
     ("project-level", "DOT has not verified; certify per project")])}</div>
 <span class="muted">"As listed" = catalog number copied from the DOT list. "CCT swapped" = TxDOT-listed number with the 3000K option substituted.
-480V* = the DOT listing hides the voltage code; 480V is inferred from the manufacturer's options. Rows are one line each; tap or click a row to show its full text.</span>
+The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table. Rows are one line each; tap or click a row to show its full text.</span>
 <ul>{src_items}</ul>
 </div>
 
@@ -219,10 +220,11 @@ def render(build_date, data, view):
 
 {table(headers, body, "No fixtures match the filter.")}
 
-<h2>Family-level listings (no color temperature on the DOT list)</h2>
-<p class="small muted">These DOT lists flag a whole product family for Buy America without giving a catalog number or color temperature.
-The family offers 480V and both 3000K and 4000K options, so they appear on both fixture pages. Specify the exact configuration with the
-manufacturer and confirm the DOT accepts it.</p>
+<h2>Flagged listings that don't show 480V or a color temperature</h2>
+<p class="small muted">These DOT entries are flagged for Buy America, but the listing itself does not print a 480V voltage code
+(it shows a placeholder such as xx*, x or X, or no catalog number at all) or a color temperature. The product family offers a 480V
+option, but that is not evidence the listed configuration is 480V; for example, Caltrans spells out its 480V variants separately as
+"(480 VAC)". Confirm the exact configuration with the manufacturer and the DOT.</p>
 {table(fam_headers, fam_body, "None.")}
 
 <footer>
