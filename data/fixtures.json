@@ -699,8 +699,8 @@
       "voltage": 480,
       "catalog": "BABA-ARCH1-50-740-8-T3RE-AP-FF-20MSP-K-TXDOT-D169340",
       "distribution": "Type III (T3RE)",
-      "watts": null,
-      "lumens": null,
+      "watts": 53,
+      "lumens": 6932,
       "dot": {
         "source": "tx-mpl-2026-09",
         "table": "Table 5",
@@ -712,9 +712,17 @@
         "title": "ARCH1 spec sheet (PS50619924EN)",
         "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/streetworks-archeon-contemporary-arch1-spec/Streetworks-ARCH1-Spec-Sheet.pdf"
       },
-      "ies": [],
+      "ies": [
+        {
+          "file": "ies/cooper/ARCH1-50-740-U-T3RE_6932lms.ies",
+          "lumcat": "ARCH1-50-740-U-T3RE",
+          "lumens": 6932,
+          "watts": 53,
+          "source_url": "https://www.webtools.cooperlighting.com/Public/files/ies/instabase/STREETWORKS/ROADWAY/ARCHEON%20CONTEMPORARY/4000K%2070%20CRI%20STANDARD/ARCH1-50-740-U-T3RE_6932lms.ies",
+          "note": "Scaled from LM-79-08 data; published as U (120–277V) photometry."
+        }
+      ],
       "caveats": [
-        "Cooper 4000K .ies being located; check the Cooper product page photometry tab.",
         "The D-number at the end is TxDOT's custom configuration code; quote it when ordering."
       ]
     },
@@ -729,8 +737,8 @@
       "voltage": 480,
       "catalog": "BABA-ARCH3-80-740-8-T2RE-AP-20MSP-K-TXDOT-D169342",
       "distribution": "Type II (T2RE)",
-      "watts": null,
-      "lumens": null,
+      "watts": 81.9,
+      "lumens": 13360,
       "dot": {
         "source": "tx-mpl-2026-09",
         "table": "Table 5",
@@ -742,9 +750,17 @@
         "title": "ARCH3 spec sheet (PS50659724EN)",
         "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/streetworks-archeon-contemporary-arch3-spec/Streetworks-ARCH3-Spec-Sheet.pdf"
       },
-      "ies": [],
+      "ies": [
+        {
+          "file": "ies/cooper/ARCH3-80-740-U-T2RE_13360lms.ies",
+          "lumcat": "ARCH3-80-740-U-T2RE",
+          "lumens": 13360,
+          "watts": 81.9,
+          "source_url": "https://www.webtools.cooperlighting.com/Public/files/ies/instabase/STREETWORKS/ROADWAY/ARCHEON%20CONTEMPORARY/4000K%2070%20CRI%20STANDARD/ARCH3-80-740-U-T2RE_13360lms.ies",
+          "note": "Scaled from LM-79-08 data; published as U (120–277V) photometry."
+        }
+      ],
       "caveats": [
-        "Cooper 4000K .ies being located; check the Cooper product page photometry tab.",
         "Cut sheet: 480V not for ungrounded or impedance-grounded systems."
       ]
     },
@@ -759,8 +775,8 @@
       "voltage": 480,
       "catalog": "BABA-ARCH3-150-740-8-T2RE-AP-20MSP-K-TXDOT-D169346",
       "distribution": "Type II (T2RE)",
-      "watts": null,
-      "lumens": null,
+      "watts": 150.7,
+      "lumens": 21726,
       "dot": {
         "source": "tx-mpl-2026-09",
         "table": "Table 5",
@@ -772,9 +788,17 @@
         "title": "ARCH3 spec sheet (PS50659724EN)",
         "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/streetworks-archeon-contemporary-arch3-spec/Streetworks-ARCH3-Spec-Sheet.pdf"
       },
-      "ies": [],
+      "ies": [
+        {
+          "file": "ies/cooper/ARCH3-150-740-U-T2RE_21726lms.ies",
+          "lumcat": "ARCH3-150-740-U-T2RE",
+          "lumens": 21726,
+          "watts": 150.7,
+          "source_url": "https://www.webtools.cooperlighting.com/Public/files/ies/instabase/STREETWORKS/ROADWAY/ARCHEON%20CONTEMPORARY/4000K%2070%20CRI%20STANDARD/ARCH3-150-740-U-T2RE_21726lms.ies",
+          "note": "Scaled from LM-79-08 data; published as U (120–277V) photometry."
+        }
+      ],
       "caveats": [
-        "Cooper 4000K .ies being located; check the Cooper product page photometry tab.",
         "Cut sheet: 480V not for ungrounded or impedance-grounded systems."
       ]
     },
@@ -1072,8 +1096,8 @@
       "voltage": 480,
       "catalog": "BAA-CST-CA8-330-740-8-T2-AP-FF-20MSP-PSC-PR7-D169466",
       "distribution": "Type II (T2)",
-      "watts": null,
-      "lumens": null,
+      "watts": 331.5,
+      "lumens": 48588,
       "dot": {
         "source": "tx-mpl-2026-09",
         "table": "Table 24",
@@ -1086,9 +1110,17 @@
         "title": "CST Celesteon spec sheet (PS506070EN)",
         "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/b36ac27b36e646c486aead6001287eeb/Streetworks-CST-Celesteon-Spec-Sheet.pdf"
       },
-      "ies": [],
+      "ies": [
+        {
+          "file": "ies/cooper/CST-CA8-330-740-U-T2.ies",
+          "lumcat": "CST-CA8-330-740-U-T2",
+          "lumens": 48588,
+          "watts": 331.5,
+          "source_url": "https://www.webtools.cooperlighting.com/Public/files/ies/instabase/STREETWORKS/ROADWAY/CELESTEON%20HIGH%20MAST/4000-70CRI-Standard/CST-CA8-330-740-U-T2.ies",
+          "note": "Scaled from LM-79-08 data; published as U (120–277V) photometry."
+        }
+      ],
       "caveats": [
-        "Cooper 4000K .ies being located; check the Cooper product page photometry tab.",
         "Cut sheet: 480V only for Wye systems."
       ]
     },
@@ -1103,8 +1135,8 @@
       "voltage": 480,
       "catalog": "BAA-CST-CA8-480-740-8-T3-AP-FF-20MSP-PSC-PR7-D169467",
       "distribution": "Type III (T3)",
-      "watts": null,
-      "lumens": null,
+      "watts": 480.8,
+      "lumens": 71212,
       "dot": {
         "source": "tx-mpl-2026-09",
         "table": "Table 24",
@@ -1117,9 +1149,17 @@
         "title": "CST Celesteon spec sheet (PS506070EN)",
         "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/b36ac27b36e646c486aead6001287eeb/Streetworks-CST-Celesteon-Spec-Sheet.pdf"
       },
-      "ies": [],
+      "ies": [
+        {
+          "file": "ies/cooper/CST-CA8-480-740-U-T3.ies",
+          "lumcat": "CST-CA8-480-740-U-T3",
+          "lumens": 71212,
+          "watts": 480.8,
+          "source_url": "https://www.webtools.cooperlighting.com/Public/files/ies/instabase/STREETWORKS/ROADWAY/CELESTEON%20HIGH%20MAST/4000-70CRI-Standard/CST-CA8-480-740-U-T3.ies",
+          "note": "Scaled from LM-79-08 data; published as U (120–277V) photometry."
+        }
+      ],
       "caveats": [
-        "Cooper 4000K .ies being located; check the Cooper product page photometry tab.",
         "Cut sheet: 480V only for Wye systems."
       ]
     },
@@ -1134,8 +1174,8 @@
       "voltage": 480,
       "catalog": "BAA-CST-CA8-480-740-8-T5N-AP-FF-20MSP-PSC-PR7-D169468",
       "distribution": "Type V narrow (T5N)",
-      "watts": null,
-      "lumens": null,
+      "watts": 480.8,
+      "lumens": 75740,
       "dot": {
         "source": "tx-mpl-2026-09",
         "table": "Table 24",
@@ -1148,9 +1188,17 @@
         "title": "CST Celesteon spec sheet (PS506070EN)",
         "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/b36ac27b36e646c486aead6001287eeb/Streetworks-CST-Celesteon-Spec-Sheet.pdf"
       },
-      "ies": [],
+      "ies": [
+        {
+          "file": "ies/cooper/CST-CA8-480-740-U-T5N.ies",
+          "lumcat": "CST-CA8-480-740-U-T5N",
+          "lumens": 75740,
+          "watts": 480.8,
+          "source_url": "https://www.webtools.cooperlighting.com/Public/files/ies/instabase/STREETWORKS/ROADWAY/CELESTEON%20HIGH%20MAST/4000-70CRI-Standard/CST-CA8-480-740-U-T5N.ies",
+          "note": "Scaled from LM-79-08 data; published as U (120–277V) photometry."
+        }
+      ],
       "caveats": [
-        "Cooper 4000K .ies being located; check the Cooper product page photometry tab.",
         "Cut sheet: 480V only for Wye systems."
       ]
     },
