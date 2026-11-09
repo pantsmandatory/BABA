@@ -27,6 +27,11 @@ PHASE_BADGE = {
 }
 PHASE_RANK = {"phase2": 0, "phase1": 1, "eligible-unspecified": 2, "project-level": 3}
 BASIS_BADGE = {"as-listed": ("As listed", "ok"), "cct-swapped": ("CCT swapped", "warn")}
+FOCUS_BADGE = {
+    "twin": ("Phase 2 listed at 120–277V · 480V not printed", "warn"),
+    "family": ("Family flagged · this optic/voltage not listed", "warn"),
+    "none": ("No DOT Phase 2 statement", "bad"),
+}
 
 EXTRA_CSS = """
 .chips{display:inline-flex;flex-wrap:wrap;gap:4px;vertical-align:middle}
@@ -133,6 +138,50 @@ def row(fx, sources, show_listed, main):
     )
 
 
+def focus_row(fx):
+    """One Current/Cree row: 480V 3000K photometry plus what the state DOT lists actually say."""
+    sheet = fx.get("cut_sheet") or {}
+    search = " ".join(str(x) for x in [fx.get("manufacturer"), fx.get("brand"), fx.get("family"), fx.get("catalog"),
+                                       fx.get("use"), fx.get("optic"), fx.get("evidence")] if x).lower()
+    kind = "LED high mast luminaire" if fx.get("use") == "High mast" else "LED roadway luminaire"
+    return (
+        f'<tr data-search="{e(search)}" data-type="{kind}" data-state="" data-phase="">'
+        + td(badge_for(FOCUS_BADGE, fx.get("status")), "c-b", FOCUS_BADGE.get(fx.get("status"), ("",))[0])
+        + td(f"<strong>{e(fx.get('manufacturer'))}</strong>", "c-m", fx.get("manufacturer"))
+        + td(e(fx.get("family")), "c-s", fx.get("family"))
+        + td(e(fx.get("use")), "c-d")
+        + td(e(fx.get("catalog")), "c-cat mono", fx.get("catalog"))
+        + td(e(fx.get("voltage")), "c-d", fx.get("voltage"))
+        + td(e(fx.get("optic") or "—"), "c-s", fx.get("optic"))
+        + td(e(fx.get("watts")), "num")
+        + td(f'{fx["lumens"]:,}', "num")
+        + td(sheet_cell(sheet), "c-d", sheet.get("title"))
+        + td(ies_cell(fx), "c-d", ies_title(fx))
+        + td(e(fx.get("evidence")), "c-x muted", fx.get("evidence"))
+        + td(e(fx.get("notes")), "c-x muted", fx.get("notes"))
+        + "</tr>"
+    )
+
+
+def focus_section(data):
+    rows = data.get("focus", [])
+    if not rows:
+        return ""
+    headers = ["Status", "Manufacturer", "Family", "Use", "Catalog number (480V, 3000K)", "Voltage", "Optic", "W",
+               "Lumens", "Cut sheet", "Photometry", "What the state DOT lists say", "Notes"]
+    out = """<h2 id="current-cree">Current Lighting and Cree Lighting: 480V 3000K photometry and DOT status</h2>
+<p class="small muted">Requested search: 480V, 3000K, about 20,000 lumens in Type II and Type III, and high mast at about 250–500W.
+<strong>None of these exact 480V configurations is printed on a state DOT list with a Phase 2 statement</strong>, so they are kept out of
+the table above. The Status column says how close each one is, and the DOT column quotes what each list says. The only Current
+row a DOT prints at 480V with a Phase 2 statement is Caltrans ERL2H12D530DGRAYBL251, in the table above. No state DOT states
+Phase 2 for any Cree Lighting luminaire. Get the manufacturer's Buy America certification for the exact catalog number.</p>
+"""
+    for group in dict.fromkeys(f["group"] for f in rows):
+        body = "\n".join(focus_row(f) for f in rows if f["group"] == group)
+        out += f"<h3>{e(group)}</h3>\n" + table(headers, body, "None.") + "\n"
+    return out
+
+
 def sort_key(f):
     return (f.get("basis") != "as-listed", PHASE_RANK.get(f["dot"].get("phase"), 9),
             f["dot"]["source"] != "tx-mpl-2026-09", f["dot"]["source"],
@@ -157,8 +206,10 @@ def render(build_date, data, view):
     type_opts = "".join(f'<option value="{e(t)}">{e(t)}</option>' for t in types)
     states = sorted({sources[f["dot"]["source"]]["state"] for f in both})
     state_opts = "".join(f'<option value="{e(s)}">{e(s)} – {e(STATE_NAMES.get(s, s))}</option>' for s in states)
-    phase_opts = "".join(f'<option value="{k}">{e(v[0])}</option>' for k, v in PHASE_BADGE.items())
-    n_ies = sum(1 for f in shown for i in f.get("ies", []) if has_file(i.get("file")))
+    phase_opts = "".join(f'<option value="{k}">{e(v[0])}</option>' for k, v in PHASE_BADGE.items()
+                         if any(f["dot"].get("phase") == k for f in both))
+    focus = data.get("focus", []) if view.get("show_focus") else []
+    n_ies = sum(1 for f in shown + focus for i in f.get("ies", []) if has_file(i.get("file")))
     n_p2 = sum(1 for f in shown if f["dot"].get("phase") == "phase2")
     chips = "".join(f'<span class="chip">{e(c)}</span>' for c in view.get("labels", []))
     used = {f["dot"]["source"] for f in both}
@@ -188,7 +239,7 @@ def render(build_date, data, view):
 <body>
 <main>
 <h1>{e(view["title"])}</h1>
-<div class="muted">480V luminaires that state DOT product lists flag for Buy America (BABA) · Updated {e(build_date)}</div>
+<div class="muted">480V luminaires that state DOT product lists state are Phase 2 Buy America (BABA) compliant · Updated {e(build_date)}</div>
 <div class="small">{nav(view["file"])}</div>
 
 <div class="stats">
@@ -201,11 +252,8 @@ def render(build_date, data, view):
 
 <div class="card">
 <strong>How to read this.</strong> {e(view.get("intro", ""))}
-<div class="phases">{''.join(f'<span>{badge_for(PHASE_BADGE, k)} {e(t)}</span>' for k, t in [
-    ("phase2", "DOT says US final assembly and more than 55% domestic cost (projects obligated on/after Oct 1, 2026)"),
-    ("phase1", "final assembly only; not enough after Oct 1, 2026"),
-    ("eligible-unspecified", "DOT flags it BABA/BAA without saying which phase"),
-    ("project-level", "DOT has not verified; certify per project")])}</div>
+<div class="phases"><span>{badge_for(PHASE_BADGE, "phase2")} DOT says US final assembly and more than 55% domestic cost (projects obligated on/after Oct 1, 2026). Only these listings are shown.</span></div>
+<span class="muted">Removed 2026-11-09: {data.get("removed_count", 0)} listings that are not Phase 2 (final assembly only, "eligible" or "BAA" with no phase, TxDOT Compliant v4, or project-level certification). They are kept in <code>data/fixtures_removed.json</code>.</span><br>
 <span class="muted">"As listed" = catalog number copied from the DOT list. "CCT swapped" = TxDOT-listed number with the 3000K option substituted.
 The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table. Rows are one line each; tap or click a row to show its full text.</span>
 <ul>{src_items}</ul>
@@ -226,6 +274,8 @@ The main table only includes listings that print a 480V code (480, 8 for Cooper,
 option, but that is not evidence the listed configuration is 480V; for example, Caltrans spells out its 480V variants separately as
 "(480 VAC)". Confirm the exact configuration with the manufacturer and the DOT.</p>
 {table(fam_headers, fam_body, "None.")}
+
+{focus_section(data) if view.get("show_focus") else ""}
 
 <footer>
 Generated by <code>scripts/build_fixtures.py</code> from <code>data/fixtures.json</code>. Photometric files and cut sheet
@@ -248,8 +298,9 @@ def chooser(build_date):
 <h1>BABA Fixture Downloads</h1>
 <div class="muted">480V luminaires flagged for Buy America on state DOT lists, with .ies files and cut sheets · Updated {e(build_date)}</div>
 <div class="card"><ul>
-<li><a href="fixtures-4k.html"><strong>4000K</strong></a> – TxDOT Compliant v5, Alabama Y2 and North Carolina listings at 480V.</li>
-<li><a href="fixtures-3k.html"><strong>3000K</strong></a> – Caltrans, Washington and Missouri listings at 480V, plus TxDOT configurations with the 3000K option swapped in.</li>
+<li><a href="fixtures-4k.html"><strong>4000K</strong></a> – TxDOT Compliant v5 and Alabama Y2 listings at 480V.</li>
+<li><a href="fixtures-3k.html"><strong>3000K</strong></a> – Caltrans Phase 2 listings at 480V, TxDOT Compliant v5 configurations with the 3000K option swapped in, and <a href="fixtures-3k.html#current-cree">Current Lighting and Cree Lighting 480V 3000K photometry</a> with their DOT status.</li>
+</ul><p class="small muted">Only Phase 2 listings (projects obligated on or after Oct 1, 2026) are shown.</p><ul>
 </ul></div>
 <div class="small"><a href="index.html">Compliance index</a> · <a href="fiber.html">Fiber products</a></div>
 </main></body></html>

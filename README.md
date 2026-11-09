@@ -15,6 +15,14 @@ configurations with the 3000K / 70 CRI option swapped in. `fixtures.html` links 
 `fiber.html` lists Corning fiber products with BABA evidence: traffic/ITS cabinet splice housings, orange OM1/OM2
 multimode cable, and G.652 single-mode cable (data in `data/fiber.json`, built by `scripts/build_fiber.py`).
 
+Fixture pages show **Phase 2 listings only** (a state DOT states US final assembly and more than 55% domestic component
+cost, for projects obligated on or after Oct 1, 2026). Rows a DOT flags only for Phase 1, as "eligible"/"BAA" with no phase,
+or for project-level certification were removed on 2026-11-09 and are kept, unrendered, in `data/fixtures_removed.json`.
+
+`fixtures-3k.html` also has a **Current Lighting and Cree Lighting** section (`focus` in `data/fixtures.json`): 480V 3000K
+roadway (about 20,000 lm, Type II/III) and high mast (about 250–500W) configurations with `.ies` files in `ies/current/` and
+`ies/cree/`, each with what the state DOT lists actually say. None of those exact configurations has a DOT Phase 2 statement.
+
 Fixture page first source: TxDOT's Roadway Illumination MPL, "Compliant v5" entries (projects obligated on/after Oct 1, 2026).
 
 ## How it works

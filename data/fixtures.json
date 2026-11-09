@@ -19,42 +19,6 @@
       "status_note": "BABA column: Y2 = manufactured product, BABA compliant; N2 = final assembly only, fails the Oct 1, 2026 55% rule; N1 = fails the Oct 1, 2025 final-assembly rule. Y2 is therefore treated as Phase 2."
     },
     {
-      "id": "fl-apl-led",
-      "state": "FL",
-      "name": "FDOT Approved Product List – LED luminaires (715-005/-006)",
-      "short_name": "FDOT APL",
-      "url": "https://path.fdot.gov/ProductTypes/Index/611",
-      "edition": "live, fetched 2026-11-09",
-      "status_note": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing."
-    },
-    {
-      "id": "nc-apl-led",
-      "state": "NC",
-      "name": "NCDOT Approved Products List – Innovative Roadway Lighting / LED",
-      "short_name": "NCDOT APL",
-      "url": "https://apps.ncdot.gov/vendor/approvedproducts/",
-      "edition": "live, fetched 2026-11-09",
-      "status_note": "BABA column: Compliant / Not Compliant / Unknown, no phase detail."
-    },
-    {
-      "id": "pa-b15-2026-11",
-      "state": "PA",
-      "name": "PennDOT Bulletin 15, Section 1101.06(c) Arm Mount Luminaires – LED",
-      "short_name": "PennDOT Bulletin 15",
-      "url": "https://docs.penndot.pa.gov/public/Bureaus/BOCM/BOCM_MTD_LAB/Publications/PUB_35/Current_Edition/Bulletin15.pdf",
-      "edition": "Bulletin 15 (Publication 35) posted 11/4/2026 7:59:51AM; section 1101.06(c) last revised 10/28/2026",
-      "status_note": "Note on ATB0/ATB2 only: \"Product must be ordered with the BAA option to receive BABA/BAA product certification.\" Family-level, no CCT or voltage."
-    },
-    {
-      "id": "mo-apl-2026-06",
-      "state": "MO",
-      "name": "MoDOT Traffic Operations Approved Products List",
-      "short_name": "MoDOT APL",
-      "url": "https://www.modot.org/media/39242",
-      "edition": "Revised June 2026",
-      "status_note": "MoDOT: \"The models shown on the APL have not been verified to meet Build America Buy America (BABA) requirements.\" BAA-suffix rows shown as project-level."
-    },
-    {
       "id": "ca-aml-led",
       "state": "CA",
       "name": "Caltrans Authorized Materials List – LED Luminaires",
@@ -62,15 +26,6 @@
       "url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
       "edition": "Last edit date: 11/8/2026",
       "status_note": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K."
-    },
-    {
-      "id": "wa-eapl-2026-10",
-      "state": "WA",
-      "name": "WSDOT Electrical Approved Products List, 9.29.10.1.B",
-      "short_name": "WSDOT E-APL",
-      "url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
-      "edition": "XLSX last modified 2026-10-01",
-      "status_note": "Rows described \"BAA Compliant\" (Buy American Act order option), not an FHWA Buy America statement; no BABA phase given."
     }
   ],
   "fixtures": [
@@ -1971,511 +1926,6 @@
       ]
     },
     {
-      "id": "fl-se-15",
-      "manufacturer": "Cooper Lighting Solutions",
-      "brand": "Cooper Lighting Solutions",
-      "family": "Archeon",
-      "product_type": "LED roadway luminaire",
-      "cct": "unspecified",
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "Includes Arch-L, Arch-M, Arch-S, & Arch-N",
-      "distribution": "unspecified",
-      "watts": "unspecified",
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "fl-apl-led",
-        "table": "715-005 LED Luminaire, (Conventional) [product type 611]",
-        "status": "Phase 1",
-        "phase": "phase1",
-        "listing_id": "715-005-038",
-        "list_url": "https://path.fdot.gov/ProductTypes/Index/611",
-        "listed_catalog": "Includes Arch-L, Arch-M, Arch-S, & Arch-N",
-        "listed_cct": "unspecified"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: BABA Eligible: Eligible; Limitation: \"BABA Approved for job lettings on or before December 31, 2026.\"",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (Cooper code 8; e.g. ALDOT ARCH-x-PA3-xxx-740-8-xx)",
-        "No CCT on the listing. APL entry is family-level; no CCT on listing",
-        "Phase1: Eligible only for lettings through 12/31/2026 (time-limited; not shown as meeting 55% rule beyond that). Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
-      ]
-    },
-    {
-      "id": "fl-se-16",
-      "manufacturer": "Cooper Lighting Solutions",
-      "brand": "Cooper Lighting Solutions",
-      "family": "Archeon Contemporary ARCH1/ARCH2/ARCH3/ARCH4",
-      "product_type": "LED roadway luminaire",
-      "cct": "unspecified",
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "ARCH1 ARCH2 ARCH3 ARCH4",
-      "distribution": "unspecified",
-      "watts": "unspecified",
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "fl-apl-led",
-        "table": "715-005 LED Luminaire, (Conventional) [product type 611]",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "715-005-041",
-        "list_url": "https://path.fdot.gov/Products/Index/10067?approvalId=9992",
-        "listed_catalog": "ARCH1 ARCH2 ARCH3 ARCH4",
-        "listed_cct": "unspecified"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: BABA Eligible: Eligible; no limitation listed",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (TxDOT MPL lists BABA-ARCH1/ARCH3 at 480V per user context)",
-        "No CCT on the listing. APL entry is family-level; no CCT on listing",
-        "Approval date 7/22/2025. Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
-      ]
-    },
-    {
-      "id": "fl-se-17",
-      "manufacturer": "American Electric (Acuity Brands)",
-      "brand": "American Electric (Acuity Brands)",
-      "family": "Autobahn",
-      "product_type": "LED roadway luminaire",
-      "cct": "unspecified",
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "Includes models ATB0, ATB2, ATBM & ATBL.",
-      "distribution": "unspecified",
-      "watts": "unspecified",
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "fl-apl-led",
-        "table": "715-005 LED Luminaire, (Conventional) [product type 611]",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "715-005-033",
-        "list_url": "https://path.fdot.gov/Products/Index/4790?approvalId=8312",
-        "listed_catalog": "Includes models ATB0, ATB2, ATBM & ATBL.",
-        "listed_cct": "unspecified"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: BABA Eligible: Eligible; no limitation listed",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (ALDOT ATBx-x-480)",
-        "No CCT on the listing. APL entry is family-level; no CCT on listing",
-        "APL comments: \"ATB0 & ATB2 require catalog number ATB#-P### (check \"P\" designation).\" \"All models require highest surge protection option and Osram, Nichia, or Cree brand LEDs.\" Approval 6/7/2016. Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
-      ]
-    },
-    {
-      "id": "fl-se-18",
-      "manufacturer": "Leotek",
-      "brand": "LEOTEK ELECTRONICS USA LLC",
-      "family": "GreenCobra",
-      "product_type": "LED roadway luminaire",
-      "cct": "unspecified",
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "GCJ, GCM, GCL, GC1, & GC2",
-      "distribution": "unspecified",
-      "watts": "unspecified",
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "fl-apl-led",
-        "table": "715-005 LED Luminaire, (Conventional) [product type 611]",
-        "status": "Phase 1",
-        "phase": "phase1",
-        "listing_id": "715-005-019",
-        "list_url": "https://path.fdot.gov/ProductTypes/Index/611",
-        "listed_catalog": "GCJ, GCM, GCL, GC1, & GC2",
-        "listed_cct": "unspecified"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: BABA Eligible: Eligible; Limitation: \"BABA Approved for job lettings on or before December 31, 2026.\"",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers HV 347-480V (ALDOT GC2-96G-HV)",
-        "No CCT on the listing. APL entry is family-level; no CCT on listing",
-        "Phase1: Eligible only for lettings through 12/31/2026 (time-limited; not shown as meeting 55% rule beyond that). Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
-      ]
-    },
-    {
-      "id": "fl-se-19",
-      "manufacturer": "Acuity Brands",
-      "brand": "Holophane Lighting",
-      "family": "Mongoose Medium MGLEDM",
-      "product_type": "LED roadway luminaire",
-      "cct": "unspecified",
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "MGLEDM",
-      "distribution": "unspecified",
-      "watts": "unspecified",
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "fl-apl-led",
-        "table": "715-005 LED Luminaire, (Conventional) [product type 611]",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "715-005-024",
-        "list_url": "https://path.fdot.gov/ProductTypes/Index/611",
-        "listed_catalog": "MGLEDM",
-        "listed_cct": "unspecified"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: BABA Eligible: Eligible; no limitation listed",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (ALDOT MGLEDM-xx-4K-480)",
-        "No CCT on the listing. APL entry is family-level; no CCT on listing",
-        " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
-      ]
-    },
-    {
-      "id": "fl-se-20",
-      "manufacturer": "Cooper Lighting Solutions",
-      "brand": "Cooper Lighting Solutions",
-      "family": "Navion",
-      "product_type": "LED roadway luminaire",
-      "cct": "unspecified",
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "(blank)",
-      "distribution": "unspecified",
-      "watts": "unspecified",
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "fl-apl-led",
-        "table": "715-005 LED Luminaire, (Conventional) [product type 611]",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "715-005-008",
-        "list_url": "https://path.fdot.gov/ProductTypes/Index/611",
-        "listed_catalog": "(blank)",
-        "listed_cct": "unspecified"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: BABA Eligible: Eligible; no limitation listed",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 8 = 480V (Cooper Navion spec sheet)",
-        "No CCT on the listing. APL entry is family-level; no CCT on listing",
-        " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
-      ]
-    },
-    {
-      "id": "fl-se-21",
-      "manufacturer": "Current Lighting",
-      "brand": "Current Lighting",
-      "family": "Evolve ERLS",
-      "product_type": "LED roadway luminaire",
-      "cct": "unspecified",
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "ERLS",
-      "distribution": "unspecified",
-      "watts": "unspecified",
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "fl-apl-led",
-        "table": "715-005 LED Luminaire, (Conventional) [product type 611]",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "715-005-040",
-        "list_url": "https://path.fdot.gov/ProductTypes/Index/611",
-        "listed_catalog": "ERLS",
-        "listed_cct": "unspecified"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: BABA Eligible: Eligible; no limitation listed",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; ERLS voltage options include 347-480V and 277-480V (Current product listing per search snippet)",
-        "No CCT on the listing. APL entry is family-level; no CCT on listing",
-        " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
-      ]
-    },
-    {
-      "id": "fl-se-22",
-      "manufacturer": "CHM Lighting",
-      "brand": "Carolina High Mast, Inc.",
-      "family": "CLED2",
-      "product_type": "LED high mast luminaire",
-      "cct": "unspecified",
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "(blank)",
-      "distribution": "unspecified",
-      "watts": "unspecified",
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "fl-apl-led",
-        "table": "715-006 LED Luminaire, (High Mast) [product type 612]",
-        "status": "Phase 1",
-        "phase": "phase1",
-        "listing_id": "715-006-007",
-        "list_url": "https://path.fdot.gov/ProductTypes/Index/612",
-        "listed_catalog": "(blank)",
-        "listed_cct": "unspecified"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: BABA Eligible: Eligible; Limitation: \"BABA Approved for job lettings on or before December 31, 2026.\"",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; 480V capability per TxDOT MPL CHM CLED2 (user context); CHM voltage code not confirmed",
-        "No CCT on the listing. APL entry is family-level; no CCT on listing",
-        "Phase1: Eligible only for lettings through 12/31/2026 (time-limited; not shown as meeting 55% rule beyond that). Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
-      ]
-    },
-    {
-      "id": "fl-se-23",
-      "manufacturer": "Signify North America Corporation",
-      "brand": "Signify North America Corporation",
-      "family": "HighFocus",
-      "product_type": "LED high mast luminaire",
-      "cct": "unspecified",
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "(blank)",
-      "distribution": "unspecified",
-      "watts": "unspecified",
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "fl-apl-led",
-        "table": "715-006 LED Luminaire, (High Mast) [product type 612]",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "715-006-002",
-        "list_url": "https://path.fdot.gov/ProductTypes/Index/612",
-        "listed_catalog": "(blank)",
-        "listed_cct": "unspecified"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: BABA Eligible: Eligible; no limitation listed",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (ALDOT HFL-xxxx-G2-xxx-480-DMG)",
-        "No CCT on the listing. APL entry is family-level; no CCT on listing",
-        " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
-      ]
-    },
-    {
-      "id": "fl-se-24",
-      "manufacturer": "Acuity Brands",
-      "brand": "Holophane Lighting",
-      "family": "HMLED4",
-      "product_type": "LED high mast luminaire",
-      "cct": "unspecified",
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "(blank)",
-      "distribution": "unspecified",
-      "watts": "unspecified",
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "fl-apl-led",
-        "table": "715-006 LED Luminaire, (High Mast) [product type 612]",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "715-006-008",
-        "list_url": "https://path.fdot.gov/ProductTypes/Index/612",
-        "listed_catalog": "(blank)",
-        "listed_cct": "unspecified"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: BABA Eligible: Eligible; no limitation listed",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; HMLED4 offers HVOLT 347-480V / XVOLT 277-480V (Acuity spec sheet per search snippet)",
-        "No CCT on the listing. APL entry is family-level; no CCT on listing",
-        " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
-      ]
-    },
-    {
-      "id": "nc-se-25",
-      "manufacturer": "CHM Lighting",
-      "brand": "CHM (Carolina High Mast)",
-      "family": "CLED2",
-      "product_type": "LED high mast luminaire",
-      "cct": 4000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "CLED2XCG4070X5W",
-      "distribution": "5W (as in string; not decoded)",
-      "watts": "unspecified",
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "nc-apl-led",
-        "table": "Innovative Roadway Lighting > LED Lighting",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "NP21-9008",
-        "list_url": "https://apps.ncdot.gov/vendor/approvedproducts/ProductDetails.aspx?id=9410",
-        "listed_catalog": "CLED2XCG4070X5W",
-        "listed_cct": "4000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: BABA: Compliant",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: X (voltage code not decoded; CLED2 family 480V-capable per TxDOT MPL)",
-        "Status: \"Approved for Provisional Use\". APL has a BABA column with values Compliant / Not Compliant / Unknown; no phase detail."
-      ]
-    },
-    {
-      "id": "pa-ne-0",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "Autobahn ATB0",
-      "product_type": "LED roadway luminaire",
-      "cct": "unspecified",
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "Autobahn ATB0",
-      "distribution": "not listed",
-      "watts": "not listed",
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "pa-b15-2026-11",
-        "table": "1101.06(c) Arm Mount Luminaires - LED - (Cobra Head); supplier ACUITY15, plant 1615 Elmore Street Crawfordsville, IN 47993",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "Ref. No. 2017-348Q",
-        "list_url": "https://docs.penndot.pa.gov/public/Bureaus/BOCM/BOCM_MTD_LAB/Publications/PUB_35/Current_Edition/Bulletin15.pdf",
-        "listed_catalog": "Autobahn ATB0",
-        "listed_cct": "unspecified"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Product must be ordered with the BAA option to receive BABA/BAA product certification of the completed manufactured product.",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: List gives no voltage. ATB0 catalog voltage options: MVOLT 120-277V, 347, 480 ('480 480V'), XVOLT 277V-480V (XVOLT only with P452/P453/P454; 480V not with P201). BAA option = 'Buy America(n) Act Compliant'.",
-        "No CCT on the listing. List gives no CCT. ATB0 spec sheet (Rev. 12/19/22, copy fetched from ppm.opkansas.org/wiki/images/TRF_PQL_SL_CAT_AmericanElectric_AutobahnATB0ClassE.pdf): '(Blank) 4000K CCT, 70 CRI Min.'; '3K 3000K CCT' optional. Default = 4000K.",
-        "Family-level listing ('Conventional LED Luminaire'); DMSCF column 'No'. BABA eligibility is conditional on ordering the BAA option; Bulletin 15 gives no Phase 1/Phase 2 (Oct 2026 / 55%) detail. 480V capability and CCT come from the manufacturer catalog, not the PennDOT list."
-      ]
-    },
-    {
-      "id": "pa-ne-1",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "Autobahn ATB2",
-      "product_type": "LED roadway luminaire",
-      "cct": "unspecified",
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "Autobahn ATB2",
-      "distribution": "not listed",
-      "watts": "not listed",
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "pa-b15-2026-11",
-        "table": "1101.06(c) Arm Mount Luminaires - LED - (Cobra Head); supplier ACUITY15, plant 1615 Elmore Street Crawfordsville, IN 47993",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "Ref. No. 2017-349Q",
-        "list_url": "https://docs.penndot.pa.gov/public/Bureaus/BOCM/BOCM_MTD_LAB/Publications/PUB_35/Current_Edition/Bulletin15.pdf",
-        "listed_catalog": "Autobahn ATB2",
-        "listed_cct": "unspecified"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Product must be ordered with the BAA option to receive BABA/BAA product certification of the completed manufactured product.",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: List gives no voltage. ATB2 catalog voltage options: MVOLT 120-277V, 347, 480 ('480 480V'), XVOLT 277V-480V (XVOLT only with P601/P602). Catalog: 'BABA - Build America Buy America: Product with the BAA option also ... Build America, Buy America Act' and 'qualifies as manufactured in the United States under DOT Buy America regulations'.",
-        "No CCT on the listing. List gives no CCT. ATB2 spec sheet (Rev. 04/16/24, copy fetched from connect.ncdot.gov .../AEL ATB2 Luminaire.pdf): '(Blank) 4000K CCT, 70 CRI Min.'; '3K 3000K CCT' optional. Default = 4000K.",
-        "Family-level listing ('Conventional LED Luminaire'); DMSCF column 'No'. BABA eligibility is conditional on ordering the BAA option; Bulletin 15 gives no Phase 1/Phase 2 (Oct 2026 / 55%) detail. 480V capability and CCT come from the manufacturer catalog, not the PennDOT list."
-      ]
-    },
-    {
-      "id": "mo-mw-0",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "Autobahn ATB0",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": false,
-      "catalog": "ATB0-P203-480-R3-3K-NL-NR-BAA",
-      "distribution": "R3 (Type III roadway)",
-      "watts": null,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "mo-apl-2026-06",
-        "table": "II. Highway Lighting - LED Luminaires - BRACKET ARM MOUNT (480V) - LED-A (page 4)",
-        "status": "Project-level",
-        "phase": "project-level",
-        "listing_id": "",
-        "list_url": "https://www.modot.org/media/39242",
-        "listed_catalog": "ATB0-P203-480-R3-3K-NL-NR-BAA",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Catalog suffix '-BAA'; list disclaimer: 'The models shown on the APL have not been verified to meet Build America Buy America (BABA) requirements.'",
-        "Only BAA-suffixed 480V rows on the MoDOT APL (non-BAA twin ATB0-P203-480-R3-3K-NL-NR also listed). MoDOT does not verify BABA, so certification is per project; AEL 'BAA' option = Buy American(Act)-configured build, phase not stated. LED-A class lumen/watt not given on list. NR = no receptacle."
-      ]
-    },
-    {
-      "id": "mo-mw-1",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "Autobahn ATB0",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": false,
-      "catalog": "ATB0-P203-480-R3-3K-NL-P7-SH-BAA*",
-      "distribution": "R3 (Type III roadway)",
-      "watts": null,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "mo-apl-2026-06",
-        "table": "II. Highway Lighting - LED Luminaires - BRACKET ARM MOUNT (480V) - LED-A (page 4)",
-        "status": "Project-level",
-        "phase": "project-level",
-        "listing_id": "",
-        "list_url": "https://www.modot.org/media/39242",
-        "listed_catalog": "ATB0-P203-480-R3-3K-NL-P7-SH-BAA*",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Catalog suffix '-BAA'; list disclaimer: 'The models shown on the APL have not been verified to meet Build America Buy America (BABA) requirements.'",
-        "'*' = 'ANSI C136.41 7-pin receptacle with shorting cap included'. Same caveats as the NR version. The ATB0 P303/P453 480V rows (LED-B/C) have NO BAA suffix."
-      ]
-    },
-    {
       "id": "ca-w-0",
       "manufacturer": "EOI",
       "brand": "",
@@ -2509,8 +1959,8 @@
     },
     {
       "id": "ca-w-1",
-      "manufacturer": "GE Lighting",
-      "brand": "Evolve",
+      "manufacturer": "Current Lighting",
+      "brand": "GE Evolve",
       "family": "ERL2",
       "product_type": "LED roadway luminaire",
       "cct": 3000,
@@ -2532,9 +1982,13 @@
         "listed_catalog": "ERL2H12D530DGRAYBL251 ( 480 VAC)",
         "listed_cct": "3000K"
       },
-      "cut_sheet": {},
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 5 spec sheet (OLP3238)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3238_ERL2_Gen5.pdf"
+      },
       "ies": [],
       "caveats": [
+        "Caltrans lists this row under \"GE Lighting\" (East Flat Rock, NC), now Current Lighting. Lumen code 12, Type IV (D5) optic.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
         "AML authorization expires 6/30/2028"
       ]
@@ -2570,39 +2024,6 @@
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
         "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 6/30/2028"
-      ]
-    },
-    {
-      "id": "ca-w-3",
-      "manufacturer": "SolarMax",
-      "brand": "",
-      "family": "SMX-WiE LL5",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": 70,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "SMX-134WiE-XV-LL5-00-3070-T302-P",
-      "distribution": null,
-      "watts": 134,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "ca-aml-led",
-        "table": "Roadway 1",
-        "status": "Phase 1",
-        "phase": "phase1",
-        "listing_id": "",
-        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=1&print=yes",
-        "listed_catalog": "SMX-134WiE-XV-LL5-00-3070-T302-P",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: XV (SolarMax: 120-480VAC, 134W only per SolarMax spec sheet snippet)",
-        "AML authorization expires 6/30/2028"
       ]
     },
     {
@@ -2704,39 +2125,6 @@
       ]
     },
     {
-      "id": "ca-w-7",
-      "manufacturer": "SolarMax",
-      "brand": "",
-      "family": "SMX-WiE LL5",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": 70,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "Conventional Highway - SMX-134WiE-xx*-LL5-00-3070-T302-P ; Expressway - SMX-134WiE-xx*-LL5-00-3070-T302-P",
-      "distribution": null,
-      "watts": 134,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "ca-aml-led",
-        "table": "Roadway 11",
-        "status": "Phase 1",
-        "phase": "phase1",
-        "listing_id": "",
-        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
-        "listed_catalog": "Conventional Highway - SMX-134WiE-xx*-LL5-00-3070-T302-P ; Expressway - SMX-134WiE-xx*-LL5-00-3070-T302-P",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
-        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
-      ]
-    },
-    {
       "id": "ca-w-8",
       "manufacturer": "Acuity Brands",
       "brand": "American Electric Lighting (AEL) / Holophane",
@@ -2832,39 +2220,6 @@
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
         "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
-      ]
-    },
-    {
-      "id": "ca-w-11",
-      "manufacturer": "SolarMax",
-      "brand": "",
-      "family": "SMX-WiE LL5",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": 70,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "SMX-134WiE-xx*-LL5-00-3070-T302-P",
-      "distribution": null,
-      "watts": 134,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "ca-aml-led",
-        "table": "Roadway 12; Intersection:  Small A",
-        "status": "Phase 1",
-        "phase": "phase1",
-        "listing_id": "",
-        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
-        "listed_catalog": "SMX-134WiE-xx*-LL5-00-3070-T302-P",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
-        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
       ]
     },
     {
@@ -3064,39 +2419,6 @@
       ]
     },
     {
-      "id": "ca-w-19",
-      "manufacturer": "SolarMax",
-      "brand": "",
-      "family": "SMX-WiE LL5",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": 70,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "SMX-105WiE-xx*-LL5-00-3070-T302-P",
-      "distribution": null,
-      "watts": 105,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "ca-aml-led",
-        "table": "Intersection:  Small B; Intersection:  Large B",
-        "status": "Phase 1",
-        "phase": "phase1",
-        "listing_id": "",
-        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
-        "listed_catalog": "SMX-105WiE-xx*-LL5-00-3070-T302-P",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
-        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
-      ]
-    },
-    {
       "id": "ca-w-20",
       "manufacturer": "Acuity Brands",
       "brand": "American Electric Lighting (AEL) / Holophane",
@@ -3192,39 +2514,6 @@
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
         "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
-      ]
-    },
-    {
-      "id": "ca-w-23",
-      "manufacturer": "SolarMax",
-      "brand": "",
-      "family": "SMX-WiE LL5",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": 70,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "SMX-33WiE-xx*-LL5-00-3070-T302-P",
-      "distribution": null,
-      "watts": 33,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "ca-aml-led",
-        "table": "Intersection:  Small C",
-        "status": "Phase 1",
-        "phase": "phase1",
-        "listing_id": "",
-        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
-        "listed_catalog": "SMX-33WiE-xx*-LL5-00-3070-T302-P",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
-        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
       ]
     },
     {
@@ -3326,39 +2615,6 @@
       ]
     },
     {
-      "id": "ca-w-27",
-      "manufacturer": "SolarMax",
-      "brand": "",
-      "family": "SMX-WiE LL5",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": 70,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "SMX-218WiE-xx*-LL5-00-3070-T302-P",
-      "distribution": null,
-      "watts": 218,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "ca-aml-led",
-        "table": "Intersection:  Medium A",
-        "status": "Phase 1",
-        "phase": "phase1",
-        "listing_id": "",
-        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
-        "listed_catalog": "SMX-218WiE-xx*-LL5-00-3070-T302-P",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
-        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
-      ]
-    },
-    {
       "id": "ca-w-28",
       "manufacturer": "Acuity Brands",
       "brand": "American Electric Lighting (AEL) / Holophane",
@@ -3454,39 +2710,6 @@
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
         "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
-      ]
-    },
-    {
-      "id": "ca-w-31",
-      "manufacturer": "SolarMax",
-      "brand": "",
-      "family": "SMX-WiE LL5",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": 70,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "SMX-166WiE-xx*-LL5-00-3070-T302-P",
-      "distribution": null,
-      "watts": 166,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "ca-aml-led",
-        "table": "Intersection:  Medium B",
-        "status": "Phase 1",
-        "phase": "phase1",
-        "listing_id": "",
-        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
-        "listed_catalog": "SMX-166WiE-xx*-LL5-00-3070-T302-P",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
-        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
       ]
     },
     {
@@ -3588,39 +2811,6 @@
       ]
     },
     {
-      "id": "ca-w-35",
-      "manufacturer": "SolarMax",
-      "brand": "",
-      "family": "SMX-WiE LL5",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": 70,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "SMX-52WiE-xx*-LL5-00-3070-T302-P",
-      "distribution": null,
-      "watts": 52,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "ca-aml-led",
-        "table": "Intersection:  Medium C",
-        "status": "Phase 1",
-        "phase": "phase1",
-        "listing_id": "",
-        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
-        "listed_catalog": "SMX-52WiE-xx*-LL5-00-3070-T302-P",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
-        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
-      ]
-    },
-    {
       "id": "ca-w-36",
       "manufacturer": "Acuity Brands",
       "brand": "American Electric Lighting (AEL) / Holophane",
@@ -3683,39 +2873,6 @@
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
         "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
-      ]
-    },
-    {
-      "id": "ca-w-39",
-      "manufacturer": "SolarMax",
-      "brand": "",
-      "family": "SMX-WiE LL5",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": 70,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "SMX-139WiE-xx*-LL5-00-3070-T302-P",
-      "distribution": null,
-      "watts": 139,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "ca-aml-led",
-        "table": "Intersection:  Large A",
-        "status": "Phase 1",
-        "phase": "phase1",
-        "listing_id": "",
-        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
-        "listed_catalog": "SMX-139WiE-xx*-LL5-00-3070-T302-P",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
-        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
       ]
     },
     {
@@ -3848,423 +3005,6 @@
         "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder in listed code; Leotek voltage codes MV (120-277V) / HV (347-480V)",
         "480V via HV voltage code (documented for GCL on Leotek spec sheet and WSDOT E-APL GCL1/GCL2/GC2 HV 480V entries); Caltrans gives no key for xx*; AML authorization expires 10/30/2029"
       ]
-    },
-    {
-      "id": "ca-w-47",
-      "manufacturer": "SolarMax",
-      "brand": "",
-      "family": "SMX-WiE LL5",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": 70,
-      "voltage": 480,
-      "voltage_inferred": true,
-      "catalog": "SMX-68WiE-xx*-LL5-00-3070-T302-P",
-      "distribution": null,
-      "watts": 68,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "ca-aml-led",
-        "table": "Intersection:  Large C",
-        "status": "Phase 1",
-        "phase": "phase1",
-        "listing_id": "",
-        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
-        "listed_catalog": "SMX-68WiE-xx*-LL5-00-3070-T302-P",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
-        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
-        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
-      ]
-    },
-    {
-      "id": "wa-w-48",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "ATB2",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": false,
-      "catalog": "ATB2-P4XX-480-R4-3K-MP-NL-NR-BAA-RFD337580*",
-      "distribution": "R4",
-      "watts": 83,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "wa-eapl-2026-10",
-        "table": "LED Conventional Roadway Luminaire - 200W Class",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "9.29.10.1.B.A-8",
-        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
-        "listed_catalog": "ATB2-P4XX-480-R4-3K-MP-NL-NR-BAA-RFD337580*",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Autobahn ATB2, 83W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
-        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
-      ]
-    },
-    {
-      "id": "wa-w-49",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "ATB2",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": false,
-      "catalog": "ATB2-P601-480-R4-3K-MP-NL-NR-AO4-BAA-RFD337582*",
-      "distribution": "R4",
-      "watts": 97,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "wa-eapl-2026-10",
-        "table": "LED Conventional Roadway Luminaire - 200W Class",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "9.29.10.1.B.A-18",
-        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
-        "listed_catalog": "ATB2-P601-480-R4-3K-MP-NL-NR-AO4-BAA-RFD337582*",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Autobahn ATB2, 97W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
-        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
-      ]
-    },
-    {
-      "id": "wa-w-50",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "ACM",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": false,
-      "catalog": "ACM-P607-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342043*",
-      "distribution": "R4",
-      "watts": 107,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "wa-eapl-2026-10",
-        "table": "LED Conventional Roadway Luminaire - 200W Class",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "9.29.10.1.B.A-24",
-        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
-        "listed_catalog": "ACM-P607-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342043*",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Autoconnect Medium (ACM), 107W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
-        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert. Note: E-APL row B.B-9/B.B-10 BAA labels appear swapped for 120-277V; A-23/A-24 share RFD342043."
-      ]
-    },
-    {
-      "id": "wa-w-51",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "ATB2",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": false,
-      "catalog": "ATB2-P4XX-480-R3-3K-MP-NL-NR-BAA-RFD337588*",
-      "distribution": "R3",
-      "watts": 105,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "wa-eapl-2026-10",
-        "table": "LED Conventional Roadway Luminaire - 250W Class",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "9.29.10.1.B.B-4",
-        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
-        "listed_catalog": "ATB2-P4XX-480-R3-3K-MP-NL-NR-BAA-RFD337588*",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Autobahn ATB2, 105W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
-        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
-      ]
-    },
-    {
-      "id": "wa-w-52",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "ACM",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": false,
-      "catalog": "ACM-P608-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342046",
-      "distribution": "R4",
-      "watts": 118,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "wa-eapl-2026-10",
-        "table": "LED Conventional Roadway Luminaire - 250W Class",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "9.29.10.1.B.B-12",
-        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
-        "listed_catalog": "ACM-P608-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342046",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Autoconnect Medium (ACM), 118W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
-        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
-      ]
-    },
-    {
-      "id": "wa-w-53",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "ATB2",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": false,
-      "catalog": "ATB2-P601-480-R3-3K-MP-NL-NR-AO5-BAA-RFD337586*",
-      "distribution": "R3",
-      "watts": 119,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "wa-eapl-2026-10",
-        "table": "LED Conventional Roadway Luminaire - 250W Class",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "9.29.10.1.B.B-16",
-        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
-        "listed_catalog": "ATB2-P601-480-R3-3K-MP-NL-NR-AO5-BAA-RFD337586*",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Autobahn ATB2, 119W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
-        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
-      ]
-    },
-    {
-      "id": "wa-w-54",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "ATBM",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": false,
-      "catalog": "ATBM-P40-480-R3-4B-3K-MP-NL-NR-BAA-RFD337584*",
-      "distribution": "R3",
-      "watts": 135,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "wa-eapl-2026-10",
-        "table": "LED Conventional Roadway Luminaire - 250W Class",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "9.29.10.1.B.B-28",
-        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
-        "listed_catalog": "ATBM-P40-480-R3-4B-3K-MP-NL-NR-BAA-RFD337584*",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Autobahn ATBM, 135W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
-        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
-      ]
-    },
-    {
-      "id": "wa-w-55",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "ACL",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": false,
-      "catalog": "ACL-P126-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342050*",
-      "distribution": "R4",
-      "watts": 157,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "wa-eapl-2026-10",
-        "table": "LED Conventional Roadway Luminaire - 310W Class",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "9.29.10.1.B.C-6",
-        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
-        "listed_catalog": "ACL-P126-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342050*",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Autoconnect Large (ACL), 157W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
-        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
-      ]
-    },
-    {
-      "id": "wa-w-56",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "ATB2",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": false,
-      "catalog": "ATB2-P4XX-480-R3-3K-MP-NL-NR-BAA-RFD337590*",
-      "distribution": "R3",
-      "watts": 170,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "wa-eapl-2026-10",
-        "table": "LED Conventional Roadway Luminaire - 310W Class",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "9.29.10.1.B.C-18",
-        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
-        "listed_catalog": "ATB2-P4XX-480-R3-3K-MP-NL-NR-BAA-RFD337590*",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Autobahn ATB2, 170W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
-        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
-      ]
-    },
-    {
-      "id": "wa-w-57",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "ATB2",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": false,
-      "catalog": "ATB2-P4XX-480-R3-3K-MP-NL-NR-BAA-RFD337594*",
-      "distribution": "R3",
-      "watts": 187,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "wa-eapl-2026-10",
-        "table": "LED Conventional Roadway Luminaire - 400W Class",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "9.29.10.1.B.D-4",
-        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
-        "listed_catalog": "ATB2-P4XX-480-R3-3K-MP-NL-NR-BAA-RFD337594*",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Autobahn ATB2, 187W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
-        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
-      ]
-    },
-    {
-      "id": "wa-w-58",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "ATB2",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": false,
-      "catalog": "ATB2-P602-480-R3-3K-MP-NL-NR-BAA-RFD337592*",
-      "distribution": "R3",
-      "watts": 196,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "wa-eapl-2026-10",
-        "table": "LED Conventional Roadway Luminaire - 400W Class",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "9.29.10.1.B.D-10",
-        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
-        "listed_catalog": "ATB2-P602-480-R3-3K-MP-NL-NR-BAA-RFD337592*",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Autobahn ATB2, 196W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
-        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
-      ]
-    },
-    {
-      "id": "wa-w-59",
-      "manufacturer": "Acuity Brands",
-      "brand": "American Electric Lighting (AEL)",
-      "family": "ACL",
-      "product_type": "LED roadway luminaire",
-      "cct": 3000,
-      "cri": null,
-      "voltage": 480,
-      "voltage_inferred": false,
-      "catalog": "ACL-P128-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342054*",
-      "distribution": "R4",
-      "watts": 199,
-      "lumens": null,
-      "basis": "as-listed",
-      "dot": {
-        "source": "wa-eapl-2026-10",
-        "table": "LED Conventional Roadway Luminaire - 400W Class",
-        "status": "Eligible",
-        "phase": "eligible-unspecified",
-        "listing_id": "9.29.10.1.B.D-14",
-        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
-        "listed_catalog": "ACL-P128-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342054*",
-        "listed_cct": "3000K"
-      },
-      "cut_sheet": {},
-      "ies": [],
-      "caveats": [
-        "DOT wording: Autoconnect Large (ACL), 199W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
-        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
-      ]
     }
   ],
   "views": [
@@ -4279,11 +3019,12 @@
       "labels": [
         "3000K",
         "480V",
-        "State DOT Buy America flags"
+        "Phase 2 only (Oct 1, 2026)"
       ],
       "order_label": "Catalog number",
       "show_listed": true,
-      "intro": "3000K configurations at 480V that a state DOT flags for Buy America. Caltrans (California) marks each row with an explicit BABA category and requires 3000K. The TxDOT rows are TxDOT's 4000K Compliant v5 listings with the 3000K option swapped in, so they are not listed as written; confirm Buy America certification with the manufacturer."
+      "intro": "3000K configurations at 480V that a state DOT states are Phase 2 compliant (US final assembly and more than 55% domestic component cost, for projects obligated on or after Oct 1, 2026). Caltrans (California) marks each row with an explicit BABA category and requires 3000K. The TxDOT rows are TxDOT's 4000K Compliant v5 listings with the 3000K option swapped in, so they are not listed as written; confirm Buy America certification with the manufacturer.",
+      "show_focus": true
     },
     {
       "file": "fixtures-4k.html",
@@ -4296,11 +3037,704 @@
       "labels": [
         "4000K",
         "480V",
-        "State DOT Buy America flags"
+        "Phase 2 only (Oct 1, 2026)"
       ],
       "order_label": "Catalog number (as listed)",
       "show_listed": false,
-      "intro": "4000K configurations at 480V that a state DOT flags for Buy America, with catalog numbers copied from the DOT list. TxDOT's Compliant v5 and Alabama's Y2 code both mean US final assembly and more than 55% domestic cost."
+      "intro": "4000K configurations at 480V that a state DOT states are Phase 2 compliant, with catalog numbers copied from the DOT list. TxDOT's Compliant v5 and Alabama's Y2 code both mean US final assembly and more than 55% domestic component cost."
     }
-  ]
+  ],
+  "focus": [
+    {
+      "id": "cur-erl2-h-21b5",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 5)",
+      "use": "Roadway",
+      "catalog": "ERL2-H-21B5-30-D-GRAY-BL",
+      "optic": "Type II (B5)",
+      "voltage": "347–480V (H)",
+      "watts": 160,
+      "lumens": 20100,
+      "status": "family",
+      "evidence": "Caltrans AML (last edit 11/8/2026) flags the ERL2 21 lumen package as Phase 2 only with the E5/D5 optics and voltage code 0* (120–277V). This optic and the 480V (H) build are not on the Caltrans list. FDOT APL 715-005-017 (Evolve ERLC/ERL1/ERL2): \"BABA Eligible\", no limitation and no phase. TxDOT MPL (Sept 1, 2026): Evolve roadway is \"Project Level Certification Required\". ALDOT List IV-6 (Nov 5, 2026): ERL2_5_xx_xx_40_GRAY is coded N1 (not compliant).",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 5 spec sheet (OLP3238)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3238_ERL2_Gen5.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_21B530_____.IES",
+          "lumcat": "ERL2_21B530",
+          "lumens": 20100,
+          "watts": 160.0,
+          "source_url": "https://instabase.lightinganalysts.com/IITC/suppliers/current/GE%20LED%20-%20Outdoor%20-%20Evolve/Latest/Roadway/ERL2%20EVOLVE%20x5%20Distribution/3000K/ERL2_21B530_____.IES",
+          "note": "IES class Type II"
+        }
+      ],
+      "notes": "Catalog string follows the Caltrans listing with H swapped in for 0*. .ies is the 3000K/70 CRI file; watts are the published 120–277V value. The Gen 7 ERL2 sheet (OLP3249) adds an ordering suffix \"D1 = BABA Compliant\" and says to contact the factory to verify the configuration."
+    },
+    {
+      "id": "cur-erl2-h-21c5",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 5)",
+      "use": "Roadway",
+      "catalog": "ERL2-H-21C5-30-D-GRAY-BL",
+      "optic": "Type III (C5)",
+      "voltage": "347–480V (H)",
+      "watts": 160,
+      "lumens": 20100,
+      "status": "family",
+      "evidence": "Caltrans AML (last edit 11/8/2026) flags the ERL2 21 lumen package as Phase 2 only with the E5/D5 optics and voltage code 0* (120–277V). This optic and the 480V (H) build are not on the Caltrans list. FDOT APL 715-005-017 (Evolve ERLC/ERL1/ERL2): \"BABA Eligible\", no limitation and no phase. TxDOT MPL (Sept 1, 2026): Evolve roadway is \"Project Level Certification Required\". ALDOT List IV-6 (Nov 5, 2026): ERL2_5_xx_xx_40_GRAY is coded N1 (not compliant).",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 5 spec sheet (OLP3238)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3238_ERL2_Gen5.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_21C530_____.IES",
+          "lumcat": "ERL2_21C530",
+          "lumens": 20100,
+          "watts": 160.0,
+          "source_url": "https://instabase.lightinganalysts.com/IITC/suppliers/current/GE%20LED%20-%20Outdoor%20-%20Evolve/Latest/Roadway/ERL2%20EVOLVE%20x5%20Distribution/3000K/ERL2_21C530_____.IES",
+          "note": "IES class Type III"
+        }
+      ],
+      "notes": "Catalog string follows the Caltrans listing with H swapped in for 0*. .ies is the 3000K/70 CRI file; watts are the published 120–277V value. The Gen 7 ERL2 sheet (OLP3249) adds an ordering suffix \"D1 = BABA Compliant\" and says to contact the factory to verify the configuration."
+    },
+    {
+      "id": "cur-erl2-h-23b5",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 5)",
+      "use": "Roadway",
+      "catalog": "ERL2-H-23B5-30-D-GRAY-BL",
+      "optic": "Type II (B5)",
+      "voltage": "347–480V (H)",
+      "watts": 177,
+      "lumens": 22000,
+      "status": "family",
+      "evidence": "Caltrans AML (last edit 11/8/2026) flags the ERL2 23 lumen package as Phase 2 only with the E5/D5 optics and voltage code 0* (120–277V). This optic and the 480V (H) build are not on the Caltrans list. FDOT APL 715-005-017 (Evolve ERLC/ERL1/ERL2): \"BABA Eligible\", no limitation and no phase. TxDOT MPL (Sept 1, 2026): Evolve roadway is \"Project Level Certification Required\". ALDOT List IV-6 (Nov 5, 2026): ERL2_5_xx_xx_40_GRAY is coded N1 (not compliant).",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 5 spec sheet (OLP3238)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3238_ERL2_Gen5.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_23B530_____.IES",
+          "lumcat": "ERL2_23B530",
+          "lumens": 22000,
+          "watts": 177.0,
+          "source_url": "https://instabase.lightinganalysts.com/IITC/suppliers/current/GE%20LED%20-%20Outdoor%20-%20Evolve/Latest/Roadway/ERL2%20EVOLVE%20x5%20Distribution/3000K/ERL2_23B530_____.IES",
+          "note": "IES class Type II"
+        }
+      ],
+      "notes": "Catalog string follows the Caltrans listing with H swapped in for 0*. .ies is the 3000K/70 CRI file; watts are the published 120–277V value. The Gen 7 ERL2 sheet (OLP3249) adds an ordering suffix \"D1 = BABA Compliant\" and says to contact the factory to verify the configuration."
+    },
+    {
+      "id": "cur-erl2-h-23c5",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 5)",
+      "use": "Roadway",
+      "catalog": "ERL2-H-23C5-30-D-GRAY-BL",
+      "optic": "Type III (C5)",
+      "voltage": "347–480V (H)",
+      "watts": 177,
+      "lumens": 22000,
+      "status": "family",
+      "evidence": "Caltrans AML (last edit 11/8/2026) flags the ERL2 23 lumen package as Phase 2 only with the E5/D5 optics and voltage code 0* (120–277V). This optic and the 480V (H) build are not on the Caltrans list. FDOT APL 715-005-017 (Evolve ERLC/ERL1/ERL2): \"BABA Eligible\", no limitation and no phase. TxDOT MPL (Sept 1, 2026): Evolve roadway is \"Project Level Certification Required\". ALDOT List IV-6 (Nov 5, 2026): ERL2_5_xx_xx_40_GRAY is coded N1 (not compliant).",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 5 spec sheet (OLP3238)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3238_ERL2_Gen5.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_23C530_____.IES",
+          "lumcat": "ERL2_23C530",
+          "lumens": 22000,
+          "watts": 177.0,
+          "source_url": "https://instabase.lightinganalysts.com/IITC/suppliers/current/GE%20LED%20-%20Outdoor%20-%20Evolve/Latest/Roadway/ERL2%20EVOLVE%20x5%20Distribution/3000K/ERL2_23C530_____.IES",
+          "note": "IES class Type III"
+        }
+      ],
+      "notes": "Catalog string follows the Caltrans listing with H swapped in for 0*. .ies is the 3000K/70 CRI file; watts are the published 120–277V value. The Gen 7 ERL2 sheet (OLP3249) adds an ordering suffix \"D1 = BABA Compliant\" and says to contact the factory to verify the configuration."
+    },
+    {
+      "id": "cur-erl2-h-21e5",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 5)",
+      "use": "Roadway",
+      "catalog": "ERL2-H-21E5-30-D-GRAY-BL",
+      "optic": "Type II enhanced back light (E5)",
+      "voltage": "347–480V (H)",
+      "watts": 160,
+      "lumens": 20100,
+      "status": "twin",
+      "evidence": "Caltrans AML (last edit 11/8/2026) flags ERL2-0*-21E5-30-D-GRAY-BL (Roadway 11, Expressway, 160W) as \"Manufactured Product, 55% or higher cost and final assembly both in US\", but with voltage code 0* (120–277V). This row is the same luminaire with voltage code H (347–480V), which Caltrans does not print. FDOT APL 715-005-017 (Evolve ERLC/ERL1/ERL2): \"BABA Eligible\", no limitation and no phase. TxDOT MPL (Sept 1, 2026): Evolve roadway is \"Project Level Certification Required\". ALDOT List IV-6 (Nov 5, 2026): ERL2_5_xx_xx_40_GRAY is coded N1 (not compliant).",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 5 spec sheet (OLP3238)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3238_ERL2_Gen5.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_21E530_____.IES",
+          "lumcat": "ERL2_21E530",
+          "lumens": 20100,
+          "watts": 160.0,
+          "source_url": "https://instabase.lightinganalysts.com/IITC/suppliers/current/GE%20LED%20-%20Outdoor%20-%20Evolve/Latest/Roadway/ERL2%20EVOLVE%20x5%20Distribution/3000K/ERL2_21E530_____.IES",
+          "note": "IES class Type II"
+        }
+      ],
+      "notes": "Catalog string follows the Caltrans listing with H swapped in for 0*. .ies is the 3000K/70 CRI file; watts are the published 120–277V value. The Gen 7 ERL2 sheet (OLP3249) adds an ordering suffix \"D1 = BABA Compliant\" and says to contact the factory to verify the configuration."
+    },
+    {
+      "id": "cur-erl2-h-23e5",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 5)",
+      "use": "Roadway",
+      "catalog": "ERL2-H-23E5-30-D-GRAY-BL",
+      "optic": "Type II enhanced back light (E5)",
+      "voltage": "347–480V (H)",
+      "watts": 177,
+      "lumens": 22000,
+      "status": "twin",
+      "evidence": "Caltrans AML (last edit 11/8/2026) flags ERL2-0*-23E5-30-D-GRAY-BL (Roadway 11, Conventional Highway, 177W) as \"Manufactured Product, 55% or higher cost and final assembly both in US\", but with voltage code 0* (120–277V). This row is the same luminaire with voltage code H (347–480V), which Caltrans does not print. FDOT APL 715-005-017 (Evolve ERLC/ERL1/ERL2): \"BABA Eligible\", no limitation and no phase. TxDOT MPL (Sept 1, 2026): Evolve roadway is \"Project Level Certification Required\". ALDOT List IV-6 (Nov 5, 2026): ERL2_5_xx_xx_40_GRAY is coded N1 (not compliant).",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 5 spec sheet (OLP3238)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3238_ERL2_Gen5.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_23E530_____.IES",
+          "lumcat": "ERL2_23E530",
+          "lumens": 22000,
+          "watts": 177.0,
+          "source_url": "https://instabase.lightinganalysts.com/IITC/suppliers/current/GE%20LED%20-%20Outdoor%20-%20Evolve/Latest/Roadway/ERL2%20EVOLVE%20x5%20Distribution/3000K/ERL2_23E530_____.IES",
+          "note": "IES class Type II"
+        }
+      ],
+      "notes": "Catalog string follows the Caltrans listing with H swapped in for 0*. .ies is the 3000K/70 CRI file; watts are the published 120–277V value. The Gen 7 ERL2 sheet (OLP3249) adds an ordering suffix \"D1 = BABA Compliant\" and says to contact the factory to verify the configuration."
+    },
+    {
+      "id": "cur-erl2-h-21d5",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERL2 (Gen 5)",
+      "use": "Roadway",
+      "catalog": "ERL2-H-21D5-30-D-GRAY-BL",
+      "optic": "Type IV (D5)",
+      "voltage": "347–480V (H)",
+      "watts": 160,
+      "lumens": 20100,
+      "status": "twin",
+      "evidence": "Caltrans AML (last edit 11/8/2026) flags ERL2-0*-21D5-30-D-GRAY-BL (Intersection Small A / Large A, 160W) as \"Manufactured Product, 55% or higher cost and final assembly both in US\", but with voltage code 0* (120–277V). This row is the same luminaire with voltage code H (347–480V), which Caltrans does not print. FDOT APL 715-005-017 (Evolve ERLC/ERL1/ERL2): \"BABA Eligible\", no limitation and no phase. TxDOT MPL (Sept 1, 2026): Evolve roadway is \"Project Level Certification Required\". ALDOT List IV-6 (Nov 5, 2026): ERL2_5_xx_xx_40_GRAY is coded N1 (not compliant).",
+      "cut_sheet": {
+        "title": "Evolve ERL2 Gen 5 spec sheet (OLP3238)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3238_ERL2_Gen5.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERL2_21D530_____.IES",
+          "lumcat": "ERL2_21D530",
+          "lumens": 20100,
+          "watts": 160.0,
+          "source_url": "https://instabase.lightinganalysts.com/IITC/suppliers/current/GE%20LED%20-%20Outdoor%20-%20Evolve/Latest/Roadway/ERL2%20EVOLVE%20x5%20Distribution/3000K/ERL2_21D530_____.IES",
+          "note": "IES class Type IV"
+        }
+      ],
+      "notes": "Catalog string follows the Caltrans listing with H swapped in for 0*. .ies is the 3000K/70 CRI file; watts are the published 120–277V value. The Gen 7 ERL2 sheet (OLP3249) adds an ordering suffix \"D1 = BABA Compliant\" and says to contact the factory to verify the configuration."
+    },
+    {
+      "id": "cur-erhm02-5-30c3-730",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERHM02 high mast",
+      "use": "High mast",
+      "catalog": "ERHM02-5-30-C3-7-30-N-D-4B-GRAY",
+      "optic": "Type III (C3)",
+      "voltage": "480V (5)",
+      "watts": 240,
+      "lumens": 28200,
+      "status": "none",
+      "evidence": "No state DOT states Phase 2 for ERHM. FDOT APL 715-006-005 (Evolve LED High Mast \"ERHM\"): \"BABA Eligible\" but limited to \"job lettings on or before December 31, 2026\". TxDOT MPL Table 27 (Sept 1, 2026) lists ERHM02 at 480V (4000K) as \"Project Level Certification Required\", not Compliant v5. The ERHM spec sheets have no BABA ordering option.",
+      "cut_sheet": {
+        "title": "Evolve ERHM high mast spec sheet (OLP3099B)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3099B-Evolve-ERHM-LED-Roadway-High-Mast-Light-Spec-Sheet.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERHM02_30C3730________.IES",
+          "lumcat": "ERHM02_30C3730",
+          "lumens": 28200,
+          "watts": 240.0,
+          "source_url": "https://instabase.lightinganalysts.com/IITC/suppliers/current/GE%20LED%20-%20Outdoor%20-%20Evolve/Latest/Roadway/ERHM02%20EVOLVE%20HIGH%20MAST/3000K/ERHM02_30C3730________.IES",
+          "note": "IES class Type III"
+        }
+      ],
+      "notes": "Catalog string follows the TxDOT-listed ERHM02540B3740ND4BGRAY pattern with 3000K (30) swapped in for 4000K (40). .ies is the 3000K/70 CRI file."
+    },
+    {
+      "id": "cur-erhm02-5-40c3-730",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERHM02 high mast",
+      "use": "High mast",
+      "catalog": "ERHM02-5-40-C3-7-30-N-D-4B-GRAY",
+      "optic": "Type III (C3)",
+      "voltage": "480V (5)",
+      "watts": 305,
+      "lumens": 37600,
+      "status": "none",
+      "evidence": "No state DOT states Phase 2 for ERHM. FDOT APL 715-006-005 (Evolve LED High Mast \"ERHM\"): \"BABA Eligible\" but limited to \"job lettings on or before December 31, 2026\". TxDOT MPL Table 27 (Sept 1, 2026) lists ERHM02 at 480V (4000K) as \"Project Level Certification Required\", not Compliant v5. The ERHM spec sheets have no BABA ordering option.",
+      "cut_sheet": {
+        "title": "Evolve ERHM high mast spec sheet (OLP3099B)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3099B-Evolve-ERHM-LED-Roadway-High-Mast-Light-Spec-Sheet.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERHM02_40C3730________.IES",
+          "lumcat": "ERHM02_40C3730",
+          "lumens": 37600,
+          "watts": 305.0,
+          "source_url": "https://instabase.lightinganalysts.com/IITC/suppliers/current/GE%20LED%20-%20Outdoor%20-%20Evolve/Latest/Roadway/ERHM02%20EVOLVE%20HIGH%20MAST/3000K/ERHM02_40C3730________.IES",
+          "note": "IES class Type III"
+        }
+      ],
+      "notes": "Catalog string follows the TxDOT-listed ERHM02540B3740ND4BGRAY pattern with 3000K (30) swapped in for 4000K (40). .ies is the 3000K/70 CRI file."
+    },
+    {
+      "id": "cur-erhm02-5-40vw-730",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERHM02 high mast",
+      "use": "High mast",
+      "catalog": "ERHM02-5-40-VW-7-30-N-D-4B-GRAY",
+      "optic": "Type V wide (VW)",
+      "voltage": "480V (5)",
+      "watts": 280,
+      "lumens": 37600,
+      "status": "none",
+      "evidence": "No state DOT states Phase 2 for ERHM. FDOT APL 715-006-005 (Evolve LED High Mast \"ERHM\"): \"BABA Eligible\" but limited to \"job lettings on or before December 31, 2026\". TxDOT MPL Table 27 (Sept 1, 2026) lists ERHM02 at 480V (4000K) as \"Project Level Certification Required\", not Compliant v5. The ERHM spec sheets have no BABA ordering option.",
+      "cut_sheet": {
+        "title": "Evolve ERHM high mast spec sheet (OLP3099B)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3099B-Evolve-ERHM-LED-Roadway-High-Mast-Light-Spec-Sheet.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERHM02_40VW730________.IES",
+          "lumcat": "ERHM02_40VW730",
+          "lumens": 37600,
+          "watts": 280.0,
+          "source_url": "https://instabase.lightinganalysts.com/IITC/suppliers/current/GE%20LED%20-%20Outdoor%20-%20Evolve/Latest/Roadway/ERHM02%20EVOLVE%20HIGH%20MAST/3000K/ERHM02_40VW730________.IES",
+          "note": "IES class Type VS"
+        }
+      ],
+      "notes": "Catalog string follows the TxDOT-listed ERHM02540B3740ND4BGRAY pattern with 3000K (30) swapped in for 4000K (40). .ies is the 3000K/70 CRI file."
+    },
+    {
+      "id": "cur-erhm02-5-50c3-730",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERHM02 high mast",
+      "use": "High mast",
+      "catalog": "ERHM02-5-50-C3-7-30-N-D-4B-GRAY",
+      "optic": "Type III (C3)",
+      "voltage": "480V (5)",
+      "watts": 380,
+      "lumens": 47000,
+      "status": "none",
+      "evidence": "No state DOT states Phase 2 for ERHM. FDOT APL 715-006-005 (Evolve LED High Mast \"ERHM\"): \"BABA Eligible\" but limited to \"job lettings on or before December 31, 2026\". TxDOT MPL Table 27 (Sept 1, 2026) lists ERHM02 at 480V (4000K) as \"Project Level Certification Required\", not Compliant v5. The ERHM spec sheets have no BABA ordering option.",
+      "cut_sheet": {
+        "title": "Evolve ERHM high mast spec sheet (OLP3099B)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3099B-Evolve-ERHM-LED-Roadway-High-Mast-Light-Spec-Sheet.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERHM02_50C3730________.IES",
+          "lumcat": "ERHM02_50C3730",
+          "lumens": 47000,
+          "watts": 380.0,
+          "source_url": "https://instabase.lightinganalysts.com/IITC/suppliers/current/GE%20LED%20-%20Outdoor%20-%20Evolve/Latest/Roadway/ERHM02%20EVOLVE%20HIGH%20MAST/3000K/ERHM02_50C3730________.IES",
+          "note": "IES class Type III"
+        }
+      ],
+      "notes": "Catalog string follows the TxDOT-listed ERHM02540B3740ND4BGRAY pattern with 3000K (30) swapped in for 4000K (40). .ies is the 3000K/70 CRI file."
+    },
+    {
+      "id": "cur-erhm02-5-50vw-730",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERHM02 high mast",
+      "use": "High mast",
+      "catalog": "ERHM02-5-50-VW-7-30-N-D-4B-GRAY",
+      "optic": "Type V wide (VW)",
+      "voltage": "480V (5)",
+      "watts": 365,
+      "lumens": 47000,
+      "status": "none",
+      "evidence": "No state DOT states Phase 2 for ERHM. FDOT APL 715-006-005 (Evolve LED High Mast \"ERHM\"): \"BABA Eligible\" but limited to \"job lettings on or before December 31, 2026\". TxDOT MPL Table 27 (Sept 1, 2026) lists ERHM02 at 480V (4000K) as \"Project Level Certification Required\", not Compliant v5. The ERHM spec sheets have no BABA ordering option.",
+      "cut_sheet": {
+        "title": "Evolve ERHM high mast spec sheet (OLP3099B)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3099B-Evolve-ERHM-LED-Roadway-High-Mast-Light-Spec-Sheet.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERHM02_50VW730________.IES",
+          "lumcat": "ERHM02_50VW730",
+          "lumens": 47000,
+          "watts": 365.0,
+          "source_url": "https://instabase.lightinganalysts.com/IITC/suppliers/current/GE%20LED%20-%20Outdoor%20-%20Evolve/Latest/Roadway/ERHM02%20EVOLVE%20HIGH%20MAST/3000K/ERHM02_50VW730________.IES",
+          "note": "IES class Type VS"
+        }
+      ],
+      "notes": "Catalog string follows the TxDOT-listed ERHM02540B3740ND4BGRAY pattern with 3000K (30) swapped in for 4000K (40). .ies is the 3000K/70 CRI file."
+    },
+    {
+      "id": "cur-erhm02-5-60c3-730",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERHM02 high mast",
+      "use": "High mast",
+      "catalog": "ERHM02-5-60-C3-7-30-N-D-4B-GRAY",
+      "optic": "Type III (C3)",
+      "voltage": "480V (5)",
+      "watts": 495,
+      "lumens": 61100,
+      "status": "none",
+      "evidence": "No state DOT states Phase 2 for ERHM. FDOT APL 715-006-005 (Evolve LED High Mast \"ERHM\"): \"BABA Eligible\" but limited to \"job lettings on or before December 31, 2026\". TxDOT MPL Table 27 (Sept 1, 2026) lists ERHM02 at 480V (4000K) as \"Project Level Certification Required\", not Compliant v5. The ERHM spec sheets have no BABA ordering option.",
+      "cut_sheet": {
+        "title": "Evolve ERHM high mast spec sheet (OLP3099B)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3099B-Evolve-ERHM-LED-Roadway-High-Mast-Light-Spec-Sheet.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERHM02_60C3730________.IES",
+          "lumcat": "ERHM02_60C3730",
+          "lumens": 61100,
+          "watts": 495.0,
+          "source_url": "https://instabase.lightinganalysts.com/IITC/suppliers/current/GE%20LED%20-%20Outdoor%20-%20Evolve/Latest/Roadway/ERHM02%20EVOLVE%20HIGH%20MAST/3000K/ERHM02_60C3730________.IES",
+          "note": "IES class Type III"
+        }
+      ],
+      "notes": "Catalog string follows the TxDOT-listed ERHM02540B3740ND4BGRAY pattern with 3000K (30) swapped in for 4000K (40). .ies is the 3000K/70 CRI file."
+    },
+    {
+      "id": "cur-erhm02-5-60vw-730",
+      "group": "Current Lighting",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "Evolve ERHM02 high mast",
+      "use": "High mast",
+      "catalog": "ERHM02-5-60-VW-7-30-N-D-4B-GRAY",
+      "optic": "Type V wide (VW)",
+      "voltage": "480V (5)",
+      "watts": 468,
+      "lumens": 61100,
+      "status": "none",
+      "evidence": "No state DOT states Phase 2 for ERHM. FDOT APL 715-006-005 (Evolve LED High Mast \"ERHM\"): \"BABA Eligible\" but limited to \"job lettings on or before December 31, 2026\". TxDOT MPL Table 27 (Sept 1, 2026) lists ERHM02 at 480V (4000K) as \"Project Level Certification Required\", not Compliant v5. The ERHM spec sheets have no BABA ordering option.",
+      "cut_sheet": {
+        "title": "Evolve ERHM high mast spec sheet (OLP3099B)",
+        "url": "https://cdn.currentlighting.com/site/specsheet/OLP3099B-Evolve-ERHM-LED-Roadway-High-Mast-Light-Spec-Sheet.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/current/ERHM02_60VW730________.IES",
+          "lumcat": "ERHM02_60VW730",
+          "lumens": 61100,
+          "watts": 468.0,
+          "source_url": "https://instabase.lightinganalysts.com/IITC/suppliers/current/GE%20LED%20-%20Outdoor%20-%20Evolve/Latest/Roadway/ERHM02%20EVOLVE%20HIGH%20MAST/3000K/ERHM02_60VW730________.IES",
+          "note": "IES class Type VS"
+        }
+      ],
+      "notes": "Catalog string follows the TxDOT-listed ERHM02540B3740ND4BGRAY pattern with 3000K (30) swapped in for 4000K (40). .ies is the 3000K/70 CRI file."
+    },
+    {
+      "id": "cree-gwyl-20l-30k7-2m-uh",
+      "group": "Cree Lighting",
+      "manufacturer": "Cree Lighting",
+      "brand": "",
+      "family": "Guideway Large · 20L",
+      "use": "Roadway",
+      "catalog": "GWYL-A-20L-30K7-2M-UH-GY",
+      "optic": "Type II medium (2M)",
+      "voltage": "347–480V (UH)",
+      "watts": 119,
+      "lumens": 18600,
+      "status": "none",
+      "evidence": "No state DOT states Phase 2 for Guideway. TxDOT MPL Table 13 (Sept 1, 2026) lists Guideway at 480V (GWYLA-25L-40K7-2M-UH-GY-20KV-W10-TXDOT, 4000K) as \"Compliant v4\", which covers Oct 1, 2025 – Sept 30, 2026 only. Caltrans AML (11/8/2026) lists the 3000K GWYL-A rows (UL voltage) as \"Unconfirmed\". FDOT APL 715-005-042 (Guideway GWY): \"BABA Eligible\", no limitation and no phase. Cree Lighting lists Guideway on its BAA/BABA page and says not every SKU in a family qualifies.",
+      "cut_sheet": {
+        "title": "Guideway Series spec sheet",
+        "url": "https://cms.creelighting.com/download/67522"
+      },
+      "ies": [
+        {
+          "file": "ies/cree/GWYL-A-20L-30K7-2M-Ux-xx-xx-xx_CONFIGURED.ies",
+          "lumcat": "GWYL-A-20L-30K7-2M-Ux-xx-xx-xx",
+          "lumens": 18600,
+          "watts": 119.0,
+          "source_url": "https://cms.creelighting.com/download/67528",
+          "note": "from Cree .zip bundle"
+        }
+      ],
+      "notes": "Catalog string is the published 3000K/70 CRI .ies configuration with the UH (347–480V) voltage code; add finish and options per project. Watts are the .ies value."
+    },
+    {
+      "id": "cree-gwyl-20l-30k7-3m-uh",
+      "group": "Cree Lighting",
+      "manufacturer": "Cree Lighting",
+      "brand": "",
+      "family": "Guideway Large · 20L",
+      "use": "Roadway",
+      "catalog": "GWYL-A-20L-30K7-3M-UH-GY",
+      "optic": "Type III medium (3M)",
+      "voltage": "347–480V (UH)",
+      "watts": 115,
+      "lumens": 19031,
+      "status": "none",
+      "evidence": "No state DOT states Phase 2 for Guideway. TxDOT MPL Table 13 (Sept 1, 2026) lists Guideway at 480V (GWYLA-25L-40K7-2M-UH-GY-20KV-W10-TXDOT, 4000K) as \"Compliant v4\", which covers Oct 1, 2025 – Sept 30, 2026 only. Caltrans AML (11/8/2026) lists the 3000K GWYL-A rows (UL voltage) as \"Unconfirmed\". FDOT APL 715-005-042 (Guideway GWY): \"BABA Eligible\", no limitation and no phase. Cree Lighting lists Guideway on its BAA/BABA page and says not every SKU in a family qualifies.",
+      "cut_sheet": {
+        "title": "Guideway Series spec sheet",
+        "url": "https://cms.creelighting.com/download/67522"
+      },
+      "ies": [
+        {
+          "file": "ies/cree/GWYL-A-20L-30K7-3M-UL-xx-xx-xx_PL17833-001A.ies",
+          "lumcat": "GWYL-A-20L-30K7-3M-UL-xx-xx-xx",
+          "lumens": 19031,
+          "watts": 114.8,
+          "source_url": "https://cms.creelighting.com/download/67553",
+          "note": "from Cree .zip bundle"
+        }
+      ],
+      "notes": "Catalog string is the published 3000K/70 CRI .ies configuration with the UH (347–480V) voltage code; add finish and options per project. Watts are the .ies value."
+    },
+    {
+      "id": "cree-gwyl-25l-30k7-2m-uh",
+      "group": "Cree Lighting",
+      "manufacturer": "Cree Lighting",
+      "brand": "",
+      "family": "Guideway Large · 25L",
+      "use": "Roadway",
+      "catalog": "GWYL-A-25L-30K7-2M-UH-GY",
+      "optic": "Type II medium (2M)",
+      "voltage": "347–480V (UH)",
+      "watts": 148,
+      "lumens": 23200,
+      "status": "none",
+      "evidence": "No state DOT states Phase 2 for Guideway. TxDOT MPL Table 13 (Sept 1, 2026) lists Guideway at 480V (GWYLA-25L-40K7-2M-UH-GY-20KV-W10-TXDOT, 4000K) as \"Compliant v4\", which covers Oct 1, 2025 – Sept 30, 2026 only. Caltrans AML (11/8/2026) lists the 3000K GWYL-A rows (UL voltage) as \"Unconfirmed\". FDOT APL 715-005-042 (Guideway GWY): \"BABA Eligible\", no limitation and no phase. Cree Lighting lists Guideway on its BAA/BABA page and says not every SKU in a family qualifies.",
+      "cut_sheet": {
+        "title": "Guideway Series spec sheet",
+        "url": "https://cms.creelighting.com/download/67522"
+      },
+      "ies": [
+        {
+          "file": "ies/cree/GWYL-A-25L-30K7-2M-Ux-xx-xx-xx_CONFIGURED.ies",
+          "lumcat": "GWYL-A-25L-30K7-2M-Ux-xx-xx-xx",
+          "lumens": 23200,
+          "watts": 148.0,
+          "source_url": "https://cms.creelighting.com/download/67528",
+          "note": "from Cree .zip bundle"
+        }
+      ],
+      "notes": "Catalog string is the published 3000K/70 CRI .ies configuration with the UH (347–480V) voltage code; add finish and options per project. Watts are the .ies value."
+    },
+    {
+      "id": "cree-gwyl-25l-30k7-3m-uh",
+      "group": "Cree Lighting",
+      "manufacturer": "Cree Lighting",
+      "brand": "",
+      "family": "Guideway Large · 25L",
+      "use": "Roadway",
+      "catalog": "GWYL-A-25L-30K7-3M-UH-GY",
+      "optic": "Type III medium (3M)",
+      "voltage": "347–480V (UH)",
+      "watts": 144,
+      "lumens": 23680,
+      "status": "none",
+      "evidence": "No state DOT states Phase 2 for Guideway. TxDOT MPL Table 13 (Sept 1, 2026) lists Guideway at 480V (GWYLA-25L-40K7-2M-UH-GY-20KV-W10-TXDOT, 4000K) as \"Compliant v4\", which covers Oct 1, 2025 – Sept 30, 2026 only. Caltrans AML (11/8/2026) lists the 3000K GWYL-A rows (UL voltage) as \"Unconfirmed\". FDOT APL 715-005-042 (Guideway GWY): \"BABA Eligible\", no limitation and no phase. Cree Lighting lists Guideway on its BAA/BABA page and says not every SKU in a family qualifies.",
+      "cut_sheet": {
+        "title": "Guideway Series spec sheet",
+        "url": "https://cms.creelighting.com/download/67522"
+      },
+      "ies": [
+        {
+          "file": "ies/cree/GWYL-A-25L-30K7-3M-UL-xx-xx-xx_PL17834-001A.ies",
+          "lumcat": "GWYL-A-25L-30K7-3M-UL-xx-xx-xx",
+          "lumens": 23680,
+          "watts": 143.5,
+          "source_url": "https://cms.creelighting.com/download/67553",
+          "note": "from Cree .zip bundle"
+        }
+      ],
+      "notes": "Catalog string is the published 3000K/70 CRI .ies configuration with the UH (347–480V) voltage code; add finish and options per project. Watts are the .ies value."
+    },
+    {
+      "id": "cree-osql-40l-30k7-5m-uh",
+      "group": "Cree Lighting",
+      "manufacturer": "Cree Lighting",
+      "brand": "",
+      "family": "OSQ Large · 40L",
+      "use": "High mast",
+      "catalog": "OSQL-C-40L-30K7-5M-UH",
+      "optic": "Type V medium (5M)",
+      "voltage": "347–480V (UH)",
+      "watts": 236,
+      "lumens": 38400,
+      "status": "none",
+      "evidence": "No state DOT luminaire list reviewed carries OSQ as a high mast luminaire or states Phase 2 for it. Cree Lighting lists OSQ Area/Flood on its BAA/BABA page and says not every SKU in a family qualifies. Cree has no TxDOT or FDOT high mast listing.",
+      "cut_sheet": {
+        "title": "OSQ M/L/X Version C spec sheet",
+        "url": "https://cms.creelighting.com/download/54951"
+      },
+      "ies": [
+        {
+          "file": "ies/cree/OSQL-C-40L-30K7-5M-Ux-xx-xx-xx-xx_CONFIGURED.ies",
+          "lumcat": "OSQL-C-40L-30K7-5M-Ux-xx-xx-xx-xx",
+          "lumens": 38400,
+          "watts": 236.0,
+          "source_url": "https://cms.creelighting.com/download/54962",
+          "note": "from Cree .zip bundle"
+        }
+      ],
+      "notes": "Catalog string is the published 3000K/70 CRI .ies configuration with the UH (347–480V) voltage code; add finish and options per project. Watts are the .ies value."
+    },
+    {
+      "id": "cree-osqx-50l-30k7-5m-uh",
+      "group": "Cree Lighting",
+      "manufacturer": "Cree Lighting",
+      "brand": "",
+      "family": "OSQ X-Large · 50L",
+      "use": "High mast",
+      "catalog": "OSQX-C-50L-30K7-5M-UH",
+      "optic": "Type V medium (5M)",
+      "voltage": "347–480V (UH)",
+      "watts": 297,
+      "lumens": 48000,
+      "status": "none",
+      "evidence": "No state DOT luminaire list reviewed carries OSQ as a high mast luminaire or states Phase 2 for it. Cree Lighting lists OSQ Area/Flood on its BAA/BABA page and says not every SKU in a family qualifies. Cree has no TxDOT or FDOT high mast listing.",
+      "cut_sheet": {
+        "title": "OSQ M/L/X Version C spec sheet",
+        "url": "https://cms.creelighting.com/download/54951"
+      },
+      "ies": [
+        {
+          "file": "ies/cree/OSQX-C-50L-30K7-5M-Ux-xx-xx-xx-xx_CONFIGURED.ies",
+          "lumcat": "OSQX-C-50L-30K7-5M-Ux-xx-xx-xx-xx",
+          "lumens": 48000,
+          "watts": 297.0,
+          "source_url": "https://cms.creelighting.com/download/54962",
+          "note": "from Cree .zip bundle"
+        }
+      ],
+      "notes": "Catalog string is the published 3000K/70 CRI .ies configuration with the UH (347–480V) voltage code; add finish and options per project. Watts are the .ies value."
+    },
+    {
+      "id": "cree-osqx-65l-30k7-5m-uh",
+      "group": "Cree Lighting",
+      "manufacturer": "Cree Lighting",
+      "brand": "",
+      "family": "OSQ X-Large · 65L",
+      "use": "High mast",
+      "catalog": "OSQX-C-65L-30K7-5M-UH",
+      "optic": "Type V medium (5M)",
+      "voltage": "347–480V (UH)",
+      "watts": 384,
+      "lumens": 62400,
+      "status": "none",
+      "evidence": "No state DOT luminaire list reviewed carries OSQ as a high mast luminaire or states Phase 2 for it. Cree Lighting lists OSQ Area/Flood on its BAA/BABA page and says not every SKU in a family qualifies. Cree has no TxDOT or FDOT high mast listing.",
+      "cut_sheet": {
+        "title": "OSQ M/L/X Version C spec sheet",
+        "url": "https://cms.creelighting.com/download/54951"
+      },
+      "ies": [
+        {
+          "file": "ies/cree/OSQX-C-65L-30K7-5M-Ux-xx-xx-xx-xx_CONFIGURED.ies",
+          "lumcat": "OSQX-C-65L-30K7-5M-Ux-xx-xx-xx-xx",
+          "lumens": 62400,
+          "watts": 384.0,
+          "source_url": "https://cms.creelighting.com/download/54962",
+          "note": "from Cree .zip bundle"
+        }
+      ],
+      "notes": "Catalog string is the published 3000K/70 CRI .ies configuration with the UH (347–480V) voltage code; add finish and options per project. Watts are the .ies value."
+    },
+    {
+      "id": "cree-osqx-75l-30k7-5m-uh",
+      "group": "Cree Lighting",
+      "manufacturer": "Cree Lighting",
+      "brand": "",
+      "family": "OSQ X-Large · 75L",
+      "use": "High mast",
+      "catalog": "OSQX-C-75L-30K7-5M-UH",
+      "optic": "Type V medium (5M)",
+      "voltage": "347–480V (UH)",
+      "watts": 447,
+      "lumens": 72000,
+      "status": "none",
+      "evidence": "No state DOT luminaire list reviewed carries OSQ as a high mast luminaire or states Phase 2 for it. Cree Lighting lists OSQ Area/Flood on its BAA/BABA page and says not every SKU in a family qualifies. Cree has no TxDOT or FDOT high mast listing.",
+      "cut_sheet": {
+        "title": "OSQ M/L/X Version C spec sheet",
+        "url": "https://cms.creelighting.com/download/54951"
+      },
+      "ies": [
+        {
+          "file": "ies/cree/OSQX-C-75L-30K7-5M-Ux-xx-xx-xx-xx_CONFIGURED.ies",
+          "lumcat": "OSQX-C-75L-30K7-5M-Ux-xx-xx-xx-xx",
+          "lumens": 72000,
+          "watts": 447.0,
+          "source_url": "https://cms.creelighting.com/download/54962",
+          "note": "from Cree .zip bundle"
+        }
+      ],
+      "notes": "Catalog string is the published 3000K/70 CRI .ies configuration with the UH (347–480V) voltage code; add finish and options per project. Watts are the .ies value."
+    },
+    {
+      "id": "cree-osqx-85l-30k7-5m-uh",
+      "group": "Cree Lighting",
+      "manufacturer": "Cree Lighting",
+      "brand": "",
+      "family": "OSQ X-Large · 85L",
+      "use": "High mast",
+      "catalog": "OSQX-C-85L-30K7-5M-UH",
+      "optic": "Type V medium (5M)",
+      "voltage": "347–480V (UH)",
+      "watts": 499,
+      "lumens": 81600,
+      "status": "none",
+      "evidence": "No state DOT luminaire list reviewed carries OSQ as a high mast luminaire or states Phase 2 for it. Cree Lighting lists OSQ Area/Flood on its BAA/BABA page and says not every SKU in a family qualifies. Cree has no TxDOT or FDOT high mast listing.",
+      "cut_sheet": {
+        "title": "OSQ M/L/X Version C spec sheet",
+        "url": "https://cms.creelighting.com/download/54951"
+      },
+      "ies": [
+        {
+          "file": "ies/cree/OSQX-C-85L-30K7-5M-Ux-xx-xx-xx-xx_CONFIGURED.ies",
+          "lumcat": "OSQX-C-85L-30K7-5M-Ux-xx-xx-xx-xx",
+          "lumens": 81600,
+          "watts": 499.0,
+          "source_url": "https://cms.creelighting.com/download/54962",
+          "note": "from Cree .zip bundle"
+        }
+      ],
+      "notes": "Catalog string is the published 3000K/70 CRI .ies configuration with the UH (347–480V) voltage code; add finish and options per project. Watts are the .ies value."
+    }
+  ],
+  "removed_count": 37
 }

@@ -1,7 +1,7 @@
 [
   {
     "id": "fl-current-evolve-brand-manufacturer-name-not-confirmed-in-snippet-evolve-erl6-c",
-    "manufacturer": "Current (Evolve brand; manufacturer name not confirmed in snippet)",
+    "manufacturer": "Current Lighting",
     "model": "Evolve ERL6 Cobra head",
     "product_type": "Conventional LED roadway luminaire",
     "states": [
@@ -660,31 +660,6 @@
     "last_verified": "2026-11-09"
   },
   {
-    "id": "st480-fl-apl-led-cooper-lighting-solutions-archeon",
-    "manufacturer": "Cooper Lighting Solutions",
-    "model": "Archeon (1 configuration on the list)",
-    "product_type": "LED roadway luminaire",
-    "states": [
-      {
-        "state": "FL",
-        "list_name": "FDOT Approved Product List – LED luminaires (715-005/-006)",
-        "listing_id": "Phase 1",
-        "dot_list_url": "https://path.fdot.gov/ProductTypes/Index/611"
-      }
-    ],
-    "final_assembly_us": "stated",
-    "domestic_content_55": "not stated",
-    "evidence_level": "dot-flagged",
-    "evidence": [
-      {
-        "summary": "FDOT APL",
-        "url": "https://path.fdot.gov/ProductTypes/Index/611"
-      }
-    ],
-    "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
-    "last_verified": "2026-11-09"
-  },
-  {
     "id": "st480-fl-apl-led-cooper-lighting-solutions-archeon-contemporary-arch1-arch2-arch3-arch4",
     "manufacturer": "Cooper Lighting Solutions",
     "model": "Archeon Contemporary ARCH1/ARCH2/ARCH3/ARCH4 (1 configuration on the list)",
@@ -729,31 +704,6 @@
       {
         "summary": "FDOT APL",
         "url": "https://path.fdot.gov/Products/Index/4790?approvalId=8312"
-      }
-    ],
-    "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
-    "last_verified": "2026-11-09"
-  },
-  {
-    "id": "st480-fl-apl-led-leotek-greencobra",
-    "manufacturer": "Leotek",
-    "model": "GreenCobra (1 configuration on the list)",
-    "product_type": "LED roadway luminaire",
-    "states": [
-      {
-        "state": "FL",
-        "list_name": "FDOT Approved Product List – LED luminaires (715-005/-006)",
-        "listing_id": "Phase 1",
-        "dot_list_url": "https://path.fdot.gov/ProductTypes/Index/611"
-      }
-    ],
-    "final_assembly_us": "stated",
-    "domestic_content_55": "not stated",
-    "evidence_level": "dot-flagged",
-    "evidence": [
-      {
-        "summary": "FDOT APL",
-        "url": "https://path.fdot.gov/ProductTypes/Index/611"
       }
     ],
     "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
@@ -829,31 +779,6 @@
       {
         "summary": "FDOT APL",
         "url": "https://path.fdot.gov/ProductTypes/Index/611"
-      }
-    ],
-    "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
-    "last_verified": "2026-11-09"
-  },
-  {
-    "id": "st480-fl-apl-led-chm-lighting-cled2",
-    "manufacturer": "CHM Lighting",
-    "model": "CLED2 (1 configuration on the list)",
-    "product_type": "LED high mast luminaire",
-    "states": [
-      {
-        "state": "FL",
-        "list_name": "FDOT Approved Product List – LED luminaires (715-005/-006)",
-        "listing_id": "Phase 1",
-        "dot_list_url": "https://path.fdot.gov/ProductTypes/Index/612"
-      }
-    ],
-    "final_assembly_us": "stated",
-    "domestic_content_55": "not stated",
-    "evidence_level": "dot-flagged",
-    "evidence": [
-      {
-        "summary": "FDOT APL",
-        "url": "https://path.fdot.gov/ProductTypes/Index/612"
       }
     ],
     "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
@@ -1074,31 +999,6 @@
     ],
     "final_assembly_us": "stated",
     "domestic_content_55": "stated",
-    "evidence_level": "dot-flagged",
-    "evidence": [
-      {
-        "summary": "Caltrans AML",
-        "url": "https://mets.dot.ca.gov/aml/LED.php?type=1&print=yes"
-      }
-    ],
-    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
-    "last_verified": "2026-11-09"
-  },
-  {
-    "id": "st480-ca-aml-led-solarmax-smx-wie-ll5",
-    "manufacturer": "SolarMax",
-    "model": "SMX-WiE LL5 (10 configurations on the list)",
-    "product_type": "LED roadway luminaire",
-    "states": [
-      {
-        "state": "CA",
-        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
-        "listing_id": "Phase 1",
-        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=1&print=yes"
-      }
-    ],
-    "final_assembly_us": "stated",
-    "domestic_content_55": "not stated",
     "evidence_level": "dot-flagged",
     "evidence": [
       {
@@ -1457,6 +1357,111 @@
       }
     ],
     "notes": "Rows described \"BAA Compliant\" (Buy American Act order option), not an FHWA Buy America statement; no BABA phase given. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "cree-guideway-gwy",
+    "manufacturer": "Cree Lighting",
+    "model": "Guideway (GWYS/GWYM/GWYL)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "FDOT APL 715-005 LED Luminaire (Conventional)",
+        "listing_id": "715-005-042",
+        "dot_list_url": "https://path.fdot.gov/ProductTypes/Index/611"
+      },
+      {
+        "state": "TX",
+        "list_name": "TxDOT MPL Table 13",
+        "listing_id": "Compliant v4",
+        "dot_list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      },
+      {
+        "state": "CA",
+        "list_name": "Caltrans AML – LED Luminaires",
+        "listing_id": "Unconfirmed",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "FDOT APL: BABA Eligible, no limitation, no phase",
+        "url": "https://path.fdot.gov/ProductTypes/Index/611"
+      },
+      {
+        "summary": "TxDOT MPL: Compliant v4 (Oct 1, 2025 – Sept 30, 2026 only)",
+        "url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      },
+      {
+        "summary": "Cree Lighting BAA/BABA page (family level, per-SKU evaluation)",
+        "url": "https://www.creelighting.com/baa-baba/"
+      }
+    ],
+    "notes": "No state DOT states Phase 2 (55%) for Guideway. TxDOT lists 480V (UH) Guideway as Compliant v4 only; Caltrans lists the 3000K rows as \"Unconfirmed\". 3000K .ies files are on fixtures-3k.html.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "current-evolve-erhm",
+    "manufacturer": "Current Lighting",
+    "model": "Evolve ERHM high mast",
+    "product_type": "LED high mast luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "FDOT APL 715-006 LED Luminaire (High Mast)",
+        "listing_id": "715-006-005",
+        "dot_list_url": "https://path.fdot.gov/ProductTypes/Index/612"
+      },
+      {
+        "state": "TX",
+        "list_name": "TxDOT MPL Table 27",
+        "listing_id": "Project Level Certification Required",
+        "dot_list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "FDOT APL: BABA Eligible, limited to job lettings on or before December 31, 2026",
+        "url": "https://path.fdot.gov/ProductTypes/Index/612"
+      },
+      {
+        "summary": "TxDOT MPL: Project Level Certification Required",
+        "url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf"
+      }
+    ],
+    "notes": "No state DOT states Phase 2 (55%) for ERHM. 3000K .ies files are on fixtures-3k.html.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "current-evolve-erl-fl",
+    "manufacturer": "Current Lighting",
+    "model": "Evolve Roadway LED Lighting (ERLC, ERL1, ERL2)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "FDOT APL 715-005 LED Luminaire (Conventional)",
+        "listing_id": "715-005-017",
+        "dot_list_url": "https://path.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "FDOT APL: BABA Eligible, no limitation, no phase",
+        "url": "https://path.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "notes": "Florida does not state a phase. Caltrans separately flags specific ERL1/ERL2 3000K rows as Phase 2 (see the Caltrans entries). ALDOT codes ERL2_5_xx_xx_40_GRAY as N1 (not compliant); TxDOT requires project-level certification.",
     "last_verified": "2026-11-09"
   }
 ]
