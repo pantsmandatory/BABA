@@ -1,16 +1,4 @@
 {
-  "filter": {
-    "cct": 3000,
-    "voltage": 480,
-    "cri": 70
-  },
-  "filter_labels": [
-    "3000K",
-    "480V",
-    "70 CRI",
-    "TxDOT Compliant v5"
-  ],
-  "cct_note": "None of these 3000K catalog numbers is listed by TxDOT as written (TxDOT qualified the 4000K versions), so ask the manufacturer to confirm the 3000K build carries the same Buy America certification before you specify it.",
   "sources": [
     {
       "id": "tx-mpl-2026-09",
@@ -699,6 +687,685 @@
         "Lumens are estimated: 4000K output × 0.94. Watts are the sheet's 480V value.",
         "3070 is printed under the sheet's custom configurations."
       ]
+    },
+    {
+      "id": "cooper-arch1-50-730-8-t3re--4k",
+      "manufacturer": "Cooper Lighting Solutions",
+      "brand": "Streetworks",
+      "family": "Archeon ARCH1 · 50W",
+      "product_type": "LED roadway luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "BABA-ARCH1-50-740-8-T3RE-AP-FF-20MSP-K-TXDOT-D169340",
+      "distribution": "Type III (T3RE)",
+      "watts": null,
+      "lumens": null,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 5",
+        "status": "Compliant v5",
+        "listed_catalog": "BABA-ARCH1-50-740-8-T3RE-AP-FF-20MSP-K-TXDOT-D169340",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "ARCH1 spec sheet (PS50619924EN)",
+        "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/streetworks-archeon-contemporary-arch1-spec/Streetworks-ARCH1-Spec-Sheet.pdf"
+      },
+      "ies": [],
+      "caveats": [
+        "Cooper 4000K .ies being located; check the Cooper product page photometry tab.",
+        "The D-number at the end is TxDOT's custom configuration code; quote it when ordering."
+      ]
+    },
+    {
+      "id": "cooper-arch3-80-730-8-t2re--4k",
+      "manufacturer": "Cooper Lighting Solutions",
+      "brand": "Streetworks",
+      "family": "Archeon ARCH3 · 80W",
+      "product_type": "LED roadway luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "BABA-ARCH3-80-740-8-T2RE-AP-20MSP-K-TXDOT-D169342",
+      "distribution": "Type II (T2RE)",
+      "watts": null,
+      "lumens": null,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 5",
+        "status": "Compliant v5",
+        "listed_catalog": "BABA-ARCH3-80-740-8-T2RE-AP-20MSP-K-TXDOT-D169342",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "ARCH3 spec sheet (PS50659724EN)",
+        "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/streetworks-archeon-contemporary-arch3-spec/Streetworks-ARCH3-Spec-Sheet.pdf"
+      },
+      "ies": [],
+      "caveats": [
+        "Cooper 4000K .ies being located; check the Cooper product page photometry tab.",
+        "Cut sheet: 480V not for ungrounded or impedance-grounded systems."
+      ]
+    },
+    {
+      "id": "cooper-arch3-150-730-8-t2re--4k",
+      "manufacturer": "Cooper Lighting Solutions",
+      "brand": "Streetworks",
+      "family": "Archeon ARCH3 · 150W",
+      "product_type": "LED roadway luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "BABA-ARCH3-150-740-8-T2RE-AP-20MSP-K-TXDOT-D169346",
+      "distribution": "Type II (T2RE)",
+      "watts": null,
+      "lumens": null,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 5",
+        "status": "Compliant v5",
+        "listed_catalog": "BABA-ARCH3-150-740-8-T2RE-AP-20MSP-K-TXDOT-D169346",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "ARCH3 spec sheet (PS50659724EN)",
+        "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/streetworks-archeon-contemporary-arch3-spec/Streetworks-ARCH3-Spec-Sheet.pdf"
+      },
+      "ies": [],
+      "caveats": [
+        "Cooper 4000K .ies being located; check the Cooper product page photometry tab.",
+        "Cut sheet: 480V not for ungrounded or impedance-grounded systems."
+      ]
+    },
+    {
+      "id": "leotek-gcj2-30k-hv-065--4k",
+      "manufacturer": "Leotek",
+      "brand": "GreenCobra",
+      "family": "GreenCobra GCJ2 J-Series · 44W",
+      "product_type": "LED roadway luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "GCJ2-30J-HV-40K-3R-GY-070-PCR7CR-WL-DF-SP2-SC-TXDOT-BABA",
+      "distribution": "Type III (3R)",
+      "watts": 44.0,
+      "lumens": 6843,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 6",
+        "status": "Compliant v5",
+        "listed_catalog": "GCJ2-30J-HV-40K-3R-GY-070-PCR7CR-WL-DF-SP2-SC-TXDOT-BABA",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "GCJ J-Series spec sheet (rev 09-22-26)",
+        "url": "https://leotek.com/download/263/greencobra-gcj/22404/gcj-j-series-spec-sheet.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/leotek/GCJ2-30J-MV-40K-3R-XX-070.ies",
+          "lumcat": "GCJ2-30J-MV-40K-3R-XX-070",
+          "lumens": 6843,
+          "watts": 44.0,
+          "source_url": "https://leotek.com/download/278/ies-files-gcj-j-series/22425/gcj-j-series_4000k-ies-files.zip",
+          "note": "Measured (UL test 12844807.02A, 7/2/2019) at 120–277V (MV)."
+        }
+      ],
+      "caveats": [
+        "TxDOT lists 45W; Leotek's file and sheet show 44W.",
+        "Leotek: the BABA option code is required; it \"meets Oct. 1, 2026 final US assembly, 55% content\" rules."
+      ]
+    },
+    {
+      "id": "leotek-gcm3-30k-hv-145--4k",
+      "manufacturer": "Leotek",
+      "brand": "GreenCobra",
+      "family": "GreenCobra GCM J-Series · 100W",
+      "product_type": "LED roadway luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "GCM3-60J-HV-40K-2R-GY-155-PCR7CR-WL-SP2-SC-TXDOT-BABA",
+      "distribution": "Type II (2R)",
+      "watts": 100,
+      "lumens": 15553,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 6",
+        "status": "Compliant v5",
+        "listed_catalog": "GCM3-60J-HV-40K-2R-GY-155-PCR7CR-WL-SP2-SC-TXDOT-BABA",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "GCM J-Series spec sheet (rev 09-22-26)",
+        "url": "https://leotek.com/download/264/greencobra-gcm/22506/gcm-j-series-specification-sheet.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/leotek/GCM2-60J-MV-40K-2R-XX-155_S.ies",
+          "lumcat": "GCM2-60J-MV-40K-2R-XX-155",
+          "lumens": 15553,
+          "watts": 100,
+          "source_url": "https://leotek.com/download/290/ies-files-gcm-j-series/22510/gcm-j-series_4000k-ies-files.zip",
+          "note": "Scaled from an LM-79 test, 120–277V (MV). Leotek names this size GCM2."
+        }
+      ],
+      "caveats": [
+        "TxDOT lists this as GCM3, but Leotek's tables put output code 155 under GCM2. Confirm the housing size with Leotek."
+      ]
+    },
+    {
+      "id": "leotek-gcm3-30k-hv-215--4k",
+      "manufacturer": "Leotek",
+      "brand": "GreenCobra",
+      "family": "GreenCobra GCM J-Series · 140W",
+      "product_type": "LED roadway luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "GCM3-60J-HV-40K-2R-GY-220-PCR7CR-WL-SP2-SC-TXDOT-BABA",
+      "distribution": "Type II (2R)",
+      "watts": 138.6,
+      "lumens": 22350,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 6",
+        "status": "Compliant v5",
+        "listed_catalog": "GCM3-60J-HV-40K-2R-GY-220-PCR7CR-WL-SP2-SC-TXDOT-BABA",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "GCM J-Series spec sheet (rev 09-22-26)",
+        "url": "https://leotek.com/download/264/greencobra-gcm/22506/gcm-j-series-specification-sheet.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/leotek/GCM4-60J-MV-40K-2R-XX-220_S.ies",
+          "lumcat": "GCM4-60J-MV-40K-2R-XX-220-PCR7",
+          "lumens": 22350,
+          "watts": 138.6,
+          "source_url": "https://leotek.com/download/293/ies-files-gcm4-legacy/22524/gcm4_ies.zip",
+          "note": "Scaled, 120–277V (MV), Leotek 'GCM4 (Legacy)' set."
+        }
+      ],
+      "caveats": [
+        "TxDOT lists 145W as GCM3; Leotek's tables put code 220 under GCM4 (about 140W). Confirm with Leotek."
+      ]
+    },
+    {
+      "id": "acuity-atb0-p202-480-r4-3k--4k",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting",
+      "family": "Autobahn ATB0 · P202",
+      "product_type": "LED roadway luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "ATB0 P202 480 R4 BL NL P7 SH BAA TXDOT RFD353994",
+      "distribution": "Type IV (R4)",
+      "watts": 49,
+      "lumens": 6906,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 10",
+        "status": "Compliant v5",
+        "listed_catalog": "ATB0 P202 480 R4 BL NL P7 SH BAA TXDOT RFD353994",
+        "listed_cct": "4000K (default)"
+      },
+      "cut_sheet": {
+        "title": "ATB0 spec sheet (Rev. 02/27/26)",
+        "url": "https://img.acuitybrands.com/public-assets/catalog/122046/atb0_.pdf",
+        "file": "cutsheets/acuity/ATB0_spec_rev-2026-02-27.pdf"
+      },
+      "ies": [],
+      "caveats": [
+        "Lumens/watts from the cut sheet's 4000K table (Rev. 02/27/26). Request the .ies from Acuity quoting RFD353994.",
+        "BAA option required (cut sheet: qualifies under DOT Buy America and BABA)."
+      ]
+    },
+    {
+      "id": "acuity-atb0-p303-480-r2-3k--4k",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting",
+      "family": "Autobahn ATB0 · P303",
+      "product_type": "LED roadway luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "ATB0 P303 480 R2 BL NL P7 SH BAA TXDOT RFD353998",
+      "distribution": "Type II (R2)",
+      "watts": 106,
+      "lumens": 15420,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 10",
+        "status": "Compliant v5",
+        "listed_catalog": "ATB0 P303 480 R2 BL NL P7 SH BAA TXDOT RFD353998",
+        "listed_cct": "4000K (default)"
+      },
+      "cut_sheet": {
+        "title": "ATB0 spec sheet (Rev. 02/27/26)",
+        "url": "https://img.acuitybrands.com/public-assets/catalog/122046/atb0_.pdf",
+        "file": "cutsheets/acuity/ATB0_spec_rev-2026-02-27.pdf"
+      },
+      "ies": [],
+      "caveats": [
+        "Cut sheet 4000K table. Request the .ies quoting RFD353998.",
+        "TxDOT lists 110W; cut sheet shows 106W."
+      ]
+    },
+    {
+      "id": "acuity-atb0-p453-480-r2-3k--4k",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting",
+      "family": "Autobahn ATB0 · P453",
+      "product_type": "LED roadway luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "ATB0 P453 480 R2 BL NL P7 SH BAA TXDOT RFD354000",
+      "distribution": "Type II (R2)",
+      "watts": 159,
+      "lumens": 23900,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 10",
+        "status": "Compliant v5",
+        "listed_catalog": "ATB0 P453 480 R2 BL NL P7 SH BAA TXDOT RFD354000",
+        "listed_cct": "4000K (default)"
+      },
+      "cut_sheet": {
+        "title": "ATB0 spec sheet (Rev. 02/27/26)",
+        "url": "https://img.acuitybrands.com/public-assets/catalog/122046/atb0_.pdf",
+        "file": "cutsheets/acuity/ATB0_spec_rev-2026-02-27.pdf"
+      },
+      "ies": [],
+      "caveats": [
+        "Cut sheet 4000K table. Request the .ies quoting RFD354000."
+      ]
+    },
+    {
+      "id": "visionaire-rlx3-t3l-70w-3k-5--4k",
+      "manufacturer": "Visionaire Lighting",
+      "brand": "",
+      "family": "Roadway LX-3 Array (RLX-3) · 70W",
+      "product_type": "LED roadway luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "RLX-3-T3L-70W-4K-5-MAF-GY-7PINPER-DIM-20KV-DF480-EBL-UWL",
+      "distribution": "Type III (T3L)",
+      "watts": 67,
+      "lumens": 7665,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 12",
+        "status": "Compliant v5",
+        "listed_catalog": "RLX-3-T3L-70W-4K-5-MAF-GY-7PINPER-DIM-20KV-DF480-EBL-UWL",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "RLX-3 Array spec sheet",
+        "url": "https://visionairelighting.com/lex-cms/download_referral/m-159/7192b4d1d7a5496da619fa2aebe8e53e/rlx-3-ar.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/visionaire/RLX-3_T3L_70W_4K.ies",
+          "lumcat": "RLX-3_T3L_70W_4K",
+          "lumens": 7665,
+          "watts": 67,
+          "source_url": "https://visionairelighting.com/lex-cms/download_referral/m-159/135d41743c3a467c8afa7596ba197483/rlx-3-array.zip",
+          "note": "Intertek test, 10/30/2019, tested at 120V."
+        }
+      ],
+      "caveats": [
+        "Cut sheet has no BABA wording; BABA status rests on the TxDOT listing."
+      ]
+    },
+    {
+      "id": "visionaire-rlx3-t2-125w-3k-5--4k",
+      "manufacturer": "Visionaire Lighting",
+      "brand": "",
+      "family": "Roadway LX-3 Array (RLX-3) · 125W",
+      "product_type": "LED roadway luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "RLX-3-T2-125W-4K-5-MAF-GY-7PINPER-DIM-20KV-EBL-UWL",
+      "distribution": "Type II (T2)",
+      "watts": 128,
+      "lumens": 14490,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 12",
+        "status": "Compliant v5",
+        "listed_catalog": "RLX-3-T2-125W-4K-5-MAF-GY-7PINPER-DIM-20KV-EBL-UWL",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "RLX-3 Array spec sheet",
+        "url": "https://visionairelighting.com/lex-cms/download_referral/m-159/7192b4d1d7a5496da619fa2aebe8e53e/rlx-3-ar.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/visionaire/RLX-3_T2_125W_4K.ies",
+          "lumcat": "RLX-3_T2_125W_4K",
+          "lumens": 14490,
+          "watts": 128,
+          "source_url": "https://visionairelighting.com/lex-cms/download_referral/m-159/135d41743c3a467c8afa7596ba197483/rlx-3-array.zip",
+          "note": "Intertek test, 10/30/2019, tested at 120V."
+        }
+      ],
+      "caveats": [
+        "Cut sheet has no BABA wording; BABA status rests on the TxDOT listing."
+      ]
+    },
+    {
+      "id": "cooper-cst-ca8-330-730-8-t2--4k",
+      "manufacturer": "Cooper Lighting Solutions",
+      "brand": "Streetworks",
+      "family": "Celesteon CST · 330W",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "BAA-CST-CA8-330-740-8-T2-AP-FF-20MSP-PSC-PR7-D169466",
+      "distribution": "Type II (T2)",
+      "watts": null,
+      "lumens": null,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 24",
+        "status": "Compliant v5",
+        "application": "Type A/B",
+        "listed_catalog": "BAA-CST-CA8-330-740-8-T2-AP-FF-20MSP-PSC-PR7-D169466",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "CST Celesteon spec sheet (PS506070EN)",
+        "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/b36ac27b36e646c486aead6001287eeb/Streetworks-CST-Celesteon-Spec-Sheet.pdf"
+      },
+      "ies": [],
+      "caveats": [
+        "Cooper 4000K .ies being located; check the Cooper product page photometry tab.",
+        "Cut sheet: 480V only for Wye systems."
+      ]
+    },
+    {
+      "id": "cooper-cst-ca8-480-730-8-t3--4k",
+      "manufacturer": "Cooper Lighting Solutions",
+      "brand": "Streetworks",
+      "family": "Celesteon CST · 480W",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "BAA-CST-CA8-480-740-8-T3-AP-FF-20MSP-PSC-PR7-D169467",
+      "distribution": "Type III (T3)",
+      "watts": null,
+      "lumens": null,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 24",
+        "status": "Compliant v5",
+        "application": "Type C",
+        "listed_catalog": "BAA-CST-CA8-480-740-8-T3-AP-FF-20MSP-PSC-PR7-D169467",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "CST Celesteon spec sheet (PS506070EN)",
+        "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/b36ac27b36e646c486aead6001287eeb/Streetworks-CST-Celesteon-Spec-Sheet.pdf"
+      },
+      "ies": [],
+      "caveats": [
+        "Cooper 4000K .ies being located; check the Cooper product page photometry tab.",
+        "Cut sheet: 480V only for Wye systems."
+      ]
+    },
+    {
+      "id": "cooper-cst-ca8-480-730-8-t5n--4k",
+      "manufacturer": "Cooper Lighting Solutions",
+      "brand": "Streetworks",
+      "family": "Celesteon CST · 480W",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "BAA-CST-CA8-480-740-8-T5N-AP-FF-20MSP-PSC-PR7-D169468",
+      "distribution": "Type V narrow (T5N)",
+      "watts": null,
+      "lumens": null,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 24",
+        "status": "Compliant v5",
+        "application": "Type S",
+        "listed_catalog": "BAA-CST-CA8-480-740-8-T5N-AP-FF-20MSP-PSC-PR7-D169468",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "CST Celesteon spec sheet (PS506070EN)",
+        "url": "https://cooperlighting.com/api/assets/v1/file/CLS/content/b36ac27b36e646c486aead6001287eeb/Streetworks-CST-Celesteon-Spec-Sheet.pdf"
+      },
+      "ies": [],
+      "caveats": [
+        "Cooper 4000K .ies being located; check the Cooper product page photometry tab.",
+        "Cut sheet: 480V only for Wye systems."
+      ]
+    },
+    {
+      "id": "acuity-hmled4-p25-30k-hvolt-nas--4k",
+      "manufacturer": "Acuity Brands",
+      "brand": "Holophane",
+      "family": "HMAO LED IV HMLED4 · P25",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "HMLED4 P25 40K HVOLT HGR NAS PR7 DFD SH TXDOT TYPE A RFD321353 / TYPE B RFD322280",
+      "distribution": "NAS",
+      "watts": null,
+      "lumens": null,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 26",
+        "status": "Compliant v5",
+        "application": "Type A/B",
+        "listed_catalog": "HMLED4 P25 40K HVOLT HGR NAS PR7 DFD SH TXDOT TYPE A RFD321353 / TYPE B RFD322280",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "HMLED4 spec sheet (Rev. 10/12/26)",
+        "url": "https://img.acuitybrands.com/public-assets/catalog/1312787/lum_hmled4_.pdf",
+        "file": "cutsheets/acuity/HMLED4_spec_rev-2026-10-12.pdf"
+      },
+      "ies": [],
+      "caveats": [
+        "P25 is a TxDOT custom package (380W per TxDOT), not on the public sheet. Request the .ies quoting RFD321353 (Type A) / RFD322280 (Type B)."
+      ]
+    },
+    {
+      "id": "acuity-hmled4-p25-30k-hvolt-mas--4k",
+      "manufacturer": "Acuity Brands",
+      "brand": "Holophane",
+      "family": "HMAO LED IV HMLED4 · P25",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "HMLED4 P25 40K HVOLT HGR MAS PR7 DFD SH TXDOT TYPE C RFD318759",
+      "distribution": "MAS",
+      "watts": null,
+      "lumens": null,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 26",
+        "status": "Compliant v5",
+        "application": "Type C",
+        "listed_catalog": "HMLED4 P25 40K HVOLT HGR MAS PR7 DFD SH TXDOT TYPE C RFD318759",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "HMLED4 spec sheet (Rev. 10/12/26)",
+        "url": "https://img.acuitybrands.com/public-assets/catalog/1312787/lum_hmled4_.pdf",
+        "file": "cutsheets/acuity/HMLED4_spec_rev-2026-10-12.pdf"
+      },
+      "ies": [],
+      "caveats": [
+        "P25 is a TxDOT custom package (380W per TxDOT). Request the .ies quoting RFD318759."
+      ]
+    },
+    {
+      "id": "acuity-hmled4-p4-30k-hvolt-an-aw--4k",
+      "manufacturer": "Acuity Brands",
+      "brand": "Holophane",
+      "family": "HMAO LED IV HMLED4 · P4",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "HMLED4 P4 40K HVOLT HGR AN AW PR7 DFD SH TXDOT TYPE S RFD318760",
+      "distribution": "AN / AW (symmetric)",
+      "watts": 582,
+      "lumens": 82761,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 26",
+        "status": "Compliant v5",
+        "application": "Type S",
+        "listed_catalog": "HMLED4 P4 40K HVOLT HGR AN AW PR7 DFD SH TXDOT TYPE S RFD318760",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "HMLED4 spec sheet (Rev. 10/12/26)",
+        "url": "https://img.acuitybrands.com/public-assets/catalog/1312787/lum_hmled4_.pdf",
+        "file": "cutsheets/acuity/HMLED4_spec_rev-2026-10-12.pdf"
+      },
+      "ies": [],
+      "caveats": [
+        "Cut sheet P4 4000K: AW 82,761 lm, AN 89,131 lm, 582W (TxDOT lists 575W). Custom two-optic build; request its .ies quoting RFD318760."
+      ]
+    },
+    {
+      "id": "chm-cled2-08c-3070-t3-b--4k",
+      "manufacturer": "CHM Lighting",
+      "brand": "",
+      "family": "CLED2 · 08C",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "CLED2-08C-GY-4070-T3-B-7P-F2-TXA / -TXB / -TXC",
+      "distribution": "Type III (T3)",
+      "watts": 383,
+      "lumens": 56951,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 29",
+        "status": "Compliant v5",
+        "application": "Types A/B/C",
+        "listed_catalog": "CLED2-08C-GY-4070-T3-B-7P-F2-TXA / -TXB / -TXC",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "CLED2 spec sheet (REV20260414)",
+        "url": "https://chmlighting.com/Downloads/SPECS/CHM_SPECSHEET_CLED2.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/chm/CLED208CGXX70AT3.ies",
+          "lumcat": "CLED208CGXX70AT3",
+          "lumens": 56951,
+          "watts": 403,
+          "source_url": "https://chmlighting.com/Downloads/IES/CHM_IES_CLED2.zip",
+          "note": "CHM: 'use this file to represent 4000K–5000K'. ITL test 05/20/21, 120–277V driver (403W)."
+        }
+      ],
+      "caveats": [
+        "Watts are the cut sheet's 480V value (TxDOT lists 410W). Unshielded file; S90/S180/S360 shielded versions are in CHM's zip.",
+        "CHM: \"BABA compliant in all package offerings\"; made in Fort Worth, TX."
+      ]
+    },
+    {
+      "id": "chm-cled2-10c-3070-5w-b--4k",
+      "manufacturer": "CHM Lighting",
+      "brand": "",
+      "family": "CLED2 · 10C",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "CLED2-10C-GY-4070-5W-B-7P-F2-TXS",
+      "distribution": "Type V wide (5W)",
+      "watts": 479,
+      "lumens": 71748,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 29",
+        "status": "Compliant v5",
+        "application": "Type S",
+        "listed_catalog": "CLED2-10C-GY-4070-5W-B-7P-F2-TXS",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {
+        "title": "CLED2 spec sheet (REV20260414)",
+        "url": "https://chmlighting.com/Downloads/SPECS/CHM_SPECSHEET_CLED2.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/chm/CLED210CGXX70A5W.ies",
+          "lumcat": "CLED210CGXX70A5W",
+          "lumens": 71748,
+          "watts": 503,
+          "source_url": "https://chmlighting.com/Downloads/IES/CHM_IES_CLED2.zip",
+          "note": "CHM: 4000K–5000K file, scaled from ITL94690, 120–277V driver (503W)."
+        }
+      ],
+      "caveats": [
+        "Watts are the cut sheet's 480V value (TxDOT lists 510W)."
+      ]
+    }
+  ],
+  "views": [
+    {
+      "file": "fixtures-3k.html",
+      "cct_label": "3000K",
+      "title": "BABA Fixture Downloads · 3000K",
+      "filter": {
+        "cct": 3000,
+        "voltage": 480,
+        "cri": 70
+      },
+      "labels": [
+        "3000K",
+        "480V",
+        "70 CRI",
+        "TxDOT Compliant v5"
+      ],
+      "order_label": "Order as (3000K · 480V · 70 CRI)",
+      "show_listed": true,
+      "intro": "The \"Order as\" number swaps the 3000K / 70 CRI option into the DOT-listed configuration. None of these 3000K catalog numbers is listed by TxDOT as written (TxDOT qualified the 4000K versions), so ask the manufacturer to confirm the 3000K build carries the same Buy America certification before you specify it."
+    },
+    {
+      "file": "fixtures-4k.html",
+      "cct_label": "4000K",
+      "title": "BABA Fixture Downloads · 4000K (as TxDOT lists)",
+      "filter": {
+        "cct": 4000,
+        "voltage": 480,
+        "cri": 70
+      },
+      "labels": [
+        "4000K",
+        "480V",
+        "70 CRI",
+        "TxDOT Compliant v5",
+        "Exact TxDOT catalog numbers"
+      ],
+      "order_label": "TxDOT-listed catalog (4000K · 480V · 70 CRI)",
+      "show_listed": false,
+      "intro": "These are the 480V configurations exactly as TxDOT lists them, so the catalog numbers match the Compliant v5 listing with no substitutions. Photometry is the manufacturer's 4000K file for the same configuration."
     }
   ]
 }

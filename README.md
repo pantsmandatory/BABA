@@ -8,8 +8,10 @@ FHWA Buy America (BABA) compliance for manufactured products (23 CFR 635.410):
 
 Open `index.html` for the current list. Weekly snapshots are in `archive/`.
 
-`fixtures.html` lists the DOT-certified fixtures with downloadable `.ies` files and manufacturer cut sheets.
-It currently shows only **3000K, 480V, 70 CRI** variants (set by `filter` in `data/fixtures.json`).
+Fixture pages list the DOT-certified fixtures at 480V with downloadable `.ies` files and manufacturer cut sheets:
+`fixtures-4k.html` shows the 4000K catalog numbers exactly as TxDOT lists them; `fixtures-3k.html` shows the same
+configurations with the 3000K / 70 CRI option swapped in. `fixtures.html` links to both. Pages are set by `views` in
+`data/fixtures.json`.
 `fiber.html` lists Corning fiber products with BABA evidence: traffic/ITS cabinet splice housings, orange OM1/OM2
 multimode cable, and G.652 single-mode cable (data in `data/fiber.json`, built by `scripts/build_fiber.py`).
 

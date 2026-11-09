@@ -66,14 +66,14 @@ def ies_cell(fx):
     return " · ".join(parts) if parts else '<span class="muted">request</span>'
 
 
-def ies_title(fx):
+def ies_title(fx, cct_label):
     return " | ".join(
         " · ".join(str(x) for x in [pathlib.Path(f.get("file", "")).name, f.get("lumcat"), f.get("note")] if x)
         for f in fx.get("ies", [])
-    ) or "No 3000K .ies published; request from manufacturer."
+    ) or f"No {cct_label} .ies published; request from manufacturer."
 
 
-def row(fx, sources):
+def row(fx, sources, view):
     d = fx["dot"]
     src = sources.get(d["source"], {})
     label, tone = STATUS_BADGE.get(d.get("status"), (d.get("status"), "muted"))
@@ -100,16 +100,22 @@ def row(fx, sources):
         + td(e(fx.get("watts") if fx.get("watts") is not None else "—"), "num")
         + td(e(lm), "num", "Estimated" if fx.get("lumens_estimated") else None)
         + td(sheet_cell(sheet), "c-d", sheet.get("title"))
-        + td(ies_cell(fx), "c-d", ies_title(fx))
+        + td(ies_cell(fx), "c-d", ies_title(fx, view["cct_label"]))
         + td(e(notes), "c-x muted", notes)
-        + td(e(d.get("listed_catalog")), "c-l mono muted", f'{d.get("listed_cct", "")}: {d.get("listed_catalog", "")}')
+        + (td(e(d.get("listed_catalog")), "c-l mono muted", f'{d.get("listed_cct", "")}: {d.get("listed_catalog", "")}')
+           if view.get("show_listed") else "")
         + "</tr>"
     )
 
 
-def render(build_date):
-    data = json.loads((DATA / "fixtures.json").read_text(encoding="utf-8"))
-    flt = data.get("filter", {})
+def nav(current):
+    pages = [("fixtures-3k.html", "Fixtures 3000K"), ("fixtures-4k.html", "Fixtures 4000K (TxDOT as listed)"),
+             ("index.html", "Compliance index"), ("fiber.html", "Fiber products")]
+    return " · ".join(f"<strong>{e(t)}</strong>" if f == current else f'<a href="{f}">{e(t)}</a>' for f, t in pages)
+
+
+def render(build_date, data, view):
+    flt = view["filter"]
     sources = {s["id"]: s for s in data.get("sources", [])}
     shown = [f for f in data.get("fixtures", []) if matches(f, flt)]
     shown.sort(key=lambda f: (f.get("product_type") != "LED roadway luminaire",
@@ -117,29 +123,32 @@ def render(build_date):
     types = sorted({f.get("product_type") for f in shown})
     type_opts = "".join(f'<option value="{e(t)}">{e(t)}</option>' for t in types)
     n_ies = sum(1 for f in shown for i in f.get("ies", []) if has_file(i.get("file")))
-    chips = "".join(f'<span class="chip">{e(c)}</span>' for c in data.get("filter_labels", []))
+    chips = "".join(f'<span class="chip">{e(c)}</span>' for c in view.get("labels", []))
     src_items = "".join(
         f"<li><strong>{e(s['state'])}</strong> – {link(s.get('url'), s.get('name'))} "
         f"<span class='muted'>({e(s.get('edition', ''))})</span>. {e(s.get('status_note', ''))}</li>"
         for s in sources.values()
     )
-    headers = ["Manufacturer", "Family", "Use", "DOT list", "Status", "Order as (3000K · 480V · 70 CRI)",
-               "Optic", "W", "Lumens", "Cut sheet", "Photometry", "Notes", "DOT-listed catalog (4000K)"]
-    body = "\n".join(row(f, sources) for f in shown)
+    headers = ["Manufacturer", "Family", "Use", "DOT list", "Status", view["order_label"],
+               "Optic", "W", "Lumens", "Cut sheet", "Photometry", "Notes"]
+    if view.get("show_listed"):
+        headers.append("DOT-listed catalog (4000K)")
+    body = "\n".join(row(f, sources, view) for f in shown)
 
     return f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BABA Fixture Downloads</title>
-<meta name="description" content="BABA-compliant roadway and high mast luminaires from state DOT approved lists, with .ies photometric files and manufacturer cut sheets. Showing 3000K, 480V, 70 CRI variants.">
+<title>{e(view["title"])}</title>
+<meta name="description" content="BABA-compliant roadway and high mast luminaires from state DOT approved lists, with .ies photometric files and manufacturer cut sheets. Showing {e(", ".join(view.get("labels", [])[:3]))} variants.">
 <style>{CSS}{EXTRA_CSS}</style>
 </head>
 <body>
 <main>
-<h1>BABA Fixture Downloads</h1>
-<div class="muted">Luminaires a state DOT lists as Buy America (BABA) compliant, with photometry and cut sheets · Updated {e(build_date)} · <a href="index.html">Compliance index</a> · <a href="fiber.html">Fiber products</a></div>
+<h1>{e(view["title"])}</h1>
+<div class="muted">Luminaires a state DOT lists as Buy America (BABA) compliant, with photometry and cut sheets · Updated {e(build_date)}</div>
+<div class="small">{nav(view["file"])}</div>
 
 <div class="stats">
   <span class="chips">{chips}</span>
@@ -151,8 +160,7 @@ def render(build_date):
 <div class="card">
 <strong>How to read this.</strong> Each row is a configuration a state DOT lists as <strong>Compliant v5</strong>: the
 manufacturer certified it for federal-aid projects obligated on or after Oct 1, 2026 (US final assembly and more than
-55% domestic component cost). The "Order as" number swaps the 3000K / 70 CRI option into the DOT-listed configuration.
-{e(data.get('cct_note', ''))} Rows are one line each; tap or click a row to show its full text.
+55% domestic component cost). {e(view.get("intro", ""))} Rows are one line each; tap or click a row to show its full text.
 <ul>{src_items}</ul>
 </div>
 
@@ -176,12 +184,31 @@ catalog number you order.
 """
 
 
+def chooser(build_date):
+    """fixtures.html: keeps the old link working and points to the 3000K and 4000K pages."""
+    return f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BABA Fixture Downloads</title><style>{CSS}</style></head><body><main>
+<h1>BABA Fixture Downloads</h1>
+<div class="muted">TxDOT Compliant v5 luminaires at 480V with .ies files and cut sheets · Updated {e(build_date)}</div>
+<div class="card"><ul>
+<li><a href="fixtures-4k.html"><strong>4000K</strong></a> – catalog numbers exactly as TxDOT lists them (Compliant v5).</li>
+<li><a href="fixtures-3k.html"><strong>3000K</strong></a> – the same configurations with the 3000K / 70 CRI option swapped in; confirm Buy America certification with the manufacturer.</li>
+</ul></div>
+<div class="small"><a href="index.html">Compliance index</a> · <a href="fiber.html">Fiber products</a></div>
+</main></body></html>
+"""
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=dt.date.today().isoformat())
     args = ap.parse_args()
-    ROOT.joinpath("fixtures.html").write_text(render(args.date), encoding="utf-8")
-    print(f"Built fixtures.html for {args.date}")
+    data = json.loads((DATA / "fixtures.json").read_text(encoding="utf-8"))
+    for view in data["views"]:
+        ROOT.joinpath(view["file"]).write_text(render(args.date, data, view), encoding="utf-8")
+        print(f"Built {view['file']} for {args.date}")
+    ROOT.joinpath("fixtures.html").write_text(chooser(args.date), encoding="utf-8")
 
 
 if __name__ == "__main__":

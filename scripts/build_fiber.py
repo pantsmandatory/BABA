@@ -102,7 +102,7 @@ def render(build_date):
 <body>
 <main>
 <h1>BABA Fiber Products · Corning</h1>
-<div class="muted">Splice housings for traffic and ITS cabinets, orange multimode cable, and G.652 single-mode cable · Updated {e(build_date)} · <a href="index.html">Luminaire index</a> · <a href="fixtures.html">Fixture downloads</a></div>
+<div class="muted">Splice housings for traffic and ITS cabinets, orange multimode cable, and G.652 single-mode cable · Updated {e(build_date)} · <a href="index.html">Luminaire index</a> · Fixtures <a href="fixtures-3k.html">3000K</a> · <a href="fixtures-4k.html">4000K</a></div>
 
 <div class="stats">
   <span><b id="count">{total}</b>products</span>
