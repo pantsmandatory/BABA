@@ -246,7 +246,7 @@ def render(build_date):
 <body>
 <main>
 <h1>BABA Luminaire Index</h1>
-<div class="muted">Roadway &amp; area luminaires on state DOT approved product lists with documented FHWA Buy America compliance · Updated {e(build_date)} · Fixture downloads: <a href="fixtures-3k.html">3000K</a> · <a href="fixtures-4k.html">4000K (TxDOT as listed)</a> · <a href="fiber.html">Fiber products</a></div>
+<div class="muted">Roadway &amp; area luminaires on state DOT approved product lists with documented FHWA Buy America compliance · Updated {e(build_date)} · Fixture downloads: <a href="fixtures-3k.html">3000K</a> · <a href="fixtures-4k.html">4000K</a> · <a href="fiber.html">Fiber products</a></div>
 
 <div class="stats">
   <span><b>{len(compliant)}</b>compliant</span>

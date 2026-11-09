@@ -14,28 +14,34 @@ import datetime as dt
 import json
 import pathlib
 
-from build_site import CSS, ROW_JS, e, link, table, td
+from build_site import CSS, ROW_JS, STATE_NAMES, e, link, table, td
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
-STATUS_BADGE = {
-    "Compliant v5": ("v5 · Phase 2", "ok"),
-    "Compliant v4": ("v4 · Phase 1", "warn"),
+PHASE_BADGE = {
+    "phase2": ("Phase 2 · 55%", "ok"),
+    "phase1": ("Phase 1 only", "warn"),
+    "eligible-unspecified": ("Eligible · no phase", "info"),
+    "project-level": ("Project cert.", "muted"),
 }
+PHASE_RANK = {"phase2": 0, "phase1": 1, "eligible-unspecified": 2, "project-level": 3}
+BASIS_BADGE = {"as-listed": ("As listed", "ok"), "cct-swapped": ("CCT swapped", "warn")}
 
 EXTRA_CSS = """
 .chips{display:inline-flex;flex-wrap:wrap;gap:4px;vertical-align:middle}
 .chip{background:var(--info-bg);color:var(--info);border-radius:999px;padding:0 8px;font-size:11px;font-weight:600}
+.phases{display:flex;flex-wrap:wrap;gap:4px 14px;margin:4px 0}
 """
 
 JS = """
-const q=document.getElementById('q'),ty=document.getElementById('type');
-function apply(){const t=q.value.trim().toLowerCase(),y=ty.value;let n=0;
+const q=document.getElementById('q'),ty=document.getElementById('type'),sf=document.getElementById('st'),ph=document.getElementById('ph');
+function apply(){const t=q.value.trim().toLowerCase(),y=ty.value,s=sf.value,p=ph.value;let n=0;
 document.querySelectorAll('tbody tr[data-search]').forEach(r=>{
-const ok=(!t||r.dataset.search.includes(t))&&(!y||r.dataset.type===y);r.hidden=!ok;if(ok)n++;});
+const ok=(!t||r.dataset.search.includes(t))&&(!y||r.dataset.type===y)&&(!s||r.dataset.state===s)&&(!p||r.dataset.phase===p);
+r.hidden=!ok;if(ok&&r.dataset.main)n++;});
 document.getElementById('count').textContent=n;}
-q.addEventListener('input',apply);ty.addEventListener('change',apply);
+[q,ty,sf,ph].forEach(x=>x.addEventListener(x===q?'input':'change',apply));
 """ + ROW_JS
 
 
@@ -45,6 +51,11 @@ def matches(fx, flt):
 
 def has_file(path):
     return bool(path) and (ROOT / path).exists()
+
+
+def badge_for(table, key):
+    text, tone = table.get(key, (key or "—", "muted"))
+    return f'<span class="badge {tone}">{e(text)}</span>'
 
 
 def sheet_cell(sheet):
@@ -66,50 +77,71 @@ def ies_cell(fx):
     return " · ".join(parts) if parts else '<span class="muted">request</span>'
 
 
-def ies_title(fx, cct_label):
+def ies_title(fx):
     return " | ".join(
         " · ".join(str(x) for x in [pathlib.Path(f.get("file", "")).name, f.get("lumcat"), f.get("note")] if x)
         for f in fx.get("ies", [])
-    ) or f"No {cct_label} .ies published; request from manufacturer."
+    ) or "No .ies published for this exact configuration; request from manufacturer."
 
 
-def row(fx, sources, view):
+def use_label(fx):
+    pt = fx.get("product_type", "")
+    kind = "High mast" if "high mast" in pt else "Underpass" if "underpass" in pt else "Roadway"
+    app = fx["dot"].get("application")
+    return kind + (f" {app}" if app else "")
+
+
+def row(fx, sources, show_listed, main):
     d = fx["dot"]
     src = sources.get(d["source"], {})
-    label, tone = STATUS_BADGE.get(d.get("status"), (d.get("status"), "muted"))
+    st = src.get("state", "")
+    label = PHASE_BADGE.get(d.get("phase"), (d.get("status"), "muted"))
+    if d["source"] == "tx-mpl-2026-09":
+        label = ("v5 · Phase 2", "ok")
     sheet = fx.get("cut_sheet") or {}
-    kind = "High mast" if "high mast" in fx.get("product_type", "") else "Roadway"
-    if d.get("application"):
-        kind += f' {d["application"]}'
-    dot = f'<strong>{e(src.get("state"))}</strong> ' + link(src.get("url"), d.get("table") or src.get("short_name"))
+    kind = use_label(fx)
+    where = d.get("table") or src.get("short_name")
+    dot = f"<strong>{e(st)}</strong> " + link(d.get("list_url") or src.get("url"), where)
     lumens = fx.get("lumens")
-    lm = (("≈" if fx.get("lumens_estimated") else "") + f"{lumens:,}") if lumens else "—"
+    lm = (("≈" if fx.get("lumens_estimated") else "") + f"{lumens:,}") if isinstance(lumens, (int, float)) else "—"
+    watts = fx.get("watts")
     notes = " · ".join(fx.get("caveats", []))
-    search = " ".join([fx.get("manufacturer", ""), fx.get("brand", ""), fx.get("family", ""),
-                       fx.get("catalog", ""), d.get("listed_catalog", ""), kind, src.get("state", "")]).lower()
+    volt = "480V*" if fx.get("voltage_inferred") else "480V"
+    search = " ".join(str(x) for x in [fx.get("manufacturer"), fx.get("brand"), fx.get("family"), fx.get("catalog"),
+                                       d.get("listed_catalog"), kind, st, STATE_NAMES.get(st, ""), notes] if x).lower()
     who = fx.get("manufacturer", "") + (f' · {fx["brand"]}' if fx.get("brand") else "")
+    listed = d.get("listed_catalog") if fx.get("basis") == "cct-swapped" else "—"
     return (
-        f'<tr data-search="{e(search)}" data-type="{e(fx.get("product_type"))}">'
+        f'<tr data-search="{e(search)}" data-type="{e(fx.get("product_type"))}" data-state="{e(st)}" '
+        f'data-phase="{e(d.get("phase", ""))}"{" data-main=1" if main else ""}>'
+        + td(dot, "c-l", f'{src.get("name", "")} · {d.get("table", "")}')
+        + td(f'<span class="badge {label[1]}">{e(label[0])}</span>', "c-b", d.get("status"))
         + td(f"<strong>{e(fx.get('manufacturer'))}</strong>", "c-m", who)
-        + td(e(fx.get("family")), "c-l", fx.get("family"))
+        + td(e(fx.get("family")), "c-s", fx.get("family"))
         + td(e(kind), "c-d")
-        + td(dot, "c-d", src.get("name"))
-        + td(f'<span class="badge {tone}">{e(label)}</span>', "c-b", d.get("status"))
         + td(e(fx.get("catalog")), "c-cat mono", fx.get("catalog"))
-        + td(e(fx.get("distribution")), "c-s", fx.get("distribution"))
-        + td(e(fx.get("watts") if fx.get("watts") is not None else "—"), "num")
+        + td(badge_for(BASIS_BADGE, fx.get("basis")), "c-b")
+        + td(e(volt), "c-d", "Inferred from the manufacturer's voltage code; not shown on the DOT listing" if fx.get("voltage_inferred") else None)
+        + td(e(fx.get("distribution") or "—"), "c-s", fx.get("distribution"))
+        + td(e(watts if watts not in (None, "") else "—"), "num")
         + td(e(lm), "num", "Estimated" if fx.get("lumens_estimated") else None)
         + td(sheet_cell(sheet), "c-d", sheet.get("title"))
-        + td(ies_cell(fx), "c-d", ies_title(fx, view["cct_label"]))
+        + td(ies_cell(fx), "c-d", ies_title(fx))
         + td(e(notes), "c-x muted", notes)
-        + (td(e(d.get("listed_catalog")), "c-l mono muted", f'{d.get("listed_cct", "")}: {d.get("listed_catalog", "")}')
-           if view.get("show_listed") else "")
+        + (td(e(listed), "c-l mono muted", listed) if show_listed else "")
         + "</tr>"
     )
 
 
+def sort_key(f):
+    return (f.get("basis") != "as-listed", PHASE_RANK.get(f["dot"].get("phase"), 9),
+            f["dot"]["source"] != "tx-mpl-2026-09", f["dot"]["source"],
+            f.get("product_type") != "LED roadway luminaire", f.get("manufacturer", "").lower(),
+            f.get("family", "").split(" · ")[0], f.get("watts") if isinstance(f.get("watts"), (int, float)) else 0)
+
+
 def nav(current):
-    pages = [("fixtures-3k.html", "Fixtures 3000K"), ("fixtures-4k.html", "Fixtures 4000K (TxDOT as listed)"),
+    pages = [("fixtures-3k.html", "Fixtures 3000K"), ("fixtures-4k.html", "Fixtures 4000K"),
              ("index.html", "Compliance index"), ("fiber.html", "Fiber products")]
     return " · ".join(f"<strong>{e(t)}</strong>" if f == current else f'<a href="{f}">{e(t)}</a>' for f, t in pages)
 
@@ -117,23 +149,31 @@ def nav(current):
 def render(build_date, data, view):
     flt = view["filter"]
     sources = {s["id"]: s for s in data.get("sources", [])}
-    shown = [f for f in data.get("fixtures", []) if matches(f, flt)]
-    shown.sort(key=lambda f: (f.get("product_type") != "LED roadway luminaire",
-                              f.get("manufacturer", "").lower(), f.get("family", "").split(" · ")[0], f.get("watts") or 0))
-    types = sorted({f.get("product_type") for f in shown})
+    shown = sorted((f for f in data["fixtures"] if matches(f, flt)), key=sort_key)
+    family = sorted((f for f in data["fixtures"] if f.get("cct") == "unspecified" and f.get("voltage") == 480), key=sort_key)
+    both = shown + family
+    types = sorted({f.get("product_type") for f in both})
     type_opts = "".join(f'<option value="{e(t)}">{e(t)}</option>' for t in types)
+    states = sorted({sources[f["dot"]["source"]]["state"] for f in both})
+    state_opts = "".join(f'<option value="{e(s)}">{e(s)} – {e(STATE_NAMES.get(s, s))}</option>' for s in states)
+    phase_opts = "".join(f'<option value="{k}">{e(v[0])}</option>' for k, v in PHASE_BADGE.items())
     n_ies = sum(1 for f in shown for i in f.get("ies", []) if has_file(i.get("file")))
+    n_p2 = sum(1 for f in shown if f["dot"].get("phase") == "phase2")
     chips = "".join(f'<span class="chip">{e(c)}</span>' for c in view.get("labels", []))
+    used = {f["dot"]["source"] for f in both}
     src_items = "".join(
         f"<li><strong>{e(s['state'])}</strong> – {link(s.get('url'), s.get('name'))} "
         f"<span class='muted'>({e(s.get('edition', ''))})</span>. {e(s.get('status_note', ''))}</li>"
-        for s in sources.values()
+        for s in sorted(sources.values(), key=lambda s: s["state"]) if s["id"] in used
     )
-    headers = ["Manufacturer", "Family", "Use", "DOT list", "Status", view["order_label"],
-               "Optic", "W", "Lumens", "Cut sheet", "Photometry", "Notes"]
-    if view.get("show_listed"):
-        headers.append("DOT-listed catalog (4000K)")
-    body = "\n".join(row(f, sources, view) for f in shown)
+    show_listed = view.get("show_listed")
+    headers = ["DOT list", "BABA status", "Manufacturer", "Family", "Use", view["order_label"], "Catalog basis",
+               "Voltage", "Optic", "W", "Lumens", "Cut sheet", "Photometry", "Notes"]
+    if show_listed:
+        headers.append("TxDOT-listed catalog (4000K)")
+    body = "\n".join(row(f, sources, show_listed, True) for f in shown)
+    fam_headers = [h if h != view["order_label"] else "Listing as published" for h in headers[:14]]
+    fam_body = "\n".join(row(f, sources, False, False) for f in family)
 
     return f"""<!doctype html>
 <html lang="en">
@@ -141,41 +181,55 @@ def render(build_date, data, view):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(view["title"])}</title>
-<meta name="description" content="BABA-compliant roadway and high mast luminaires from state DOT approved lists, with .ies photometric files and manufacturer cut sheets. Showing {e(", ".join(view.get("labels", [])[:3]))} variants.">
+<meta name="description" content="Roadway, high mast and underpass luminaires that state DOT lists flag for Buy America (BABA), at 480V, with .ies files and cut sheets. {e(", ".join(view.get("labels", [])[:2]))}.">
 <style>{CSS}{EXTRA_CSS}</style>
 </head>
 <body>
 <main>
 <h1>{e(view["title"])}</h1>
-<div class="muted">Luminaires a state DOT lists as Buy America (BABA) compliant, with photometry and cut sheets · Updated {e(build_date)}</div>
+<div class="muted">480V luminaires that state DOT product lists flag for Buy America (BABA) · Updated {e(build_date)}</div>
 <div class="small">{nav(view["file"])}</div>
 
 <div class="stats">
   <span class="chips">{chips}</span>
-  <span><b id="count">{len(shown)}</b>fixtures</span>
+  <span><b id="count">{len(shown)}</b>configurations</span>
+  <span><b>{n_p2}</b>flagged Phase 2 (55%)</span>
   <span><b>{n_ies}</b>.ies files</span>
-  <span><b>{len(sources)}</b>DOT source list{'s' if len(sources) != 1 else ''}</span>
+  <span><b>{len(states)}</b>states</span>
 </div>
 
 <div class="card">
-<strong>How to read this.</strong> Each row is a configuration a state DOT lists as <strong>Compliant v5</strong>: the
-manufacturer certified it for federal-aid projects obligated on or after Oct 1, 2026 (US final assembly and more than
-55% domestic component cost). {e(view.get("intro", ""))} Rows are one line each; tap or click a row to show its full text.
+<strong>How to read this.</strong> {e(view.get("intro", ""))}
+<div class="phases">{''.join(f'<span>{badge_for(PHASE_BADGE, k)} {e(t)}</span>' for k, t in [
+    ("phase2", "DOT says US final assembly and more than 55% domestic cost (projects obligated on/after Oct 1, 2026)"),
+    ("phase1", "final assembly only; not enough after Oct 1, 2026"),
+    ("eligible-unspecified", "DOT flags it BABA/BAA without saying which phase"),
+    ("project-level", "DOT has not verified; certify per project")])}</div>
+<span class="muted">"As listed" = catalog number copied from the DOT list. "CCT swapped" = TxDOT-listed number with the 3000K option substituted.
+480V* = the DOT listing hides the voltage code; 480V is inferred from the manufacturer's options. Rows are one line each; tap or click a row to show its full text.</span>
 <ul>{src_items}</ul>
 </div>
 
 <div class="controls">
-  <input id="q" type="search" placeholder="Search manufacturer, family, or catalog number" aria-label="Search">
+  <input id="q" type="search" placeholder="Search manufacturer, family, catalog number, or state" aria-label="Search">
+  <select id="st" aria-label="Filter by state"><option value="">All states</option>{state_opts}</select>
+  <select id="ph" aria-label="Filter by BABA status"><option value="">All BABA statuses</option>{phase_opts}</select>
   <select id="type" aria-label="Filter by type"><option value="">All types</option>{type_opts}</select>
 </div>
 
 {table(headers, body, "No fixtures match the filter.")}
 
+<h2>Family-level listings (no color temperature on the DOT list)</h2>
+<p class="small muted">These DOT lists flag a whole product family for Buy America without giving a catalog number or color temperature.
+The family offers 480V and both 3000K and 4000K options, so they appear on both fixture pages. Specify the exact configuration with the
+manufacturer and confirm the DOT accepts it.</p>
+{table(fam_headers, fam_body, "None.")}
+
 <footer>
 Generated by <code>scripts/build_fixtures.py</code> from <code>data/fixtures.json</code>. Photometric files and cut sheet
-copies are the manufacturers' published files, kept here for convenience; each links to its source. This page is a
-research aid, not a certification: get the manufacturer's project-specific Buy America certification for the exact
-catalog number you order.
+copies are the manufacturers' published files, kept here for convenience; each links to its source. States researched with no
+480V Buy America-flagged luminaires are summarized on the <a href="index.html">compliance index</a>. This page is a research
+aid, not a certification: get the manufacturer's project-specific Buy America certification for the exact catalog number you order.
 </footer>
 </main>
 <script>{JS}</script>
@@ -190,10 +244,10 @@ def chooser(build_date):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BABA Fixture Downloads</title><style>{CSS}</style></head><body><main>
 <h1>BABA Fixture Downloads</h1>
-<div class="muted">TxDOT Compliant v5 luminaires at 480V with .ies files and cut sheets · Updated {e(build_date)}</div>
+<div class="muted">480V luminaires flagged for Buy America on state DOT lists, with .ies files and cut sheets · Updated {e(build_date)}</div>
 <div class="card"><ul>
-<li><a href="fixtures-4k.html"><strong>4000K</strong></a> – catalog numbers exactly as TxDOT lists them (Compliant v5).</li>
-<li><a href="fixtures-3k.html"><strong>3000K</strong></a> – the same configurations with the 3000K / 70 CRI option swapped in; confirm Buy America certification with the manufacturer.</li>
+<li><a href="fixtures-4k.html"><strong>4000K</strong></a> – TxDOT Compliant v5, Alabama Y2 and North Carolina listings at 480V.</li>
+<li><a href="fixtures-3k.html"><strong>3000K</strong></a> – Caltrans, Washington and Missouri listings at 480V, plus TxDOT configurations with the 3000K option swapped in.</li>
 </ul></div>
 <div class="small"><a href="index.html">Compliance index</a> · <a href="fiber.html">Fiber products</a></div>
 </main></body></html>

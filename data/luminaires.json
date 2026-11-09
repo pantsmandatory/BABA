@@ -458,5 +458,1005 @@
     ],
     "notes": "TxDOT 'Compliant v5' = manufacturer certified via TxDOT Gold Star Program for projects obligated on/after Oct 1, 2026 (Phase 2: US final assembly + >55% domestic component cost). Listed configurations are 4000K only. CHM: 'BABA compliant in all package offerings'; made in Fort Worth, TX.",
     "last_verified": "2026-11-06"
+  },
+  {
+    "id": "st480-al-iv6-2026-11-cooper-lighting-solutions-archeon",
+    "manufacturer": "Cooper Lighting Solutions",
+    "model": "Archeon (4 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "AL",
+        "list_name": "ALDOT MSDSAR List IV-6: Roadway Lighting",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "ALDOT List IV-6",
+        "url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "notes": "BABA column: Y2 = manufactured product, BABA compliant; N2 = final assembly only, fails the Oct 1, 2026 55% rule; N1 = fails the Oct 1, 2025 final-assembly rule. Y2 is therefore treated as Phase 2. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-al-iv6-2026-11-acuity-brands-autobahn-atb",
+    "manufacturer": "Acuity Brands",
+    "model": "Autobahn ATB (2 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "AL",
+        "list_name": "ALDOT MSDSAR List IV-6: Roadway Lighting",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "ALDOT List IV-6",
+        "url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "notes": "BABA column: Y2 = manufactured product, BABA compliant; N2 = final assembly only, fails the Oct 1, 2026 55% rule; N1 = fails the Oct 1, 2025 final-assembly rule. Y2 is therefore treated as Phase 2. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-al-iv6-2026-11-cooper-lighting-solutions-galleon",
+    "manufacturer": "Cooper Lighting Solutions",
+    "model": "Galleon (2 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "AL",
+        "list_name": "ALDOT MSDSAR List IV-6: Roadway Lighting",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "ALDOT List IV-6",
+        "url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "notes": "BABA column: Y2 = manufactured product, BABA compliant; N2 = final assembly only, fails the Oct 1, 2026 55% rule; N1 = fails the Oct 1, 2025 final-assembly rule. Y2 is therefore treated as Phase 2. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-al-iv6-2026-11-acuity-brands-mongoose-led-medium-mgledm",
+    "manufacturer": "Acuity Brands",
+    "model": "Mongoose LED Medium MGLEDM (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "AL",
+        "list_name": "ALDOT MSDSAR List IV-6: Roadway Lighting",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "ALDOT List IV-6",
+        "url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "notes": "BABA column: Y2 = manufactured product, BABA compliant; N2 = final assembly only, fails the Oct 1, 2026 55% rule; N1 = fails the Oct 1, 2025 final-assembly rule. Y2 is therefore treated as Phase 2. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-al-iv6-2026-11-cooper-lighting-solutions-navion",
+    "manufacturer": "Cooper Lighting Solutions",
+    "model": "Navion (2 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "AL",
+        "list_name": "ALDOT MSDSAR List IV-6: Roadway Lighting",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "ALDOT List IV-6",
+        "url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "notes": "BABA column: Y2 = manufactured product, BABA compliant; N2 = final assembly only, fails the Oct 1, 2026 55% rule; N1 = fails the Oct 1, 2025 final-assembly rule. Y2 is therefore treated as Phase 2. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-al-iv6-2026-11-acuity-brands-hmao-led-hmled-",
+    "manufacturer": "Acuity Brands",
+    "model": "HMAO LED (HMLED) (1 listed 480V configuration)",
+    "product_type": "LED high mast luminaire",
+    "states": [
+      {
+        "state": "AL",
+        "list_name": "ALDOT MSDSAR List IV-6: Roadway Lighting",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "ALDOT List IV-6",
+        "url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "notes": "BABA column: Y2 = manufactured product, BABA compliant; N2 = final assembly only, fails the Oct 1, 2026 55% rule; N1 = fails the Oct 1, 2025 final-assembly rule. Y2 is therefore treated as Phase 2. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-al-iv6-2026-11-cooper-lighting-solutions-galleon-wallpack-upw",
+    "manufacturer": "Cooper Lighting Solutions",
+    "model": "Galleon Wallpack UPW (1 listed 480V configuration)",
+    "product_type": "LED underpass luminaire",
+    "states": [
+      {
+        "state": "AL",
+        "list_name": "ALDOT MSDSAR List IV-6: Roadway Lighting",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "ALDOT List IV-6",
+        "url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "notes": "BABA column: Y2 = manufactured product, BABA compliant; N2 = final assembly only, fails the Oct 1, 2026 55% rule; N1 = fails the Oct 1, 2025 final-assembly rule. Y2 is therefore treated as Phase 2. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-al-iv6-2026-11-acuity-brands-wall-connect-led-wcng",
+    "manufacturer": "Acuity Brands",
+    "model": "Wall Connect LED WCNG (1 listed 480V configuration)",
+    "product_type": "LED underpass luminaire",
+    "states": [
+      {
+        "state": "AL",
+        "list_name": "ALDOT MSDSAR List IV-6: Roadway Lighting",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "ALDOT List IV-6",
+        "url": "https://www.aldot.gov/publications/Materials/pdf/MSDSAR/QMSD/Liv06.pdf"
+      }
+    ],
+    "notes": "BABA column: Y2 = manufactured product, BABA compliant; N2 = final assembly only, fails the Oct 1, 2026 55% rule; N1 = fails the Oct 1, 2025 final-assembly rule. Y2 is therefore treated as Phase 2. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-fl-apl-led-cooper-lighting-solutions-archeon",
+    "manufacturer": "Cooper Lighting Solutions",
+    "model": "Archeon (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "FDOT Approved Product List – LED luminaires (715-005/-006)",
+        "listing_id": "Phase 1",
+        "dot_list_url": "https://path.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "FDOT APL",
+        "url": "https://path.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-fl-apl-led-cooper-lighting-solutions-archeon-contemporary-arch1-arch2-arch3-arch4",
+    "manufacturer": "Cooper Lighting Solutions",
+    "model": "Archeon Contemporary ARCH1/ARCH2/ARCH3/ARCH4 (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "FDOT Approved Product List – LED luminaires (715-005/-006)",
+        "listing_id": "Eligible",
+        "dot_list_url": "https://path.fdot.gov/Products/Index/10067?approvalId=9992"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "FDOT APL",
+        "url": "https://path.fdot.gov/Products/Index/10067?approvalId=9992"
+      }
+    ],
+    "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-fl-apl-led-american-electric-acuity-brands-autobahn",
+    "manufacturer": "American Electric (Acuity Brands)",
+    "model": "Autobahn (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "FDOT Approved Product List – LED luminaires (715-005/-006)",
+        "listing_id": "Eligible",
+        "dot_list_url": "https://path.fdot.gov/Products/Index/4790?approvalId=8312"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "FDOT APL",
+        "url": "https://path.fdot.gov/Products/Index/4790?approvalId=8312"
+      }
+    ],
+    "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-fl-apl-led-leotek-greencobra",
+    "manufacturer": "Leotek",
+    "model": "GreenCobra (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "FDOT Approved Product List – LED luminaires (715-005/-006)",
+        "listing_id": "Phase 1",
+        "dot_list_url": "https://path.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "FDOT APL",
+        "url": "https://path.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-fl-apl-led-acuity-brands-mongoose-medium-mgledm",
+    "manufacturer": "Acuity Brands",
+    "model": "Mongoose Medium MGLEDM (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "FDOT Approved Product List – LED luminaires (715-005/-006)",
+        "listing_id": "Eligible",
+        "dot_list_url": "https://path.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "FDOT APL",
+        "url": "https://path.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-fl-apl-led-cooper-lighting-solutions-navion",
+    "manufacturer": "Cooper Lighting Solutions",
+    "model": "Navion (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "FDOT Approved Product List – LED luminaires (715-005/-006)",
+        "listing_id": "Eligible",
+        "dot_list_url": "https://path.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "FDOT APL",
+        "url": "https://path.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-fl-apl-led-current-lighting-evolve-erls",
+    "manufacturer": "Current Lighting",
+    "model": "Evolve ERLS (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "FDOT Approved Product List – LED luminaires (715-005/-006)",
+        "listing_id": "Eligible",
+        "dot_list_url": "https://path.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "FDOT APL",
+        "url": "https://path.fdot.gov/ProductTypes/Index/611"
+      }
+    ],
+    "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-fl-apl-led-chm-lighting-cled2",
+    "manufacturer": "CHM Lighting",
+    "model": "CLED2 (1 listed 480V configuration)",
+    "product_type": "LED high mast luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "FDOT Approved Product List – LED luminaires (715-005/-006)",
+        "listing_id": "Phase 1",
+        "dot_list_url": "https://path.fdot.gov/ProductTypes/Index/612"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "FDOT APL",
+        "url": "https://path.fdot.gov/ProductTypes/Index/612"
+      }
+    ],
+    "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-fl-apl-led-signify-north-america-corporation-highfocus",
+    "manufacturer": "Signify North America Corporation",
+    "model": "HighFocus (1 listed 480V configuration)",
+    "product_type": "LED high mast luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "FDOT Approved Product List – LED luminaires (715-005/-006)",
+        "listing_id": "Eligible",
+        "dot_list_url": "https://path.fdot.gov/ProductTypes/Index/612"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "FDOT APL",
+        "url": "https://path.fdot.gov/ProductTypes/Index/612"
+      }
+    ],
+    "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-fl-apl-led-acuity-brands-hmled4",
+    "manufacturer": "Acuity Brands",
+    "model": "HMLED4 (1 listed 480V configuration)",
+    "product_type": "LED high mast luminaire",
+    "states": [
+      {
+        "state": "FL",
+        "list_name": "FDOT Approved Product List – LED luminaires (715-005/-006)",
+        "listing_id": "Eligible",
+        "dot_list_url": "https://path.fdot.gov/ProductTypes/Index/612"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "FDOT APL",
+        "url": "https://path.fdot.gov/ProductTypes/Index/612"
+      }
+    ],
+    "notes": "\"BABA Eligible: Eligible\" per product family, some limited to lettings on or before Dec 31, 2026 (treated as Phase 1). No CCT or voltage on the listing. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-nc-apl-led-chm-lighting-cled2",
+    "manufacturer": "CHM Lighting",
+    "model": "CLED2 (1 listed 480V configuration)",
+    "product_type": "LED high mast luminaire",
+    "states": [
+      {
+        "state": "NC",
+        "list_name": "NCDOT Approved Products List – Innovative Roadway Lighting / LED",
+        "listing_id": "Eligible",
+        "dot_list_url": "https://apps.ncdot.gov/vendor/approvedproducts/ProductDetails.aspx?id=9410"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "NCDOT APL",
+        "url": "https://apps.ncdot.gov/vendor/approvedproducts/ProductDetails.aspx?id=9410"
+      }
+    ],
+    "notes": "BABA column: Compliant / Not Compliant / Unknown, no phase detail. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-pa-b15-2026-11-acuity-brands-autobahn-atb0",
+    "manufacturer": "Acuity Brands",
+    "model": "Autobahn ATB0 (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "PA",
+        "list_name": "PennDOT Bulletin 15, Section 1101.06(c) Arm Mount Luminaires – LED",
+        "listing_id": "Eligible",
+        "dot_list_url": "https://docs.penndot.pa.gov/public/Bureaus/BOCM/BOCM_MTD_LAB/Publications/PUB_35/Current_Edition/Bulletin15.pdf"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "PennDOT Bulletin 15",
+        "url": "https://docs.penndot.pa.gov/public/Bureaus/BOCM/BOCM_MTD_LAB/Publications/PUB_35/Current_Edition/Bulletin15.pdf"
+      }
+    ],
+    "notes": "Note on ATB0/ATB2 only: \"Product must be ordered with the BAA option to receive BABA/BAA product certification.\" Family-level, no CCT or voltage. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-pa-b15-2026-11-acuity-brands-autobahn-atb2",
+    "manufacturer": "Acuity Brands",
+    "model": "Autobahn ATB2 (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "PA",
+        "list_name": "PennDOT Bulletin 15, Section 1101.06(c) Arm Mount Luminaires – LED",
+        "listing_id": "Eligible",
+        "dot_list_url": "https://docs.penndot.pa.gov/public/Bureaus/BOCM/BOCM_MTD_LAB/Publications/PUB_35/Current_Edition/Bulletin15.pdf"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "PennDOT Bulletin 15",
+        "url": "https://docs.penndot.pa.gov/public/Bureaus/BOCM/BOCM_MTD_LAB/Publications/PUB_35/Current_Edition/Bulletin15.pdf"
+      }
+    ],
+    "notes": "Note on ATB0/ATB2 only: \"Product must be ordered with the BAA option to receive BABA/BAA product certification.\" Family-level, no CCT or voltage. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-mo-apl-2026-06-acuity-brands-autobahn-atb0",
+    "manufacturer": "Acuity Brands",
+    "model": "Autobahn ATB0 (2 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "MO",
+        "list_name": "MoDOT Traffic Operations Approved Products List",
+        "listing_id": "Project-level",
+        "dot_list_url": "https://www.modot.org/media/39242"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "MoDOT APL",
+        "url": "https://www.modot.org/media/39242"
+      }
+    ],
+    "notes": "MoDOT: \"The models shown on the APL have not been verified to meet Build America Buy America (BABA) requirements.\" BAA-suffix rows shown as project-level. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-ca-aml-led-eoi-esufa",
+    "manufacturer": "EOI",
+    "model": "ESUFA (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "CA",
+        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=1&print=yes"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Caltrans AML",
+        "url": "https://mets.dot.ca.gov/aml/LED.php?type=1&print=yes"
+      }
+    ],
+    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-ca-aml-led-ge-lighting-erl2",
+    "manufacturer": "GE Lighting",
+    "model": "ERL2 (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "CA",
+        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=1&print=yes"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Caltrans AML",
+        "url": "https://mets.dot.ca.gov/aml/LED.php?type=1&print=yes"
+      }
+    ],
+    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-ca-aml-led-leotek-ec3",
+    "manufacturer": "Leotek",
+    "model": "EC3 (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "CA",
+        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=1&print=yes"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Caltrans AML",
+        "url": "https://mets.dot.ca.gov/aml/LED.php?type=1&print=yes"
+      }
+    ],
+    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-ca-aml-led-solarmax-smx-wie-ll5",
+    "manufacturer": "SolarMax",
+    "model": "SMX-WiE LL5 (10 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "CA",
+        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
+        "listing_id": "Phase 1",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=1&print=yes"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Caltrans AML",
+        "url": "https://mets.dot.ca.gov/aml/LED.php?type=1&print=yes"
+      }
+    ],
+    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-ca-aml-led-acuity-brands-atb0",
+    "manufacturer": "Acuity Brands",
+    "model": "ATB0 (8 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "CA",
+        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Caltrans AML",
+        "url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-ca-aml-led-current-lighting-erl2",
+    "manufacturer": "Current Lighting",
+    "model": "ERL2 (5 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "CA",
+        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Caltrans AML",
+        "url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-ca-aml-led-leotek-gcl1",
+    "manufacturer": "Leotek",
+    "model": "GCL1 (3 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "CA",
+        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Caltrans AML",
+        "url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-ca-aml-led-current-lighting-erl1",
+    "manufacturer": "Current Lighting",
+    "model": "ERL1 (5 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "CA",
+        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Caltrans AML",
+        "url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-ca-aml-led-leotek-gcm3",
+    "manufacturer": "Leotek",
+    "model": "GCM3 (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "CA",
+        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Caltrans AML",
+        "url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-ca-aml-led-leotek-gcj2",
+    "manufacturer": "Leotek",
+    "model": "GCJ2 (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "CA",
+        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Caltrans AML",
+        "url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-ca-aml-led-acuity-brands-atb2",
+    "manufacturer": "Acuity Brands",
+    "model": "ATB2 (2 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "CA",
+        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Caltrans AML",
+        "url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-ca-aml-led-leotek-gc2",
+    "manufacturer": "Leotek",
+    "model": "GC2 (3 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "CA",
+        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Caltrans AML",
+        "url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-ca-aml-led-leotek-gcj3",
+    "manufacturer": "Leotek",
+    "model": "GCJ3 (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "CA",
+        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Caltrans AML",
+        "url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-ca-aml-led-leotek-gcj4",
+    "manufacturer": "Leotek",
+    "model": "GCJ4 (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "CA",
+        "list_name": "Caltrans Authorized Materials List – LED Luminaires",
+        "listing_id": "Phase 2",
+        "dot_list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "final_assembly_us": "stated",
+    "domestic_content_55": "stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "Caltrans AML",
+        "url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes"
+      }
+    ],
+    "notes": "\"BABA Act Information\" column: \"Manufactured Product, 55% or higher cost and final assembly both in US\" (Phase 2) or \"only final assembly (manufacturing) in US\" (Phase 1). Caltrans criteria require nominal 3000K. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-wa-eapl-2026-10-acuity-brands-atb2",
+    "manufacturer": "Acuity Brands",
+    "model": "ATB2 (7 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "WA",
+        "list_name": "WSDOT Electrical Approved Products List, 9.29.10.1.B",
+        "listing_id": "Eligible",
+        "dot_list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "WSDOT E-APL",
+        "url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx"
+      }
+    ],
+    "notes": "Rows described \"BAA Compliant\" (Buy American Act order option), not an FHWA Buy America statement; no BABA phase given. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-wa-eapl-2026-10-acuity-brands-acm",
+    "manufacturer": "Acuity Brands",
+    "model": "ACM (2 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "WA",
+        "list_name": "WSDOT Electrical Approved Products List, 9.29.10.1.B",
+        "listing_id": "Eligible",
+        "dot_list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "WSDOT E-APL",
+        "url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx"
+      }
+    ],
+    "notes": "Rows described \"BAA Compliant\" (Buy American Act order option), not an FHWA Buy America statement; no BABA phase given. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-wa-eapl-2026-10-acuity-brands-atbm",
+    "manufacturer": "Acuity Brands",
+    "model": "ATBM (1 listed 480V configuration)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "WA",
+        "list_name": "WSDOT Electrical Approved Products List, 9.29.10.1.B",
+        "listing_id": "Eligible",
+        "dot_list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "WSDOT E-APL",
+        "url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx"
+      }
+    ],
+    "notes": "Rows described \"BAA Compliant\" (Buy American Act order option), not an FHWA Buy America statement; no BABA phase given. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "st480-wa-eapl-2026-10-acuity-brands-acl",
+    "manufacturer": "Acuity Brands",
+    "model": "ACL (2 listed 480V configurations)",
+    "product_type": "LED roadway luminaire",
+    "states": [
+      {
+        "state": "WA",
+        "list_name": "WSDOT Electrical Approved Products List, 9.29.10.1.B",
+        "listing_id": "Eligible",
+        "dot_list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx"
+      }
+    ],
+    "final_assembly_us": "not stated",
+    "domestic_content_55": "not stated",
+    "evidence_level": "dot-flagged",
+    "evidence": [
+      {
+        "summary": "WSDOT E-APL",
+        "url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx"
+      }
+    ],
+    "notes": "Rows described \"BAA Compliant\" (Buy American Act order option), not an FHWA Buy America statement; no BABA phase given. See fixtures-3k.html / fixtures-4k.html for configurations.",
+    "last_verified": "2026-11-09"
   }
 ]
