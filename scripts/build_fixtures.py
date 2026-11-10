@@ -97,7 +97,7 @@ def use_label(fx):
     return kind + (f" {app}" if app else "")
 
 
-def row(fx, sources, show_listed, main):
+def row(fx, sources, show_listed, main, show_cct=False):
     d = fx["dot"]
     src = sources.get(d["source"], {})
     st = src.get("state", "")
@@ -134,6 +134,7 @@ def row(fx, sources, show_listed, main):
         + td(sheet_cell(sheet), "c-d", sheet.get("title"))
         + td(ies_cell(fx), "c-d", ies_title(fx))
         + td(e(notes), "c-x muted", notes)
+        + (td(e(cct_label(fx)), "c-d", "Color temperature printed on the DOT listing") if show_cct else "")
         + (td(e(listed), "c-l mono muted", listed) if show_listed else "")
         + "</tr>"
     )
@@ -191,9 +192,25 @@ def sort_key(f):
             f.get("family", "").split(" · ")[0], f.get("watts") if isinstance(f.get("watts"), (int, float)) else 0)
 
 
-def nav(current):
-    pages = [("fixtures-3k.html", "Fixtures 3000K"), ("fixtures-4k.html", "Fixtures 4000K"),
-             ("index.html", "Compliance index"), ("fiber.html", "Fiber products")]
+ALL_VIEW = {
+    "file": "fixtures.html", "title": "BABA Fixture Downloads · 480V", "filter": {"voltage": 480}, "show_cct": True,
+    "labels": ["480V", "Any color temperature", "Phase 2 only (Oct 1, 2026)"], "order_label": "Catalog number (as listed)",
+    "intro": "Every 480V configuration that a state DOT list prints, with this exact model number, as Phase 2 compliant "
+             "(US final assembly and more than 55% domestic component cost, for projects obligated on or after Oct 1, 2026), "
+             "at any color temperature. TxDOT's Compliant v5, Alabama's Y2 code and Caltrans's \"55% or higher cost and final "
+             "assembly both in US\" all mean Phase 2. The CCT column shows the color temperature the listing prints.",
+}
+
+
+def cct_label(fx):
+    return f'{fx["cct"]}K' if isinstance(fx.get("cct"), int) else "not printed"
+
+
+def nav(current, strict=False):
+    pages = ([("fixtures.html", "All 480V fixtures")] if strict else []) + [
+        ("fixtures-3k.html", "3000K only" if strict else "Fixtures 3000K"),
+        ("fixtures-4k.html", "4000K only" if strict else "Fixtures 4000K"),
+        ("index.html", "Compliance index"), ("fiber.html", "Fiber products")]
     return " · ".join(f"<strong>{e(t)}</strong>" if f == current else f'<a href="{f}">{e(t)}</a>' for f, t in pages)
 
 
@@ -207,7 +224,9 @@ def render(build_date, data, view):
     sources = {s["id"]: s for s in data.get("sources", [])}
     shown = sorted((f for f in data["fixtures"] if matches(f, flt) and not f.get("voltage_inferred")), key=sort_key)
     family = sorted((f for f in data["fixtures"] if f.get("voltage") == 480 and
-                     (f.get("cct") == "unspecified" or (f.get("cct") == flt["cct"] and f.get("voltage_inferred")))), key=sort_key)
+                     (f.get("cct") == "unspecified" or (f.get("cct") == flt.get("cct") and f.get("voltage_inferred")))), key=sort_key)
+    if not unlisted:
+        family = []  # strict design: no listings with a placeholder voltage
     both = shown + family
     types = sorted({f.get("product_type") for f in both})
     type_opts = "".join(f'<option value="{e(t)}">{e(t)}</option>' for t in types)
@@ -228,11 +247,17 @@ def render(build_date, data, view):
     show_listed = view.get("show_listed")
     headers = ["DOT list", "BABA status", "Manufacturer", "Family", "Use", view["order_label"], "Catalog basis",
                "Voltage", "Optic", "W", "Lumens", "Cut sheet", "Photometry", "Notes"]
+    if view.get("show_cct"):
+        headers.append("CCT")
     if show_listed:
         headers.append("TxDOT-listed catalog (4000K)")
-    body = "\n".join(row(f, sources, show_listed, True) for f in shown)
-    fam_headers = [h if h != view["order_label"] else "Listing as published" for h in headers[:14]]
-    fam_body = "\n".join(row(f, sources, False, False) for f in family)
+    body = "\n".join(row(f, sources, show_listed, True, view.get("show_cct")) for f in shown)
+    family_html = "" if not unlisted else f"""<h2>Flagged listings that don't show 480V or a color temperature</h2>
+<p class="small muted">These DOT entries are flagged for Buy America, but the listing itself does not print a 480V voltage code
+(it shows a placeholder such as xx*, x or X, or no catalog number at all) or a color temperature. The product family offers a 480V
+option, but that is not evidence the listed configuration is 480V; for example, Caltrans spells out its 480V variants separately as
+"(480 VAC)". Confirm the exact configuration with the manufacturer and the DOT.</p>
+{table([h if h != view["order_label"] else "Listing as published" for h in headers[:14]], chr(10).join(row(f, sources, False, False) for f in family), "None.")}"""
 
     return f"""<!doctype html>
 <html lang="en">
@@ -247,7 +272,7 @@ def render(build_date, data, view):
 <main>
 <h1>{e(view["title"])}</h1>
 <div class="muted">480V luminaires that state DOT product lists state are Phase 2 Buy America (BABA) compliant · Updated {e(build_date)}</div>
-<div class="small">{nav(view["file"])}</div>
+<div class="small">{nav(view["file"], not unlisted)}</div>
 
 <div class="stats">
   <span class="chips">{chips}</span>
@@ -262,7 +287,7 @@ def render(build_date, data, view):
 <div class="phases"><span>{badge_for(PHASE_BADGE, "phase2")} DOT says US final assembly and more than 55% domestic cost (projects obligated on/after Oct 1, 2026). Only these listings are shown.</span></div>
 <span class="muted">Removed 2026-11-09: {data.get("removed_count", 0)} listings that are not Phase 2 (final assembly only, "eligible" or "BAA" with no phase, TxDOT Compliant v4, or project-level certification). They are kept in <code>data/fixtures_removed.json</code>.</span><br>
 <span class="muted">{'"As listed" = catalog number copied from the DOT list. "CCT swapped" = TxDOT-listed number with the 3000K option substituted.' if unlisted else 'Every catalog number is copied from the state DOT list as printed; nothing is substituted or inferred.'}
-The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table. Rows are one line each; tap or click a row to show its full text.</span>
+{'The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table.' if unlisted else 'Only listings that print a 480V code (480, 480 VAC, 8 for Cooper, HVOLT/HV) are included; listings with a placeholder voltage are left out.'} Rows are one line each; tap or click a row to show its full text.</span>
 <ul>{src_items}</ul>
 </div>
 
@@ -275,12 +300,7 @@ The main table only includes listings that print a 480V code (480, 8 for Cooper,
 
 {table(headers, body, "No fixtures match the filter.")}
 
-<h2>Flagged listings that don't show 480V or a color temperature</h2>
-<p class="small muted">These DOT entries are flagged for Buy America, but the listing itself does not print a 480V voltage code
-(it shows a placeholder such as xx*, x or X, or no catalog number at all) or a color temperature. The product family offers a 480V
-option, but that is not evidence the listed configuration is 480V; for example, Caltrans spells out its 480V variants separately as
-"(480 VAC)". Confirm the exact configuration with the manufacturer and the DOT.</p>
-{table(fam_headers, fam_body, "None.")}
+{family_html}
 
 {focus_section(data) if view.get("show_focus") else ""}
 
@@ -324,7 +344,11 @@ def main():
     for view in data["views"]:
         ROOT.joinpath(view["file"]).write_text(render(args.date, data, view), encoding="utf-8")
         print(f"Built {view['file']} for {args.date}")
-    ROOT.joinpath("fixtures.html").write_text(chooser(args.date, data["show_unlisted"]), encoding="utf-8")
+    if data["show_unlisted"]:
+        ROOT.joinpath("fixtures.html").write_text(chooser(args.date, True), encoding="utf-8")
+    else:  # strict design: fixtures.html is the full 480V list, with no color temperature requirement
+        ROOT.joinpath("fixtures.html").write_text(render(args.date, data, ALL_VIEW), encoding="utf-8")
+        print(f"Built fixtures.html for {args.date}")
 
 
 if __name__ == "__main__":

@@ -3025,7 +3025,7 @@
       "show_listed": true,
       "intro": "3000K configurations at 480V that a state DOT states are Phase 2 compliant (US final assembly and more than 55% domestic component cost, for projects obligated on or after Oct 1, 2026). Caltrans (California) marks each row with an explicit BABA category and requires 3000K. The TxDOT rows are TxDOT's 4000K Compliant v5 listings with the 3000K option swapped in, so they are not listed as written; confirm Buy America certification with the manufacturer.",
       "show_focus": true,
-      "intro_strict": "3000K configurations at 480V that a state DOT list prints, with this exact model number, as Phase 2 compliant (US final assembly and more than 55% domestic component cost, for projects obligated on or after Oct 1, 2026). All rows are from the Caltrans (California) Authorized Materials List, which marks each row with an explicit BABA category and requires 3000K."
+      "intro_strict": "3000K configurations at 480V that a state DOT list prints, with this exact model number, as Phase 2 compliant (US final assembly and more than 55% domestic component cost, for projects obligated on or after Oct 1, 2026). All rows are from the Caltrans (California) Authorized Materials List, which marks each row with an explicit BABA category. This page is only a 3000K filter of the full 480V list."
     },
     {
       "file": "fixtures-4k.html",
