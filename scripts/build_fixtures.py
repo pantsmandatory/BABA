@@ -112,7 +112,7 @@ def row(fx, sources, show_listed, main, show_cct=False):
     lm = (("≈" if fx.get("lumens_estimated") else "") + f"{lumens:,}") if isinstance(lumens, (int, float)) else "—"
     watts = fx.get("watts")
     notes = " · ".join(fx.get("caveats", []))
-    volt = "not shown" if fx.get("voltage_inferred") else "480V"
+    volt = "not shown" if fx.get("voltage_inferred") else volt_label(fx.get("voltage"))
     search = " ".join(str(x) for x in [fx.get("manufacturer"), fx.get("brand"), fx.get("family"), fx.get("catalog"),
                                        d.get("listed_catalog"), kind, st, STATE_NAMES.get(st, ""), notes] if x).lower()
     who = fx.get("manufacturer", "") + (f' · {fx["brand"]}' if fx.get("brand") else "")
@@ -192,14 +192,25 @@ def sort_key(f):
             f.get("family", "").split(" · ")[0], f.get("watts") if isinstance(f.get("watts"), (int, float)) else 0)
 
 
-ALL_VIEW = {
-    "file": "fixtures.html", "title": "BABA Fixture Downloads · 480V", "filter": {"voltage": 480}, "show_cct": True,
-    "labels": ["480V", "Any color temperature", "Phase 2 only (Oct 1, 2026)"], "order_label": "Catalog number (as listed)",
-    "intro": "Every 480V configuration that a state DOT list prints, with this exact model number, as Phase 2 compliant "
-             "(US final assembly and more than 55% domestic component cost, for projects obligated on or after Oct 1, 2026), "
-             "at any color temperature. TxDOT's Compliant v5, Alabama's Y2 code and Caltrans's \"55% or higher cost and final "
-             "assembly both in US\" all mean Phase 2. The CCT column shows the color temperature the listing prints.",
-}
+def volt_label(v):
+    return "120–277V" if v == "120-277" else f"{v}V"
+
+
+def volt_view(voltage, slug):
+    """Strict design: the full list for one voltage, at any color temperature."""
+    lab = volt_label(voltage)
+    return {
+        "file": f"fixtures-{slug}.html", "title": f"BABA Fixture Downloads · {lab}", "filter": {"voltage": voltage},
+        "show_cct": True, "volt_label": lab,
+        "labels": [lab, "Any color temperature", "Phase 2 only (Oct 1, 2026)"], "order_label": "Catalog number (as listed)",
+        "intro": f"Every {lab} configuration that a state DOT list prints, with this exact model number, as Phase 2 compliant "
+                 "(US final assembly and more than 55% domestic component cost, for projects obligated on or after Oct 1, 2026), "
+                 "at any color temperature. TxDOT's Compliant v5, Alabama's Y2 code and Caltrans's \"55% or higher cost and final "
+                 "assembly both in US\" all mean Phase 2. The CCT column shows the color temperature the listing prints.",
+    }
+
+
+VOLT_VIEWS = [volt_view(480, "480v"), volt_view("120-277", "120-277v")]
 
 
 def cct_label(fx):
@@ -207,9 +218,9 @@ def cct_label(fx):
 
 
 def nav(current, strict=False):
-    pages = ([("fixtures.html", "All 480V fixtures")] if strict else []) + [
-        ("fixtures-3k.html", "3000K only" if strict else "Fixtures 3000K"),
-        ("fixtures-4k.html", "4000K only" if strict else "Fixtures 4000K"),
+    pages = ([("fixtures-480v.html", "480V fixtures"), ("fixtures-120-277v.html", "120–277V fixtures")] if strict else []) + [
+        ("fixtures-3k.html", "480V 3000K only" if strict else "Fixtures 3000K"),
+        ("fixtures-4k.html", "480V 4000K only" if strict else "Fixtures 4000K"),
         ("index.html", "Compliance index"), ("fiber.html", "Fiber products")]
     return " · ".join(f"<strong>{e(t)}</strong>" if f == current else f'<a href="{f}">{e(t)}</a>' for f, t in pages)
 
@@ -265,13 +276,13 @@ option, but that is not evidence the listed configuration is 480V; for example, 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(view["title"])}</title>
-<meta name="description" content="Roadway, high mast and underpass luminaires that state DOT lists flag for Buy America (BABA), at 480V, with .ies files and cut sheets. {e(", ".join(view.get("labels", [])[:2]))}.">
+<meta name="description" content="Roadway, high mast and underpass luminaires that state DOT lists flag for Buy America (BABA), at {e(view.get("volt_label", "480V"))}, with .ies files and cut sheets. {e(", ".join(view.get("labels", [])[:2]))}.">
 <style>{CSS}{EXTRA_CSS}</style>
 </head>
 <body>
 <main>
 <h1>{e(view["title"])}</h1>
-<div class="muted">480V luminaires that state DOT product lists state are Phase 2 Buy America (BABA) compliant · Updated {e(build_date)}</div>
+<div class="muted">{e(view.get("volt_label", "480V"))} luminaires that state DOT product lists state are Phase 2 Buy America (BABA) compliant · Updated {e(build_date)}</div>
 <div class="small">{nav(view["file"], not unlisted)}</div>
 
 <div class="stats">
@@ -287,7 +298,7 @@ option, but that is not evidence the listed configuration is 480V; for example, 
 <div class="phases"><span>{badge_for(PHASE_BADGE, "phase2")} DOT says US final assembly and more than 55% domestic cost (projects obligated on/after Oct 1, 2026). Only these listings are shown.</span></div>
 <span class="muted">Removed 2026-11-09: {data.get("removed_count", 0)} listings that are not Phase 2 (final assembly only, "eligible" or "BAA" with no phase, TxDOT Compliant v4, or project-level certification). They are kept in <code>data/fixtures_removed.json</code>.</span><br>
 <span class="muted">{'"As listed" = catalog number copied from the DOT list. "CCT swapped" = TxDOT-listed number with the 3000K option substituted.' if unlisted else 'Every catalog number is copied from the state DOT list as printed; nothing is substituted or inferred.'}
-{'The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table.' if unlisted else 'Only listings that print a 480V code (480, 480 VAC, 8 for Cooper, HVOLT/HV) are included; listings with a placeholder voltage are left out.'} Rows are one line each; tap or click a row to show its full text.</span>
+{'The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table.' if unlisted else ('Only listings that print a 120–277V code (MVOLT, MV, UNV, U, 0, or "120-277 VAC") are included. TxDOT labels its rows 120/240V. Listings with a placeholder voltage, or a voltage code that could not be confirmed as 120–277V, are left out.' if view.get("volt_label") == "120–277V" else 'Only listings that print a 480V code (480, 480 VAC, 8 for Cooper, HVOLT/HV) are included; listings with a placeholder voltage are left out.')} Rows are one line each; tap or click a row to show its full text.</span>
 <ul>{src_items}</ul>
 </div>
 
@@ -307,7 +318,7 @@ option, but that is not evidence the listed configuration is 480V; for example, 
 <footer>
 Generated by <code>scripts/build_fixtures.py</code> from <code>data/fixtures.json</code>. Photometric files and cut sheet
 copies are the manufacturers' published files, kept here for convenience; each links to its source. States researched with no
-480V Buy America-flagged luminaires are summarized on the <a href="index.html">compliance index</a>. This page is a research
+Buy America-flagged luminaires are summarized on the <a href="index.html">compliance index</a>. This page is a research
 aid, not a certification: get the manufacturer's project-specific Buy America certification for the exact catalog number you order.
 </footer>
 </main>
@@ -318,17 +329,21 @@ aid, not a certification: get the manufacturer's project-specific Buy America ce
 
 
 def chooser(build_date, unlisted=False):
-    """fixtures.html: keeps the old link working and points to the 3000K and 4000K pages."""
+    """fixtures.html: keeps the old link working and points to the per-voltage (or, in the earlier design, per-CCT) pages."""
+    if unlisted:
+        items = """<li><a href="fixtures-4k.html"><strong>4000K</strong></a> – TxDOT Compliant v5 and Alabama Y2 listings at 480V.</li>
+<li><a href="fixtures-3k.html"><strong>3000K</strong></a> – Caltrans Phase 2 listings at 480V, TxDOT Compliant v5 configurations with the 3000K option swapped in, and <a href="fixtures-3k.html#current-cree">Current Lighting and Cree Lighting 480V 3000K photometry</a> with their DOT status.</li>"""
+    else:
+        items = """<li><a href="fixtures-480v.html"><strong>480V</strong></a> – TxDOT Compliant v5, Alabama Y2 and Caltrans Phase 2 listings that print a 480V code. Filters: <a href="fixtures-3k.html">3000K</a> · <a href="fixtures-4k.html">4000K</a>.</li>
+<li><a href="fixtures-120-277v.html"><strong>120–277V</strong></a> – the same three lists, rows that print a 120–277V code (MVOLT, MV, UNV, U).</li>"""
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BABA Fixture Downloads</title><style>{CSS}</style></head><body><main>
 <h1>BABA Fixture Downloads</h1>
-<div class="muted">480V luminaires flagged for Buy America on state DOT lists, with .ies files and cut sheets · Updated {e(build_date)}</div>
+<div class="muted">Luminaires that state DOT lists state are Buy America compliant for projects obligated on or after Oct 1, 2026, with .ies files and cut sheets · Updated {e(build_date)}</div>
 <div class="card"><ul>
-<li><a href="fixtures-4k.html"><strong>4000K</strong></a> – TxDOT Compliant v5 and Alabama Y2 listings at 480V.</li>
-<li><a href="fixtures-3k.html"><strong>3000K</strong></a> – {'Caltrans Phase 2 listings at 480V, TxDOT Compliant v5 configurations with the 3000K option swapped in, and <a href="fixtures-3k.html#current-cree">Current Lighting and Cree Lighting 480V 3000K photometry</a> with their DOT status.' if unlisted else 'Caltrans Phase 2 listings at 480V, exactly as Caltrans prints them.'}</li>
-</ul><p class="small muted">Only Phase 2 listings (projects obligated on or after Oct 1, 2026) are shown{'' if unlisted else ', with the exact model number the state DOT prints'}.</p><ul>
-</ul></div>
+{items}
+</ul><p class="small muted">Only Phase 2 listings are shown{'' if unlisted else ', with the exact model number the state DOT prints'}.</p></div>
 <div class="small"><a href="index.html">Compliance index</a> · <a href="fiber.html">Fiber products</a></div>
 </main></body></html>
 """
@@ -344,11 +359,11 @@ def main():
     for view in data["views"]:
         ROOT.joinpath(view["file"]).write_text(render(args.date, data, view), encoding="utf-8")
         print(f"Built {view['file']} for {args.date}")
-    if data["show_unlisted"]:
-        ROOT.joinpath("fixtures.html").write_text(chooser(args.date, True), encoding="utf-8")
-    else:  # strict design: fixtures.html is the full 480V list, with no color temperature requirement
-        ROOT.joinpath("fixtures.html").write_text(render(args.date, data, ALL_VIEW), encoding="utf-8")
-        print(f"Built fixtures.html for {args.date}")
+    ROOT.joinpath("fixtures.html").write_text(chooser(args.date, data["show_unlisted"]), encoding="utf-8")
+    if not data["show_unlisted"]:  # strict design: one full list per voltage, with no color temperature requirement
+        for view in VOLT_VIEWS:
+            ROOT.joinpath(view["file"]).write_text(render(args.date, data, view), encoding="utf-8")
+            print(f"Built {view['file']} for {args.date}")
 
 
 if __name__ == "__main__":

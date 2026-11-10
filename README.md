@@ -15,8 +15,9 @@ configurations with the 3000K / 70 CRI option swapped in. `fixtures.html` links 
 `fiber.html` lists Corning fiber products with BABA evidence: traffic/ITS cabinet splice housings, orange OM1/OM2
 multimode cable, and G.652 single-mode cable (data in `data/fiber.json`, built by `scripts/build_fiber.py`).
 
-**Strict design (default).** `fixtures.html` is the full list: every 480V configuration a state DOT prints as Phase 2, at
-any color temperature (there is no 3000K requirement). `fixtures-3k.html` and `fixtures-4k.html` are filters of it. Listings
+**Strict design (default).** `fixtures-480v.html` and `fixtures-120-277v.html` are the full lists: every configuration a
+state DOT prints as Phase 2 at that voltage, at any color temperature (there is no 3000K requirement). `fixtures.html` links to
+both. `fixtures-3k.html` and `fixtures-4k.html` are 480V filters. Listings
 with a placeholder voltage code are not shown. `data/site.json` has `"show_unlisted": false`: every page shows only rows that a state DOT list
 prints, with that exact model number, as Buy America compliant for projects obligated on or after Oct 1, 2026. Setting it to
 `true` and re-running the build scripts restores the earlier design (commit `817d028`), which also showed TxDOT rows with the
