@@ -319,7 +319,7 @@ def main():
         ARCHIVE.mkdir(exist_ok=True)
         # Archive pages live one folder down, so point the archive link back up.
         ARCHIVE.joinpath(f"{args.date}.html").write_text(
-            page.replace('href="archive/index.html"', 'href="index.html"').replace('href="fixtures-3k.html"', 'href="../fixtures-3k.html"').replace('href="fixtures-4k.html"', 'href="../fixtures-4k.html"').replace('href="fiber.html"', 'href="../fiber.html"'), encoding="utf-8"
+            page.replace('href="archive/index.html"', 'href="index.html"').replace('href="fixtures-3k.html"', 'href="../fixtures-3k.html"').replace('href="fixtures.html"', 'href="../fixtures.html"').replace('href="fixtures-4k.html"', 'href="../fixtures-4k.html"').replace('href="fiber.html"', 'href="../fiber.html"'), encoding="utf-8"
         )
         write_archive_index()
     print(f"Built index.html for {args.date}")
