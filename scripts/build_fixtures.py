@@ -199,6 +199,11 @@ def nav(current):
 
 def render(build_date, data, view):
     flt = view["filter"]
+    unlisted = data.get("show_unlisted", False)
+    if not unlisted:
+        # Strict design: only rows whose catalog number is copied from a state DOT list.
+        data = dict(data, fixtures=[f for f in data["fixtures"] if f.get("basis") == "as-listed"], focus=[])
+        view = dict(view, show_listed=False, show_focus=False, intro=view.get("intro_strict") or view.get("intro", ""))
     sources = {s["id"]: s for s in data.get("sources", [])}
     shown = sorted((f for f in data["fixtures"] if matches(f, flt) and not f.get("voltage_inferred")), key=sort_key)
     family = sorted((f for f in data["fixtures"] if f.get("voltage") == 480 and
@@ -256,7 +261,7 @@ def render(build_date, data, view):
 <strong>How to read this.</strong> {e(view.get("intro", ""))}
 <div class="phases"><span>{badge_for(PHASE_BADGE, "phase2")} DOT says US final assembly and more than 55% domestic cost (projects obligated on/after Oct 1, 2026). Only these listings are shown.</span></div>
 <span class="muted">Removed 2026-11-09: {data.get("removed_count", 0)} listings that are not Phase 2 (final assembly only, "eligible" or "BAA" with no phase, TxDOT Compliant v4, or project-level certification). They are kept in <code>data/fixtures_removed.json</code>.</span><br>
-<span class="muted">"As listed" = catalog number copied from the DOT list. "CCT swapped" = TxDOT-listed number with the 3000K option substituted.
+<span class="muted">{'"As listed" = catalog number copied from the DOT list. "CCT swapped" = TxDOT-listed number with the 3000K option substituted.' if unlisted else 'Every catalog number is copied from the state DOT list as printed; nothing is substituted or inferred.'}
 The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table. Rows are one line each; tap or click a row to show its full text.</span>
 <ul>{src_items}</ul>
 </div>
@@ -292,7 +297,7 @@ aid, not a certification: get the manufacturer's project-specific Buy America ce
 """
 
 
-def chooser(build_date):
+def chooser(build_date, unlisted=False):
     """fixtures.html: keeps the old link working and points to the 3000K and 4000K pages."""
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -301,8 +306,8 @@ def chooser(build_date):
 <div class="muted">480V luminaires flagged for Buy America on state DOT lists, with .ies files and cut sheets · Updated {e(build_date)}</div>
 <div class="card"><ul>
 <li><a href="fixtures-4k.html"><strong>4000K</strong></a> – TxDOT Compliant v5 and Alabama Y2 listings at 480V.</li>
-<li><a href="fixtures-3k.html"><strong>3000K</strong></a> – Caltrans Phase 2 listings at 480V, TxDOT Compliant v5 configurations with the 3000K option swapped in, and <a href="fixtures-3k.html#current-cree">Current Lighting and Cree Lighting 480V 3000K photometry</a> with their DOT status.</li>
-</ul><p class="small muted">Only Phase 2 listings (projects obligated on or after Oct 1, 2026) are shown.</p><ul>
+<li><a href="fixtures-3k.html"><strong>3000K</strong></a> – {'Caltrans Phase 2 listings at 480V, TxDOT Compliant v5 configurations with the 3000K option swapped in, and <a href="fixtures-3k.html#current-cree">Current Lighting and Cree Lighting 480V 3000K photometry</a> with their DOT status.' if unlisted else 'Caltrans Phase 2 listings at 480V, exactly as Caltrans prints them.'}</li>
+</ul><p class="small muted">Only Phase 2 listings (projects obligated on or after Oct 1, 2026) are shown{'' if unlisted else ', with the exact model number the state DOT prints'}.</p><ul>
 </ul></div>
 <div class="small"><a href="index.html">Compliance index</a> · <a href="fiber.html">Fiber products</a></div>
 </main></body></html>
@@ -314,10 +319,12 @@ def main():
     ap.add_argument("--date", default=dt.date.today().isoformat())
     args = ap.parse_args()
     data = json.loads((DATA / "fixtures.json").read_text(encoding="utf-8"))
+    site = json.loads((DATA / "site.json").read_text(encoding="utf-8")) if (DATA / "site.json").exists() else {}
+    data["show_unlisted"] = bool(site.get("show_unlisted"))
     for view in data["views"]:
         ROOT.joinpath(view["file"]).write_text(render(args.date, data, view), encoding="utf-8")
         print(f"Built {view['file']} for {args.date}")
-    ROOT.joinpath("fixtures.html").write_text(chooser(args.date), encoding="utf-8")
+    ROOT.joinpath("fixtures.html").write_text(chooser(args.date, data["show_unlisted"]), encoding="utf-8")
 
 
 if __name__ == "__main__":

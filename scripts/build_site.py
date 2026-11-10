@@ -212,6 +212,7 @@ def render(build_date):
     luminaires = load("luminaires.json", [])
     status = load("source_status.json", {})
 
+    show_queue = bool(load("site.json", {}).get("show_unlisted"))
     compliant = [i for i in luminaires if is_compliant(i)]
     pending = [i for i in luminaires if not is_compliant(i)]
     key = lambda i: (i.get("manufacturer", "").lower(), i.get("model", "").lower())
@@ -250,7 +251,7 @@ def render(build_date):
 
 <div class="stats">
   <span><b>{len(compliant)}</b>compliant</span>
-  <span><b>{len(pending)}</b>awaiting verification</span>
+  {f"<span><b>{len(pending)}</b>awaiting verification</span>" if show_queue else ""}
   <span><b>{len(states_covered)}</b>state DOT lists</span>
   <span><b>{flagged}</b>lists flag Buy America</span>
   <span><b>{changed}</b>changed since last check</span>
@@ -274,11 +275,9 @@ manufacturer's project-specific Buy America certification and confirm with the D
 </div>
 
 <h2>Compliant luminaires</h2>
-{table(prod_headers, product_rows(compliant), "No entries yet meet both documented tests. See the verification queue below.")}
+{table(prod_headers, product_rows(compliant), "No entries yet meet both documented tests.")}
 
-<h2>Verification queue</h2>
-<p class="small muted">On a DOT list, but only one test (or neither) is documented so far, or the claim is not specific to FHWA rules.</p>
-{table(prod_headers, product_rows(pending), "Nothing in the queue.")}
+{('<h2>Verification queue</h2><p class="small muted">On a DOT list, but only one test (or neither) is documented so far, or the claim is not specific to FHWA rules.</p>' + table(prod_headers, product_rows(pending), "Nothing in the queue.")) if show_queue else ""}
 
 <h2>State DOT product lists</h2>
 <p class="small muted">"Flags Buy America" means the list itself marks compliance. Weekly check shows whether the list page changed since the previous run.</p>

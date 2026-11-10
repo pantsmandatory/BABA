@@ -1,0 +1,4 @@
+{
+  "show_unlisted": false,
+  "note": "false = pages show only rows a state DOT list prints, with that exact model number, as Buy America compliant for projects obligated on or after Oct 1, 2026. true = restore the earlier design (as of commit 817d028): TxDOT rows with the 3000K option swapped in, the Current Lighting / Cree Lighting section on fixtures-3k.html, and the verification queue on index.html. All of that data stays in data/fixtures.json and data/luminaires.json; only the rendering changes."
+}

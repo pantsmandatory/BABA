@@ -15,6 +15,12 @@ configurations with the 3000K / 70 CRI option swapped in. `fixtures.html` links 
 `fiber.html` lists Corning fiber products with BABA evidence: traffic/ITS cabinet splice housings, orange OM1/OM2
 multimode cable, and G.652 single-mode cable (data in `data/fiber.json`, built by `scripts/build_fiber.py`).
 
+**Strict design (default).** `data/site.json` has `"show_unlisted": false`: every page shows only rows that a state DOT list
+prints, with that exact model number, as Buy America compliant for projects obligated on or after Oct 1, 2026. Setting it to
+`true` and re-running the build scripts restores the earlier design (commit `817d028`), which also showed TxDOT rows with the
+3000K option swapped in, the Current Lighting / Cree Lighting 480V 3000K section, and the index verification queue. That data
+and the `.ies` files in `ies/current/` and `ies/cree/` stay in the repo; only the rendering changes.
+
 Fixture pages show **Phase 2 listings only** (a state DOT states US final assembly and more than 55% domestic component
 cost, for projects obligated on or after Oct 1, 2026). Rows a DOT flags only for Phase 1, as "eligible"/"BAA" with no phase,
 or for project-level certification were removed on 2026-11-09 and are kept, unrendered, in `data/fixtures_removed.json`.

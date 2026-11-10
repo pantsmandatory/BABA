@@ -3024,7 +3024,8 @@
       "order_label": "Catalog number",
       "show_listed": true,
       "intro": "3000K configurations at 480V that a state DOT states are Phase 2 compliant (US final assembly and more than 55% domestic component cost, for projects obligated on or after Oct 1, 2026). Caltrans (California) marks each row with an explicit BABA category and requires 3000K. The TxDOT rows are TxDOT's 4000K Compliant v5 listings with the 3000K option swapped in, so they are not listed as written; confirm Buy America certification with the manufacturer.",
-      "show_focus": true
+      "show_focus": true,
+      "intro_strict": "3000K configurations at 480V that a state DOT list prints, with this exact model number, as Phase 2 compliant (US final assembly and more than 55% domestic component cost, for projects obligated on or after Oct 1, 2026). All rows are from the Caltrans (California) Authorized Materials List, which marks each row with an explicit BABA category and requires 3000K."
     },
     {
       "file": "fixtures-4k.html",
@@ -3041,7 +3042,8 @@
       ],
       "order_label": "Catalog number (as listed)",
       "show_listed": false,
-      "intro": "4000K configurations at 480V that a state DOT states are Phase 2 compliant, with catalog numbers copied from the DOT list. TxDOT's Compliant v5 and Alabama's Y2 code both mean US final assembly and more than 55% domestic component cost."
+      "intro": "4000K configurations at 480V that a state DOT states are Phase 2 compliant, with catalog numbers copied from the DOT list. TxDOT's Compliant v5 and Alabama's Y2 code both mean US final assembly and more than 55% domestic component cost.",
+      "intro_strict": "4000K configurations at 480V that a state DOT states are Phase 2 compliant, with catalog numbers copied from the DOT list. TxDOT's Compliant v5 and Alabama's Y2 code both mean US final assembly and more than 55% domestic component cost."
     }
   ],
   "focus": [
