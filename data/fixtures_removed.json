@@ -1,0 +1,1372 @@
+{
+  "note": "Fixture rows removed from the fixture pages on 2026-11-09 because the state DOT does not state Phase 2 compliance. Kept for reference; not rendered.",
+  "fixtures": [
+    {
+      "id": "fl-se-15",
+      "manufacturer": "Cooper Lighting Solutions",
+      "brand": "Cooper Lighting Solutions",
+      "family": "Archeon",
+      "product_type": "LED roadway luminaire",
+      "cct": "unspecified",
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "Includes Arch-L, Arch-M, Arch-S, & Arch-N",
+      "distribution": "unspecified",
+      "watts": "unspecified",
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "fl-apl-led",
+        "table": "715-005 LED Luminaire, (Conventional) [product type 611]",
+        "status": "Phase 1",
+        "phase": "phase1",
+        "listing_id": "715-005-038",
+        "list_url": "https://path.fdot.gov/ProductTypes/Index/611",
+        "listed_catalog": "Includes Arch-L, Arch-M, Arch-S, & Arch-N",
+        "listed_cct": "unspecified"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: BABA Eligible: Eligible; Limitation: \"BABA Approved for job lettings on or before December 31, 2026.\"",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (Cooper code 8; e.g. ALDOT ARCH-x-PA3-xxx-740-8-xx)",
+        "No CCT on the listing. APL entry is family-level; no CCT on listing",
+        "Phase1: Eligible only for lettings through 12/31/2026 (time-limited; not shown as meeting 55% rule beyond that). Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Phase 1"
+      }
+    },
+    {
+      "id": "fl-se-16",
+      "manufacturer": "Cooper Lighting Solutions",
+      "brand": "Cooper Lighting Solutions",
+      "family": "Archeon Contemporary ARCH1/ARCH2/ARCH3/ARCH4",
+      "product_type": "LED roadway luminaire",
+      "cct": "unspecified",
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "ARCH1 ARCH2 ARCH3 ARCH4",
+      "distribution": "unspecified",
+      "watts": "unspecified",
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "fl-apl-led",
+        "table": "715-005 LED Luminaire, (Conventional) [product type 611]",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "715-005-041",
+        "list_url": "https://path.fdot.gov/Products/Index/10067?approvalId=9992",
+        "listed_catalog": "ARCH1 ARCH2 ARCH3 ARCH4",
+        "listed_cct": "unspecified"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: BABA Eligible: Eligible; no limitation listed",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (TxDOT MPL lists BABA-ARCH1/ARCH3 at 480V per user context)",
+        "No CCT on the listing. APL entry is family-level; no CCT on listing",
+        "Approval date 7/22/2025. Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "fl-se-17",
+      "manufacturer": "American Electric (Acuity Brands)",
+      "brand": "American Electric (Acuity Brands)",
+      "family": "Autobahn",
+      "product_type": "LED roadway luminaire",
+      "cct": "unspecified",
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "Includes models ATB0, ATB2, ATBM & ATBL.",
+      "distribution": "unspecified",
+      "watts": "unspecified",
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "fl-apl-led",
+        "table": "715-005 LED Luminaire, (Conventional) [product type 611]",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "715-005-033",
+        "list_url": "https://path.fdot.gov/Products/Index/4790?approvalId=8312",
+        "listed_catalog": "Includes models ATB0, ATB2, ATBM & ATBL.",
+        "listed_cct": "unspecified"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: BABA Eligible: Eligible; no limitation listed",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (ALDOT ATBx-x-480)",
+        "No CCT on the listing. APL entry is family-level; no CCT on listing",
+        "APL comments: \"ATB0 & ATB2 require catalog number ATB#-P### (check \"P\" designation).\" \"All models require highest surge protection option and Osram, Nichia, or Cree brand LEDs.\" Approval 6/7/2016. Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "fl-se-18",
+      "manufacturer": "Leotek",
+      "brand": "LEOTEK ELECTRONICS USA LLC",
+      "family": "GreenCobra",
+      "product_type": "LED roadway luminaire",
+      "cct": "unspecified",
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "GCJ, GCM, GCL, GC1, & GC2",
+      "distribution": "unspecified",
+      "watts": "unspecified",
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "fl-apl-led",
+        "table": "715-005 LED Luminaire, (Conventional) [product type 611]",
+        "status": "Phase 1",
+        "phase": "phase1",
+        "listing_id": "715-005-019",
+        "list_url": "https://path.fdot.gov/ProductTypes/Index/611",
+        "listed_catalog": "GCJ, GCM, GCL, GC1, & GC2",
+        "listed_cct": "unspecified"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: BABA Eligible: Eligible; Limitation: \"BABA Approved for job lettings on or before December 31, 2026.\"",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers HV 347-480V (ALDOT GC2-96G-HV)",
+        "No CCT on the listing. APL entry is family-level; no CCT on listing",
+        "Phase1: Eligible only for lettings through 12/31/2026 (time-limited; not shown as meeting 55% rule beyond that). Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Phase 1"
+      }
+    },
+    {
+      "id": "fl-se-19",
+      "manufacturer": "Acuity Brands",
+      "brand": "Holophane Lighting",
+      "family": "Mongoose Medium MGLEDM",
+      "product_type": "LED roadway luminaire",
+      "cct": "unspecified",
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "MGLEDM",
+      "distribution": "unspecified",
+      "watts": "unspecified",
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "fl-apl-led",
+        "table": "715-005 LED Luminaire, (Conventional) [product type 611]",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "715-005-024",
+        "list_url": "https://path.fdot.gov/ProductTypes/Index/611",
+        "listed_catalog": "MGLEDM",
+        "listed_cct": "unspecified"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: BABA Eligible: Eligible; no limitation listed",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (ALDOT MGLEDM-xx-4K-480)",
+        "No CCT on the listing. APL entry is family-level; no CCT on listing",
+        " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "fl-se-20",
+      "manufacturer": "Cooper Lighting Solutions",
+      "brand": "Cooper Lighting Solutions",
+      "family": "Navion",
+      "product_type": "LED roadway luminaire",
+      "cct": "unspecified",
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "(blank)",
+      "distribution": "unspecified",
+      "watts": "unspecified",
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "fl-apl-led",
+        "table": "715-005 LED Luminaire, (Conventional) [product type 611]",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "715-005-008",
+        "list_url": "https://path.fdot.gov/ProductTypes/Index/611",
+        "listed_catalog": "(blank)",
+        "listed_cct": "unspecified"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: BABA Eligible: Eligible; no limitation listed",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 8 = 480V (Cooper Navion spec sheet)",
+        "No CCT on the listing. APL entry is family-level; no CCT on listing",
+        " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "fl-se-21",
+      "manufacturer": "Current Lighting",
+      "brand": "Current Lighting",
+      "family": "Evolve ERLS",
+      "product_type": "LED roadway luminaire",
+      "cct": "unspecified",
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "ERLS",
+      "distribution": "unspecified",
+      "watts": "unspecified",
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "fl-apl-led",
+        "table": "715-005 LED Luminaire, (Conventional) [product type 611]",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "715-005-040",
+        "list_url": "https://path.fdot.gov/ProductTypes/Index/611",
+        "listed_catalog": "ERLS",
+        "listed_cct": "unspecified"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: BABA Eligible: Eligible; no limitation listed",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; ERLS voltage options include 347-480V and 277-480V (Current product listing per search snippet)",
+        "No CCT on the listing. APL entry is family-level; no CCT on listing",
+        " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "fl-se-22",
+      "manufacturer": "CHM Lighting",
+      "brand": "Carolina High Mast, Inc.",
+      "family": "CLED2",
+      "product_type": "LED high mast luminaire",
+      "cct": "unspecified",
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "(blank)",
+      "distribution": "unspecified",
+      "watts": "unspecified",
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "fl-apl-led",
+        "table": "715-006 LED Luminaire, (High Mast) [product type 612]",
+        "status": "Phase 1",
+        "phase": "phase1",
+        "listing_id": "715-006-007",
+        "list_url": "https://path.fdot.gov/ProductTypes/Index/612",
+        "listed_catalog": "(blank)",
+        "listed_cct": "unspecified"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: BABA Eligible: Eligible; Limitation: \"BABA Approved for job lettings on or before December 31, 2026.\"",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; 480V capability per TxDOT MPL CHM CLED2 (user context); CHM voltage code not confirmed",
+        "No CCT on the listing. APL entry is family-level; no CCT on listing",
+        "Phase1: Eligible only for lettings through 12/31/2026 (time-limited; not shown as meeting 55% rule beyond that). Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Phase 1"
+      }
+    },
+    {
+      "id": "fl-se-23",
+      "manufacturer": "Signify North America Corporation",
+      "brand": "Signify North America Corporation",
+      "family": "HighFocus",
+      "product_type": "LED high mast luminaire",
+      "cct": "unspecified",
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "(blank)",
+      "distribution": "unspecified",
+      "watts": "unspecified",
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "fl-apl-led",
+        "table": "715-006 LED Luminaire, (High Mast) [product type 612]",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "715-006-002",
+        "list_url": "https://path.fdot.gov/ProductTypes/Index/612",
+        "listed_catalog": "(blank)",
+        "listed_cct": "unspecified"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: BABA Eligible: Eligible; no limitation listed",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; family offers 480V (ALDOT HFL-xxxx-G2-xxx-480-DMG)",
+        "No CCT on the listing. APL entry is family-level; no CCT on listing",
+        " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "fl-se-24",
+      "manufacturer": "Acuity Brands",
+      "brand": "Holophane Lighting",
+      "family": "HMLED4",
+      "product_type": "LED high mast luminaire",
+      "cct": "unspecified",
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "(blank)",
+      "distribution": "unspecified",
+      "watts": "unspecified",
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "fl-apl-led",
+        "table": "715-006 LED Luminaire, (High Mast) [product type 612]",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "715-006-008",
+        "list_url": "https://path.fdot.gov/ProductTypes/Index/612",
+        "listed_catalog": "(blank)",
+        "listed_cct": "unspecified"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: BABA Eligible: Eligible; no limitation listed",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: not listed on APL; HMLED4 offers HVOLT 347-480V / XVOLT 277-480V (Acuity spec sheet per search snippet)",
+        "No CCT on the listing. APL entry is family-level; no CCT on listing",
+        " Read via WebFetch (summarizing fetcher; curl got Cloudflare 403)."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "nc-se-25",
+      "manufacturer": "CHM Lighting",
+      "brand": "CHM (Carolina High Mast)",
+      "family": "CLED2",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "CLED2XCG4070X5W",
+      "distribution": "5W (as in string; not decoded)",
+      "watts": "unspecified",
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "nc-apl-led",
+        "table": "Innovative Roadway Lighting > LED Lighting",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "NP21-9008",
+        "list_url": "https://apps.ncdot.gov/vendor/approvedproducts/ProductDetails.aspx?id=9410",
+        "listed_catalog": "CLED2XCG4070X5W",
+        "listed_cct": "4000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: BABA: Compliant",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: X (voltage code not decoded; CLED2 family 480V-capable per TxDOT MPL)",
+        "Status: \"Approved for Provisional Use\". APL has a BABA column with values Compliant / Not Compliant / Unknown; no phase detail."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "pa-ne-0",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "Autobahn ATB0",
+      "product_type": "LED roadway luminaire",
+      "cct": "unspecified",
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "Autobahn ATB0",
+      "distribution": "not listed",
+      "watts": "not listed",
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "pa-b15-2026-11",
+        "table": "1101.06(c) Arm Mount Luminaires - LED - (Cobra Head); supplier ACUITY15, plant 1615 Elmore Street Crawfordsville, IN 47993",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "Ref. No. 2017-348Q",
+        "list_url": "https://docs.penndot.pa.gov/public/Bureaus/BOCM/BOCM_MTD_LAB/Publications/PUB_35/Current_Edition/Bulletin15.pdf",
+        "listed_catalog": "Autobahn ATB0",
+        "listed_cct": "unspecified"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Product must be ordered with the BAA option to receive BABA/BAA product certification of the completed manufactured product.",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: List gives no voltage. ATB0 catalog voltage options: MVOLT 120-277V, 347, 480 ('480 480V'), XVOLT 277V-480V (XVOLT only with P452/P453/P454; 480V not with P201). BAA option = 'Buy America(n) Act Compliant'.",
+        "No CCT on the listing. List gives no CCT. ATB0 spec sheet (Rev. 12/19/22, copy fetched from ppm.opkansas.org/wiki/images/TRF_PQL_SL_CAT_AmericanElectric_AutobahnATB0ClassE.pdf): '(Blank) 4000K CCT, 70 CRI Min.'; '3K 3000K CCT' optional. Default = 4000K.",
+        "Family-level listing ('Conventional LED Luminaire'); DMSCF column 'No'. BABA eligibility is conditional on ordering the BAA option; Bulletin 15 gives no Phase 1/Phase 2 (Oct 2026 / 55%) detail. 480V capability and CCT come from the manufacturer catalog, not the PennDOT list."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "pa-ne-1",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "Autobahn ATB2",
+      "product_type": "LED roadway luminaire",
+      "cct": "unspecified",
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "Autobahn ATB2",
+      "distribution": "not listed",
+      "watts": "not listed",
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "pa-b15-2026-11",
+        "table": "1101.06(c) Arm Mount Luminaires - LED - (Cobra Head); supplier ACUITY15, plant 1615 Elmore Street Crawfordsville, IN 47993",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "Ref. No. 2017-349Q",
+        "list_url": "https://docs.penndot.pa.gov/public/Bureaus/BOCM/BOCM_MTD_LAB/Publications/PUB_35/Current_Edition/Bulletin15.pdf",
+        "listed_catalog": "Autobahn ATB2",
+        "listed_cct": "unspecified"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Product must be ordered with the BAA option to receive BABA/BAA product certification of the completed manufactured product.",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: List gives no voltage. ATB2 catalog voltage options: MVOLT 120-277V, 347, 480 ('480 480V'), XVOLT 277V-480V (XVOLT only with P601/P602). Catalog: 'BABA - Build America Buy America: Product with the BAA option also ... Build America, Buy America Act' and 'qualifies as manufactured in the United States under DOT Buy America regulations'.",
+        "No CCT on the listing. List gives no CCT. ATB2 spec sheet (Rev. 04/16/24, copy fetched from connect.ncdot.gov .../AEL ATB2 Luminaire.pdf): '(Blank) 4000K CCT, 70 CRI Min.'; '3K 3000K CCT' optional. Default = 4000K.",
+        "Family-level listing ('Conventional LED Luminaire'); DMSCF column 'No'. BABA eligibility is conditional on ordering the BAA option; Bulletin 15 gives no Phase 1/Phase 2 (Oct 2026 / 55%) detail. 480V capability and CCT come from the manufacturer catalog, not the PennDOT list."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "mo-mw-0",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "Autobahn ATB0",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ATB0-P203-480-R3-3K-NL-NR-BAA",
+      "distribution": "R3 (Type III roadway)",
+      "watts": null,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "mo-apl-2026-06",
+        "table": "II. Highway Lighting - LED Luminaires - BRACKET ARM MOUNT (480V) - LED-A (page 4)",
+        "status": "Project-level",
+        "phase": "project-level",
+        "listing_id": "",
+        "list_url": "https://www.modot.org/media/39242",
+        "listed_catalog": "ATB0-P203-480-R3-3K-NL-NR-BAA",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Catalog suffix '-BAA'; list disclaimer: 'The models shown on the APL have not been verified to meet Build America Buy America (BABA) requirements.'",
+        "Only BAA-suffixed 480V rows on the MoDOT APL (non-BAA twin ATB0-P203-480-R3-3K-NL-NR also listed). MoDOT does not verify BABA, so certification is per project; AEL 'BAA' option = Buy American(Act)-configured build, phase not stated. LED-A class lumen/watt not given on list. NR = no receptacle."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Project-level"
+      }
+    },
+    {
+      "id": "mo-mw-1",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "Autobahn ATB0",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ATB0-P203-480-R3-3K-NL-P7-SH-BAA*",
+      "distribution": "R3 (Type III roadway)",
+      "watts": null,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "mo-apl-2026-06",
+        "table": "II. Highway Lighting - LED Luminaires - BRACKET ARM MOUNT (480V) - LED-A (page 4)",
+        "status": "Project-level",
+        "phase": "project-level",
+        "listing_id": "",
+        "list_url": "https://www.modot.org/media/39242",
+        "listed_catalog": "ATB0-P203-480-R3-3K-NL-P7-SH-BAA*",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Catalog suffix '-BAA'; list disclaimer: 'The models shown on the APL have not been verified to meet Build America Buy America (BABA) requirements.'",
+        "'*' = 'ANSI C136.41 7-pin receptacle with shorting cap included'. Same caveats as the NR version. The ATB0 P303/P453 480V rows (LED-B/C) have NO BAA suffix."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Project-level"
+      }
+    },
+    {
+      "id": "ca-w-3",
+      "manufacturer": "SolarMax",
+      "brand": "",
+      "family": "SMX-WiE LL5",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": 70,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "SMX-134WiE-XV-LL5-00-3070-T302-P",
+      "distribution": null,
+      "watts": 134,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "ca-aml-led",
+        "table": "Roadway 1",
+        "status": "Phase 1",
+        "phase": "phase1",
+        "listing_id": "",
+        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=1&print=yes",
+        "listed_catalog": "SMX-134WiE-XV-LL5-00-3070-T302-P",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: XV (SolarMax: 120-480VAC, 134W only per SolarMax spec sheet snippet)",
+        "AML authorization expires 6/30/2028"
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Phase 1"
+      }
+    },
+    {
+      "id": "ca-w-7",
+      "manufacturer": "SolarMax",
+      "brand": "",
+      "family": "SMX-WiE LL5",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": 70,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "Conventional Highway - SMX-134WiE-xx*-LL5-00-3070-T302-P ; Expressway - SMX-134WiE-xx*-LL5-00-3070-T302-P",
+      "distribution": null,
+      "watts": 134,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "ca-aml-led",
+        "table": "Roadway 11",
+        "status": "Phase 1",
+        "phase": "phase1",
+        "listing_id": "",
+        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
+        "listed_catalog": "Conventional Highway - SMX-134WiE-xx*-LL5-00-3070-T302-P ; Expressway - SMX-134WiE-xx*-LL5-00-3070-T302-P",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Phase 1"
+      }
+    },
+    {
+      "id": "ca-w-11",
+      "manufacturer": "SolarMax",
+      "brand": "",
+      "family": "SMX-WiE LL5",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": 70,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "SMX-134WiE-xx*-LL5-00-3070-T302-P",
+      "distribution": null,
+      "watts": 134,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "ca-aml-led",
+        "table": "Roadway 12; Intersection:  Small A",
+        "status": "Phase 1",
+        "phase": "phase1",
+        "listing_id": "",
+        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
+        "listed_catalog": "SMX-134WiE-xx*-LL5-00-3070-T302-P",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Phase 1"
+      }
+    },
+    {
+      "id": "ca-w-19",
+      "manufacturer": "SolarMax",
+      "brand": "",
+      "family": "SMX-WiE LL5",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": 70,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "SMX-105WiE-xx*-LL5-00-3070-T302-P",
+      "distribution": null,
+      "watts": 105,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "ca-aml-led",
+        "table": "Intersection:  Small B; Intersection:  Large B",
+        "status": "Phase 1",
+        "phase": "phase1",
+        "listing_id": "",
+        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
+        "listed_catalog": "SMX-105WiE-xx*-LL5-00-3070-T302-P",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Phase 1"
+      }
+    },
+    {
+      "id": "ca-w-23",
+      "manufacturer": "SolarMax",
+      "brand": "",
+      "family": "SMX-WiE LL5",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": 70,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "SMX-33WiE-xx*-LL5-00-3070-T302-P",
+      "distribution": null,
+      "watts": 33,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "ca-aml-led",
+        "table": "Intersection:  Small C",
+        "status": "Phase 1",
+        "phase": "phase1",
+        "listing_id": "",
+        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
+        "listed_catalog": "SMX-33WiE-xx*-LL5-00-3070-T302-P",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Phase 1"
+      }
+    },
+    {
+      "id": "ca-w-27",
+      "manufacturer": "SolarMax",
+      "brand": "",
+      "family": "SMX-WiE LL5",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": 70,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "SMX-218WiE-xx*-LL5-00-3070-T302-P",
+      "distribution": null,
+      "watts": 218,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "ca-aml-led",
+        "table": "Intersection:  Medium A",
+        "status": "Phase 1",
+        "phase": "phase1",
+        "listing_id": "",
+        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
+        "listed_catalog": "SMX-218WiE-xx*-LL5-00-3070-T302-P",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Phase 1"
+      }
+    },
+    {
+      "id": "ca-w-31",
+      "manufacturer": "SolarMax",
+      "brand": "",
+      "family": "SMX-WiE LL5",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": 70,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "SMX-166WiE-xx*-LL5-00-3070-T302-P",
+      "distribution": null,
+      "watts": 166,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "ca-aml-led",
+        "table": "Intersection:  Medium B",
+        "status": "Phase 1",
+        "phase": "phase1",
+        "listing_id": "",
+        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
+        "listed_catalog": "SMX-166WiE-xx*-LL5-00-3070-T302-P",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Phase 1"
+      }
+    },
+    {
+      "id": "ca-w-35",
+      "manufacturer": "SolarMax",
+      "brand": "",
+      "family": "SMX-WiE LL5",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": 70,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "SMX-52WiE-xx*-LL5-00-3070-T302-P",
+      "distribution": null,
+      "watts": 52,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "ca-aml-led",
+        "table": "Intersection:  Medium C",
+        "status": "Phase 1",
+        "phase": "phase1",
+        "listing_id": "",
+        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
+        "listed_catalog": "SMX-52WiE-xx*-LL5-00-3070-T302-P",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Phase 1"
+      }
+    },
+    {
+      "id": "ca-w-39",
+      "manufacturer": "SolarMax",
+      "brand": "",
+      "family": "SMX-WiE LL5",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": 70,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "SMX-139WiE-xx*-LL5-00-3070-T302-P",
+      "distribution": null,
+      "watts": 139,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "ca-aml-led",
+        "table": "Intersection:  Large A",
+        "status": "Phase 1",
+        "phase": "phase1",
+        "listing_id": "",
+        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
+        "listed_catalog": "SMX-139WiE-xx*-LL5-00-3070-T302-P",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Phase 1"
+      }
+    },
+    {
+      "id": "ca-w-47",
+      "manufacturer": "SolarMax",
+      "brand": "",
+      "family": "SMX-WiE LL5",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": 70,
+      "voltage": 480,
+      "voltage_inferred": true,
+      "catalog": "SMX-68WiE-xx*-LL5-00-3070-T302-P",
+      "distribution": null,
+      "watts": 68,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "ca-aml-led",
+        "table": "Intersection:  Large C",
+        "status": "Phase 1",
+        "phase": "phase1",
+        "listing_id": "",
+        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
+        "listed_catalog": "SMX-68WiE-xx*-LL5-00-3070-T302-P",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Manufactured Product, only final assembly (manufacturing) in US",
+        "The DOT listing does not show a 480V voltage code (placeholder or blank). 480V is only an available option for this family; confirm the configuration. Listing note: 'xx*' voltage placeholder; SolarMax codes NV=120-277V, HV=347-480V, XV=120-480V",
+        "480V via HV/XV code (WSDOT E-APL lists SMX-...WiE-HV as 480V); AML authorization expires 4/30/2027"
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Phase 1"
+      }
+    },
+    {
+      "id": "wa-w-48",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "ATB2",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ATB2-P4XX-480-R4-3K-MP-NL-NR-BAA-RFD337580*",
+      "distribution": "R4",
+      "watts": 83,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "wa-eapl-2026-10",
+        "table": "LED Conventional Roadway Luminaire - 200W Class",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "9.29.10.1.B.A-8",
+        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
+        "listed_catalog": "ATB2-P4XX-480-R4-3K-MP-NL-NR-BAA-RFD337580*",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Autobahn ATB2, 83W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
+        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "wa-w-49",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "ATB2",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ATB2-P601-480-R4-3K-MP-NL-NR-AO4-BAA-RFD337582*",
+      "distribution": "R4",
+      "watts": 97,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "wa-eapl-2026-10",
+        "table": "LED Conventional Roadway Luminaire - 200W Class",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "9.29.10.1.B.A-18",
+        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
+        "listed_catalog": "ATB2-P601-480-R4-3K-MP-NL-NR-AO4-BAA-RFD337582*",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Autobahn ATB2, 97W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
+        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "wa-w-50",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "ACM",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ACM-P607-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342043*",
+      "distribution": "R4",
+      "watts": 107,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "wa-eapl-2026-10",
+        "table": "LED Conventional Roadway Luminaire - 200W Class",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "9.29.10.1.B.A-24",
+        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
+        "listed_catalog": "ACM-P607-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342043*",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Autoconnect Medium (ACM), 107W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
+        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert. Note: E-APL row B.B-9/B.B-10 BAA labels appear swapped for 120-277V; A-23/A-24 share RFD342043."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "wa-w-51",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "ATB2",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ATB2-P4XX-480-R3-3K-MP-NL-NR-BAA-RFD337588*",
+      "distribution": "R3",
+      "watts": 105,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "wa-eapl-2026-10",
+        "table": "LED Conventional Roadway Luminaire - 250W Class",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "9.29.10.1.B.B-4",
+        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
+        "listed_catalog": "ATB2-P4XX-480-R3-3K-MP-NL-NR-BAA-RFD337588*",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Autobahn ATB2, 105W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
+        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "wa-w-52",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "ACM",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ACM-P608-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342046",
+      "distribution": "R4",
+      "watts": 118,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "wa-eapl-2026-10",
+        "table": "LED Conventional Roadway Luminaire - 250W Class",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "9.29.10.1.B.B-12",
+        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
+        "listed_catalog": "ACM-P608-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342046",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Autoconnect Medium (ACM), 118W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
+        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "wa-w-53",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "ATB2",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ATB2-P601-480-R3-3K-MP-NL-NR-AO5-BAA-RFD337586*",
+      "distribution": "R3",
+      "watts": 119,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "wa-eapl-2026-10",
+        "table": "LED Conventional Roadway Luminaire - 250W Class",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "9.29.10.1.B.B-16",
+        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
+        "listed_catalog": "ATB2-P601-480-R3-3K-MP-NL-NR-AO5-BAA-RFD337586*",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Autobahn ATB2, 119W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
+        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "wa-w-54",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "ATBM",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ATBM-P40-480-R3-4B-3K-MP-NL-NR-BAA-RFD337584*",
+      "distribution": "R3",
+      "watts": 135,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "wa-eapl-2026-10",
+        "table": "LED Conventional Roadway Luminaire - 250W Class",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "9.29.10.1.B.B-28",
+        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
+        "listed_catalog": "ATBM-P40-480-R3-4B-3K-MP-NL-NR-BAA-RFD337584*",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Autobahn ATBM, 135W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
+        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "wa-w-55",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "ACL",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ACL-P126-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342050*",
+      "distribution": "R4",
+      "watts": 157,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "wa-eapl-2026-10",
+        "table": "LED Conventional Roadway Luminaire - 310W Class",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "9.29.10.1.B.C-6",
+        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
+        "listed_catalog": "ACL-P126-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342050*",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Autoconnect Large (ACL), 157W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
+        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "wa-w-56",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "ATB2",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ATB2-P4XX-480-R3-3K-MP-NL-NR-BAA-RFD337590*",
+      "distribution": "R3",
+      "watts": 170,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "wa-eapl-2026-10",
+        "table": "LED Conventional Roadway Luminaire - 310W Class",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "9.29.10.1.B.C-18",
+        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
+        "listed_catalog": "ATB2-P4XX-480-R3-3K-MP-NL-NR-BAA-RFD337590*",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Autobahn ATB2, 170W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
+        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "wa-w-57",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "ATB2",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ATB2-P4XX-480-R3-3K-MP-NL-NR-BAA-RFD337594*",
+      "distribution": "R3",
+      "watts": 187,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "wa-eapl-2026-10",
+        "table": "LED Conventional Roadway Luminaire - 400W Class",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "9.29.10.1.B.D-4",
+        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
+        "listed_catalog": "ATB2-P4XX-480-R3-3K-MP-NL-NR-BAA-RFD337594*",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Autobahn ATB2, 187W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
+        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "wa-w-58",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "ATB2",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ATB2-P602-480-R3-3K-MP-NL-NR-BAA-RFD337592*",
+      "distribution": "R3",
+      "watts": 196,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "wa-eapl-2026-10",
+        "table": "LED Conventional Roadway Luminaire - 400W Class",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "9.29.10.1.B.D-10",
+        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
+        "listed_catalog": "ATB2-P602-480-R3-3K-MP-NL-NR-BAA-RFD337592*",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Autobahn ATB2, 196W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
+        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    },
+    {
+      "id": "wa-w-59",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL)",
+      "family": "ACL",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ACL-P128-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342054*",
+      "distribution": "R4",
+      "watts": 199,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "wa-eapl-2026-10",
+        "table": "LED Conventional Roadway Luminaire - 400W Class",
+        "status": "Eligible",
+        "phase": "eligible-unspecified",
+        "listing_id": "9.29.10.1.B.D-14",
+        "list_url": "https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-Approved-Products-List.xlsx",
+        "listed_catalog": "ACL-P128-XVOLT480-ZT-R4-4B-3K-GY-MP-NL-NTR-NBR-BAA-RFD342054*",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Autoconnect Large (ACL), 199W, 480V, BAA Compliant, *Contact HwyLighting@wsdot.wa.gov for special color codes",
+        "Flag is \"BAA Compliant\" (Buy American Act order-code option \"BAA\"), not an FHWA Buy America/BABA statement; E-APL Guide (July 2025) describes a \"BABA Cert.\" column (Y) but the current workbook has no such column. ADOT CA Manual notes Buy American certification is not Buy America certification - treat as needing project-level BABA cert."
+      ],
+      "removed": {
+        "date": "2026-11-09",
+        "reason": "DOT listing does not state Phase 2 (US final assembly and more than 55% domestic component cost) for projects obligated on or after Oct 1, 2026; DOT status was: Eligible"
+      }
+    }
+  ]
+}
