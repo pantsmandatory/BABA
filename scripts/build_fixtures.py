@@ -38,6 +38,25 @@ EXTRA_CSS = """
 .chips{display:inline-flex;flex-wrap:wrap;gap:4px;vertical-align:middle}
 .chip{background:var(--info-bg);color:var(--info);border-radius:999px;padding:0 8px;font-size:11px;font-weight:600}
 .phases{display:flex;flex-wrap:wrap;gap:4px 14px;margin:4px 0}
+button{font:inherit;font-weight:600;padding:5px 12px;border:1px solid var(--accent);border-radius:6px;background:var(--surface);color:var(--accent);cursor:pointer}
+button[aria-pressed="true"]{background:var(--accent);color:var(--surface)}
+table.fx .r{display:none}
+body.ref table.fx .m{display:none}
+body.ref table.fx .r{display:table-cell}
+body.ref table.fx td.r{white-space:normal;overflow:visible}
+body.ref table.fx td.c-cat{white-space:normal;word-break:break-all}
+/* Phone held sideways (and anything narrower): let cells wrap so a whole row shows with no sideways scrolling. */
+@media (max-width:1000px){
+main{padding:8px 8px 32px}
+.table-wrap{overflow-x:hidden}
+table.fx{font-size:11px}
+table.fx th,table.fx td{padding:2px 4px;white-space:normal;overflow:visible;max-width:none;min-width:0}
+table.fx th{font-size:9.5px;letter-spacing:0}
+table.fx td.c-cat,table.fx td.mono{word-break:break-all;font-size:10.5px}
+table.fx td.c-cat{min-width:150px}
+table.fx td.c-b{white-space:nowrap}
+}
+@media (max-height:520px){.table-wrap{max-height:none}th{position:static}}
 """
 
 JS = """
@@ -48,6 +67,9 @@ const ok=(!t||r.dataset.search.includes(t))&&(!y||r.dataset.type===y)&&(!s||r.da
 r.hidden=!ok;if(ok&&r.dataset.main)n++;});
 document.getElementById('count').textContent=n;}
 [q,ty,sf,ph].forEach(x=>x.addEventListener(x===q?'input':'change',apply));
+const rb=document.getElementById('refbtn');
+rb.addEventListener('click',()=>{const on=document.body.classList.toggle('ref');rb.setAttribute('aria-pressed',on);
+rb.textContent=on?'Back to fixture details':'Show BABA reference';});
 """ + ROW_JS
 
 
@@ -97,6 +119,23 @@ def use_label(fx):
     return kind + (f" {app}" if app else "")
 
 
+# Column layout: fixture details first (optic, voltage, CCT, manufacturer ...), then the order code, then the BABA
+# reference columns. The reference columns stay hidden until the button is pressed; pressing it hides every
+# detail column except the order code, so a row always fits a phone held sideways.
+MAIN_HEADERS = ["Optic", "Voltage", "CCT", "Manufacturer", "Family", "Use", "W", "Lumens"]
+FILE_HEADERS = ["Cut sheet", ".ies"]
+REF_HEADERS = ["DOT list", "BABA status", "Catalog basis", "BABA notes"]
+
+
+def fixture_table(order_label, body, empty_msg, show_listed=False):
+    ref = REF_HEADERS + (["TxDOT-listed catalog (4000K)"] if show_listed else [])
+    head = ("".join(f'<th class="m">{e(h)}</th>' for h in MAIN_HEADERS) + f"<th>{e(order_label)}</th>"
+            + "".join(f'<th class="m">{e(h)}</th>' for h in FILE_HEADERS) + "".join(f'<th class="r">{e(h)}</th>' for h in ref))
+    if not body:
+        body = f'<tr><td colspan="{len(MAIN_HEADERS) + 1 + len(FILE_HEADERS) + len(ref)}" class="empty">{e(empty_msg)}</td></tr>'
+    return f'<div class="table-wrap"><table class="fx"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
+
+
 def row(fx, sources, show_listed, main, show_cct=False):
     d = fx["dot"]
     src = sources.get(d["source"], {})
@@ -120,22 +159,22 @@ def row(fx, sources, show_listed, main, show_cct=False):
     return (
         f'<tr data-search="{e(search)}" data-type="{e(fx.get("product_type"))}" data-state="{e(st)}" '
         f'data-phase="{e(d.get("phase", ""))}"{" data-main=1" if main else ""}>'
-        + td(dot, "c-l", f'{src.get("name", "")} · {d.get("table", "")}')
-        + td(f'<span class="badge {label[1]}">{e(label[0])}</span>', "c-b", d.get("status"))
-        + td(f"<strong>{e(fx.get('manufacturer'))}</strong>", "c-m", who)
-        + td(e(fx.get("family")), "c-s", fx.get("family"))
-        + td(e(kind), "c-d")
+        + td(e(fx.get("distribution") or "—"), "m c-s", fx.get("distribution"))
+        + td(e(volt), "m c-d", "Not shown on the DOT listing (placeholder voltage code); 480V is only an available option for the family" if fx.get("voltage_inferred") else None)
+        + td(e(cct_label(fx)), "m c-d", "Color temperature printed on the DOT listing")
+        + td(f"<strong>{e(fx.get('manufacturer'))}</strong>", "m c-m", who)
+        + td(e(fx.get("family")), "m c-s", fx.get("family"))
+        + td(e(kind), "m c-d")
+        + td(e(watts if watts not in (None, "") else "—"), "m num")
+        + td(e(lm), "m num", "Estimated" if fx.get("lumens_estimated") else None)
         + td(e(fx.get("catalog")), "c-cat mono", fx.get("catalog"))
-        + td(badge_for(BASIS_BADGE, fx.get("basis")), "c-b")
-        + td(e(volt), "c-d", "Not shown on the DOT listing (placeholder voltage code); 480V is only an available option for the family" if fx.get("voltage_inferred") else None)
-        + td(e(fx.get("distribution") or "—"), "c-s", fx.get("distribution"))
-        + td(e(watts if watts not in (None, "") else "—"), "num")
-        + td(e(lm), "num", "Estimated" if fx.get("lumens_estimated") else None)
-        + td(sheet_cell(sheet), "c-d", sheet.get("title"))
-        + td(ies_cell(fx), "c-d", ies_title(fx))
-        + td(e(notes), "c-x muted", notes)
-        + (td(e(cct_label(fx)), "c-d", "Color temperature printed on the DOT listing") if show_cct else "")
-        + (td(e(listed), "c-l mono muted", listed) if show_listed else "")
+        + td(sheet_cell(sheet), "m c-d", sheet.get("title"))
+        + td(ies_cell(fx), "m c-d", ies_title(fx))
+        + td(dot, "r c-l", f'{src.get("name", "")} · {d.get("table", "")}')
+        + td(f'<span class="badge {label[1]}">{e(label[0])}</span>', "r c-b", d.get("status"))
+        + td(badge_for(BASIS_BADGE, fx.get("basis")), "r c-b")
+        + td(e(notes), "r c-x muted", notes)
+        + (td(e(listed), "r c-l mono muted", listed) if show_listed else "")
         + "</tr>"
     )
 
@@ -256,19 +295,13 @@ def render(build_date, data, view):
         for s in sorted(sources.values(), key=lambda s: s["state"]) if s["id"] in used
     )
     show_listed = view.get("show_listed")
-    headers = ["DOT list", "BABA status", "Manufacturer", "Family", "Use", view["order_label"], "Catalog basis",
-               "Voltage", "Optic", "W", "Lumens", "Cut sheet", "Photometry", "Notes"]
-    if view.get("show_cct"):
-        headers.append("CCT")
-    if show_listed:
-        headers.append("TxDOT-listed catalog (4000K)")
     body = "\n".join(row(f, sources, show_listed, True, view.get("show_cct")) for f in shown)
     family_html = "" if not unlisted else f"""<h2>Flagged listings that don't show 480V or a color temperature</h2>
 <p class="small muted">These DOT entries are flagged for Buy America, but the listing itself does not print a 480V voltage code
 (it shows a placeholder such as xx*, x or X, or no catalog number at all) or a color temperature. The product family offers a 480V
 option, but that is not evidence the listed configuration is 480V; for example, Caltrans spells out its 480V variants separately as
 "(480 VAC)". Confirm the exact configuration with the manufacturer and the DOT.</p>
-{table([h if h != view["order_label"] else "Listing as published" for h in headers[:14]], chr(10).join(row(f, sources, False, False) for f in family), "None.")}"""
+{fixture_table("Listing as published", chr(10).join(row(f, sources, False, False) for f in family), "None.")}"""
 
     return f"""<!doctype html>
 <html lang="en">
@@ -298,7 +331,7 @@ option, but that is not evidence the listed configuration is 480V; for example, 
 <div class="phases"><span>{badge_for(PHASE_BADGE, "phase2")} DOT says US final assembly and more than 55% domestic cost (projects obligated on/after Oct 1, 2026). Only these listings are shown.</span></div>
 <span class="muted">Removed 2026-11-09: {data.get("removed_count", 0)} listings that are not Phase 2 (final assembly only, "eligible" or "BAA" with no phase, TxDOT Compliant v4, or project-level certification). They are kept in <code>data/fixtures_removed.json</code>.</span><br>
 <span class="muted">{'"As listed" = catalog number copied from the DOT list. "CCT swapped" = TxDOT-listed number with the 3000K option substituted.' if unlisted else 'Every catalog number is copied from the state DOT list as printed; nothing is substituted or inferred.'}
-{'The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table.' if unlisted else ('Only listings that print a 120–277V code (MVOLT, MV, UNV, U, 0, or "120-277 VAC") are included. TxDOT labels its rows 120/240V. Listings with a placeholder voltage, or a voltage code that could not be confirmed as 120–277V, are left out.' if view.get("volt_label") == "120–277V" else 'Only listings that print a 480V code (480, 480 VAC, 8 for Cooper, HVOLT/HV) are included; listings with a placeholder voltage are left out.')} Rows are one line each; tap or click a row to show its full text.</span>
+{'The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table.' if unlisted else ('Only listings that print a 120–277V code (MVOLT, MV, UNV, U, 0, or "120-277 VAC") are included. TxDOT labels its rows 120/240V. Listings with a placeholder voltage, or a voltage code that could not be confirmed as 120–277V, are left out.' if view.get("volt_label") == "120–277V" else 'Only listings that print a 480V code (480, 480 VAC, 8 for Cooper, HVOLT/HV) are included; listings with a placeholder voltage are left out.')} Fixture details come first; press <strong>Show BABA reference</strong> to swap them for the DOT list, BABA status and notes next to each order code. On a phone, turn it sideways to see a whole row.</span>
 <ul>{src_items}</ul>
 </div>
 
@@ -307,9 +340,10 @@ option, but that is not evidence the listed configuration is 480V; for example, 
   <select id="st" aria-label="Filter by state"><option value="">All states</option>{state_opts}</select>
   <select id="ph" aria-label="Filter by BABA status"><option value="">All BABA statuses</option>{phase_opts}</select>
   <select id="type" aria-label="Filter by type"><option value="">All types</option>{type_opts}</select>
+  <button id="refbtn" type="button" aria-pressed="false">Show BABA reference</button>
 </div>
 
-{table(headers, body, "No fixtures match the filter.")}
+{fixture_table(view["order_label"], body, "No fixtures match the filter.", show_listed)}
 
 {family_html}
 
