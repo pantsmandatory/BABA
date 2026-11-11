@@ -65,6 +65,15 @@ body.compact table.fx th.m,body.compact table.fx td.m{min-width:0;max-width:none
 table.fx .h1{width:99%;border-left:2px solid var(--border)}
 table.fx th.h1{white-space:normal;text-transform:none;letter-spacing:0;font-size:12px;color:var(--accent)}
 body.ref table.fx .h1,body.one table.fx .h1,body.compact table.fx .h1{display:none}
+/* Phones: the pointer is a header row across the table instead of a column. */
+table.fx tr.hintrow{display:none}
+body.compact:not(.ref):not(.one) table.fx tr.hintrow{display:table-row}
+table.fx tr.hintrow th{position:static;text-align:center;text-transform:none;letter-spacing:0;font-size:12px;color:var(--accent);white-space:normal}
+/* Sortable headers */
+table.fx tr.cols th{cursor:pointer;user-select:none}
+table.fx tr.cols th.h1{cursor:default}
+table.fx tr.cols th[data-dir]::after{content:" ▲";font-size:.8em;color:var(--accent)}
+table.fx tr.cols th[data-dir="desc"]::after{content:" ▼"}
 .vlabels{display:flex;justify-content:space-between;gap:8px;font-size:12px;font-weight:600;color:var(--muted)}
 .vlabels span{flex:1;cursor:pointer;line-height:1.2}
 .vlabels span:nth-child(2){text-align:center}.vlabels span:nth-child(3){text-align:right}
@@ -109,6 +118,18 @@ function setView(v){vw.value=v;document.body.classList.toggle('ref',v==2);docume
 vl.forEach(x=>x.classList.toggle('on',x.dataset.v==v));fit();}
 vw.addEventListener('input',()=>setView(+vw.value));
 vl.forEach(x=>x.addEventListener('click',()=>setView(+x.dataset.v)));
+// Click a column header to sort by it; click again to reverse. Works in all three views. Blank and "—" cells go last.
+function sortKey(td){const t=(td?td.textContent:'').trim();if(!t||t==='—'||t==='request'||t==='unspecified'||t==='not printed')return null;
+const m=t.replace(/[,≈]/g,'').match(/^([0-9]+([.][0-9]+)?)(V|K|W)?([/–-][0-9.]+(V|K|W)?)?$/);return m?parseFloat(m[1]):t.toLowerCase();}
+document.querySelectorAll('table.fx tr.cols th:not(.h1)').forEach(th=>th.addEventListener('click',()=>{
+const tr=th.parentElement,i=th.cellIndex,tb=th.closest('table').tBodies[0],dir=th.dataset.dir==='asc'?'desc':'asc';
+tr.querySelectorAll('th').forEach(x=>delete x.dataset.dir);th.dataset.dir=dir;
+const rows=[...tb.rows].map((r,n)=>({r,n,k:sortKey(r.cells[i])}));
+rows.sort((a,b)=>{if(a.k===null||b.k===null)return a.k===b.k?a.n-b.n:(a.k===null?1:-1);
+if(typeof a.k!==typeof b.k)return typeof a.k==='number'?-1:1;
+let c=typeof a.k==='number'?a.k-b.k:String(a.k).localeCompare(String(b.k),undefined,{numeric:true});
+return (dir==='asc'?c:-c)||a.n-b.n;});
+rows.forEach(x=>tb.appendChild(x.r));}));
 // Phone check: the browser's own mobile flag when it has one, else a phone user agent on a small touch screen.
 function isPhone(){const sc=window.screen||{},small=Math.min(sc.width||9999,sc.height||9999)<=600;if(!small)return false;
 const ud=navigator.userAgentData;if(ud&&typeof ud.mobile==='boolean')return ud.mobile;
@@ -118,8 +139,9 @@ const tb=document.getElementById('turn');
 tb.addEventListener('click',()=>{if(tb.classList.contains('dim')){turnOff=true;document.body.classList.remove('turn');}else tb.classList.add('dim');});
 // Log the monitor / window size and fit the table to it, so desktop behaves like a phone held sideways.
 function fit(){const w=window.innerWidth,h=window.innerHeight,sc=window.screen||{},dpr=window.devicePixelRatio||1;
-document.body.classList.toggle('compact',w<1000);
-const sizes=w<1000?[11,10.5,10]:[12.5,12,11.5,11,10.5,10];let used=sizes[0],ok=false;
+// Compact layout: narrow windows, short windows (a phone held sideways can be over 1000px wide) and detected phones.
+document.body.classList.toggle('compact',w<1000||h<=560||isPhone());
+const sizes=document.body.classList.contains('compact')?[11,10.5,10]:[12.5,12,11.5,11,10.5,10];let used=sizes[0],ok=false;
 const wraps=[...document.querySelectorAll('table.fx')].map(t=>t.parentElement),one=document.body.classList.contains('one');
 // In the one-line view a row "fits" only if nothing overflows and the notes column keeps some room.
 const room=()=>[...document.querySelectorAll('table.fx td.c-cat .cl')].every(c=>!c.offsetParent||c.scrollHeight<=c.clientHeight+2);
@@ -212,7 +234,8 @@ def fixture_table(order_label, body, empty_msg, show_listed=False):
             + '<th class="h1">See slider above for Cutsheet &amp; Order Notes as well as BABA Nuances</th>')
     if not body:
         body = f'<tr><td colspan="{len(MAIN_HEADERS) + 3 + len(ref)}" class="empty">{e(empty_msg)}</td></tr>'
-    return f'<div class="table-wrap"><table class="fx"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
+    hint = '<tr class="hintrow"><th colspan="40">See slider above for Cutsheet &amp; Order Notes as well as BABA Nuances</th></tr>'
+    return f'<div class="table-wrap"><table class="fx"><thead>{hint}<tr class="cols">{head}</tr></thead><tbody>{body}</tbody></table></div>'
 
 
 def ftd(content, cls="", full=None):
