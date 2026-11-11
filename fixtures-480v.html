@@ -67,6 +67,15 @@ body.compact table.fx th,body.compact table.fx td{padding:2px 4px}
 body.compact table.fx th{font-size:9.5px;letter-spacing:0}
 body.compact table.fx td.c-cat,body.compact table.fx td.mono{word-break:break-all}
 #screeninfo{font-variant-numeric:tabular-nums}
+/* Phone held upright: oval banner with scrolling text asking the user to turn the phone sideways. */
+#turn{display:none;position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:20;width:min(88vw,360px);height:38px;
+border-radius:999px;background:var(--accent);color:var(--surface);font-weight:600;font-size:14px;line-height:38px;overflow:hidden;
+white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.3);border:0;padding:0;cursor:pointer}
+body.turn #turn{display:block}
+#turn span{display:inline-block;padding-left:100%;animation:turnscroll 11s linear -4s infinite}
+@keyframes turnscroll{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media (prefers-reduced-motion:reduce){#turn{height:auto;white-space:normal;line-height:1.3;padding:8px 16px;border-radius:22px;text-align:center}
+#turn span{padding-left:0;animation:none}}
 @media (max-height:520px){.table-wrap{max-height:none}th{position:static}}
 </style>
 </head>
@@ -155,6 +164,7 @@ aid, not a certification: get the manufacturer's project-specific Buy America ce
 <div id="screeninfo" class="muted"></div>
 </footer>
 </main>
+<button id="turn" type="button" aria-label="Turn your phone sideways to see each whole row. Tap to dismiss."><span>↻ Turn your phone sideways to see each whole row at once &nbsp;·&nbsp; tap to dismiss</span></button>
 <script>
 const q=document.getElementById('q'),ty=document.getElementById('type'),sf=document.getElementById('st'),ph=document.getElementById('ph');
 function apply(){const t=q.value.trim().toLowerCase(),y=ty.value,s=sf.value,p=ph.value;let n=0;
@@ -166,6 +176,12 @@ document.getElementById('count').textContent=n;}
 const rb=document.getElementById('refbtn');
 rb.addEventListener('click',()=>{const on=document.body.classList.toggle('ref');rb.setAttribute('aria-pressed',on);
 rb.textContent=on?'Back to fixture details':'Show BABA reference';fit();});
+// Phone check: the browser's own mobile flag when it has one, else a phone user agent on a small touch screen.
+function isPhone(){const sc=window.screen||{},small=Math.min(sc.width||9999,sc.height||9999)<=600;if(!small)return false;
+const ud=navigator.userAgentData;if(ud&&typeof ud.mobile==='boolean')return ud.mobile;
+return /Android.*Mobile|iPhone|iPod|Windows Phone/i.test(navigator.userAgent)&&navigator.maxTouchPoints>0;}
+let turnOff=false;
+document.getElementById('turn').addEventListener('click',()=>{turnOff=true;document.body.classList.remove('turn');});
 // Log the monitor / window size and fit the table to it, so desktop behaves like a phone held sideways.
 function fit(){const w=window.innerWidth,h=window.innerHeight,sc=window.screen||{},dpr=window.devicePixelRatio||1;
 document.body.classList.toggle('compact',w<1000);
@@ -175,7 +191,8 @@ for(const fs of sizes){used=fs;document.body.style.setProperty('--fx',fs+'px');
 ok=wraps.every(x=>x.scrollWidth<=x.clientWidth+1);if(ok)break;}
 const msg='Screen '+(sc.width||'?')+'×'+(sc.height||'?')+' · window '+w+'×'+h+' · pixel ratio '+(Math.round(dpr*100)/100)+
 ' · table text '+used+'px · '+(ok?'row fits the window':'row is wider than the window, scroll sideways');
-const el=document.getElementById('screeninfo');if(el)el.textContent=msg;
+const phone=isPhone();document.body.classList.toggle('turn',phone&&h>w&&!turnOff);
+const el=document.getElementById('screeninfo');if(el)el.textContent=msg+(phone?' · phone detected':'');
 if(msg!==fit.last){fit.last=msg;console.log('[BABA fixtures] '+msg);}}
 let ft;window.addEventListener('resize',()=>{clearTimeout(ft);ft=setTimeout(fit,120);});
 window.addEventListener('orientationchange',()=>setTimeout(fit,200));fit();
