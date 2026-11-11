@@ -2204,7 +2204,7 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
-        "Caltrans prints the voltage code as 0*; Current code 0 is 120–277V.",
+        "Caltrans prints voltage as 0*; code 0 = 120–277V.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US"
       ]
     },
@@ -2237,7 +2237,7 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
-        "Caltrans prints the voltage code as 0*; Current code 0 is 120–277V.",
+        "Caltrans prints voltage as 0*; code 0 = 120–277V.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US"
       ]
     },
@@ -2334,7 +2334,7 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
-        "Caltrans prints the voltage code as 0*; Current code 0 is 120–277V.",
+        "Caltrans prints voltage as 0*; code 0 = 120–277V.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US"
       ]
     },
@@ -2431,7 +2431,7 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
-        "Caltrans prints the voltage code as 0*; Current code 0 is 120–277V.",
+        "Caltrans prints voltage as 0*; code 0 = 120–277V.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US"
       ]
     },
@@ -2528,7 +2528,7 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
-        "Caltrans prints the voltage code as 0*; Current code 0 is 120–277V.",
+        "Caltrans prints voltage as 0*; code 0 = 120–277V.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US"
       ]
     },
@@ -2625,7 +2625,7 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
-        "Caltrans prints the voltage code as 0*; Current code 0 is 120–277V.",
+        "Caltrans prints voltage as 0*; code 0 = 120–277V.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US"
       ]
     },
@@ -2722,7 +2722,7 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
-        "Caltrans prints the voltage code as 0*; Current code 0 is 120–277V.",
+        "Caltrans prints voltage as 0*; code 0 = 120–277V.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US"
       ]
     },
@@ -2819,7 +2819,7 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
-        "Caltrans prints the voltage code as 0*; Current code 0 is 120–277V.",
+        "Caltrans prints voltage as 0*; code 0 = 120–277V.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US"
       ]
     },
@@ -2916,7 +2916,7 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
-        "Caltrans prints the voltage code as 0*; Current code 0 is 120–277V.",
+        "Caltrans prints voltage as 0*; code 0 = 120–277V.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US"
       ]
     },
@@ -3079,7 +3079,7 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
-        "Caltrans prints the voltage code as 0*; Current code 0 is 120–277V.",
+        "Caltrans prints voltage as 0*; code 0 = 120–277V.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US"
       ]
     },
@@ -3143,7 +3143,7 @@
       "cut_sheet": {},
       "ies": [],
       "caveats": [
-        "Caltrans prints the voltage code as 0*; Current code 0 is 120–277V.",
+        "Caltrans prints voltage as 0*; code 0 = 120–277V.",
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US"
       ]
     },
@@ -3216,7 +3216,7 @@
         }
       ],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (U) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; U = 120–277V.",
         "The D-number at the end is TxDOT's custom configuration code; quote it when ordering."
       ],
       "basis": "as-listed",
@@ -3258,7 +3258,7 @@
         }
       ],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (U) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; U = 120–277V.",
         "Cut sheet: 480V not for ungrounded or impedance-grounded systems."
       ],
       "basis": "as-listed",
@@ -3300,7 +3300,7 @@
         }
       ],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (U) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; U = 120–277V.",
         "Cut sheet: 480V not for ungrounded or impedance-grounded systems."
       ],
       "basis": "as-listed",
@@ -3342,7 +3342,7 @@
         }
       ],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (MV) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; MV = 120–277V.",
         "TxDOT lists 45W; Leotek's file and sheet show 44W.",
         "Leotek: the BABA option code is required; it \"meets Oct. 1, 2026 final US assembly, 55% content\" rules."
       ],
@@ -3385,7 +3385,7 @@
         }
       ],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (MV) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; MV = 120–277V.",
         "TxDOT lists this as GCM3, but Leotek's tables put output code 155 under GCM2. Confirm the housing size with Leotek."
       ],
       "basis": "as-listed",
@@ -3427,7 +3427,7 @@
         }
       ],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (MV) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; MV = 120–277V.",
         "TxDOT lists 145W as GCM3; Leotek's tables put code 220 under GCM4 (about 140W). Confirm with Leotek."
       ],
       "basis": "as-listed",
@@ -3461,7 +3461,7 @@
       },
       "ies": [],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (MVOLT) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; MVOLT = 120–277V.",
         "Lumens/watts from the cut sheet's 4000K table (Rev. 02/27/26). Request the .ies from Acuity quoting RFD353993.",
         "BAA option required (cut sheet: qualifies under DOT Buy America and BABA)."
       ],
@@ -3496,7 +3496,7 @@
       },
       "ies": [],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (MVOLT) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; MVOLT = 120–277V.",
         "Cut sheet 4000K table. Request the .ies quoting RFD353996.",
         "TxDOT lists 110W; cut sheet shows 106W."
       ],
@@ -3531,7 +3531,7 @@
       },
       "ies": [],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (MVOLT) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; MVOLT = 120–277V.",
         "Cut sheet 4000K table. Request the .ies quoting RFD353999."
       ],
       "basis": "as-listed",
@@ -3565,7 +3565,7 @@
       },
       "ies": [],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (MVOLT) is the 120–277V universal option. Bronze finish.",
+        "TxDOT lists it as 120/240V; MVOLT = 120–277V. Bronze finish.",
         "Cut sheet 4000K table. Request the .ies quoting RFD353995.",
         "TxDOT lists 110W; cut sheet shows 106W."
       ],
@@ -3600,7 +3600,7 @@
       },
       "ies": [],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (MVOLT) is the 120–277V universal option. Black finish.",
+        "TxDOT lists it as 120/240V; MVOLT = 120–277V. Black finish.",
         "Cut sheet 4000K table. Request the .ies quoting RFD353997.",
         "TxDOT lists 110W; cut sheet shows 106W."
       ],
@@ -3643,7 +3643,7 @@
         }
       ],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (UNV) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; UNV = 120–277V.",
         "Cut sheet has no BABA wording; BABA status rests on the TxDOT listing."
       ],
       "basis": "as-listed",
@@ -3685,7 +3685,7 @@
         }
       ],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (UNV) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; UNV = 120–277V.",
         "Cut sheet has no BABA wording; BABA status rests on the TxDOT listing."
       ],
       "basis": "as-listed",
@@ -3728,7 +3728,7 @@
         }
       ],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (U) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; U = 120–277V.",
         "Cut sheet: 480V only for Wye systems."
       ],
       "basis": "as-listed",
@@ -3763,7 +3763,7 @@
       },
       "ies": [],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (MVOLT) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; MVOLT = 120–277V.",
         "P25 is a TxDOT custom package (380W per TxDOT), not on the public sheet. Request the .ies quoting RFD321354."
       ],
       "basis": "as-listed",
@@ -3798,7 +3798,7 @@
       },
       "ies": [],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (MVOLT) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; MVOLT = 120–277V.",
         "P25 is a TxDOT custom package (380W per TxDOT), not on the public sheet. Request the .ies quoting RFD322281."
       ],
       "basis": "as-listed",
@@ -3833,7 +3833,7 @@
       },
       "ies": [],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (MVOLT) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; MVOLT = 120–277V.",
         "P25 is a TxDOT custom package (380W per TxDOT). Request the .ies quoting RFD320604."
       ],
       "basis": "as-listed",
@@ -3868,7 +3868,7 @@
       },
       "ies": [],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (MVOLT) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; MVOLT = 120–277V.",
         "Cut sheet P4 4000K: AW 82,761 lm, AN 89,131 lm, 582W (TxDOT lists 575W). Custom two-optic build; request its .ies quoting RFD320605."
       ],
       "basis": "as-listed",
@@ -3911,7 +3911,7 @@
         }
       ],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (A) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; A = 120–277V.",
         "Watts are the cut sheet's 480V value (TxDOT lists 410W). Unshielded file; S90/S180/S360 shielded versions are in CHM's zip.",
         "CHM: \"BABA compliant in all package offerings\"; made in Fort Worth, TX."
       ],
@@ -3955,7 +3955,7 @@
         }
       ],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (A) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; A = 120–277V.",
         "Watts are the cut sheet's 480V value (TxDOT lists 410W). Unshielded file; S90/S180/S360 shielded versions are in CHM's zip.",
         "CHM: \"BABA compliant in all package offerings\"; made in Fort Worth, TX."
       ],
@@ -3999,7 +3999,7 @@
         }
       ],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (A) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; A = 120–277V.",
         "Watts are the cut sheet's 480V value (TxDOT lists 410W). Unshielded file; S90/S180/S360 shielded versions are in CHM's zip.",
         "CHM: \"BABA compliant in all package offerings\"; made in Fort Worth, TX."
       ],
@@ -4043,7 +4043,7 @@
         }
       ],
       "caveats": [
-        "TxDOT labels this row 120/240V; the catalog voltage code (A) is the 120–277V universal option.",
+        "TxDOT lists it as 120/240V; A = 120–277V.",
         "Watts are the cut sheet's 480V value (TxDOT lists 510W)."
       ],
       "basis": "as-listed",

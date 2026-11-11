@@ -55,7 +55,8 @@ body.ref table.fx .m{display:none}
 body.ref table.fx .r{display:table-cell}
 body.ref table.fx td.r{white-space:normal;overflow:visible}
 body.ref table.fx td.c-cat{white-space:normal;word-break:break-all}
-body.ref table.fx td.c-x{width:36%}
+body.ref table.fx td.c-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:150px}
+body.ref table.fx tr.open td.c-l{white-space:normal;overflow:visible}
 /* View 3: one line per row. Order code plus DOT list, BABA status and notes; notes are cut with an ellipsis.
    If the full order code leaves no room, the script adds body.short and the 4-character model code shows instead. */
 body.one table.fx .m{display:none}
