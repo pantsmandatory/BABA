@@ -45,17 +45,18 @@ body.ref table.fx .m{display:none}
 body.ref table.fx .r{display:table-cell}
 body.ref table.fx td.r{white-space:normal;overflow:visible}
 body.ref table.fx td.c-cat{white-space:normal;word-break:break-all}
-/* Phone held sideways (and anything narrower): let cells wrap so a whole row shows with no sideways scrolling. */
-@media (max-width:1000px){
-main{padding:8px 8px 32px}
-.table-wrap{overflow-x:hidden}
-table.fx{font-size:11px}
-table.fx th,table.fx td{padding:2px 4px;white-space:normal;overflow:visible;max-width:none;min-width:0}
-table.fx th{font-size:9.5px;letter-spacing:0}
-table.fx td.c-cat,table.fx td.mono{word-break:break-all;font-size:10.5px}
+/* Every screen: cells wrap so a whole row shows with no sideways scrolling. The script below logs the screen
+   size and steps the table text size down (--fx) until the table fits the window. */
+table.fx{font-size:var(--fx,12.5px)}
+table.fx th,table.fx td{white-space:normal;overflow:visible;max-width:none;min-width:0}
+table.fx td.c-cat,table.fx td.mono{overflow-wrap:anywhere;font-size:.92em}
 table.fx td.c-cat{min-width:150px}
-table.fx td.c-b{white-space:nowrap}
-}
+table.fx td.c-b,table.fx td.num{white-space:nowrap}
+body.compact main{padding:8px 8px 32px}
+body.compact table.fx th,body.compact table.fx td{padding:2px 4px}
+body.compact table.fx th{font-size:9.5px;letter-spacing:0}
+body.compact table.fx td.c-cat,body.compact table.fx td.mono{word-break:break-all}
+#screeninfo{font-variant-numeric:tabular-nums}
 @media (max-height:520px){.table-wrap{max-height:none}th{position:static}}
 """
 
@@ -69,7 +70,20 @@ document.getElementById('count').textContent=n;}
 [q,ty,sf,ph].forEach(x=>x.addEventListener(x===q?'input':'change',apply));
 const rb=document.getElementById('refbtn');
 rb.addEventListener('click',()=>{const on=document.body.classList.toggle('ref');rb.setAttribute('aria-pressed',on);
-rb.textContent=on?'Back to fixture details':'Show BABA reference';});
+rb.textContent=on?'Back to fixture details':'Show BABA reference';fit();});
+// Log the monitor / window size and fit the table to it, so desktop behaves like a phone held sideways.
+function fit(){const w=window.innerWidth,h=window.innerHeight,sc=window.screen||{},dpr=window.devicePixelRatio||1;
+document.body.classList.toggle('compact',w<1000);
+const sizes=w<1000?[11,10.5,10]:[12.5,12,11.5,11,10.5,10];let used=sizes[0],ok=false;
+const wraps=[...document.querySelectorAll('table.fx')].map(t=>t.parentElement);
+for(const fs of sizes){used=fs;document.body.style.setProperty('--fx',fs+'px');
+ok=wraps.every(x=>x.scrollWidth<=x.clientWidth+1);if(ok)break;}
+const msg='Screen '+(sc.width||'?')+'×'+(sc.height||'?')+' · window '+w+'×'+h+' · pixel ratio '+(Math.round(dpr*100)/100)+
+' · table text '+used+'px · '+(ok?'row fits the window':'row is wider than the window, scroll sideways');
+const el=document.getElementById('screeninfo');if(el)el.textContent=msg;
+if(msg!==fit.last){fit.last=msg;console.log('[BABA fixtures] '+msg);}}
+let ft;window.addEventListener('resize',()=>{clearTimeout(ft);ft=setTimeout(fit,120);});
+window.addEventListener('orientationchange',()=>setTimeout(fit,200));fit();
 """ + ROW_JS
 
 
@@ -331,7 +345,7 @@ option, but that is not evidence the listed configuration is 480V; for example, 
 <div class="phases"><span>{badge_for(PHASE_BADGE, "phase2")} DOT says US final assembly and more than 55% domestic cost (projects obligated on/after Oct 1, 2026). Only these listings are shown.</span></div>
 <span class="muted">Removed 2026-11-09: {data.get("removed_count", 0)} listings that are not Phase 2 (final assembly only, "eligible" or "BAA" with no phase, TxDOT Compliant v4, or project-level certification). They are kept in <code>data/fixtures_removed.json</code>.</span><br>
 <span class="muted">{'"As listed" = catalog number copied from the DOT list. "CCT swapped" = TxDOT-listed number with the 3000K option substituted.' if unlisted else 'Every catalog number is copied from the state DOT list as printed; nothing is substituted or inferred.'}
-{'The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table.' if unlisted else ('Only listings that print a 120–277V code (MVOLT, MV, UNV, U, 0, or "120-277 VAC") are included. TxDOT labels its rows 120/240V. Listings with a placeholder voltage, or a voltage code that could not be confirmed as 120–277V, are left out.' if view.get("volt_label") == "120–277V" else 'Only listings that print a 480V code (480, 480 VAC, 8 for Cooper, HVOLT/HV) are included; listings with a placeholder voltage are left out.')} Fixture details come first; press <strong>Show BABA reference</strong> to swap them for the DOT list, BABA status and notes next to each order code. On a phone, turn it sideways to see a whole row.</span>
+{'The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table.' if unlisted else ('Only listings that print a 120–277V code (MVOLT, MV, UNV, U, 0, or "120-277 VAC") are included. TxDOT labels its rows 120/240V. Listings with a placeholder voltage, or a voltage code that could not be confirmed as 120–277V, are left out.' if view.get("volt_label") == "120–277V" else 'Only listings that print a 480V code (480, 480 VAC, 8 for Cooper, HVOLT/HV) are included; listings with a placeholder voltage are left out.')} Fixture details come first; press <strong>Show BABA reference</strong> to swap them for the DOT list, BABA status and notes next to each order code. The table sizes itself to your screen so a whole row shows at once; on a phone, turn it sideways. The detected screen size is shown at the bottom of the page.</span>
 <ul>{src_items}</ul>
 </div>
 
@@ -354,6 +368,7 @@ Generated by <code>scripts/build_fixtures.py</code> from <code>data/fixtures.jso
 copies are the manufacturers' published files, kept here for convenience; each links to its source. States researched with no
 Buy America-flagged luminaires are summarized on the <a href="index.html">compliance index</a>. This page is a research
 aid, not a certification: get the manufacturer's project-specific Buy America certification for the exact catalog number you order.
+<div id="screeninfo" class="muted"></div>
 </footer>
 </main>
 <script>{JS}</script>
