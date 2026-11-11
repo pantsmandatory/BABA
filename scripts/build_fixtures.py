@@ -58,6 +58,13 @@ body.one table.fx td.o3.c-x{width:45%}
 body.one.short .cf{display:none}
 body.one.short .cs{display:inline}
 .views{flex:1 1 100%;max-width:560px;margin-top:2px}
+body.compact .views{max-width:none}
+/* View 1: the six detail columns share one narrow width; on wide screens a last column points to the slider and takes the rest. */
+table.fx th.m,table.fx td.m{width:7em;min-width:7em;max-width:7em}
+body.compact table.fx th.m,body.compact table.fx td.m{min-width:0;max-width:none}
+table.fx .h1{width:99%;border-left:2px solid var(--border)}
+table.fx th.h1{white-space:normal;text-transform:none;letter-spacing:0;font-size:12px;color:var(--accent)}
+body.ref table.fx .h1,body.one table.fx .h1,body.compact table.fx .h1{display:none}
 .vlabels{display:flex;justify-content:space-between;gap:8px;font-size:12px;font-weight:600;color:var(--muted)}
 .vlabels span{flex:1;cursor:pointer;line-height:1.2}
 .vlabels span:nth-child(2){text-align:center}.vlabels span:nth-child(3){text-align:right}
@@ -68,7 +75,7 @@ body.one.short .cs{display:inline}
 table.fx{font-size:var(--fx,12.5px)}
 table.fx th,table.fx td{white-space:normal;overflow:visible;max-width:none;min-width:0}
 table.fx td.c-cat,table.fx td.mono{overflow-wrap:anywhere;font-size:.92em}
-table.fx td.c-cat{min-width:clamp(33ch,34vw,64ch)}
+table.fx td.c-cat{min-width:clamp(33ch,34vw,70ch)}
 table.fx td.c-cat .cl{word-break:break-all}
 table.fx td.num{white-space:nowrap}
 table.fx td.c-b .cl{display:flex;align-items:center}
@@ -201,9 +208,10 @@ def fixture_table(order_label, body, empty_msg, show_listed=False):
     ref = REF_HEADERS + (["Catalog basis", "TxDOT-listed catalog (4000K)"] if show_listed else [])
     head = ("".join(f'<th class="m">{e(h)}</th>' for h in MAIN_HEADERS) + f"<th>{e(order_label)}</th>"
             + "".join(f'<th class="{"o3" if h in ONE_LINE else "r"}">{e(h)}</th>' for h in ref)
-            + '<th class="o3">BABA nuances</th>')
+            + '<th class="o3">BABA nuances</th>'
+            + '<th class="h1">See slider above for Cutsheet &amp; Order Notes as well as BABA Nuances</th>')
     if not body:
-        body = f'<tr><td colspan="{len(MAIN_HEADERS) + 2 + len(ref)}" class="empty">{e(empty_msg)}</td></tr>'
+        body = f'<tr><td colspan="{len(MAIN_HEADERS) + 3 + len(ref)}" class="empty">{e(empty_msg)}</td></tr>'
     return f'<div class="table-wrap"><table class="fx"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
 
 
@@ -255,6 +263,7 @@ def row(fx, sources, show_listed, main, show_cct=False):
         + ftd(e(order_notes), "r c-x muted", order_notes)
         + (ftd(badge_for(BASIS_BADGE, fx.get("basis")), "r c-b") + ftd(e(listed), "r c-l mono muted", listed) if show_listed else "")
         + ftd(e(baba_notes), "o3 c-x muted", baba_notes)
+        + '<td class="h1"></td>'
         + "</tr>"
     )
 
@@ -424,8 +433,8 @@ option, but that is not evidence the listed configuration is 480V; for example, 
   <select id="ph" aria-label="Filter by BABA status"><option value="">BABA status</option>{phase_opts}</select>
   <select id="type" aria-label="Filter by use case"><option value="">Use case</option>{type_opts}</select>
   <div class="views">
-    <div class="vlabels" id="vlabels"><span data-v="1" class="on">Fixture details</span><span data-v="2">Cutsheet &amp; Order Notes</span><span data-v="3">Order code &amp; BABA nuances</span></div>
-    <input id="view" type="range" min="1" max="3" step="1" value="1" aria-label="Table view: 1 fixture details, 2 cut sheet and order notes, 3 order code and BABA nuances, one line per row">
+    <div class="vlabels" id="vlabels"><span data-v="1" class="on">Fixture details</span><span data-v="2">Cutsheet &amp; Order Notes</span><span data-v="3">BABA nuances</span></div>
+    <input id="view" type="range" min="1" max="3" step="1" value="1" aria-label="Table view: 1 fixture details, 2 cut sheet and order notes, 3 BABA nuances">
   </div>
 </div>
 
