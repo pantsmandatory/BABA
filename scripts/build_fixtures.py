@@ -45,18 +45,15 @@ table.fx .r,table.fx .o3{display:none}
 body.ref table.fx .m{display:none}
 body.ref table.fx .r{display:table-cell}
 body.ref table.fx td.r{white-space:normal;overflow:visible}
-body.ref table.fx td.c-cat{white-space:normal;word-break:break-all}
-body.ref table.fx td.c-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:150px}
-body.ref table.fx tr.open td.c-l{white-space:normal;overflow:visible}
-/* View 3: one line per row. Order code plus DOT list, BABA status and notes; notes are cut with an ellipsis.
-   If the full order code leaves no room, the script adds body.short and the 4-character model code shows instead. */
+/* Every row is exactly two text lines tall in all three views; longer text is clamped and shows when the row is tapped. */
+table.fx .cl{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;height:2.6em;line-height:1.3}
+table.fx tr.open .cl{display:block;height:auto;min-height:2.6em;overflow:visible}
+/* View 3: order code, DOT reference, BABA status and BABA nuances. If the full order code cannot show in two lines,
+   the script adds body.short and the 4-character model code shows instead. */
 body.one table.fx .m{display:none}
-body.one table.fx .r.o,body.one table.fx .o3{display:table-cell}
-body.one table.fx th,body.one table.fx td{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-body.one table.fx td.c-cat{min-width:0;overflow:visible;word-break:normal;overflow-wrap:normal}
-body.one table.fx td.c-l{max-width:190px}
-body.one table.fx td.c-x{max-width:0;width:100%;min-width:0}
-body.one table.fx tr.open td{white-space:normal;overflow:visible}
+body.one table.fx .o3{display:table-cell}
+body.one table.fx td.c-l{max-width:200px}
+body.one table.fx td.o3.c-x{width:45%}
 .cs{display:none;font-weight:700}
 body.one.short .cf{display:none}
 body.one.short .cs{display:inline}
@@ -71,13 +68,14 @@ body.one.short .cs{display:inline}
 table.fx{font-size:var(--fx,12.5px)}
 table.fx th,table.fx td{white-space:normal;overflow:visible;max-width:none;min-width:0}
 table.fx td.c-cat,table.fx td.mono{overflow-wrap:anywhere;font-size:.92em}
-table.fx td.c-cat{min-width:150px}
-table.fx td.c-b,table.fx td.num{white-space:nowrap}
+table.fx td.c-cat{min-width:clamp(33ch,34vw,64ch)}
+table.fx td.c-cat .cl{word-break:break-all}
+table.fx td.num{white-space:nowrap}
+table.fx td.c-b .cl{display:flex;align-items:center}
 body.compact main{padding:8px 8px 32px}
 body.compact table.fx th,body.compact table.fx td{padding:2px 4px}
 body.compact table.fx th{font-size:9.5px;letter-spacing:0}
 body.compact.ref table.fx td.c-x{min-width:80px}
-body.compact.ref table.fx td.c-cat{min-width:110px}
 body.compact table.fx td.c-cat,body.compact table.fx td.mono{word-break:break-all}
 #screeninfo{font-variant-numeric:tabular-nums}
 /* Phone held upright: a rotate-your-phone picture. First tap makes it half transparent, second tap removes it. */
@@ -117,7 +115,7 @@ document.body.classList.toggle('compact',w<1000);
 const sizes=w<1000?[11,10.5,10]:[12.5,12,11.5,11,10.5,10];let used=sizes[0],ok=false;
 const wraps=[...document.querySelectorAll('table.fx')].map(t=>t.parentElement),one=document.body.classList.contains('one');
 // In the one-line view a row "fits" only if nothing overflows and the notes column keeps some room.
-const room=()=>{const n=document.querySelector('table.fx td.o3');return !one||!n||n.offsetWidth>=110;};
+const room=()=>[...document.querySelectorAll('table.fx td.c-cat .cl')].every(c=>!c.offsetParent||c.scrollHeight<=c.clientHeight+2);
 const tryFit=()=>{for(const fs of sizes){used=fs;document.body.style.setProperty('--fx',fs+'px');
 ok=wraps.every(x=>x.scrollWidth<=x.clientWidth+1)&&room();if(ok)break;}};
 document.body.classList.remove('short');tryFit();
@@ -202,11 +200,17 @@ def short_code(fx):
 def fixture_table(order_label, body, empty_msg, show_listed=False):
     ref = REF_HEADERS + (["Catalog basis", "TxDOT-listed catalog (4000K)"] if show_listed else [])
     head = ("".join(f'<th class="m">{e(h)}</th>' for h in MAIN_HEADERS) + f"<th>{e(order_label)}</th>"
-            + "".join(f'<th class="r{" o" if h in ONE_LINE else ""}">{e(h)}</th>' for h in ref)
+            + "".join(f'<th class="{"o3" if h in ONE_LINE else "r"}">{e(h)}</th>' for h in ref)
             + '<th class="o3">BABA nuances</th>')
     if not body:
         body = f'<tr><td colspan="{len(MAIN_HEADERS) + 2 + len(ref)}" class="empty">{e(empty_msg)}</td></tr>'
     return f'<div class="table-wrap"><table class="fx"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
+
+
+def ftd(content, cls="", full=None):
+    """Fixture-table cell: content sits in a block that is always exactly two text lines tall (clamped; tap the row to open)."""
+    title = f' title="{e(full)}"' if full else ""
+    return f'<td class="{cls}"{title}><div class="cl">{content}</div></td>'
 
 
 def row(fx, sources, show_listed, main, show_cct=False):
@@ -235,22 +239,22 @@ def row(fx, sources, show_listed, main, show_cct=False):
     return (
         f'<tr data-search="{e(search)}" data-type="{e(fx.get("product_type"))}" data-state="{e(st)}" '
         f'data-phase="{e(d.get("phase", ""))}"{" data-main=1" if main else ""}>'
-        + td(e(volt), "m c-d", "Not shown on the DOT listing (placeholder voltage code); 480V is only an available option for the family" if fx.get("voltage_inferred") else None)
-        + td(e(watts if watts not in (None, "") else "—"), "m num")
-        + td(e(lm), "m num", "Estimated" if fx.get("lumens_estimated") else None)
-        + td(e(fx.get("distribution") or "—"), "m c-s", fx.get("distribution"))
-        + td(e(cct_label(fx)), "m c-d", "Color temperature printed on the DOT listing")
-        + td(ies_cell(fx), "m c-d", ies_title(fx))
-        + td(f'<span class="cf">{e(fx.get("catalog"))}</span><span class="cs">{e(short_code(fx))}</span>', "c-cat mono", fx.get("catalog"))
-        + td(sheet_cell(sheet), "r c-d", sheet.get("title"))
-        + td(f"<strong>{e(fx.get('manufacturer'))}</strong>", "r c-m", who)
-        + td(e(fx.get("family")), "r c-s", fx.get("family"))
-        + td(e(kind), "r c-d")
-        + td(dot, "r o c-l", f'{src.get("name", "")} · {d.get("table", "")}')
-        + td(f'<span class="badge {label[1]}">{e(label[0])}</span>', "r o c-b", d.get("status"))
-        + td(e(order_notes), "r c-x muted", order_notes)
-        + (td(badge_for(BASIS_BADGE, fx.get("basis")), "r c-b") + td(e(listed), "r c-l mono muted", listed) if show_listed else "")
-        + td(e(baba_notes), "o3 c-x muted", baba_notes)
+        + ftd(e(volt), "m c-d", "Not shown on the DOT listing (placeholder voltage code); 480V is only an available option for the family" if fx.get("voltage_inferred") else None)
+        + ftd(e(watts if watts not in (None, "") else "—"), "m num")
+        + ftd(e(lm), "m num", "Estimated" if fx.get("lumens_estimated") else None)
+        + ftd(e(fx.get("distribution") or "—"), "m c-s", fx.get("distribution"))
+        + ftd(e(cct_label(fx)), "m c-d", "Color temperature printed on the DOT listing")
+        + ftd(ies_cell(fx), "m c-d", ies_title(fx))
+        + ftd(f'<span class="cf">{e(fx.get("catalog"))}</span><span class="cs">{e(short_code(fx))}</span>', "c-cat mono", fx.get("catalog"))
+        + ftd(sheet_cell(sheet), "r c-d", sheet.get("title"))
+        + ftd(f"<strong>{e(fx.get('manufacturer'))}</strong>", "r c-m", who)
+        + ftd(e(fx.get("family")), "r c-s", fx.get("family"))
+        + ftd(e(kind), "r c-d")
+        + ftd(dot, "o3 c-l", f'{src.get("name", "")} · {d.get("table", "")}')
+        + ftd(f'<span class="badge {label[1]}">{e(label[0])}</span>', "o3 c-b", d.get("status"))
+        + ftd(e(order_notes), "r c-x muted", order_notes)
+        + (ftd(badge_for(BASIS_BADGE, fx.get("basis")), "r c-b") + ftd(e(listed), "r c-l mono muted", listed) if show_listed else "")
+        + ftd(e(baba_notes), "o3 c-x muted", baba_notes)
         + "</tr>"
     )
 
@@ -420,8 +424,8 @@ option, but that is not evidence the listed configuration is 480V; for example, 
   <select id="ph" aria-label="Filter by BABA status"><option value="">BABA status</option>{phase_opts}</select>
   <select id="type" aria-label="Filter by use case"><option value="">Use case</option>{type_opts}</select>
   <div class="views">
-    <div class="vlabels" id="vlabels"><span data-v="1" class="on">Fixture details</span><span data-v="2">Cut sheet &amp; BABA reference</span><span data-v="3">Order code &amp; BABA nuances</span></div>
-    <input id="view" type="range" min="1" max="3" step="1" value="1" aria-label="Table view: 1 fixture details, 2 cut sheet and BABA reference, 3 order code and BABA nuances, one line per row">
+    <div class="vlabels" id="vlabels"><span data-v="1" class="on">Fixture details</span><span data-v="2">Cutsheet &amp; Order Notes</span><span data-v="3">Order code &amp; BABA nuances</span></div>
+    <input id="view" type="range" min="1" max="3" step="1" value="1" aria-label="Table view: 1 fixture details, 2 cut sheet and order notes, 3 order code and BABA nuances, one line per row">
   </div>
 </div>
 
