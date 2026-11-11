@@ -13,6 +13,7 @@ import argparse
 import datetime as dt
 import json
 import pathlib
+import re
 
 from build_site import CSS, ROW_JS, STATE_NAMES, e, link, table, td
 
@@ -45,6 +46,24 @@ body.ref table.fx .m{display:none}
 body.ref table.fx .r{display:table-cell}
 body.ref table.fx td.r{white-space:normal;overflow:visible}
 body.ref table.fx td.c-cat{white-space:normal;word-break:break-all}
+/* View 3: one line per row. Order code plus DOT list, BABA status and notes; notes are cut with an ellipsis.
+   If the full order code leaves no room, the script adds body.short and the 4-character model code shows instead. */
+body.one table.fx .m{display:none}
+body.one table.fx .r.o{display:table-cell}
+body.one table.fx th,body.one table.fx td{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body.one table.fx td.c-cat{min-width:0;overflow:visible;word-break:normal;overflow-wrap:normal}
+body.one table.fx td.c-l{max-width:190px}
+body.one table.fx td.c-x{max-width:0;width:100%;min-width:0}
+body.one table.fx tr.open td{white-space:normal;overflow:visible}
+.cs{display:none;font-weight:700}
+body.one.short .cf{display:none}
+body.one.short .cs{display:inline}
+.views{flex:1 1 100%;max-width:560px;margin-top:2px}
+.vlabels{display:flex;justify-content:space-between;gap:8px;font-size:12px;font-weight:600;color:var(--muted)}
+.vlabels span{flex:1;cursor:pointer;line-height:1.2}
+.vlabels span:nth-child(2){text-align:center}.vlabels span:nth-child(3){text-align:right}
+.vlabels span.on{color:var(--accent)}
+#view{display:block;width:100%;min-width:0;padding:0;margin:4px 0 0;border:0;background:transparent;accent-color:var(--accent);height:26px}
 /* Every screen: cells wrap so a whole row shows with no sideways scrolling. The script below logs the screen
    size and steps the table text size down (--fx) until the table fits the window. */
 table.fx{font-size:var(--fx,12.5px)}
@@ -55,6 +74,8 @@ table.fx td.c-b,table.fx td.num{white-space:nowrap}
 body.compact main{padding:8px 8px 32px}
 body.compact table.fx th,body.compact table.fx td{padding:2px 4px}
 body.compact table.fx th{font-size:9.5px;letter-spacing:0}
+body.compact.ref table.fx td.c-x{min-width:80px}
+body.compact.ref table.fx td.c-cat{min-width:110px}
 body.compact table.fx td.c-cat,body.compact table.fx td.mono{word-break:break-all}
 #screeninfo{font-variant-numeric:tabular-nums}
 /* Phone held upright: a rotate-your-phone picture. First tap makes it half transparent, second tap removes it. */
@@ -76,9 +97,11 @@ const ok=(!t||r.dataset.search.includes(t))&&(!y||r.dataset.type===y)&&(!s||r.da
 r.hidden=!ok;if(ok&&r.dataset.main)n++;});
 document.getElementById('count').textContent=n;}
 [q,ty,sf,ph].forEach(x=>x.addEventListener(x===q?'input':'change',apply));
-const rb=document.getElementById('refbtn');
-rb.addEventListener('click',()=>{const on=document.body.classList.toggle('ref');rb.setAttribute('aria-pressed',on);
-rb.textContent=on?'Back to fixture details':'Cut sheet & BABA reference';fit();});
+const vw=document.getElementById('view'),vl=[...document.querySelectorAll('#vlabels span')];
+function setView(v){vw.value=v;document.body.classList.toggle('ref',v==2);document.body.classList.toggle('one',v==3);
+vl.forEach(x=>x.classList.toggle('on',x.dataset.v==v));fit();}
+vw.addEventListener('input',()=>setView(+vw.value));
+vl.forEach(x=>x.addEventListener('click',()=>setView(+x.dataset.v)));
 // Phone check: the browser's own mobile flag when it has one, else a phone user agent on a small touch screen.
 function isPhone(){const sc=window.screen||{},small=Math.min(sc.width||9999,sc.height||9999)<=600;if(!small)return false;
 const ud=navigator.userAgentData;if(ud&&typeof ud.mobile==='boolean')return ud.mobile;
@@ -90,11 +113,16 @@ tb.addEventListener('click',()=>{if(tb.classList.contains('dim')){turnOff=true;d
 function fit(){const w=window.innerWidth,h=window.innerHeight,sc=window.screen||{},dpr=window.devicePixelRatio||1;
 document.body.classList.toggle('compact',w<1000);
 const sizes=w<1000?[11,10.5,10]:[12.5,12,11.5,11,10.5,10];let used=sizes[0],ok=false;
-const wraps=[...document.querySelectorAll('table.fx')].map(t=>t.parentElement);
-for(const fs of sizes){used=fs;document.body.style.setProperty('--fx',fs+'px');
-ok=wraps.every(x=>x.scrollWidth<=x.clientWidth+1);if(ok)break;}
+const wraps=[...document.querySelectorAll('table.fx')].map(t=>t.parentElement),one=document.body.classList.contains('one');
+// In the one-line view a row "fits" only if nothing overflows and the notes column keeps some room.
+const room=()=>{const n=document.querySelector('table.fx td.c-x');return !one||!n||n.offsetWidth>=110;};
+const tryFit=()=>{for(const fs of sizes){used=fs;document.body.style.setProperty('--fx',fs+'px');
+ok=wraps.every(x=>x.scrollWidth<=x.clientWidth+1)&&room();if(ok)break;}};
+document.body.classList.remove('short');tryFit();
+if(one&&!ok){document.body.classList.add('short');tryFit();}
 const msg='Screen '+(sc.width||'?')+'×'+(sc.height||'?')+' · window '+w+'×'+h+' · pixel ratio '+(Math.round(dpr*100)/100)+
-' · table text '+used+'px · '+(ok?'row fits the window':'row is wider than the window, scroll sideways');
+' · table text '+used+'px · '+(ok?'row fits the window':'row is wider than the window, scroll sideways')+
+(document.body.classList.contains('short')?' · short model codes':'');
 const phone=isPhone();document.body.classList.toggle('turn',phone&&h>w&&!turnOff);
 const el=document.getElementById('screeninfo');if(el)el.textContent=msg+(phone?' · phone detected':'');
 if(msg!==fit.last){fit.last=msg;console.log('[BABA fixtures] '+msg);}}
@@ -156,10 +184,21 @@ MAIN_HEADERS = ["Voltage", "W", "Lumens", "Optic", "CCT", ".ies"]
 REF_HEADERS = ["Cut sheet", "Manufacturer", "Family", "Use", "DOT list", "BABA status", "Catalog basis", "BABA notes"]
 
 
+ONE_LINE = {"DOT list", "BABA status", "BABA notes"}
+
+
+def short_code(fx):
+    """Four-character model designator (ATB0, ARCH, GCJ2 ...) for the one-line view when the full order code will not fit."""
+    cat = re.sub(r"^(Conventional Highway|Coventional Highway|Expressway)\s*[:\-–]\s*", "", fx.get("catalog") or "", flags=re.I)
+    cat = re.sub(r"^(BABA|BAA)[-\s]+", "", cat)
+    token = re.split(r"[-\s_/]", cat.strip(), maxsplit=1)[0]
+    return re.sub(r"[^A-Za-z0-9]", "", token)[:4].upper() or "—"
+
+
 def fixture_table(order_label, body, empty_msg, show_listed=False):
     ref = REF_HEADERS + (["TxDOT-listed catalog (4000K)"] if show_listed else [])
     head = ("".join(f'<th class="m">{e(h)}</th>' for h in MAIN_HEADERS) + f"<th>{e(order_label)}</th>"
-            + "".join(f'<th class="r">{e(h)}</th>' for h in ref))
+            + "".join(f'<th class="r{" o" if h in ONE_LINE else ""}">{e(h)}</th>' for h in ref))
     if not body:
         body = f'<tr><td colspan="{len(MAIN_HEADERS) + 1 + len(ref)}" class="empty">{e(empty_msg)}</td></tr>'
     return f'<div class="table-wrap"><table class="fx"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
@@ -194,15 +233,15 @@ def row(fx, sources, show_listed, main, show_cct=False):
         + td(e(fx.get("distribution") or "—"), "m c-s", fx.get("distribution"))
         + td(e(cct_label(fx)), "m c-d", "Color temperature printed on the DOT listing")
         + td(ies_cell(fx), "m c-d", ies_title(fx))
-        + td(e(fx.get("catalog")), "c-cat mono", fx.get("catalog"))
+        + td(f'<span class="cf">{e(fx.get("catalog"))}</span><span class="cs">{e(short_code(fx))}</span>', "c-cat mono", fx.get("catalog"))
         + td(sheet_cell(sheet), "r c-d", sheet.get("title"))
         + td(f"<strong>{e(fx.get('manufacturer'))}</strong>", "r c-m", who)
         + td(e(fx.get("family")), "r c-s", fx.get("family"))
         + td(e(kind), "r c-d")
-        + td(dot, "r c-l", f'{src.get("name", "")} · {d.get("table", "")}')
-        + td(f'<span class="badge {label[1]}">{e(label[0])}</span>', "r c-b", d.get("status"))
+        + td(dot, "r o c-l", f'{src.get("name", "")} · {d.get("table", "")}')
+        + td(f'<span class="badge {label[1]}">{e(label[0])}</span>', "r o c-b", d.get("status"))
         + td(badge_for(BASIS_BADGE, fx.get("basis")), "r c-b")
-        + td(e(notes), "r c-x muted", notes)
+        + td(e(notes), "r o c-x muted", notes)
         + (td(e(listed), "r c-l mono muted", listed) if show_listed else "")
         + "</tr>"
     )
@@ -360,7 +399,7 @@ option, but that is not evidence the listed configuration is 480V; for example, 
 <div class="phases"><span>{badge_for(PHASE_BADGE, "phase2")} DOT says US final assembly and more than 55% domestic cost (projects obligated on/after Oct 1, 2026). Only these listings are shown.</span></div>
 <span class="muted">Removed 2026-11-09: {data.get("removed_count", 0)} listings that are not Phase 2 (final assembly only, "eligible" or "BAA" with no phase, TxDOT Compliant v4, or project-level certification). They are kept in <code>data/fixtures_removed.json</code>.</span><br>
 <span class="muted">{'"As listed" = catalog number copied from the DOT list. "CCT swapped" = TxDOT-listed number with the 3000K option substituted.' if unlisted else 'Every catalog number is copied from the state DOT list as printed; nothing is substituted or inferred.'}
-{'The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table.' if unlisted else ('Only listings that print a 120–277V code (MVOLT, MV, UNV, U, 0, or "120-277 VAC") are included. TxDOT labels its rows 120/240V. Listings with a placeholder voltage, or a voltage code that could not be confirmed as 120–277V, are left out.' if view.get("volt_label") == "120–277V" else 'Only listings that print a 480V code (480, 480 VAC, 8 for Cooper, HVOLT/HV) are included; listings with a placeholder voltage are left out.')} Each row shows voltage, watts, lumens, optic, color temperature, the .ies link and the order code. Press <strong>Cut sheet &amp; BABA reference</strong> to keep the order code and swap the rest for the cut sheet, manufacturer, DOT list, BABA status and notes. </span>
+{'The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table.' if unlisted else ('Only listings that print a 120–277V code (MVOLT, MV, UNV, U, 0, or "120-277 VAC") are included. TxDOT labels its rows 120/240V. Listings with a placeholder voltage, or a voltage code that could not be confirmed as 120–277V, are left out.' if view.get("volt_label") == "120–277V" else 'Only listings that print a 480V code (480, 480 VAC, 8 for Cooper, HVOLT/HV) are included; listings with a placeholder voltage are left out.')} Use the three-position slider above the table: <strong>Fixture details</strong> (voltage, watts, lumens, optic, color temperature, .ies link, order code); <strong>Cut sheet &amp; BABA reference</strong> (order code, cut sheet, manufacturer, DOT list, BABA status, notes); <strong>One line</strong> (order code and BABA reference on a single line per row; if the full order code does not fit, a 4-character model code such as ATB0 is shown, and tapping a row shows it in full). </span>
 <ul>{src_items}</ul>
 </div>
 
@@ -369,7 +408,10 @@ option, but that is not evidence the listed configuration is 480V; for example, 
   <select id="st" aria-label="Filter by state"><option value="">All states</option>{state_opts}</select>
   <select id="ph" aria-label="Filter by BABA status"><option value="">All BABA statuses</option>{phase_opts}</select>
   <select id="type" aria-label="Filter by type"><option value="">All types</option>{type_opts}</select>
-  <button id="refbtn" type="button" aria-pressed="false">Cut sheet &amp; BABA reference</button>
+  <div class="views">
+    <div class="vlabels" id="vlabels"><span data-v="1" class="on">Fixture details</span><span data-v="2">Cut sheet &amp; BABA reference</span><span data-v="3">One line: order code &amp; BABA</span></div>
+    <input id="view" type="range" min="1" max="3" step="1" value="1" aria-label="Table view: 1 fixture details, 2 cut sheet and BABA reference, 3 one line per row with order code and BABA reference">
+  </div>
 </div>
 
 {fixture_table(view["order_label"], body, "No fixtures match the filter.", show_listed)}
