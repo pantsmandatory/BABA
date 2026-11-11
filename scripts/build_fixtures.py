@@ -41,15 +41,16 @@ EXTRA_CSS = """
 .phases{display:flex;flex-wrap:wrap;gap:4px 14px;margin:4px 0}
 button{font:inherit;font-weight:600;padding:5px 12px;border:1px solid var(--accent);border-radius:6px;background:var(--surface);color:var(--accent);cursor:pointer}
 button[aria-pressed="true"]{background:var(--accent);color:var(--surface)}
-table.fx .r{display:none}
+table.fx .r,table.fx .o3{display:none}
 body.ref table.fx .m{display:none}
 body.ref table.fx .r{display:table-cell}
 body.ref table.fx td.r{white-space:normal;overflow:visible}
 body.ref table.fx td.c-cat{white-space:normal;word-break:break-all}
+body.ref table.fx td.c-x{width:36%}
 /* View 3: one line per row. Order code plus DOT list, BABA status and notes; notes are cut with an ellipsis.
    If the full order code leaves no room, the script adds body.short and the 4-character model code shows instead. */
 body.one table.fx .m{display:none}
-body.one table.fx .r.o{display:table-cell}
+body.one table.fx .r.o,body.one table.fx .o3{display:table-cell}
 body.one table.fx th,body.one table.fx td{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 body.one table.fx td.c-cat{min-width:0;overflow:visible;word-break:normal;overflow-wrap:normal}
 body.one table.fx td.c-l{max-width:190px}
@@ -115,7 +116,7 @@ document.body.classList.toggle('compact',w<1000);
 const sizes=w<1000?[11,10.5,10]:[12.5,12,11.5,11,10.5,10];let used=sizes[0],ok=false;
 const wraps=[...document.querySelectorAll('table.fx')].map(t=>t.parentElement),one=document.body.classList.contains('one');
 // In the one-line view a row "fits" only if nothing overflows and the notes column keeps some room.
-const room=()=>{const n=document.querySelector('table.fx td.c-x');return !one||!n||n.offsetWidth>=110;};
+const room=()=>{const n=document.querySelector('table.fx td.o3');return !one||!n||n.offsetWidth>=110;};
 const tryFit=()=>{for(const fs of sizes){used=fs;document.body.style.setProperty('--fx',fs+'px');
 ok=wraps.every(x=>x.scrollWidth<=x.clientWidth+1)&&room();if(ok)break;}};
 document.body.classList.remove('short');tryFit();
@@ -181,10 +182,12 @@ def use_label(fx):
 # the toggle button: pressing it keeps the exact order code and swaps the other columns for the cut sheet, the maker
 # and family, and the BABA reference (DOT list, status, basis, notes). Either view fits a phone held sideways.
 MAIN_HEADERS = ["Voltage", "W", "Lumens", "Optic", "CCT", ".ies"]
-REF_HEADERS = ["Cut sheet", "Manufacturer", "Family", "Use", "DOT list", "BABA status", "Catalog basis", "BABA notes"]
+REF_HEADERS = ["Cut sheet", "Manufacturer", "Family", "Use case", "DOT reference", "BABA status", "Order notes"]
 
 
-ONE_LINE = {"DOT list", "BABA status", "BABA notes"}
+ONE_LINE = {"DOT reference", "BABA status"}
+# Notes about Buy America go in the last column of the third view ("BABA nuances"); everything else is an order note.
+BABA_NOTE = re.compile(r"BABA|\bBAA\b|Buy America|DOT wording|Phase inferred|AML authorization|Y2 code|USPOM|Gold Star", re.I)
 
 
 def short_code(fx):
@@ -196,11 +199,12 @@ def short_code(fx):
 
 
 def fixture_table(order_label, body, empty_msg, show_listed=False):
-    ref = REF_HEADERS + (["TxDOT-listed catalog (4000K)"] if show_listed else [])
+    ref = REF_HEADERS + (["Catalog basis", "TxDOT-listed catalog (4000K)"] if show_listed else [])
     head = ("".join(f'<th class="m">{e(h)}</th>' for h in MAIN_HEADERS) + f"<th>{e(order_label)}</th>"
-            + "".join(f'<th class="r{" o" if h in ONE_LINE else ""}">{e(h)}</th>' for h in ref))
+            + "".join(f'<th class="r{" o" if h in ONE_LINE else ""}">{e(h)}</th>' for h in ref)
+            + '<th class="o3">BABA nuances</th>')
     if not body:
-        body = f'<tr><td colspan="{len(MAIN_HEADERS) + 1 + len(ref)}" class="empty">{e(empty_msg)}</td></tr>'
+        body = f'<tr><td colspan="{len(MAIN_HEADERS) + 2 + len(ref)}" class="empty">{e(empty_msg)}</td></tr>'
     return f'<div class="table-wrap"><table class="fx"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
 
 
@@ -218,7 +222,10 @@ def row(fx, sources, show_listed, main, show_cct=False):
     lumens = fx.get("lumens")
     lm = (("≈" if fx.get("lumens_estimated") else "") + f"{lumens:,}") if isinstance(lumens, (int, float)) else "—"
     watts = fx.get("watts")
-    notes = " · ".join(fx.get("caveats", []))
+    caveats = fx.get("caveats", [])
+    notes = " · ".join(caveats)
+    order_notes = " · ".join(c for c in caveats if not BABA_NOTE.search(c)) or "—"
+    baba_notes = " · ".join(c for c in caveats if BABA_NOTE.search(c)) or "—"
     volt = "not shown" if fx.get("voltage_inferred") else volt_label(fx.get("voltage"))
     search = " ".join(str(x) for x in [fx.get("manufacturer"), fx.get("brand"), fx.get("family"), fx.get("catalog"),
                                        d.get("listed_catalog"), kind, st, STATE_NAMES.get(st, ""), notes] if x).lower()
@@ -240,9 +247,9 @@ def row(fx, sources, show_listed, main, show_cct=False):
         + td(e(kind), "r c-d")
         + td(dot, "r o c-l", f'{src.get("name", "")} · {d.get("table", "")}')
         + td(f'<span class="badge {label[1]}">{e(label[0])}</span>', "r o c-b", d.get("status"))
-        + td(badge_for(BASIS_BADGE, fx.get("basis")), "r c-b")
-        + td(e(notes), "r o c-x muted", notes)
-        + (td(e(listed), "r c-l mono muted", listed) if show_listed else "")
+        + td(e(order_notes), "r c-x muted", order_notes)
+        + (td(badge_for(BASIS_BADGE, fx.get("basis")), "r c-b") + td(e(listed), "r c-l mono muted", listed) if show_listed else "")
+        + td(e(baba_notes), "o3 c-x muted", baba_notes)
         + "</tr>"
     )
 
@@ -363,6 +370,11 @@ def render(build_date, data, view):
         for s in sorted(sources.values(), key=lambda s: s["state"]) if s["id"] in used
     )
     show_listed = view.get("show_listed")
+    legacy_notes = "" if not unlisted else (
+        f'<span class="muted">Removed 2026-11-09: {data.get("removed_count", 0)} listings that are not Phase 2. They are kept in '
+        '<code>data/fixtures_removed.json</code>.</span><br><span class="muted">"As listed" = catalog number copied from the DOT list. '
+        '"CCT swapped" = TxDOT-listed number with the 3000K option substituted. The main table only includes listings that print a 480V '
+        'code; flagged listings with a placeholder voltage are in the second table.</span>')
     body = "\n".join(row(f, sources, show_listed, True, view.get("show_cct")) for f in shown)
     family_html = "" if not unlisted else f"""<h2>Flagged listings that don't show 480V or a color temperature</h2>
 <p class="small muted">These DOT entries are flagged for Buy America, but the listing itself does not print a 480V voltage code
@@ -397,20 +409,18 @@ option, but that is not evidence the listed configuration is 480V; for example, 
 <div class="card">
 <strong>How to read this.</strong> {e(view.get("intro", ""))}
 <div class="phases"><span>{badge_for(PHASE_BADGE, "phase2")} DOT says US final assembly and more than 55% domestic cost (projects obligated on/after Oct 1, 2026). Only these listings are shown.</span></div>
-<span class="muted">Removed 2026-11-09: {data.get("removed_count", 0)} listings that are not Phase 2 (final assembly only, "eligible" or "BAA" with no phase, TxDOT Compliant v4, or project-level certification). They are kept in <code>data/fixtures_removed.json</code>.</span><br>
-<span class="muted">{'"As listed" = catalog number copied from the DOT list. "CCT swapped" = TxDOT-listed number with the 3000K option substituted.' if unlisted else 'Every catalog number is copied from the state DOT list as printed; nothing is substituted or inferred.'}
-{'The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table.' if unlisted else ('Only listings that print a 120–277V code (MVOLT, MV, UNV, U, 0, or "120-277 VAC") are included. TxDOT labels its rows 120/240V. Listings with a placeholder voltage, or a voltage code that could not be confirmed as 120–277V, are left out.' if view.get("volt_label") == "120–277V" else 'Only listings that print a 480V code (480, 480 VAC, 8 for Cooper, HVOLT/HV) are included; listings with a placeholder voltage are left out.')} Use the three-position slider above the table: <strong>Fixture details</strong> (voltage, watts, lumens, optic, color temperature, .ies link, order code); <strong>Cut sheet &amp; BABA reference</strong> (order code, cut sheet, manufacturer, DOT list, BABA status, notes); <strong>One line</strong> (order code and BABA reference on a single line per row; if the full order code does not fit, a 4-character model code such as ATB0 is shown, and tapping a row shows it in full). </span>
+{legacy_notes}
 <ul>{src_items}</ul>
 </div>
 
 <div class="controls">
   <input id="q" type="search" placeholder="Search manufacturer, family, catalog number, or state" aria-label="Search">
-  <select id="st" aria-label="Filter by state"><option value="">All states</option>{state_opts}</select>
-  <select id="ph" aria-label="Filter by BABA status"><option value="">All BABA statuses</option>{phase_opts}</select>
-  <select id="type" aria-label="Filter by type"><option value="">All types</option>{type_opts}</select>
+  <select id="st" aria-label="Filter by state"><option value="">State</option>{state_opts}</select>
+  <select id="ph" aria-label="Filter by BABA status"><option value="">BABA status</option>{phase_opts}</select>
+  <select id="type" aria-label="Filter by use case"><option value="">Use case</option>{type_opts}</select>
   <div class="views">
-    <div class="vlabels" id="vlabels"><span data-v="1" class="on">Fixture details</span><span data-v="2">Cut sheet &amp; BABA reference</span><span data-v="3">One line: order code &amp; BABA</span></div>
-    <input id="view" type="range" min="1" max="3" step="1" value="1" aria-label="Table view: 1 fixture details, 2 cut sheet and BABA reference, 3 one line per row with order code and BABA reference">
+    <div class="vlabels" id="vlabels"><span data-v="1" class="on">Fixture details</span><span data-v="2">Cut sheet &amp; BABA reference</span><span data-v="3">Order code &amp; BABA nuances</span></div>
+    <input id="view" type="range" min="1" max="3" step="1" value="1" aria-label="Table view: 1 fixture details, 2 cut sheet and BABA reference, 3 order code and BABA nuances, one line per row">
   </div>
 </div>
 

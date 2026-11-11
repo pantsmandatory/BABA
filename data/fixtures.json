@@ -1287,7 +1287,7 @@
       "basis": "as-listed"
     },
     {
-      "id": "acuity-hmled4-p25-30k-hvolt-nas--4k",
+      "id": "acuity-hmled4-p25-30k-hvolt-nas--4k-1",
       "manufacturer": "Acuity Brands",
       "brand": "Holophane",
       "family": "HMAO LED IV HMLED4 · P25",
@@ -1295,7 +1295,7 @@
       "cct": 4000,
       "cri": 70,
       "voltage": 480,
-      "catalog": "HMLED4 P25 40K HVOLT HGR NAS PR7 DFD SH TXDOT TYPE A RFD321353 / TYPE B RFD322280",
+      "catalog": "HMLED4 P25 40K HVOLT HGR NAS PR7 DFD SH TXDOT TYPE A RFD321353",
       "distribution": "NAS",
       "watts": null,
       "lumens": null,
@@ -1303,7 +1303,7 @@
         "source": "tx-mpl-2026-09",
         "table": "Table 26",
         "status": "Compliant v5",
-        "application": "Type A/B",
+        "application": "Type A",
         "listed_catalog": "HMLED4 P25 40K HVOLT HGR NAS PR7 DFD SH TXDOT TYPE A RFD321353 / TYPE B RFD322280",
         "listed_cct": "4000K",
         "phase": "phase2"
@@ -1315,7 +1315,40 @@
       },
       "ies": [],
       "caveats": [
-        "P25 is a TxDOT custom package (380W per TxDOT), not on the public sheet. Request the .ies quoting RFD321353 (Type A) / RFD322280 (Type B)."
+        "P25 is a TxDOT custom package (380W per TxDOT), not on the public sheet. Request the .ies quoting RFD321353."
+      ],
+      "basis": "as-listed"
+    },
+    {
+      "id": "acuity-hmled4-p25-30k-hvolt-nas--4k-2",
+      "manufacturer": "Acuity Brands",
+      "brand": "Holophane",
+      "family": "HMAO LED IV HMLED4 · P25",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "HMLED4 P25 40K HVOLT HGR NAS PR7 DFD SH TXDOT TYPE B RFD322280",
+      "distribution": "NAS",
+      "watts": null,
+      "lumens": null,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 26",
+        "status": "Compliant v5",
+        "application": "Type B",
+        "listed_catalog": "HMLED4 P25 40K HVOLT HGR NAS PR7 DFD SH TXDOT TYPE A RFD321353 / TYPE B RFD322280",
+        "listed_cct": "4000K",
+        "phase": "phase2"
+      },
+      "cut_sheet": {
+        "title": "HMLED4 spec sheet (Rev. 10/12/26)",
+        "url": "https://img.acuitybrands.com/public-assets/catalog/1312787/lum_hmled4_.pdf",
+        "file": "cutsheets/acuity/HMLED4_spec_rev-2026-10-12.pdf"
+      },
+      "ies": [],
+      "caveats": [
+        "P25 is a TxDOT custom package (380W per TxDOT), not on the public sheet. Request the .ies quoting RFD322280."
       ],
       "basis": "as-listed"
     },
@@ -1386,7 +1419,7 @@
       "basis": "as-listed"
     },
     {
-      "id": "chm-cled2-08c-3070-t3-b--4k",
+      "id": "chm-cled2-08c-3070-t3-b--4k-1",
       "manufacturer": "CHM Lighting",
       "brand": "",
       "family": "CLED2 · 08C",
@@ -1394,7 +1427,7 @@
       "cct": 4000,
       "cri": 70,
       "voltage": 480,
-      "catalog": "CLED2-08C-GY-4070-T3-B-7P-F2-TXA / -TXB / -TXC",
+      "catalog": "CLED2-08C-GY-4070-T3-B-7P-F2-TXA",
       "distribution": "Type III (T3)",
       "watts": 383,
       "lumens": 56951,
@@ -1402,7 +1435,91 @@
         "source": "tx-mpl-2026-09",
         "table": "Table 29",
         "status": "Compliant v5",
-        "application": "Types A/B/C",
+        "application": "Type A",
+        "listed_catalog": "CLED2-08C-GY-4070-T3-B-7P-F2-TXA / -TXB / -TXC",
+        "listed_cct": "4000K",
+        "phase": "phase2"
+      },
+      "cut_sheet": {
+        "title": "CLED2 spec sheet (REV20260414)",
+        "url": "https://chmlighting.com/Downloads/SPECS/CHM_SPECSHEET_CLED2.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/chm/CLED208CGXX70AT3.ies",
+          "lumcat": "CLED208CGXX70AT3",
+          "lumens": 56951,
+          "watts": 403,
+          "source_url": "https://chmlighting.com/Downloads/IES/CHM_IES_CLED2.zip",
+          "note": "CHM: 'use this file to represent 4000K–5000K'. ITL test 05/20/21, 120–277V driver (403W)."
+        }
+      ],
+      "caveats": [
+        "Watts are the cut sheet's 480V value (TxDOT lists 410W). Unshielded file; S90/S180/S360 shielded versions are in CHM's zip.",
+        "CHM: \"BABA compliant in all package offerings\"; made in Fort Worth, TX."
+      ],
+      "basis": "as-listed"
+    },
+    {
+      "id": "chm-cled2-08c-3070-t3-b--4k-2",
+      "manufacturer": "CHM Lighting",
+      "brand": "",
+      "family": "CLED2 · 08C",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "CLED2-08C-GY-4070-T3-B-7P-F2-TXB",
+      "distribution": "Type III (T3)",
+      "watts": 383,
+      "lumens": 56951,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 29",
+        "status": "Compliant v5",
+        "application": "Type B",
+        "listed_catalog": "CLED2-08C-GY-4070-T3-B-7P-F2-TXA / -TXB / -TXC",
+        "listed_cct": "4000K",
+        "phase": "phase2"
+      },
+      "cut_sheet": {
+        "title": "CLED2 spec sheet (REV20260414)",
+        "url": "https://chmlighting.com/Downloads/SPECS/CHM_SPECSHEET_CLED2.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/chm/CLED208CGXX70AT3.ies",
+          "lumcat": "CLED208CGXX70AT3",
+          "lumens": 56951,
+          "watts": 403,
+          "source_url": "https://chmlighting.com/Downloads/IES/CHM_IES_CLED2.zip",
+          "note": "CHM: 'use this file to represent 4000K–5000K'. ITL test 05/20/21, 120–277V driver (403W)."
+        }
+      ],
+      "caveats": [
+        "Watts are the cut sheet's 480V value (TxDOT lists 410W). Unshielded file; S90/S180/S360 shielded versions are in CHM's zip.",
+        "CHM: \"BABA compliant in all package offerings\"; made in Fort Worth, TX."
+      ],
+      "basis": "as-listed"
+    },
+    {
+      "id": "chm-cled2-08c-3070-t3-b--4k-3",
+      "manufacturer": "CHM Lighting",
+      "brand": "",
+      "family": "CLED2 · 08C",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": 480,
+      "catalog": "CLED2-08C-GY-4070-T3-B-7P-F2-TXC",
+      "distribution": "Type III (T3)",
+      "watts": 383,
+      "lumens": 56951,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 29",
+        "status": "Compliant v5",
+        "application": "Type C",
         "listed_catalog": "CLED2-08C-GY-4070-T3-B-7P-F2-TXA / -TXB / -TXC",
         "listed_cct": "4000K",
         "phase": "phase2"
@@ -2059,7 +2176,7 @@
       ]
     },
     {
-      "id": "ca-w-5",
+      "id": "ca-w-5-1",
       "manufacturer": "Current Lighting",
       "brand": "Evolve",
       "family": "ERL2",
@@ -2068,9 +2185,9 @@
       "cri": null,
       "voltage": "120-277",
       "voltage_inferred": false,
-      "catalog": "Conventional Highway - ERL2-0*-23E5-30-D-GRAY-BL ; Expressway - ERL2-0*-21E5-30-D-GRAY-BL",
+      "catalog": "ERL2-0*-23E5-30-D-GRAY-BL",
       "distribution": null,
-      "watts": "177/160",
+      "watts": 177,
       "lumens": null,
       "basis": "as-listed",
       "dot": {
@@ -2081,7 +2198,41 @@
         "listing_id": "",
         "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
         "listed_catalog": "Conventional Highway - ERL2-0*-23E5-30-D-GRAY-BL ; Expressway - ERL2-0*-21E5-30-D-GRAY-BL",
-        "listed_cct": "3000K"
+        "listed_cct": "3000K",
+        "application": "Conventional Highway"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "Caltrans prints the voltage code as 0*; Current code 0 is 120–277V.",
+        "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US"
+      ]
+    },
+    {
+      "id": "ca-w-5-2",
+      "manufacturer": "Current Lighting",
+      "brand": "Evolve",
+      "family": "ERL2",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": "120-277",
+      "voltage_inferred": false,
+      "catalog": "ERL2-0*-21E5-30-D-GRAY-BL",
+      "distribution": null,
+      "watts": 160,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "ca-aml-led",
+        "table": "Roadway 11",
+        "status": "Phase 2",
+        "phase": "phase2",
+        "listing_id": "",
+        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
+        "listed_catalog": "Conventional Highway - ERL2-0*-23E5-30-D-GRAY-BL ; Expressway - ERL2-0*-21E5-30-D-GRAY-BL",
+        "listed_cct": "3000K",
+        "application": "Expressway"
       },
       "cut_sheet": {},
       "ies": [],
@@ -2803,7 +2954,7 @@
       ]
     },
     {
-      "id": "ca-w-36",
+      "id": "ca-w-36-1",
       "manufacturer": "Acuity Brands",
       "brand": "American Electric Lighting (AEL) / Holophane",
       "family": "ATB0",
@@ -2812,7 +2963,7 @@
       "cri": null,
       "voltage": 480,
       "voltage_inferred": false,
-      "catalog": "ATB0P455MVOLTRX3KMPNLP7USPOMRFD326236-ATB0P455480RX3KMPNLP7USPOMRFD326237-ATB0P453MVOLTRX3KMPNLP7BAARFD334125 ; ATB0P453480RX3KMPNLP7BAARFD334126",
+      "catalog": "ATB0P455480RX3KMPNLP7USPOMRFD326237",
       "distribution": null,
       "watts": 159,
       "lumens": null,
@@ -2831,7 +2982,40 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "Row also lists USPOM-option ATB0 codes (as listed); AML authorization expires 6/1/2029"
+        "AML authorization expires 6/1/2029",
+        "USPOM option code, as Caltrans lists it; this code does not carry the BAA option."
+      ]
+    },
+    {
+      "id": "ca-w-36-2",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL) / Holophane",
+      "family": "ATB0",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": 480,
+      "voltage_inferred": false,
+      "catalog": "ATB0P453480RX3KMPNLP7BAARFD334126",
+      "distribution": null,
+      "watts": 159,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "ca-aml-led",
+        "table": "Intersection:  Large A",
+        "status": "Phase 2",
+        "phase": "phase2",
+        "listing_id": "",
+        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
+        "listed_catalog": "ATB0P455MVOLTRX3KMPNLP7USPOMRFD326236-ATB0P455480RX3KMPNLP7USPOMRFD326237-ATB0P453MVOLTRX3KMPNLP7BAARFD334125 ; ATB0P453480RX3KMPNLP7BAARFD334126",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
+        "AML authorization expires 6/1/2029"
       ]
     },
     {
@@ -3551,7 +3735,7 @@
       "voltage_inferred": false
     },
     {
-      "id": "lv-tx-hmled4-p25-nas-mvolt",
+      "id": "lv-tx-hmled4-p25-nas-mvolt-1",
       "manufacturer": "Acuity Brands",
       "brand": "Holophane",
       "family": "HMAO LED IV HMLED4 · P25",
@@ -3559,7 +3743,7 @@
       "cct": 4000,
       "cri": 70,
       "voltage": "120-277",
-      "catalog": "HMLED4 P25 40K MVOLT HGR NAS PR7 DFD SH TXDOT TYPE A RFD321354 / TYPE B RFD322281",
+      "catalog": "HMLED4 P25 40K MVOLT HGR NAS PR7 DFD SH TXDOT TYPE A RFD321354",
       "distribution": "NAS",
       "watts": null,
       "lumens": null,
@@ -3567,7 +3751,7 @@
         "source": "tx-mpl-2026-09",
         "table": "Table 26",
         "status": "Compliant v5",
-        "application": "Type A/B",
+        "application": "Type A",
         "listed_catalog": "HMLED4 P25 40K MVOLT HGR NAS PR7 DFD SH TXDOT TYPE A RFD321354 / TYPE B RFD322281",
         "listed_cct": "4000K",
         "phase": "phase2"
@@ -3580,7 +3764,42 @@
       "ies": [],
       "caveats": [
         "TxDOT labels this row 120/240V; the catalog voltage code (MVOLT) is the 120–277V universal option.",
-        "P25 is a TxDOT custom package (380W per TxDOT), not on the public sheet. Request the .ies quoting RFD321354 (Type A) / RFD322281 (Type B)."
+        "P25 is a TxDOT custom package (380W per TxDOT), not on the public sheet. Request the .ies quoting RFD321354."
+      ],
+      "basis": "as-listed",
+      "voltage_inferred": false
+    },
+    {
+      "id": "lv-tx-hmled4-p25-nas-mvolt-2",
+      "manufacturer": "Acuity Brands",
+      "brand": "Holophane",
+      "family": "HMAO LED IV HMLED4 · P25",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": "120-277",
+      "catalog": "HMLED4 P25 40K MVOLT HGR NAS PR7 DFD SH TXDOT TYPE B RFD322281",
+      "distribution": "NAS",
+      "watts": null,
+      "lumens": null,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 26",
+        "status": "Compliant v5",
+        "application": "Type B",
+        "listed_catalog": "HMLED4 P25 40K MVOLT HGR NAS PR7 DFD SH TXDOT TYPE A RFD321354 / TYPE B RFD322281",
+        "listed_cct": "4000K",
+        "phase": "phase2"
+      },
+      "cut_sheet": {
+        "title": "HMLED4 spec sheet (Rev. 10/12/26)",
+        "url": "https://img.acuitybrands.com/public-assets/catalog/1312787/lum_hmled4_.pdf",
+        "file": "cutsheets/acuity/HMLED4_spec_rev-2026-10-12.pdf"
+      },
+      "ies": [],
+      "caveats": [
+        "TxDOT labels this row 120/240V; the catalog voltage code (MVOLT) is the 120–277V universal option.",
+        "P25 is a TxDOT custom package (380W per TxDOT), not on the public sheet. Request the .ies quoting RFD322281."
       ],
       "basis": "as-listed",
       "voltage_inferred": false
@@ -3656,7 +3875,7 @@
       "voltage_inferred": false
     },
     {
-      "id": "lv-tx-cled2-08c-a",
+      "id": "lv-tx-cled2-08c-a-1",
       "manufacturer": "CHM Lighting",
       "brand": "",
       "family": "CLED2 · 08C",
@@ -3664,7 +3883,7 @@
       "cct": 4000,
       "cri": 70,
       "voltage": "120-277",
-      "catalog": "CLED2-08C-GY-4070-T3-A-7P-F2-TXA / -TXB / -TXC",
+      "catalog": "CLED2-08C-GY-4070-T3-A-7P-F2-TXA",
       "distribution": "Type III (T3)",
       "watts": 383,
       "lumens": 56951,
@@ -3672,7 +3891,95 @@
         "source": "tx-mpl-2026-09",
         "table": "Table 29",
         "status": "Compliant v5",
-        "application": "Types A/B/C",
+        "application": "Type A",
+        "listed_catalog": "CLED2-08C-GY-4070-T3-A-7P-F2-TXA / -TXB / -TXC",
+        "listed_cct": "4000K",
+        "phase": "phase2"
+      },
+      "cut_sheet": {
+        "title": "CLED2 spec sheet (REV20260414)",
+        "url": "https://chmlighting.com/Downloads/SPECS/CHM_SPECSHEET_CLED2.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/chm/CLED208CGXX70AT3.ies",
+          "lumcat": "CLED208CGXX70AT3",
+          "lumens": 56951,
+          "watts": 403,
+          "source_url": "https://chmlighting.com/Downloads/IES/CHM_IES_CLED2.zip",
+          "note": "CHM: 'use this file to represent 4000K–5000K'. ITL test 05/20/21, 120–277V driver (403W)."
+        }
+      ],
+      "caveats": [
+        "TxDOT labels this row 120/240V; the catalog voltage code (A) is the 120–277V universal option.",
+        "Watts are the cut sheet's 480V value (TxDOT lists 410W). Unshielded file; S90/S180/S360 shielded versions are in CHM's zip.",
+        "CHM: \"BABA compliant in all package offerings\"; made in Fort Worth, TX."
+      ],
+      "basis": "as-listed",
+      "voltage_inferred": false
+    },
+    {
+      "id": "lv-tx-cled2-08c-a-2",
+      "manufacturer": "CHM Lighting",
+      "brand": "",
+      "family": "CLED2 · 08C",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": "120-277",
+      "catalog": "CLED2-08C-GY-4070-T3-A-7P-F2-TXB",
+      "distribution": "Type III (T3)",
+      "watts": 383,
+      "lumens": 56951,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 29",
+        "status": "Compliant v5",
+        "application": "Type B",
+        "listed_catalog": "CLED2-08C-GY-4070-T3-A-7P-F2-TXA / -TXB / -TXC",
+        "listed_cct": "4000K",
+        "phase": "phase2"
+      },
+      "cut_sheet": {
+        "title": "CLED2 spec sheet (REV20260414)",
+        "url": "https://chmlighting.com/Downloads/SPECS/CHM_SPECSHEET_CLED2.pdf"
+      },
+      "ies": [
+        {
+          "file": "ies/chm/CLED208CGXX70AT3.ies",
+          "lumcat": "CLED208CGXX70AT3",
+          "lumens": 56951,
+          "watts": 403,
+          "source_url": "https://chmlighting.com/Downloads/IES/CHM_IES_CLED2.zip",
+          "note": "CHM: 'use this file to represent 4000K–5000K'. ITL test 05/20/21, 120–277V driver (403W)."
+        }
+      ],
+      "caveats": [
+        "TxDOT labels this row 120/240V; the catalog voltage code (A) is the 120–277V universal option.",
+        "Watts are the cut sheet's 480V value (TxDOT lists 410W). Unshielded file; S90/S180/S360 shielded versions are in CHM's zip.",
+        "CHM: \"BABA compliant in all package offerings\"; made in Fort Worth, TX."
+      ],
+      "basis": "as-listed",
+      "voltage_inferred": false
+    },
+    {
+      "id": "lv-tx-cled2-08c-a-3",
+      "manufacturer": "CHM Lighting",
+      "brand": "",
+      "family": "CLED2 · 08C",
+      "product_type": "LED high mast luminaire",
+      "cct": 4000,
+      "cri": 70,
+      "voltage": "120-277",
+      "catalog": "CLED2-08C-GY-4070-T3-A-7P-F2-TXC",
+      "distribution": "Type III (T3)",
+      "watts": 383,
+      "lumens": 56951,
+      "dot": {
+        "source": "tx-mpl-2026-09",
+        "table": "Table 29",
+        "status": "Compliant v5",
+        "application": "Type C",
         "listed_catalog": "CLED2-08C-GY-4070-T3-A-7P-F2-TXA / -TXB / -TXC",
         "listed_cct": "4000K",
         "phase": "phase2"
@@ -3811,7 +4118,7 @@
       ]
     },
     {
-      "id": "lv-ca-4",
+      "id": "lv-ca-4-1",
       "manufacturer": "Acuity Brands",
       "brand": "American Electric Lighting (AEL) / Holophane",
       "family": "ATB0",
@@ -3820,7 +4127,7 @@
       "cri": null,
       "voltage": "120-277",
       "voltage_inferred": false,
-      "catalog": "Conventional Highway: ATB0P455MVOLTRX3KMPNLP7BAARFD334127 ; Expressway: ATB0P453MVOLTRX3KMPNLP7BAARFD334125",
+      "catalog": "ATB0P455MVOLTRX3KMPNLP7BAARFD334127",
       "distribution": null,
       "watts": 159,
       "lumens": null,
@@ -3833,7 +4140,41 @@
         "listing_id": "",
         "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
         "listed_catalog": "Conventional Highway: ATB0P455MVOLTRX3KMPNLP7BAARFD334127 ; Expressway: ATB0P453MVOLTRX3KMPNLP7BAARFD334125",
-        "listed_cct": "3000K"
+        "listed_cct": "3000K",
+        "application": "Conventional Highway"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
+        "AML authorization expires 6/1/2029"
+      ]
+    },
+    {
+      "id": "lv-ca-4-2",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL) / Holophane",
+      "family": "ATB0",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": "120-277",
+      "voltage_inferred": false,
+      "catalog": "ATB0P453MVOLTRX3KMPNLP7BAARFD334125",
+      "distribution": null,
+      "watts": 159,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "ca-aml-led",
+        "table": "Roadway 11",
+        "status": "Phase 2",
+        "phase": "phase2",
+        "listing_id": "",
+        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
+        "listed_catalog": "Conventional Highway: ATB0P455MVOLTRX3KMPNLP7BAARFD334127 ; Expressway: ATB0P453MVOLTRX3KMPNLP7BAARFD334125",
+        "listed_cct": "3000K",
+        "application": "Expressway"
       },
       "cut_sheet": {},
       "ies": [],
@@ -4067,7 +4408,7 @@
       ]
     },
     {
-      "id": "lv-ca-36",
+      "id": "lv-ca-36-1",
       "manufacturer": "Acuity Brands",
       "brand": "American Electric Lighting (AEL) / Holophane",
       "family": "ATB0",
@@ -4076,7 +4417,7 @@
       "cri": null,
       "voltage": "120-277",
       "voltage_inferred": false,
-      "catalog": "ATB0P455MVOLTRX3KMPNLP7USPOMRFD326236 ; ATB0P453MVOLTRX3KMPNLP7BAARFD334125",
+      "catalog": "ATB0P455MVOLTRX3KMPNLP7USPOMRFD326236",
       "distribution": null,
       "watts": 159,
       "lumens": null,
@@ -4095,7 +4436,40 @@
       "ies": [],
       "caveats": [
         "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
-        "Row also lists USPOM-option ATB0 codes (as listed); AML authorization expires 6/1/2029"
+        "AML authorization expires 6/1/2029",
+        "USPOM option code, as Caltrans lists it; this code does not carry the BAA option."
+      ]
+    },
+    {
+      "id": "lv-ca-36-2",
+      "manufacturer": "Acuity Brands",
+      "brand": "American Electric Lighting (AEL) / Holophane",
+      "family": "ATB0",
+      "product_type": "LED roadway luminaire",
+      "cct": 3000,
+      "cri": null,
+      "voltage": "120-277",
+      "voltage_inferred": false,
+      "catalog": "ATB0P453MVOLTRX3KMPNLP7BAARFD334125",
+      "distribution": null,
+      "watts": 159,
+      "lumens": null,
+      "basis": "as-listed",
+      "dot": {
+        "source": "ca-aml-led",
+        "table": "Intersection:  Large A",
+        "status": "Phase 2",
+        "phase": "phase2",
+        "listing_id": "",
+        "list_url": "https://mets.dot.ca.gov/aml/LED.php?type=2&print=yes",
+        "listed_catalog": "ATB0P455MVOLTRX3KMPNLP7USPOMRFD326236 ; ATB0P453MVOLTRX3KMPNLP7BAARFD334125",
+        "listed_cct": "3000K"
+      },
+      "cut_sheet": {},
+      "ies": [],
+      "caveats": [
+        "DOT wording: Manufactured Product, 55% or higher cost and final assembly both in US",
+        "AML authorization expires 6/1/2029"
       ]
     },
     {
