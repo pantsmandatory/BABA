@@ -181,6 +181,7 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
 .bad{background:var(--bad-bg);color:var(--bad)}.info{background:var(--info-bg);color:var(--info)}
 .muted.badge{background:var(--border);color:var(--muted)}
 .empty{padding:12px;color:var(--muted)}
+table.cfr td{white-space:normal;overflow:visible;vertical-align:top}table.cfr td.nowrap{white-space:nowrap}
 footer{margin-top:28px;color:var(--muted);font-size:.8rem}
 """
 
@@ -234,6 +235,15 @@ def render(build_date):
         for d in rule.get("key_dates", [])
     )
     rule_sources = " · ".join(link(u, f"[{n + 1}]") for n, u in enumerate(rule.get("sources", [])))
+    cfr_rows = "".join(
+        f"<tr><td>{e(c.get('topic'))}</td><td class='nowrap'>{link(rule.get('cfr_url'), c.get('cite'))}</td><td>{e(c.get('text'))}</td></tr>"
+        for c in rule.get("cfr", []))
+    cfr_html = "" if not cfr_rows else (
+        '<h2 id="cfr">CFR references for Phase 2 (projects obligated on or after Oct 1, 2026)</h2>'
+        f'<p class="small muted">Quoted from {link(rule.get("cfr_url"), "23 CFR 635.410")} ({e(rule.get("cfr_checked", ""))}). '
+        'Confirm the current text before relying on it.</p>'
+        '<div class="table-wrap"><table class="cfr"><thead><tr><th>Requirement</th><th>Citation</th><th>Rule text</th></tr></thead>'
+        f'<tbody>{cfr_rows}</tbody></table></div>')
 
     return f"""<!doctype html>
 <html lang="en">
@@ -268,6 +278,8 @@ manufacturer's project-specific Buy America certification and confirm with the D
 <div class="muted">{e(rule.get("changes_since", ""))} {rule_sources}</div>
 <div class="muted">Rows are one line each; tap or click a row to show its full text.</div>
 </div>
+
+{cfr_html}
 
 <div class="controls">
   <input id="q" type="search" placeholder="Search manufacturer, model, or state" aria-label="Search">

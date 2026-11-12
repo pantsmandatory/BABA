@@ -1,12 +1,52 @@
 {
   "summary": "FHWA final rule 'Buy America Requirements for Manufactured Products' (FR Doc. 2024-31350, Jan 14, 2025; 23 CFR 635.410) ended FHWA's general waiver for manufactured products.",
   "key_dates": [
-    {"date": "Oct 1, 2025", "requirement": "Federal-aid projects obligated on or after this date: manufactured products must have final assembly in the United States."},
-    {"date": "Oct 1, 2026", "requirement": "Projects obligated on or after this date: final assembly in the US AND domestic components > 55% of total component cost (iron/steel components count toward the 55%)."}
+    {
+      "date": "Oct 1, 2025",
+      "requirement": "Federal-aid projects obligated on or after this date: manufactured products must have final assembly in the United States."
+    },
+    {
+      "date": "Oct 1, 2026",
+      "requirement": "Projects obligated on or after this date: final assembly in the US AND domestic components > 55% of total component cost (iron/steel components count toward the 55%)."
+    }
   ],
   "changes_since": "Predominantly iron/steel cabinets or enclosures must meet FHWA iron and steel rules. De minimis waiver: non-compliant products totaling no more than the lesser of $1 million or 5% of total applicable project costs. Confirm current rule status with FHWA before relying on it.",
   "sources": [
     "https://www.federalregister.gov/documents/2025/01/14/2024-31350/buy-america-requirements-for-manufactured-products",
     "https://www.insidegovernmentcontracts.com/2025/01/fhwa-publishes-final-rule-rescinding-longstanding-buy-america-waiver-for-manufactured-products/"
+  ],
+  "cfr_url": "https://www.ecfr.gov/current/title-23/chapter-I/subchapter-G/part-635/subpart-D/section-635.410",
+  "cfr_checked": "eCFR, current as of November 9, 2026",
+  "cfr": [
+    {
+      "topic": "October 1, 2026 deadline",
+      "cite": "23 CFR 635.410(c)(1)(vii)(B)",
+      "text": "\"For projects obligated on or after October 1, 2026, the product was manufactured in the United States and the cost of the components of the manufactured product that are mined, produced, or manufactured in the United States is greater than 55 percent of the total cost of all components of the manufactured product.\""
+    },
+    {
+      "topic": "Domestic content threshold",
+      "cite": "23 CFR 635.410(c)(1)(vii)(B)",
+      "text": "Same sentence as the deadline: domestic components must be \"greater than 55 percent of the total cost of all components of the manufactured product.\""
+    },
+    {
+      "topic": "Shipment costs included",
+      "cite": "23 CFR 635.410(c)(3)(i) and (ii)",
+      "text": "Purchased components: \"the acquisition cost, including transportation costs to the place of incorporation into the manufactured product (whether or not such costs are paid to a domestic firm), and any applicable duty.\" Components the manufacturer makes: all manufacturing costs \"including transportation costs as described in paragraph (c)(3)(i) of this section, plus allocable overhead costs, but excluding profit. Cost of components does not include any costs associated with the manufacture of the manufactured product.\""
+    },
+    {
+      "topic": "Manufactured in the United States",
+      "cite": "23 CFR 635.410(c)(1)(vii)(A) and (B)",
+      "text": "(A): \"For projects obligated on or after October 1, 2025, the product was manufactured in the United States.\" (B) repeats that requirement for projects obligated on or after October 1, 2026. The rule text says \"manufactured in the United States\"; state lists often call this final assembly."
+    },
+    {
+      "topic": "What a manufactured product is",
+      "cite": "23 CFR 635.410(c)(1)(iv) and (v)",
+      "text": "(iv) defines manufactured products; (v) defines the manufacturer as \"the entity that performs the final manufacturing process that produces a manufactured product.\""
+    },
+    {
+      "topic": "Iron or steel cabinets and enclosures",
+      "cite": "23 CFR 635.410(c)(2)(ii)",
+      "text": "Cabinets or enclosures of electronic hardware systems that are wholly or predominantly iron or steel must meet the iron and steel rule in paragraph (b); their cost is included in the 55 percent calculation."
+    }
   ]
 }
