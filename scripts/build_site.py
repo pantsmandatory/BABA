@@ -15,6 +15,7 @@ import datetime as dt
 import html
 import json
 import pathlib
+import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -200,6 +201,17 @@ q.addEventListener('input',apply);st.addEventListener('change',apply);
 """ + ROW_JS
 
 
+# One navigation bar for every page, so no page links to an out-of-date set of pages.
+NAV_PAGES = [("fixtures-480v.html", "480V fixtures"), ("fixtures-120-277v.html", "120–277V fixtures"),
+             ("fixtures-3k.html", "480V 3000K only"), ("fixtures-4k.html", "480V 4000K only"),
+             ("index.html", "Compliance index"), ("fiber.html", "Fiber products"), ("leads.html", "Leads to verify")]
+
+
+def site_nav(current):
+    pages = [(f, t) for f, t in NAV_PAGES if f != "leads.html" or (DATA / "leads.json").exists()]
+    return " · ".join(f"<strong>{e(t)}</strong>" if f == current else f'<a href="{f}">{e(t)}</a>' for f, t in pages)
+
+
 def table(headers, body, empty_msg):
     head = "".join(f"<th>{e(h)}</th>" for h in headers)
     if not body:
@@ -257,7 +269,8 @@ def render(build_date):
 <body>
 <main>
 <h1>BABA Luminaire Index</h1>
-<div class="muted">Roadway &amp; area luminaires on state DOT approved product lists with documented FHWA Buy America compliance · Updated {e(build_date)} · Fixture downloads: <a href="fixtures-480v.html">480V</a> · <a href="fixtures-120-277v.html">120–277V</a> · <a href="fixtures-3k.html">3000K</a> · <a href="fixtures-4k.html">4000K</a> · <a href="fiber.html">Fiber products</a></div>
+<div class="muted">Roadway &amp; area luminaires on state DOT approved product lists with documented FHWA Buy America compliance · Updated {e(build_date)}</div>
+<div class="small">{site_nav("index.html")}</div>
 
 <div class="stats">
   <span><b>{len(compliant)}</b>compliant</span>
@@ -269,7 +282,7 @@ def render(build_date):
 
 <div class="card">
 <strong>What counts as compliant here.</strong> Under FHWA's manufactured-products rule (23 CFR 635.410), a luminaire
-must have <strong>final assembly in the United States</strong> and, for projects obligated on or after Oct 1, 2026,
+must be <strong>manufactured in the United States</strong> (state lists often call this final assembly) and, for projects obligated on or after Oct 1, 2026,
 <strong>domestic components costing more than 55%</strong> of all component cost. An entry appears in the main table
 only when it is on at least one state DOT approved list <em>and</em> both tests are documented by the DOT or by the
 manufacturer for that product family. This index is a research aid, not a certification: always obtain the
@@ -331,7 +344,7 @@ def main():
         ARCHIVE.mkdir(exist_ok=True)
         # Archive pages live one folder down, so point the archive link back up.
         ARCHIVE.joinpath(f"{args.date}.html").write_text(
-            page.replace('href="archive/index.html"', 'href="index.html"').replace('href="fixtures-3k.html"', 'href="../fixtures-3k.html"').replace('href="fixtures-480v.html"', 'href="../fixtures-480v.html"').replace('href="fixtures-120-277v.html"', 'href="../fixtures-120-277v.html"').replace('href="fixtures-4k.html"', 'href="../fixtures-4k.html"').replace('href="fiber.html"', 'href="../fiber.html"'), encoding="utf-8"
+            re.sub(r'href="([a-z0-9-]+\.html)(#[^"]*)?"', r'href="../\1\2"', page).replace('href="archive/index.html"', 'href="index.html"'), encoding="utf-8"
         )
         write_archive_index()
     print(f"Built index.html for {args.date}")

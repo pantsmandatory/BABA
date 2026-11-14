@@ -147,7 +147,7 @@
     "state": "IA",
     "agency": "Iowa Department of Transportation",
     "list_name": "MAPLE (Materials Approved Products Listing Enterprise); no roadway luminaire approved list found",
-    "url": "https://iowadot.gov/construction_materials/approved-products",
+    "url": "https://maple.iowadot.gov",
     "luminaire_category": "IM 488.06 temporary LED floodlights only; permanent roadway/tower luminaires specified per project plans",
     "baba_flag": "no",
     "baba_notes": "BABA handled per project: Iowa DOT IM 107 'Domestic Materials Self-Certification Form' (https://ia.iowadot.gov/erl/current/IM/content/107aa.pdf, fetched) certifies compliance with 23 CFR 635.410 and 2 CFR 184 per article/project. No luminaire list carrying a BABA flag. 0 entries.",
@@ -331,7 +331,7 @@
     "luminaire_category": "Innovative Roadway Lighting group, LED Lighting subcategory",
     "baba_flag": "yes",
     "baba_notes": "BABA column: Compliant / Not Compliant / Unknown. Compliant luminaires: CLED2 High Mast (NP21-9008), Lumec RoadFocus Plus (NP24-9385, RP#-###WXXXLED), Lumec HighFocus Plus (NP24-9386); all \"Approved for Provisional Use\". Not Compliant: TraStar DURA-ST/DURA-STR (480V 4000K), Solarmax SMX-LL5.",
-    "buy_america_guidance_url": "https://connect.ncdot.gov/letting/Division 12 Letting/06-23-2026/062326_SIGNALINSTALL_DIV12_INVITE.pdf",
+    "buy_america_guidance_url": "https://connect.ncdot.gov/letting/Division%2012%20Letting/06-23-2026/062326_SIGNALINSTALL_DIV12_INVITE.pdf",
     "confidence": "high",
     "last_reviewed": "2026-11-09"
   },
@@ -571,7 +571,7 @@
     "luminaire_category": "9.29.10.1.B LED Conventional Roadway Luminaire - 200W/250W/310W/400W Class (all 3K/3000K; separate 120-277V and 480V order codes)",
     "baba_flag": "unclear",
     "baba_notes": "Acuity rows carry description text \"BAA Compliant\" with \"-BAA-\" in the order code (Buy American Act option), not an FHWA Buy America/BABA statement. The E-APL Guide (July 2025, https://wsdot.wa.gov/sites/default/files/2025-07/WSDOT-Traffic-Electrical-E-APL-Guide-2025-07-08.pdf) says a \"BABA Cert.\" column will note \"Y\" for known Buy America / Build America certification, but the current workbook has no such column (9 columns, none BABA). Construction Bulletin 2025-01R1: manufactured products need Certification of Material Origin (Form 350-108) - project-level. AEL ATB0 approval rescinded April 10 2023 (ATB2/ATBM/ACM/ACL listed instead).",
-    "buy_america_guidance_url": "https://devapps.wsdot.wa.gov/sites/default/files/2025-09/ConstructionBulletin2025-01R1.pdf",
+    "buy_america_guidance_url": "https://wsdot.wa.gov/sites/default/files/2025-09/ConstructionBulletin2025-01R1.pdf",
     "confidence": "high",
     "last_reviewed": "2026-11-09"
   },
@@ -583,7 +583,7 @@
     "luminaire_category": "659.1115-659.1130 Luminaires Utility LED A-D; 659.1205-1215 Underdeck LED A-C; 659.0400 Luminaire High Mast Lighting; 659.0700 Walkway",
     "baba_flag": "no",
     "baba_notes": "Fetched full PDF: no Buy America/BABA wording or flag anywhere. Entries are 120-277V/universal style (MVOLT, -U-, UNIV/UNV, MV) with 4000K; none specify 480V (Cooper 'CST-CA8-480-740-U' - the '480' is the CST lumen/drive package, voltage code U = 120-277). The previously noted tools/prods/buyamerica.pdf now returns 404. Approved-products landing page: https://wisconsindot.gov/pages/doing-bus/eng-consultants/cnslt-rsrces/tools/appr-prod/default.aspx",
-    "buy_america_guidance_url": "https://www.wisconsindot.gov/Documents/doing-bus/eng-consultants/cnslt-rsrces/tools/prods/buyamerica.pdf",
+    "buy_america_guidance_url": "https://wisconsindot.gov/rdwy/cmm/cm-02-28.pdf",
     "confidence": "high",
     "last_reviewed": "2026-11-09"
   },
@@ -595,7 +595,7 @@
     "luminaire_category": "none; lighting-related APLs are connector kits, wire & cable, LED sign lighters, conduit",
     "baba_flag": "no",
     "baba_notes": "No luminaire APL. MP 106.10.50 gives BA acceptance (project-level).",
-    "buy_america_guidance_url": "https://transportation.wv.gov/highways/mcst/MaterialsDocuments/MPs/100s/F-MP106.10.50-26%20with%20attachments.pdf",
+    "buy_america_guidance_url": "https://webapps.transportation.wv.gov/TWS/WVDOTDocumentStorageMigration/PDF/Transportation/highways/mcst/Material%20Procedures/2025%20MPs/F_106.10.50-25.pdf",
     "confidence": "medium",
     "last_reviewed": "2026-11-09"
   },

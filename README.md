@@ -8,10 +8,10 @@ FHWA Buy America (BABA) compliance for manufactured products (23 CFR 635.410):
 
 Open `index.html` for the current list. Weekly snapshots are in `archive/`.
 
-Fixture pages list the DOT-certified fixtures at 480V with downloadable `.ies` files and manufacturer cut sheets:
-`fixtures-4k.html` shows the 4000K catalog numbers exactly as TxDOT lists them; `fixtures-3k.html` shows the same
-configurations with the 3000K / 70 CRI option swapped in. `fixtures.html` links to both. Pages are set by `views` in
-`data/fixtures.json`.
+Fixture pages list DOT-certified fixtures with downloadable `.ies` files and manufacturer cut sheets:
+`fixtures-480v.html` and `fixtures-120-277v.html` are the full lists by voltage, `fixtures-3k.html` and `fixtures-4k.html`
+are 480V color-temperature filters, and `fixtures.html` links to the voltage pages. Each table has a three-position slider
+(fixture details, cut sheet and order notes, BABA nuances), sortable columns and two-line rows sized to the screen.
 `fiber.html` lists Corning fiber products with BABA evidence: traffic/ITS cabinet splice housings, orange OM1/OM2
 multimode cable, and G.652 single-mode cable (data in `data/fiber.json`, built by `scripts/build_fiber.py`).
 
@@ -47,7 +47,7 @@ Fixture page first source: TxDOT's Roadway Illumination MPL, "Compliant v5" entr
 | `data/fixtures.json` | Fixture configurations (catalog number, DOT listing, cut sheet, .ies) and the page filter. |
 | `ies/<manufacturer>/` | Copies of manufacturer .ies files; each entry links to its source. |
 | `cutsheets/<manufacturer>/` | Copies of cut sheets whose official site blocks automated downloads. |
-| `scripts/build_fixtures.py` | Builds `fixtures.html` from `data/fixtures.json`. |
+| `scripts/build_fixtures.py` | Builds the fixture pages from `data/fixtures.json` and `data/site.json`. |
 | `scripts/check_sources.py` | Downloads each DOT list and flags lists that changed since last week. |
 | `.github/workflows/weekly-update.yml` | Runs both scripts every Monday, commits the pages, and opens an issue listing changed DOT lists. |
 

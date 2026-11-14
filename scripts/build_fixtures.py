@@ -15,7 +15,7 @@ import json
 import pathlib
 import re
 
-from build_site import CSS, ROW_JS, STATE_NAMES, e, link, table, td
+from build_site import CSS, ROW_JS, STATE_NAMES, e, link, site_nav, table, td
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -433,7 +433,7 @@ option, but that is not evidence the listed configuration is 480V; for example, 
 <main>
 <h1>{e(view["title"])}</h1>
 <div class="muted">{e(view.get("volt_label", "480V"))} luminaires that state DOT product lists state are Phase 2 Buy America (BABA) compliant · Updated {e(build_date)}</div>
-<div class="small">{nav(view["file"], not unlisted)}</div>
+<div class="small">{nav(view["file"]) if unlisted else site_nav(view["file"])}</div>
 
 <div class="stats">
   <span class="chips">{chips}</span>
@@ -499,7 +499,7 @@ def chooser(build_date, unlisted=False):
 <div class="card"><ul>
 {items}
 </ul><p class="small muted">Only Phase 2 listings are shown{'' if unlisted else ', with the exact model number the state DOT prints'}.</p></div>
-<div class="small"><a href="index.html">Compliance index</a> · <a href="fiber.html">Fiber products</a></div>
+<div class="small">{site_nav("fixtures.html")}</div>
 </main></body></html>
 """
 

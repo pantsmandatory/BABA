@@ -12,7 +12,7 @@ import datetime as dt
 import json
 import pathlib
 
-from build_site import CSS, ROW_JS, e, link, numbered_links, table, td
+from build_site import CSS, ROW_JS, e, link, numbered_links, site_nav, table, td
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -102,7 +102,8 @@ def render(build_date):
 <body>
 <main>
 <h1>BABA Fiber Products · Corning</h1>
-<div class="muted">Splice housings for traffic and ITS cabinets, orange multimode cable, and G.652 single-mode cable · Updated {e(build_date)} · <a href="index.html">Luminaire index</a> · Fixtures <a href="fixtures-3k.html">3000K</a> · <a href="fixtures-4k.html">4000K</a></div>
+<div class="muted">Splice housings for traffic and ITS cabinets, orange multimode cable, and G.652 single-mode cable · Updated {e(build_date)}</div>
+<div class="small">{site_nav("fiber.html")}</div>
 
 <div class="stats">
   <span><b id="count">{total}</b>products</span>
