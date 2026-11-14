@@ -1185,6 +1185,349 @@
       "read": "2026-11-10"
     }
   ],
-  "fiber": [],
-  "blocked": []
+  "fiber": [
+    {
+      "state": "GA",
+      "manufacturer": "AFL (America Fujikura Ltd.)",
+      "product": "LE Series gel-free single-jacket non-armored loose tube, 12–144F",
+      "part": "LEXXX*CX101N1D",
+      "fiber": "not printed (wildcard)",
+      "says": "GDOT QPL 48 Buy America column carries the flag; legend: \"Build America Buy Act Letter Provided\".",
+      "missing": "The fiber type is a wildcard in the part number, so this is not evidence of a 62.5 µm listing.",
+      "source": "GDOT QPL 48",
+      "source_short": "GDOT QPL 48",
+      "source_url": "https://www.dot.ga.gov/PartnerSmart/Materials/Documents/qpl48.pdf",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "GA",
+      "manufacturer": "Prysmian Group",
+      "product": "FusionLink with FlexRibbon, dielectric, 96F–432F",
+      "part": "RCF1JKT-12-B1-XXX-E1",
+      "fiber": "not printed",
+      "says": "GDOT QPL 48 Buy America column carries the flag; legend: \"Build America Buy Act Letter Provided\".",
+      "missing": "Not a 62.5 µm multimode product; listed here because Georgia flags it for Buy America.",
+      "source": "GDOT QPL 48",
+      "source_short": "GDOT QPL 48",
+      "source_url": "https://www.dot.ga.gov/PartnerSmart/Materials/Documents/qpl48.pdf",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "GA",
+      "manufacturer": "Prysmian Group",
+      "product": "ExpressLT dry cable, dielectric (non-armored), 12F–432F",
+      "part": "EDH1JKT-12-AA-XXX-XX",
+      "fiber": "Enhanced single-mode (ESMF)",
+      "says": "GDOT QPL 48 Buy America column carries the flag; legend: \"Build America Buy Act Letter Provided\".",
+      "missing": "Not a 62.5 µm multimode product; listed here because Georgia flags it for Buy America.",
+      "source": "GDOT QPL 48",
+      "source_short": "GDOT QPL 48",
+      "source_url": "https://www.dot.ga.gov/PartnerSmart/Materials/Documents/qpl48.pdf",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "GA",
+      "manufacturer": "Superior Essex",
+      "product": "Dri-Lite single jacket all-dielectric, 6F–288F",
+      "part": "LP 11XXRD05",
+      "fiber": "Single-mode (SM)",
+      "says": "GDOT QPL 48 Buy America column carries the flag; legend: \"Build America Buy Act Letter Provided\".",
+      "missing": "Not a 62.5 µm multimode product; listed here because Georgia flags it for Buy America.",
+      "source": "GDOT QPL 48",
+      "source_short": "GDOT QPL 48",
+      "source_url": "https://www.dot.ga.gov/PartnerSmart/Materials/Documents/qpl48.pdf",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "FL",
+      "manufacturer": "Corning",
+      "product": "Corning, Fiber Optic Buffertube Fanout Kit",
+      "part": "FAN-BT25-12",
+      "fiber": "not stated on APL",
+      "says": "APL 633-004-008; 'BABA Eligible: Eligible'; comment begins 'Approved for Project 417545-1-52-01, 450595-1, 446031-4, 450644-1, 452356-1…'",
+      "missing": "Florida approves it for named projects only and does not print a fiber type; no statement that it is 62.5 µm.",
+      "source": "FDOT APL - Fiber Optic Connection Hardware (Spec 633-004)",
+      "source_short": "FDOT APL",
+      "source_url": "https://path.fdot.gov/ProductTypes/Index/1291",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "FL",
+      "manufacturer": "Corning",
+      "product": "Corning, Fiber Optic Pigtail Kit",
+      "part": "CH-900-12KIT, CH-LC900-12Kit",
+      "fiber": "NOT STATED",
+      "says": "APL 633-004-007; 'BABA Eligible: Eligible'; comment begins 'Approved for Project 417545-1-52-01, 415927-4-52-01, 418214-5-52-01, 450595-1…'",
+      "missing": "Florida approves it for named projects only and does not print a fiber type; no statement that it is 62.5 µm.",
+      "source": "FDOT APL - Fiber Optic Connection Hardware (Spec 633-004)",
+      "source_short": "FDOT APL",
+      "source_url": "https://path.fdot.gov/ProductTypes/Index/1291",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "FL",
+      "manufacturer": "Corning",
+      "product": "Fiber Optic Jumper",
+      "part": "(model printed as) 'Fiber Optic Cable with Connectors within Cabinet'",
+      "fiber": "NOT STATED",
+      "says": "APL 633-004-010; 'BABA Eligible: Eligible'; 'Approved for Project 217838-5, 254677-2 only.'",
+      "missing": "Florida approves it for named projects only and does not print a fiber type; no statement that it is 62.5 µm.",
+      "source": "FDOT APL - Fiber Optic Connection Hardware (Spec 633-004)",
+      "source_short": "FDOT APL",
+      "source_url": "https://path.fdot.gov/ProductTypes/Index/1291",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "MN",
+      "manufacturer": "Clearfield Connection",
+      "product": "Indoor fiber pigtail, multimode, ST, 6-connector assembly, 5 m",
+      "part": "DA3-006-MXA-ZZZ-01 005M",
+      "fiber": "62.5/125",
+      "says": "On the MnDOT approved products list (62.5/125 µm per the MnDOT specification). The list has no Buy America column or wording.",
+      "missing": "MnDOT lists this 62.5 µm product but its list has no Buy America column; nothing states where it is made.",
+      "source": "MnDOT Approved/Qualified Products - Fiber optic materials - 'Indoor Fiber Pigtail - Multimode - ST'",
+      "source_short": "MnDOT list",
+      "source_url": "https://www.dot.state.mn.us/products/trafficmgtsystems/fiberopticmaterials.html",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "MN",
+      "manufacturer": "C Enterprises",
+      "product": "Indoor fiber pigtail, multimode, ST, 6-connector assembly, 5 m",
+      "part": "XMNDOT-MSTXX",
+      "fiber": "62.5/125",
+      "says": "On the MnDOT approved products list (62.5/125 µm per the MnDOT specification). The list has no Buy America column or wording.",
+      "missing": "MnDOT lists this 62.5 µm product but its list has no Buy America column; nothing states where it is made.",
+      "source": "MnDOT Approved/Qualified Products - Fiber optic materials - 'Indoor Fiber Pigtail - Multimode - ST'",
+      "source_short": "MnDOT list",
+      "source_url": "https://www.dot.state.mn.us/products/trafficmgtsystems/fiberopticmaterials.html",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "MN",
+      "manufacturer": "Optical Cable Corporation",
+      "product": "Indoor fiber pigtail, multimode, ST, 6-connector assembly, 5 m",
+      "part": "MNDOT-209073STXX0005M",
+      "fiber": "62.5/125",
+      "says": "On the MnDOT approved products list (62.5/125 µm per the MnDOT specification). The list has no Buy America column or wording.",
+      "missing": "MnDOT lists this 62.5 µm product but its list has no Buy America column; nothing states where it is made.",
+      "source": "MnDOT Approved/Qualified Products - Fiber optic materials - 'Indoor Fiber Pigtail - Multimode - ST'",
+      "source_short": "MnDOT list",
+      "source_url": "https://www.dot.state.mn.us/products/trafficmgtsystems/fiberopticmaterials.html",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "MN",
+      "manufacturer": "Quiktron",
+      "product": "Indoor fiber pigtail, multimode, ST, 6-connector assembly, 5 m",
+      "part": "806-011-017MNDOT",
+      "fiber": "62.5/125",
+      "says": "On the MnDOT approved products list (62.5/125 µm per the MnDOT specification). The list has no Buy America column or wording.",
+      "missing": "MnDOT lists this 62.5 µm product but its list has no Buy America column; nothing states where it is made.",
+      "source": "MnDOT Approved/Qualified Products - Fiber optic materials - 'Indoor Fiber Pigtail - Multimode - ST'",
+      "source_short": "MnDOT list",
+      "source_url": "https://www.dot.state.mn.us/products/trafficmgtsystems/fiberopticmaterials.html",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "MN",
+      "manufacturer": "tinifiber.com",
+      "product": "Micro fiber cable, 6 fiber, multimode",
+      "part": "TF6-OM1-PU (also 'Discontinued: TF6-0M1-PE', February 1 2019)",
+      "fiber": "62.5/125 OM1",
+      "says": "On the MnDOT approved products list (62.5/125 µm per the MnDOT specification). The list has no Buy America column or wording.",
+      "missing": "MnDOT lists this 62.5 µm product but its list has no Buy America column; nothing states where it is made.",
+      "source": "MnDOT Approved/Qualified Products - Fiber optic cables - 'Micro Fiber Cable 6 Multi mode'",
+      "source_short": "MnDOT list",
+      "source_url": "https://www.dot.state.mn.us/products/trafficmgtsystems/fiberopticcables.html",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "",
+      "manufacturer": "AFL",
+      "product": "Premise OM1 24 count - indoor/outdoor tight-buffered riser cable",
+      "part": "KR024F871801-B (Product Identifier PK05640-01)",
+      "fiber": "62.5/125 OM1",
+      "says": "Row description: 'KR024F871801-B,BABA COMPLIANT,AFL STD-M,24,62.5/125 CORNING INFINICOR 300,INDOOR/OUTDOOR,RISER,RoHS,8.7MM,BLACK,STD TB'; Location of Manufacturing: 'Duncan, SC'. Page text: 'These products have been verified to comply with the Buy America Preference (BABA) requirements or, at a minimum, meet the guidance as specified in the BABA Waiver for the BEAD Program ...' and 'All optical fiber used to manufacture our fiber optic cable is compliant and manufactured in North Carolina.' ",
+      "missing": "Manufacturer self-certification written for the BEAD broadband program, not an FHWA or state DOT statement. No state DOT list flags these parts.",
+      "source": "AFL - 'List of AFL Compliant Equipment That Qualifies for the BEAD Program' (BEAD Self-Certification and BABA Compliant Products page), main table",
+      "source_short": "AFL list",
+      "source_url": "https://www.aflglobal.com/en/company/company-profile/connecting-america/bead-self-certification",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "",
+      "manufacturer": "AFL",
+      "product": "Premise OM1 1 count - simplex riser cable",
+      "part": "SR001F201201-B (Product Identifier PS12934-01)",
+      "fiber": "62.5/125 OM1",
+      "says": "Row description: 'SR001F201201-B,BABA COMPLIANT,AFL STD-M,1,62.5/125 CORNING INFINICOR 300,SIMPLEX,RISER,RoHS,2.0MM,ORANGE,STD TB'; Location of Manufacturing: 'Duncan, SC'. Page text: 'These products have been verified to comply with the Buy America Preference (BABA) requirements or, at a minimum, meet the guidance as specified in the BABA Waiver for the BEAD Program ...' and 'All optical fiber used to manufacture our fiber optic cable is compliant and manufactured in North Carolina.' ",
+      "missing": "Manufacturer self-certification written for the BEAD broadband program, not an FHWA or state DOT statement. No state DOT list flags these parts.",
+      "source": "AFL - 'List of AFL Compliant Equipment That Qualifies for the BEAD Program', main table",
+      "source_short": "AFL list",
+      "source_url": "https://www.aflglobal.com/en/company/company-profile/connecting-america/bead-self-certification",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "",
+      "manufacturer": "AFL",
+      "product": "62.5 µm field connectors and OM1 pigtail modules: FASTConnect, FUSEConnect, Poli-MOD adapter plate and pigtails",
+      "part": "FAST-LC-MM62.5-100, FAST-LC-MM62.5-100-C, FAST-LC-MM62.5-6, FAST-SC-MM62.5-100, FAST-SC-MM62.5-100-C, FAST-SC-MM62.5-6, FAST-ST-MM62.5-100, FAST-ST-MM62.5-6; FUSEMPO-S-MM6-3-F-6, FUSEMPO-S-MM6-3-M-6, FUSE-LC2M62-6, FUSE-LC9M62-6, FUSE-SC3M62-6, FUSE-SC3M62-6S2, FUSE-SC9M62-6, FUSE-ST2M62-6, FUSE-ST3M62-6, FUSE-ST9M62-6; Poli-MOD PM-L-12-PLC-1-S-01/-06/-12, PM-L-12-PLC-1-R-01/-06/-12, PM-L-12-PSC-1-S-01/-06/-12, PM-L-12-PSC-1-R-01/-06/-12, PM-L-12-PST-1-S-01/-06/-12, PM-L-12-PST-1-R-01/-06/-12, PM-L-24-PLC-1-S-01/-06/-12, PM-L-24-PLC-1-R-01/-06/-12, PM-L-06-PLC-1-S-01, PM-L-06-PSC-1-S-01/-06/-12, PM-L-06-PST-1-S-01/-06/-12",
+      "fiber": "62.5 µm multimode / OM1",
+      "says": "NOT a BABA claim. Table heading: 'AFL Equipment That Is Waived for the BEAD Program'. Page text: 'Because the BABA Waiver for the BEAD Program completely waives the Buy America Preference for all passive optical equipment, you can find our passive optical equipment listed on a separate table at the bottom of this page.' AFL products page marks these families BEAD ✓ only, with 'BABA requirements waived for BEAD program'.",
+      "missing": "Not a compliance claim: AFL lists these 62.5 µm connectors and pigtail modules under equipment waived for the BEAD program, and that waiver is not from FHWA.",
+      "source": "AFL - same page, second table headed 'AFL Equipment That Is Waived for the BEAD Program'",
+      "source_short": "AFL list",
+      "source_url": "https://www.aflglobal.com/en/company/company-profile/connecting-america/bead-self-certification",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "",
+      "manufacturer": "The Light Connection, Inc.",
+      "product": "Indoor / Outdoor Dry Loose Tube (gel-free, UV black jacket)",
+      "part": "M62DL02C3NRBL25, M62DL06C3NRBL25, M62DL12C3NRBL25, M62DL24C3NRBL25, M62DL36C3NRBL25, M62DL48C3NRBL25, M62DL72C3NRBL25, M62DL96C3NRBL25, M62DL144C3NRBL25 (OFNR); M62DL02C3NPBL25 ... M62DL144C3NPBL25 (OFNP, same counts)",
+      "fiber": "62.5/125 OM1",
+      "says": "'Every TLC cable is manufactured in the United States and is fully compliant with Build America, Buy America (BABA) requirements. Our channel partnership with Corning Optical Fiber® has never been more valuable. ... our exclusive use of Corning fiber ensures consistent supply, dependable quality, and the performance our customers expect. All TLC products proudly carry the “plus Corning” print on the jacket'",
+      "missing": "Catalog-wide manufacturer statement, not part-specific; it does not say the fiber preform and draw are in the US. No state DOT list.",
+      "source": "The Light Connection, Inc. (TLC) 2026 Product Catalog - 'A Message from the President' + part tables headed '62.5/125 MULTIMODE OM1'",
+      "source_short": "TLC catalog",
+      "source_url": "https://thelightconnection.com/wp-content/uploads/2026/05/2026-TLC_Catalog_web.pdf",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "",
+      "manufacturer": "The Light Connection, Inc.",
+      "product": "Distribution (indoor tight-buffered)",
+      "part": "M62DI02C3NRO44, M62DI04C3NRO44, M62DI06C3NRO48, M62DI08C3NRO58, M62DI12C3NRO58, M62DI24C3NRO78, M62DI48C3NRO-O, M62DI72C3NRO-O, M62DI96C3NRO-O, M62DI144C3NRO-O (OFNR); M62DI02C3NPO44, M62DI04C3NPO44, M62DI06C3NPO48, M62DI08C3NPO58, M62DI12C3NPO58, M62DI24C3NPO78, M62DI48C3NPO-O, M62DI72C3NPO-O, M62DI96C3NPO-O (OFNP)",
+      "fiber": "62.5/125 OM1",
+      "says": "'Every TLC cable is manufactured in the United States and is fully compliant with Build America, Buy America (BABA) requirements. Our channel partnership with Corning Optical Fiber® has never been more valuable. ... our exclusive use of Corning fiber ensures consistent supply, dependable quality, and the performance our customers expect. All TLC products proudly carry the “plus Corning” print on the jacket'",
+      "missing": "Catalog-wide manufacturer statement, not part-specific; it does not say the fiber preform and draw are in the US. No state DOT list.",
+      "source": "The Light Connection, Inc. (TLC) 2026 Product Catalog - 'A Message from the President' + part tables headed '62.5/125 MULTIMODE OM1'",
+      "source_short": "TLC catalog",
+      "source_url": "https://thelightconnection.com/wp-content/uploads/2026/05/2026-TLC_Catalog_web.pdf",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "",
+      "manufacturer": "The Light Connection, Inc.",
+      "product": "Indoor / Outdoor distribution (tight-buffered)",
+      "part": "M62IO02C3NRBL44, M62IO04C3NRBL44, M62IO06C3NRBL48, M62IO08C3NRBL58, M62IO12C3NRBL58, M62IO24C3NRBL78, M62IO48C3NRBL, M62IO72C3NRBL, M62IO96C3NRBL, M62IO144C3NRBL (OFNR); M62IO02C3NPBL44, M62IO04C3NPBL44, M62IO06C3NPBL48, M62IO08C3NPBL58, M62IO12C3NPBL58, M62IO24C3NPBL78, M62IO48C3NPBL, M62IO72C3NPBL, M62IO96C3NPBL (OFNP)",
+      "fiber": "62.5/125 OM1",
+      "says": "'Every TLC cable is manufactured in the United States and is fully compliant with Build America, Buy America (BABA) requirements. Our channel partnership with Corning Optical Fiber® has never been more valuable. ... our exclusive use of Corning fiber ensures consistent supply, dependable quality, and the performance our customers expect. All TLC products proudly carry the “plus Corning” print on the jacket'",
+      "missing": "Catalog-wide manufacturer statement, not part-specific; it does not say the fiber preform and draw are in the US. No state DOT list.",
+      "source": "The Light Connection, Inc. (TLC) 2026 Product Catalog - 'A Message from the President' + part tables headed '62.5/125 MULTIMODE OM1'",
+      "source_short": "TLC catalog",
+      "source_url": "https://thelightconnection.com/wp-content/uploads/2026/05/2026-TLC_Catalog_web.pdf",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "",
+      "manufacturer": "The Light Connection, Inc.",
+      "product": "Breakout",
+      "part": "M62BK02C3NRO20-O, M62BK04C3NRO20-O, M62BK06C3NRO20-O, M62BK08C3NRO20-O, M62BK12C3NRO20-O, M62BK18C3NRO20-O (OFNR); M62BK02C3NPO20-O, M62BK04C3NPO20-O, M62BK06C3NPO20-O, M62BK08C3NPO20-O, M62BK12C3NPO20-O (OFNP)",
+      "fiber": "62.5/125 OM1",
+      "says": "'Every TLC cable is manufactured in the United States and is fully compliant with Build America, Buy America (BABA) requirements. Our channel partnership with Corning Optical Fiber® has never been more valuable. ... our exclusive use of Corning fiber ensures consistent supply, dependable quality, and the performance our customers expect. All TLC products proudly carry the “plus Corning” print on the jacket'",
+      "missing": "Catalog-wide manufacturer statement, not part-specific; it does not say the fiber preform and draw are in the US. No state DOT list.",
+      "source": "The Light Connection, Inc. (TLC) 2026 Product Catalog - 'A Message from the President' + part tables headed '62.5/125 MULTIMODE OM1'",
+      "source_short": "TLC catalog",
+      "source_url": "https://thelightconnection.com/wp-content/uploads/2026/05/2026-TLC_Catalog_web.pdf",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "",
+      "manufacturer": "The Light Connection, Inc.",
+      "product": "Duplex zip / round duplex / simplex cordage (for patch cords and pigtails); high-density; 900 µm tight buffer",
+      "part": "M62DX02C3NPO, M62DX02C3NRO (3.0 mm zip); M62DX02C3NPO20, M62DX02C3NRO20; M62DX02C3NPO18, M62DX02C3NRO18; M62DX02C3NPO16, M62DX02C3NRO16; M62DX02C3NPO12; M62RX02C3NPO, M62RX02C3NRO; M62SX01C3NPO, M62SX01C3NRO, M62SX01C3NPO20, M62SX01C3NRO20, M62SX01C3NPO18, M62SX01C3NRO18, M62SX01C3NPO16, M62SX01C3NRO16, M62SX01C3NPO12; M62HD24C3NPO, M62HD24C3NPO38; M62TB01C3NU “X”",
+      "fiber": "62.5/125 OM1",
+      "says": "'Every TLC cable is manufactured in the United States and is fully compliant with Build America, Buy America (BABA) requirements. Our channel partnership with Corning Optical Fiber® has never been more valuable. ... our exclusive use of Corning fiber ensures consistent supply, dependable quality, and the performance our customers expect. All TLC products proudly carry the “plus Corning” print on the jacket'",
+      "missing": "Catalog-wide manufacturer statement, not part-specific; it does not say the fiber preform and draw are in the US. No state DOT list.",
+      "source": "The Light Connection, Inc. (TLC) 2026 Product Catalog - 'A Message from the President' + part tables headed '62.5/125 MULTIMODE OM1'",
+      "source_short": "TLC catalog",
+      "source_url": "https://thelightconnection.com/wp-content/uploads/2026/05/2026-TLC_Catalog_web.pdf",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "",
+      "manufacturer": "Lightera",
+      "product": "62.5 µm graded-index multimode optical FIBER (bare fiber)",
+      "part": "(none on the page)",
+      "fiber": "62.5/125",
+      "says": "Product page: 'Our multimode optical fiber is manufactured at Lightera’ Multimode Center of Excellence in Sturbridge, Massachusetts, using the company’s advanced Modified Chemical Vapor Deposition (MCVD) technology.' No BABA wording on that page. Compliant-products page (https://lightera.com/babaa-for-bead-compliant-products/): 'The following listed products are available in BEAD compliant versions upon request.'",
+      "missing": "A US plant for the bare 62.5 µm fiber, but the maker's compliant-products list (4/17/26) has no multimode rows.",
+      "source": "Lightera (formerly OFS) - '62.5 µm Graded-Index Multimode Optical Fiber' product page and 'BABAA for BEAD Compliant Products' list",
+      "source_short": "Lightera",
+      "source_url": "https://lightera.com/p/62-5-%c2%b5m-graded-index-multimode-optical-fiber/",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "",
+      "manufacturer": "Leviton",
+      "product": "Economy Series OM1 pigtails and 12-fiber pigtail kits (SC, ST, LC), 3 m, 900 μm buffered",
+      "part": "(spec sheet family; distributor listings show 62PSC-M03, 62PST-M03, 62PSC-KIT, 62PLC-KIT - part numbers taken from search results, not from this sheet)",
+      "fiber": "62.5/125 OM1",
+      "says": "'COUNTRY OF ORIGIN  USA - OM3, OM4, OS2  China - OM1'",
+      "missing": "Counts against: the maker gives China as country of origin for its OM1 pigtails.",
+      "source": "Leviton - Product Specifications, 'Economy Series Fiber Optic Pigtails and Pigtail Kits'",
+      "source_short": "Leviton spec",
+      "source_url": "https://leviton.com/content/dam/leviton/network-solutions/product_documents/product_specification/Leviton-Spec-Economy-Series-Fiber-Optic-Pigtails-Kits.pdf",
+      "read": "2026-11-14"
+    },
+    {
+      "state": "",
+      "manufacturer": "Clearfield",
+      "product": "FxMP adapter plates, multimode beige LC; 62 multimode SC attenuator",
+      "part": "FMA-XXX-177-L-US, FMA-XXX-177-R-US ('ADAPTER PLATE, FXMP, MM BEIGE, 12 X LC/UPC', BROOKLYN PARK MN US); ABA-005-62MM-US ('SC UPC BUILDOUT,MALE-FEMALE,ATTENUATOR,5 DB LOSS,62 MULTIMODE  WAIVED WAIVED CN')",
+      "fiber": "multimode; 'MM BEIGE'",
+      "says": "List columns: 'CLFD PRODUCT NUMBER | PART DESCRIPTION | CITY | STATE | COUNTRY'. Page (https://www.seeclearfield.com/products/browse-by/baba.html): 'From patch cords to fiber distribution hub cabinets, our products can be manufactured to BABA compliant standards and ready for federally funded projects.' and 'quoted part numbers will indicate products that are built to BABA standards.'",
+      "missing": "The maker's BABA list has no 62.5 µm pigtails or patch cords; only multimode adapter plates, and a 62 µm attenuator marked waived (China).",
+      "source": "Clearfield - 'BABA-Compliant Product List' (clearfield-baba-items-status.pdf) and BABA Compliant page",
+      "source_short": "Clearfield list",
+      "source_url": "https://www.seeclearfield.com/assets/documents/baba/clearfield-baba-items-status.pdf",
+      "read": "2026-11-14"
+    }
+  ],
+  "blocked": [
+    {
+      "state": "—",
+      "name": "Corning BABAA compliance page",
+      "url": "https://www.corning.com/babaa-products",
+      "why": "HTTP 403 'Access Denied' (Akamai) to curl, WebFetch and headless Chromium. Only a search-engine summary was obtained."
+    },
+    {
+      "state": "—",
+      "name": "FDOT APL product type pages",
+      "url": "https://path.fdot.gov/ProductTypes/Index/1015 and /1291",
+      "why": "curl gets Cloudflare 'Attention Required' HTTP 403; readable only through the WebFetch tool, which returns model-converted text rather than raw HTML. The index https://path.fdot.gov/ProductTypes returned HTTP 500, so oth"
+    },
+    {
+      "state": "—",
+      "name": "Incab America BABA page",
+      "url": "https://incabamerica.com/incab/baba/",
+      "why": "Connection reset (curl), HTTP 503 (WebFetch), 502 'upstream request failed' (headless Chromium)."
+    },
+    {
+      "state": "—",
+      "name": "NTIA BABA Self-Certification List (links to each maker's part list)",
+      "url": "https://www.commerce.gov/sites/default/files/2024-07/BABA_Self_Certification_List.PDF",
+      "why": "HTTP 403."
+    },
+    {
+      "state": "—",
+      "name": "NJDOT ITS Qualified Products - Fiber Optic Cable / Patch Panel material references",
+      "url": "https://dot.nj.gov/transportation/eng/elec/ITS/itsenglishjuly2001/pdf/foc.pdf",
+      "why": "HTTP 403 (Imperva) on the PDFs; index page readable and shows these are material-spec references, not product lists."
+    },
+    {
+      "state": "—",
+      "name": "Arizona DOT Approved Products List (May 2025)",
+      "url": "https://azdot.gov/sites/default/files/2025-05/APLapproved-productList5-30-2025.pdf",
+      "why": "HTTP 403."
+    },
+    {
+      "state": "—",
+      "name": "Corning eCatalog spec-sheet PDFs for several OM1 parts",
+      "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012KU4-T4730D20.pdf",
+      "why": "Repeated HTTP 500 'Server Error Page' for 012KU4-T4730D20, 012KUC-T4130D20, 050502K5120003M, 95-000-51 spec-sheet PDFs; the corresponding HTML product pages were read instead."
+    }
+  ]
 }

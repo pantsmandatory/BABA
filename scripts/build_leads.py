@@ -24,8 +24,9 @@ table.ld th,table.ld td{white-space:normal;overflow:visible;max-width:none;min-w
 table.ld .cl{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;height:2.6em;line-height:1.3}
 table.ld tr.open .cl{display:block;height:auto;min-height:2.6em;overflow:visible}
 table.ld td.code .cl{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.92em;overflow-wrap:anywhere}
-table.ld td.code{min-width:clamp(16ch,22vw,34ch)}
-table.ld td.wide{width:28%}
+table.ld td.code{min-width:clamp(13ch,17vw,34ch)}
+table.ld td.code .cl{word-break:break-all}
+table.ld td.wide{width:24%}
 table.ld th{cursor:pointer;user-select:none}
 table.ld th[data-dir]::after{content:" ▲";font-size:.8em;color:var(--accent)}
 table.ld th[data-dir="desc"]::after{content:" ▼"}

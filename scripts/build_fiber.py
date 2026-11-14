@@ -102,24 +102,25 @@ def render(build_date):
 </head>
 <body class="view1">
 <main>
-<h1>BABA Fiber Products · Corning</h1>
-<div class="muted">Splice housings for traffic and ITS cabinets, orange multimode cable, and G.652 single-mode cable · Updated {e(build_date)}</div>
+<h1>BABA Fiber Products</h1>
+<div class="muted">Corning 62.5 µm multimode cable (outside-plant and orange indoor), G.652 single-mode cable, and splice housings for traffic and ITS cabinets · Updated {e(build_date)}</div>
 <div class="small">{site_nav("fiber.html")}</div>
 
 <div class="stats">
   <span><b id="count">{total}</b>products</span>
-  <span><b>{dot_listed}</b>on a DOT list as BABA eligible</span>
+  <span><b>{dot_listed}</b>flagged for Buy America on a state DOT list</span>
   <span><b>{stated}</b>with a part-specific Corning BABA statement</span>
   <span><b>{len(cats)}</b>categories</span>
+  <span><a href="leads.html#fiber">Other makers and unflagged 62.5 µm items: leads page</a></span>
 </div>
 
-<div class="card">
-<strong>Which rule applies.</strong>
+<details class="card" style="padding:6px 14px">
+<summary style="cursor:pointer"><strong>Which rule applies</strong> · documents used <span class="muted">(tap to open)</span></summary>
 <ul>{rules}</ul>
-<strong>Corning documents used</strong>
+<strong>Documents used</strong>
 <ul>{docs}</ul>
 <div class="muted">Research aid, not a certification: get Corning's project-specific Buy America certificate for the exact part numbers you order. Use the slider above the tables to switch between product details, spec sheet and DOT listing, and BABA nuances. Rows are two lines each; tap a row to open it and a column header to sort.</div>
-</div>
+</details>
 
 <div class="controls">
   <input id="q" type="search" placeholder="Search product, part number, or fiber type" aria-label="Search">
