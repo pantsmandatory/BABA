@@ -48,6 +48,7 @@ Fixture page first source: TxDOT's Roadway Illumination MPL, "Compliant v5" entr
 | `ies/<manufacturer>/` | Copies of manufacturer .ies files; each entry links to its source. |
 | `cutsheets/<manufacturer>/` | Copies of cut sheets whose official site blocks automated downloads. |
 | `scripts/build_fixtures.py` | Builds the fixture pages from `data/fixtures.json` and `data/site.json`. |
+| `data/leads.json` / `scripts/build_leads.py` | `leads.html`: Buy America clues that are not a state DOT Phase 2 statement for an exact model number (kept apart from the fixture pages). |
 | `scripts/check_sources.py` | Downloads each DOT list and flags lists that changed since last week. |
 | `.github/workflows/weekly-update.yml` | Runs both scripts every Monday, commits the pages, and opens an issue listing changed DOT lists. |
 
