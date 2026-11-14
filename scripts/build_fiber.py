@@ -12,7 +12,7 @@ import datetime as dt
 import json
 import pathlib
 
-from build_site import CSS, ROW_JS, e, link, numbered_links, site_nav, table, td
+from build_site import CSS, ROW_JS, SV_CSS, SV_JS, e, link, numbered_links, site_nav, view_slider, view_table, vtd
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -33,8 +33,9 @@ document.getElementById('count').textContent=n;}
 q.addEventListener('input',apply);cat.addEventListener('change',apply);
 """ + ROW_JS
 
-HEADERS = ["Product", "Part number / ordering", "Corning BABA", "DOT listing", "Fiber", "Jacket", "Rating",
-           "Counts", "BABA basis", "Spec sheet", "Sources", "Notes"]
+# (label, slider view): "" = always shown; 1 = product details, 2 = spec sheet and DOT listing, 3 = BABA nuances
+HEADERS = [("Product", ""), ("Part number / ordering", ""), ("Fiber", "1"), ("Jacket", "1"), ("Rating", "1"), ("Counts", "1"),
+           ("Spec sheet", "2"), ("DOT listing", "2"), ("Sources", "2"), ("Maker BABA", "3"), ("BABA basis", "3"), ("Notes", "3")]
 
 
 def label(key):
@@ -54,18 +55,18 @@ def row(p, cat_id):
                       ["name", "part_number", "fiber", "jacket", "rating", "basis"]).lower() + " " + notes.lower()
     return (
         f'<tr data-search="{e(search)}" data-cat="{e(cat_id)}">'
-        + td(f"<strong>{e(p.get('name'))}</strong>", "c-l", p.get("name"))
-        + td(e(p.get("part_number")), "c-cat mono", p.get("part_number"))
-        + td(label(p.get("corning_baba")), "c-b", p.get("corning_quote"))
-        + td(dot_cell, "c-l", dot_full)
-        + td(e(p.get("fiber", "—")), "c-s", p.get("fiber"))
-        + td(e(p.get("jacket", "—")), "c-d")
-        + td(e(p.get("rating", "—")), "c-s", p.get("rating"))
-        + td(e(p.get("counts", "—")), "c-s", p.get("counts"))
-        + td(e(p.get("basis", "—").split(" (")[0]), "c-d", p.get("basis"))
-        + td(link(sheet.get("url"), "PDF") if sheet.get("url") else "—", "c-d", sheet.get("title"))
-        + td(numbered_links(ev), "c-n", " | ".join(x.get("summary", "") for x in ev))
-        + td(e(notes), "c-x muted", notes)
+        + vtd(f"<strong>{e(p.get('name'))}</strong>", "", "", p.get("name"))
+        + vtd(e(p.get("part_number")), "", "mono", p.get("part_number"))
+        + vtd(e(p.get("fiber", "—")), "1", "", p.get("fiber"))
+        + vtd(e(p.get("jacket", "—")), "1")
+        + vtd(e(p.get("rating", "—")), "1", "", p.get("rating"))
+        + vtd(e(p.get("counts", "—")), "1", "", p.get("counts"))
+        + vtd(link(sheet.get("url"), "PDF") if sheet.get("url") else e(sheet.get("title") or "—"), "2", "", sheet.get("title"))
+        + vtd(dot_cell, "2", "", dot_full)
+        + vtd(numbered_links(ev), "2", "", " | ".join(x.get("summary", "") for x in ev))
+        + vtd(label(p.get("corning_baba")), "3", "c-b", p.get("corning_quote"))
+        + vtd(e(p.get("basis", "—").split(" (")[0]), "3", "", p.get("basis"))
+        + vtd(e(notes), "3", "wide muted", notes)
         + "</tr>"
     )
 
@@ -84,7 +85,7 @@ def render(build_date):
         sections.append(
             f'<section data-cat="{e(c["id"])}"><h2>{e(c["name"])}</h2>'
             f'<p class="small muted">{e(c.get("description", ""))}</p>'
-            f'{table(HEADERS, rows, "No Corning products with BABA documentation found yet.")}</section>'
+            f'{view_table(HEADERS, rows, "No products with BABA documentation found yet.")}</section>'
         )
     rules = "".join(f"<li>{r}</li>" for r in data.get("rule_notes_html", []))
     docs = "".join(f"<li>{link(d.get('url'), d.get('title'))} <span class='muted'>{e(d.get('note', ''))}</span></li>"
@@ -97,9 +98,9 @@ def render(build_date):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BABA Fiber Products</title>
 <meta name="description" content="Corning fiber products documented as Build America, Buy America (BABA) compliant: traffic cabinet splice housings, orange multimode cable, and G.652 single-mode cable.">
-<style>{CSS}</style>
+<style>{CSS}{SV_CSS}</style>
 </head>
-<body>
+<body class="view1">
 <main>
 <h1>BABA Fiber Products · Corning</h1>
 <div class="muted">Splice housings for traffic and ITS cabinets, orange multimode cable, and G.652 single-mode cable · Updated {e(build_date)}</div>
@@ -117,12 +118,13 @@ def render(build_date):
 <ul>{rules}</ul>
 <strong>Corning documents used</strong>
 <ul>{docs}</ul>
-<div class="muted">Research aid, not a certification: get Corning's project-specific Buy America certificate for the exact part numbers you order. Rows are one line each; tap or click a row to show its full text.</div>
+<div class="muted">Research aid, not a certification: get Corning's project-specific Buy America certificate for the exact part numbers you order. Use the slider above the tables to switch between product details, spec sheet and DOT listing, and BABA nuances. Rows are two lines each; tap a row to open it and a column header to sort.</div>
 </div>
 
 <div class="controls">
   <input id="q" type="search" placeholder="Search product, part number, or fiber type" aria-label="Search">
-  <select id="cat" aria-label="Filter by category"><option value="">All categories</option>{cat_opts}</select>
+  <select id="cat" aria-label="Filter by category"><option value="">Category</option>{cat_opts}</select>
+  {view_slider(["Product details", "Spec sheet & DOT listing", "BABA nuances"])}
 </div>
 
 {''.join(sections)}
@@ -131,7 +133,7 @@ def render(build_date):
 Generated by <code>scripts/build_fiber.py</code> from <code>data/fiber.json</code>. Corrections welcome via GitHub issues.
 </footer>
 </main>
-<script>{JS}</script>
+<script>{JS}{SV_JS}</script>
 </body>
 </html>
 """

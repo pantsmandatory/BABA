@@ -108,16 +108,16 @@ def product_rows(items):
         ).lower()
         rows.append(
             f'<tr data-search="{e(search_blob)}" data-states="{e(" ".join(state_codes))}">'
-            + td(f'<strong>{e(it.get("manufacturer"))}</strong>', "c-m", it.get("manufacturer"))
-            + td(e(it.get("model")), "c-l", it.get("model"))
-            + td(e(it.get("product_type")), "c-s", it.get("product_type"))
-            + td(state_cell, "c-l", state_full)
-            + td(badge(it.get("final_assembly_us")), "c-b")
-            + td(badge(it.get("domestic_content_55")), "c-b")
-            + td(badge(it.get("evidence_level")), "c-b")
-            + td(numbered_links(ev), "c-n", " | ".join(x.get("summary", "") for x in ev))
-            + td(e(it.get("notes", "")), "c-x muted", it.get("notes"))
-            + td(e(it.get("last_verified")), "c-d muted")
+            + vtd(f'<strong>{e(it.get("manufacturer"))}</strong>', "", "", it.get("manufacturer"))
+            + vtd(e(it.get("model")), "", "", it.get("model"))
+            + vtd(state_cell, "1", "", state_full)
+            + vtd(badge(it.get("final_assembly_us")), "1", "c-b")
+            + vtd(badge(it.get("domestic_content_55")), "1", "c-b")
+            + vtd(e(it.get("product_type")), "2", "", it.get("product_type"))
+            + vtd(badge(it.get("evidence_level")), "2", "c-b")
+            + vtd(numbered_links(ev), "2", "", " | ".join(x.get("summary", "") for x in ev))
+            + vtd(e(it.get("last_verified")), "2", "muted")
+            + vtd(e(it.get("notes", "")), "3", "wide muted", it.get("notes"))
             + "</tr>"
         )
     return "\n".join(rows)
@@ -132,13 +132,13 @@ def source_rows(sources, status):
         check = (badge(st.get("state")) + f' <span class="muted">{e(st.get("checked", ""))}</span>') if st else "—"
         rows.append(
             f'<tr data-search="{e((state + " " + STATE_NAMES.get(state, "") + " " + s.get("agency", "")).lower())}" data-states="{e(state)}">'
-            + td(f'<strong>{e(state)}</strong> <span class="muted">{e(STATE_NAMES.get(state, ""))}</span>', "c-m")
-            + td(link(s.get("url"), s.get("list_name") or "Product list"), "c-l", s.get("list_name"))
-            + td(e(s.get("luminaire_category")), "c-l muted", s.get("luminaire_category"))
-            + td(badge(s.get("baba_flag")), "c-b")
-            + td(e(s.get("baba_notes")), "c-x muted", s.get("baba_notes"))
-            + td(guide, "c-d")
-            + td(check, "c-d")
+            + vtd(f'<strong>{e(state)}</strong> <span class="muted">{e(STATE_NAMES.get(state, ""))}</span>')
+            + vtd(link(s.get("url"), s.get("list_name") or "Product list"), "", "", s.get("list_name"))
+            + vtd(badge(s.get("baba_flag")), "1", "c-b")
+            + vtd(check, "1")
+            + vtd(e(s.get("luminaire_category")), "2", "muted", s.get("luminaire_category"))
+            + vtd(guide, "2")
+            + vtd(e(s.get("baba_notes")), "3", "wide muted", s.get("baba_notes"))
             + "</tr>"
         )
     return "\n".join(rows)
@@ -201,10 +201,81 @@ q.addEventListener('input',apply);st.addEventListener('change',apply);
 """ + ROW_JS
 
 
+# Three-view tables (index and fiber pages): a slider picks which columns show; every row is two text lines tall.
+SV_CSS = """
+table.sv{font-size:var(--fx,12.5px)}
+table.sv th,table.sv td{white-space:normal;overflow:visible;max-width:none;min-width:0}
+table.sv .cl{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;height:2.6em;line-height:1.3}
+table.sv tr.open .cl{display:block;height:auto;min-height:2.6em;overflow:visible}
+table.sv .v1,table.sv .v2,table.sv .v3{display:none}
+body.view1 table.sv .v1,body.view2 table.sv .v2,body.view3 table.sv .v3{display:table-cell}
+table.sv td.mono .cl{overflow-wrap:anywhere}
+table.sv td.c-b .cl{display:flex;align-items:center}
+table.sv td.wide{width:55%}
+table.sv thead th{cursor:pointer;user-select:none}
+table.sv thead th[data-dir]::after{content:" ▲";font-size:.8em;color:var(--accent)}
+table.sv thead th[data-dir="desc"]::after{content:" ▼"}
+.views{flex:1 1 100%;max-width:560px;margin-top:2px}
+body.compact .views{max-width:none}
+.vlabels{display:flex;justify-content:space-between;gap:8px;font-size:12px;font-weight:600;color:var(--muted)}
+.vlabels span{flex:1;cursor:pointer;line-height:1.2}
+.vlabels span:nth-child(2){text-align:center}.vlabels span:nth-child(3){text-align:right}
+.vlabels span.on{color:var(--accent)}
+#view{display:block;width:100%;min-width:0;padding:0;margin:4px 0 0;border:0;background:transparent;accent-color:var(--accent);height:26px}
+body.compact main{padding:8px 8px 32px}
+body.compact table.sv th,body.compact table.sv td{padding:2px 4px}
+body.compact table.sv th{font-size:9.5px;letter-spacing:0}
+@media (max-height:520px){.table-wrap{max-height:none}th{position:static}}
+"""
+
+SV_JS = """
+const vw=document.getElementById('view'),vl=[...document.querySelectorAll('#vlabels span')];
+function setView(v){vw.value=v;document.body.classList.remove('view1','view2','view3');document.body.classList.add('view'+v);
+vl.forEach(x=>x.classList.toggle('on',x.dataset.v==v));fit();}
+vw.addEventListener('input',()=>setView(+vw.value));
+vl.forEach(x=>x.addEventListener('click',()=>setView(+x.dataset.v)));
+function sortKey(td){const t=(td?td.textContent:'').trim();if(!t||t==='—')return null;
+const m=t.replace(/[,≈]/g,'').match(/^([0-9]+([.][0-9]+)?)(V|K|W)?$/);return m?parseFloat(m[1]):t.toLowerCase();}
+document.querySelectorAll('table.sv thead th').forEach(th=>th.addEventListener('click',()=>{
+const tr=th.parentElement,i=th.cellIndex,tb=th.closest('table').tBodies[0],dir=th.dataset.dir==='asc'?'desc':'asc';
+tr.querySelectorAll('th').forEach(x=>delete x.dataset.dir);th.dataset.dir=dir;
+const rows=[...tb.rows].map((r,n)=>({r,n,k:sortKey(r.cells[i])}));
+rows.sort((a,b)=>{if(a.k===null||b.k===null)return a.k===b.k?a.n-b.n:(a.k===null?1:-1);
+if(typeof a.k!==typeof b.k)return typeof a.k==='number'?-1:1;
+let c=typeof a.k==='number'?a.k-b.k:String(a.k).localeCompare(String(b.k),undefined,{numeric:true});
+return (dir==='asc'?c:-c)||a.n-b.n;});rows.forEach(x=>tb.appendChild(x.r));}));
+function fit(){const w=window.innerWidth,h=window.innerHeight,c=w<1000||h<=560;document.body.classList.toggle('compact',c);
+const sizes=c?[11,10.5,10]:[12.5,12,11.5,11];const wraps=[...document.querySelectorAll('table.sv')].map(t=>t.parentElement);
+for(const fs of sizes){document.body.style.setProperty('--fx',fs+'px');if(wraps.every(x=>x.scrollWidth<=x.clientWidth+1))break;}}
+let ft;window.addEventListener('resize',()=>{clearTimeout(ft);ft=setTimeout(fit,120);});fit();
+"""
+
+
+def vtd(content, view="", cls="", full=None):
+    """Cell of a three-view table. view is "" (always shown) or "1"/"2"/"3" (shown only in that slider position)."""
+    title = f' title="{e(full)}"' if full else ""
+    v = f"v{view} " if view else ""
+    return f'<td class="{v}{cls}"{title}><div class="cl">{content}</div></td>'
+
+
+def view_table(headers, body, empty_msg):
+    """headers: list of (label, view) with view "" or "1"/"2"/"3"."""
+    head = "".join(f'<th class="{"v" + v if v else ""}">{e(h)}</th>' for h, v in headers)
+    if not body:
+        body = f'<tr><td colspan="{len(headers)}" class="empty">{e(empty_msg)}</td></tr>'
+    return f'<div class="table-wrap"><table class="sv"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
+
+
+def view_slider(labels):
+    spans = "".join(f'<span data-v="{n + 1}"{" class=\"on\"" if n == 0 else ""}>{e(l)}</span>' for n, l in enumerate(labels))
+    return (f'<div class="views"><div class="vlabels" id="vlabels">{spans}</div>'
+            f'<input id="view" type="range" min="1" max="3" step="1" value="1" aria-label="Table view: {e(", ".join(labels))}"></div>')
+
+
 # One navigation bar for every page, so no page links to an out-of-date set of pages.
-NAV_PAGES = [("fixtures-480v.html", "480V fixtures"), ("fixtures-120-277v.html", "120–277V fixtures"),
+NAV_PAGES = [("index.html", "Start"), ("fixtures-480v.html", "480V fixtures"), ("fixtures-120-277v.html", "120–277V fixtures"),
              ("fixtures-3k.html", "480V 3000K only"), ("fixtures-4k.html", "480V 4000K only"),
-             ("index.html", "Compliance index"), ("fiber.html", "Fiber products"), ("leads.html", "Leads to verify")]
+             ("fiber.html", "Fiber products"), ("leads.html", "Leads to verify"), ("compliance.html", "Rules & state lists")]
 
 
 def site_nav(current):
@@ -239,8 +310,10 @@ def render(build_date):
         f'<option value="{e(c)}">{e(c)} – {e(STATE_NAMES.get(c, c))}</option>' for c in states_covered
     )
 
-    prod_headers = ["Manufacturer", "Model / family", "Type", "DOT listing", "US assembly",
-                    ">55% domestic", "Evidence", "Sources", "Notes", "Verified"]
+    prod_headers = [("Manufacturer", ""), ("Model / family", ""), ("DOT listing", "1"), ("US manufacture", "1"),
+                    (">55% domestic", "1"), ("Type", "2"), ("Evidence", "2"), ("Sources", "2"), ("Verified", "2"), ("Notes", "3")]
+    src_headers = [("State", ""), ("Approved product list", ""), ("Flags Buy America", "1"), ("Weekly check", "1"),
+                   ("Luminaire category", "2"), ("Guidance", "2"), ("Notes", "3")]
 
     dates = "".join(
         f"<li><strong>{e(d.get('date'))}</strong> – {e(d.get('requirement'))}</li>"
@@ -264,13 +337,13 @@ def render(build_date):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BABA Luminaire Index</title>
 <meta name="description" content="Weekly list of roadway luminaires accepted on state DOT approved product lists with documented FHWA Buy America (BABA) compliance: US final assembly and more than 55% domestic component cost.">
-<style>{CSS}</style>
+<style>{CSS}{SV_CSS}</style>
 </head>
-<body>
+<body class="view1">
 <main>
 <h1>BABA Luminaire Index</h1>
 <div class="muted">Roadway &amp; area luminaires on state DOT approved product lists with documented FHWA Buy America compliance · Updated {e(build_date)}</div>
-<div class="small">{site_nav("index.html")}</div>
+<div class="small">{site_nav("compliance.html")}</div>
 
 <div class="stats">
   <span><b>{len(compliant)}</b>compliant</span>
@@ -289,31 +362,90 @@ manufacturer for that product family. This index is a research aid, not a certif
 manufacturer's project-specific Buy America certification and confirm with the DOT.
 <ul>{dates}</ul>
 <div class="muted">{e(rule.get("changes_since", ""))} {rule_sources}</div>
-<div class="muted">Rows are one line each; tap or click a row to show its full text.</div>
+<div class="muted">Use the slider above the tables to switch between compliance, evidence and notes. Rows are two lines each; tap a row to open it and a column header to sort.</div>
 </div>
 
 {cfr_html}
 
 <div class="controls">
   <input id="q" type="search" placeholder="Search manufacturer, model, or state" aria-label="Search">
-  <select id="state" aria-label="Filter by state"><option value="">All states</option>{state_opts}</select>
+  <select id="state" aria-label="Filter by state"><option value="">State</option>{state_opts}</select>
+  {view_slider(["Compliance", "Evidence & sources", "Notes"])}
 </div>
 
 <h2>Compliant luminaires</h2>
-{table(prod_headers, product_rows(compliant), "No entries yet meet both documented tests.")}
+{view_table(prod_headers, product_rows(compliant), "No entries yet meet both documented tests.")}
 
-{('<h2>Verification queue</h2><p class="small muted">On a DOT list, but only one test (or neither) is documented so far, or the claim is not specific to FHWA rules.</p>' + table(prod_headers, product_rows(pending), "Nothing in the queue.")) if show_queue else ""}
+{('<h2>Verification queue</h2><p class="small muted">On a DOT list, but only one test (or neither) is documented so far, or the claim is not specific to FHWA rules.</p>' + view_table(prod_headers, product_rows(pending), "Nothing in the queue.")) if show_queue else ""}
 
 <h2>State DOT product lists</h2>
 <p class="small muted">"Flags Buy America" means the list itself marks compliance. Weekly check shows whether the list page changed since the previous run.</p>
-{table(["State", "Approved product list", "Luminaire category", "Flags BA", "Notes", "Guidance", "Weekly check"], source_rows(sources, status), "No sources yet.")}
+{view_table(src_headers, source_rows(sources, status), "No sources yet.")}
 
 <footer>
 Generated by <code>scripts/build_site.py</code> from <code>data/*.json</code>. Past weekly snapshots: <a href="archive/index.html">archive</a>.
 Corrections welcome via GitHub issues.
 </footer>
 </main>
-<script>{JS}</script>
+<script>{JS}{SV_JS}</script>
+</body>
+</html>
+"""
+
+
+HOME_CSS = """
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:14px 0}
+a.tile{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
+a.tile:hover{background:var(--hover)}
+a.tile .t{font-size:1.15rem;font-weight:700;color:var(--accent)}
+a.tile .s{color:var(--muted);font-size:.9rem}
+a.tile .n{font-size:.85rem;margin-top:4px;font-weight:600}
+"""
+
+
+def render_home(build_date):
+    """index.html (and fixtures.html, so old links keep working): one tap target per list."""
+    fx = load("fixtures.json", {})
+    listed = [f for f in fx.get("fixtures", []) if f.get("basis") == "as-listed" and not f.get("voltage_inferred")]
+
+    def count(v):
+        rows = [f for f in listed if f.get("voltage") == v]
+        ies = sum(1 for f in rows for i in f.get("ies", []) if i.get("file") and (ROOT / i["file"]).exists())
+        return f"{len(rows)} configurations · {ies} .ies files"
+
+    fiber = load("fiber.json", {})
+    leads = load("leads.json", {})
+    n_leads = len(leads.get("luminaires", [])) + len(leads.get("fiber", []))
+    tiles = [
+        ("fixtures-480v.html", "480V luminaires", "Roadway, high mast and underpass", count(480)),
+        ("fixtures-120-277v.html", "120–277V luminaires", "Roadway, high mast and underpass", count("120-277")),
+        ("fiber.html", "Fiber products", "Multimode 62.5 µm, single-mode and cabinet hardware", f'{len(fiber.get("products", []))} products'),
+    ]
+    if leads:
+        tiles.append(("leads.html", "Leads to verify", "Flagged by a DOT or maker, but not yet a Phase 2 statement",
+                      f"{n_leads} leads, kept separate from the lists above"))
+    tiles.append(("compliance.html", "Rules and state lists", "23 CFR 635.410 references and the state DOT lists reviewed",
+                  f'{len(load("sources.json", []))} state DOT lists'))
+    cards = "".join(f'<a class="tile" href="{f}"><div class="t">{e(t)}</div><div class="s">{e(s)}</div><div class="n">{e(n)}</div></a>'
+                    for f, t, s, n in tiles)
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BABA Highway Products</title>
+<meta name="description" content="Highway lighting and fiber products that state DOT lists state are Buy America (BABA) compliant for projects obligated on or after Oct 1, 2026.">
+<style>{CSS}{HOME_CSS}</style>
+<script>if(location.hash==='#cfr')location.replace('compliance.html#cfr');</script>
+</head>
+<body>
+<main>
+<h1>BABA highway products</h1>
+<div class="muted">State DOT-listed products compliant for projects obligated on or after Oct 1, 2026 · Updated {e(build_date)}</div>
+<div class="cards">{cards}</div>
+<div class="small muted">480V filters: <a href="fixtures-3k.html">3000K only</a> · <a href="fixtures-4k.html">4000K only</a>.
+Only rows a state DOT prints as compliant, with the exact model number, are on the luminaire lists. This site is a research aid, not a certification.</div>
+</main>
 </body>
 </html>
 """
@@ -326,7 +458,7 @@ def write_archive_index():
         f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>BABA Index Archive</title>
 <style>{CSS}</style></head><body><main><h1>Weekly snapshots</h1>
-<p><a href="../index.html">Current list</a></p><ul>{items}</ul></main></body></html>
+<p><a href="../compliance.html">Current list</a> · <a href="../index.html">Start page</a></p><ul>{items}</ul></main></body></html>
 """,
         encoding="utf-8",
     )
@@ -339,7 +471,10 @@ def main():
     args = ap.parse_args()
 
     page = render(args.date)
-    ROOT.joinpath("index.html").write_text(page, encoding="utf-8")
+    ROOT.joinpath("compliance.html").write_text(page, encoding="utf-8")
+    home = render_home(args.date)
+    ROOT.joinpath("index.html").write_text(home, encoding="utf-8")
+    ROOT.joinpath("fixtures.html").write_text(home, encoding="utf-8")
     if not args.no_archive:
         ARCHIVE.mkdir(exist_ok=True)
         # Archive pages live one folder down, so point the archive link back up.
@@ -347,7 +482,7 @@ def main():
             re.sub(r'href="([a-z0-9-]+\.html)(#[^"]*)?"', r'href="../\1\2"', page).replace('href="archive/index.html"', 'href="index.html"'), encoding="utf-8"
         )
         write_archive_index()
-    print(f"Built index.html for {args.date}")
+    print(f"Built index.html, fixtures.html and compliance.html for {args.date}")
 
 
 if __name__ == "__main__":

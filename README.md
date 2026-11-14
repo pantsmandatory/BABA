@@ -6,7 +6,8 @@ FHWA Buy America (BABA) compliance for manufactured products (23 CFR 635.410):
 1. Final assembly in the United States (projects obligated on/after Oct 1, 2025), and
 2. Domestic components costing more than 55% of total component cost (projects obligated on/after Oct 1, 2026).
 
-Open `index.html` for the current list. Weekly snapshots are in `archive/`.
+Open `index.html` for the start page (one card per list). `compliance.html` holds the rule references, the compliant
+families and the state DOT lists reviewed; weekly snapshots of it are in `archive/`.
 
 Fixture pages list DOT-certified fixtures with downloadable `.ies` files and manufacturer cut sheets:
 `fixtures-480v.html` and `fixtures-120-277v.html` are the full lists by voltage, `fixtures-3k.html` and `fixtures-4k.html`
@@ -43,7 +44,7 @@ Fixture page first source: TxDOT's Roadway Illumination MPL, "Compliant v5" entr
 | `data/luminaires.json` | Luminaire entries with DOT listing(s) and evidence. Edited by hand. |
 | `data/rule.json` | Summary of the federal rule shown at the top of the page. |
 | `data/source_status.json` | Written by the weekly check: content hash and changed/unchanged per list. |
-| `scripts/build_site.py` | Builds `index.html` and `archive/YYYY-MM-DD.html`. |
+| `scripts/build_site.py` | Builds `index.html` (start page, also written to `fixtures.html`), `compliance.html` and `archive/YYYY-MM-DD.html`. |
 | `data/fixtures.json` | Fixture configurations (catalog number, DOT listing, cut sheet, .ies) and the page filter. |
 | `ies/<manufacturer>/` | Copies of manufacturer .ies files; each entry links to its source. |
 | `cutsheets/<manufacturer>/` | Copies of cut sheets whose official site blocks automated downloads. |
