@@ -114,10 +114,10 @@
     "url": "https://path.fdot.gov/ProductTypes/Index/611",
     "luminaire_category": "715-005 conventional (type 611); 715-006 high mast (type 612); 715-007 sign (type 613); no underpass type found",
     "baba_flag": "yes",
-    "baba_notes": "Field \"BABA Eligible: Eligible/Not Eligible\" plus limitations, e.g. \"BABA Approved for job lettings on or before December 31, 2026.\" (treated phase1) or \"...December 31, 2025.\" on Not Eligible items. No voltage/CCT on APL (family-level). curl blocked by Cloudflare 403; read via WebFetch summarizer, so verbatim text is high but not byte-exact confidence.",
+    "baba_notes": "Field \"BABA Eligible: Eligible/Not Eligible\" plus limitations, e.g. \"BABA Approved for job lettings on or before December 31, 2026.\" (treated phase1) or \"...December 31, 2025.\" on Not Eligible items. No voltage/CCT on APL (family-level). curl blocked by Cloudflare 403; read via WebFetch summarizer, so verbatim text is high but not byte-exact confidence. Update 2026-11-14: read verbatim in a browser (48 rows across conventional, high mast, sign and underdeck). 29 Eligible with no date limit, 5 Eligible through lettings on Dec 31, 2026, 14 Not Eligible. FDOT does not define Eligible against the 55% rule. Rows are on leads.html.",
     "buy_america_guidance_url": "https://fdot.gov/programmanagement/productevaluation/default.shtm",
     "confidence": "medium",
-    "last_reviewed": "2026-11-09"
+    "last_reviewed": "2026-11-14"
   },
   {
     "state": "GA",
@@ -161,11 +161,11 @@
     "list_name": "ITD Qualified Products List (QPL2 web app)",
     "url": "https://apps.itd.idaho.gov/Apps/qpl2/",
     "luminaire_category": "unclear - category list is paginated/interactive (Blazor); first page shows no lighting category; not confirmed luminaires are a QPL category",
-    "baba_flag": "unclear",
-    "baba_notes": "QPL product table has a \"BABA\" column; FAQ: \"My products are BABA but they don't have the BABA checkbox on the Approved Products list...\" suppliers check a BABA box and attach ITD Forms 914/915 for admin review. No luminaire rows could be read without running the interactive app.",
+    "baba_flag": "yes",
+    "baba_notes": "QPL product table has a \"BABA\" column; FAQ: \"My products are BABA but they don't have the BABA checkbox on the Approved Products list...\" suppliers check a BABA box and attach ITD Forms 914/915 for admin review. No luminaire rows could be read without running the interactive app. Update 2026-11-14: read in a browser. 17 illumination rows; 5 have the BABA box checked (Holophane Sign-Vue LED 3, Holophane TNLED tunnel, Cooper underpass tunnel light, Lumec RoadFocus Plus, Lumec TunnelView), all Approved (Provisional), family names only. Column tooltip: \"The supplier has either labeled this as a BABA product or uploaded a BABA document\". Rows are on leads.html.",
     "buy_america_guidance_url": "",
     "confidence": "low",
-    "last_reviewed": "2026-11-09"
+    "last_reviewed": "2026-11-14"
   },
   {
     "state": "IL",
@@ -258,10 +258,10 @@
     "url": "https://www.maine.gov/dot/doing-business/bid-opportunities/qualified-products-list",
     "luminaire_category": "none seen (snippets show QPLs for detectable warning plates, raised pavement markers, traffic control devices)",
     "baba_flag": "unclear",
-    "baba_notes": "maine.gov returned CloudFront 403 (not evaded). No luminaire QPL surfaced.",
+    "baba_notes": "maine.gov returned CloudFront 403 (not evaded). No luminaire QPL surfaced. Update 2026-11-14: readable in a browser. No luminaire list among the qualified products lists.",
     "buy_america_guidance_url": "",
     "confidence": "low",
-    "last_reviewed": "2026-11-09"
+    "last_reviewed": "2026-11-14"
   },
   {
     "state": "MI",
@@ -270,10 +270,10 @@
     "url": "https://www.michigan.gov/mdot/business/construction/materials-source-guide",
     "luminaire_category": "Luminaires 918.09 - historically acceptance by General Certification, not a QPL",
     "baba_flag": "unclear",
-    "baba_notes": "michigan.gov returned 403 (bot/edge block) to curl; not evaded. Searches found no MDOT luminaire list or luminaire-specific BABA flag; only MDOT Form 3162A general federal Buy America clause (bids require Buy America certification). Treat as project-level certification.",
+    "baba_notes": "michigan.gov returned 403 (bot/edge block) to curl; not evaded. Searches found no MDOT luminaire list or luminaire-specific BABA flag; only MDOT Form 3162A general federal Buy America clause (bids require Buy America certification). Treat as project-level certification. Update 2026-11-14: readable in a browser. The August 2026 Materials Source Guide accepts luminaires (918.09) by general certification; no model list and no Buy America flag.",
     "buy_america_guidance_url": "",
     "confidence": "low",
-    "last_reviewed": "2026-11-09"
+    "last_reviewed": "2026-11-14"
   },
   {
     "state": "MN",
@@ -282,10 +282,10 @@
     "url": "https://www.dot.state.mn.us/products/roadwaylighting/luminaires.html",
     "luminaire_category": "LED Roadway (ledroadway.html), LED High Mast (ledhighmast2.html), LED Underpass (ledunderpass.html), 5 Lane (led5lane.html), Rest Area (ledrestarea.html)",
     "baba_flag": "yes",
-    "baba_notes": "No BABA column, but separate catalog-suffix rows are listed for BABA/BAA variants on the roadway page: e.g. 'KC2-72A-MV-40K7-T2R-GY-P4-SC-SP2-WL-4B-BAA/BABA' (Leotek, approved 10/19/26), 'KC2-72A-MV-40K7-T2R-GY-P11-SC-SP2-WL-4B-BAA/BABA', 'ACL P124 MVOLT ZT R4 4B 4K GY 20K P7 NBR NL SH BAA' and 'ACM P609 MVOLT ... BAA' (American Electric, 4/20/26), 'ATB2-P402/P403-MVOLT-R2-NL-P7-SH-BAA' (9/23/24). No phase stated. EVERY MnDOT luminaire table is headed 'Operating voltage range of 120 through 277 volts AC' (roadway, high mast, underpass, 5-lane, rest area), so there are ZERO 480V-capable entries; nothing qualifies for the 480V index. All CCTs listed are 4000K (740/40K7/4K).",
+    "baba_notes": "No BABA column, but separate catalog-suffix rows are listed for BABA/BAA variants on the roadway page: e.g. 'KC2-72A-MV-40K7-T2R-GY-P4-SC-SP2-WL-4B-BAA/BABA' (Leotek, approved 10/19/26), 'KC2-72A-MV-40K7-T2R-GY-P11-SC-SP2-WL-4B-BAA/BABA', 'ACL P124 MVOLT ZT R4 4B 4K GY 20K P7 NBR NL SH BAA' and 'ACM P609 MVOLT ... BAA' (American Electric, 4/20/26), 'ATB2-P402/P403-MVOLT-R2-NL-P7-SH-BAA' (9/23/24). No phase stated. EVERY MnDOT luminaire table is headed 'Operating voltage range of 120 through 277 volts AC' (roadway, high mast, underpass, 5-lane, rest area), so there are ZERO 480V-capable entries; nothing qualifies for the 480V index. All CCTs listed are 4000K (740/40K7/4K). Update 2026-11-14: 7 roadway rows carry a BAA or BAA/BABA catalog suffix, all under the 120-277V heading; no Buy America column. Rows are on leads.html.",
     "buy_america_guidance_url": "",
     "confidence": "high",
-    "last_reviewed": "2026-11-09"
+    "last_reviewed": "2026-11-14"
   },
   {
     "state": "MO",
@@ -330,10 +330,10 @@
     "url": "https://apps.ncdot.gov/vendor/approvedproducts/",
     "luminaire_category": "Innovative Roadway Lighting group, LED Lighting subcategory",
     "baba_flag": "yes",
-    "baba_notes": "BABA column: Compliant / Not Compliant / Unknown. Compliant luminaires: CLED2 High Mast (NP21-9008), Lumec RoadFocus Plus (NP24-9385, RP#-###WXXXLED), Lumec HighFocus Plus (NP24-9386); all \"Approved for Provisional Use\". Not Compliant: TraStar DURA-ST/DURA-STR (480V 4000K), Solarmax SMX-LL5.",
+    "baba_notes": "BABA column: Compliant / Not Compliant / Unknown. Compliant luminaires: CLED2 High Mast (NP21-9008), Lumec RoadFocus Plus (NP24-9385, RP#-###WXXXLED), Lumec HighFocus Plus (NP24-9386); all \"Approved for Provisional Use\". Not Compliant: TraStar DURA-ST/DURA-STR (480V 4000K), Solarmax SMX-LL5. Update 2026-11-14: read in a browser (12 rows): Compliant 5, Not Compliant 4, Unknown 3; no phase or date. Rows are on leads.html.",
     "buy_america_guidance_url": "https://connect.ncdot.gov/letting/Division%2012%20Letting/06-23-2026/062326_SIGNALINSTALL_DIV12_INVITE.pdf",
     "confidence": "high",
-    "last_reviewed": "2026-11-09"
+    "last_reviewed": "2026-11-14"
   },
   {
     "state": "ND",
@@ -354,10 +354,10 @@
     "url": "https://dot.nebraska.gov/business-center/materials/",
     "luminaire_category": "Luminaires (QMVL); APL has no luminaire category",
     "baba_flag": "unclear",
-    "baba_notes": "The QMVL report server (ndorpubreports.nebraska.gov) redirects to a logon page - not reachable. The NDOT APL (fetched via its public JSON API, https://dot.nebraska.gov/business-center/materials/approved-products/) does mark items 'The manufacturer has provided a Buy America certificate for the products listed below.' (since the Dec 2022 letting, Spec 106.07) but has no roadway luminaire category - only signal lamps, beacons, etc. 0 luminaire entries.",
+    "baba_notes": "The QMVL report server (ndorpubreports.nebraska.gov) redirects to a logon page - not reachable. The NDOT APL (fetched via its public JSON API, https://dot.nebraska.gov/business-center/materials/approved-products/) does mark items 'The manufacturer has provided a Buy America certificate for the products listed below.' (since the Dec 2022 letting, Spec 106.07) but has no roadway luminaire category - only signal lamps, beacons, etc. 0 luminaire entries. Update 2026-11-14: the Qualified Material Vendors List now opens in a browser without a logon. LED roadway, high mast, underdeck, offset and area lists are family-level (vendor / producer / product) with no Buy America field.",
     "buy_america_guidance_url": "",
     "confidence": "medium",
-    "last_reviewed": "2026-11-09"
+    "last_reviewed": "2026-11-14"
   },
   {
     "state": "NH",
@@ -402,10 +402,10 @@
     "url": "https://www.dot.nv.gov/doing-business/about-ndot/ndot-divisions/planning/research/qualified-products-list",
     "luminaire_category": "none confirmed - no luminaire category surfaced",
     "baba_flag": "no",
-    "baba_notes": "dot.nv.gov returns Akamai \"Access Denied\" 403 to curl (not evaded). Search snippet (labelled): NDOT states products listed on the QPL \"do not guarantee that the product meets \\\"BUY AMERICA\\\" certification\". Signals/Lighting/ITS Certifications & Public Interest Findings page also 403.",
+    "baba_notes": "dot.nv.gov returns Akamai \"Access Denied\" 403 to curl (not evaded). Search snippet (labelled): NDOT states products listed on the QPL \"do not guarantee that the product meets \\\"BUY AMERICA\\\" certification\". Signals/Lighting/ITS Certifications & Public Interest Findings page also 403. Update 2026-11-14: still blocked (403). A search snippet suggests the April 2, 2026 QPL has a \"BABA Compliance\" column with many entries \"unkn\"; not read directly.",
     "buy_america_guidance_url": "https://www.dot.nv.gov/doing-business/about-ndot/ndot-divisions/operations/traffic-operations/signals-lighting-its/certifications-and-public-interest-findings",
     "confidence": "low",
-    "last_reviewed": "2026-11-09"
+    "last_reviewed": "2026-11-14"
   },
   {
     "state": "NY",
@@ -413,11 +413,11 @@
     "list_name": "Materials Bureau Approved List (no luminaire category found)",
     "url": "https://www.dot.ny.gov/divisions/engineering/technical-services/materials-bureau/approved-list",
     "luminaire_category": "none found",
-    "baba_notes": "Approved-list URL returned a portal page reading 'No Data Returned (Nothing is Displayed)'. Searches surfaced no NYSDOT luminaire approved list or product-level BABA flags.",
+    "baba_notes": "Approved-list URL returned a portal page reading 'No Data Returned (Nothing is Displayed)'. Searches surfaced no NYSDOT luminaire approved list or product-level BABA flags. Update 2026-11-14: the approved-list URL now returns a 404 page.",
     "baba_flag": "unclear",
     "buy_america_guidance_url": "",
     "confidence": "low",
-    "last_reviewed": "2026-11-09"
+    "last_reviewed": "2026-11-14"
   },
   {
     "state": "OH",
@@ -558,10 +558,10 @@
     "url": "https://vtrans.vermont.gov/highway/construct-material/test-cert/certification/approved-products-and-advanced-certifications",
     "luminaire_category": "unclear - luminaire category not confirmed",
     "baba_flag": "unclear",
-    "baba_notes": "Page returned CloudFront 403 'Request blocked' (not evaded). Search snippets: VTrans product submittal form asks for % of component cost manufactured in US and says selecting 'No' does not disqualify a product from the APL; VTrans reviews BA/BABA applicability per submittal; annual APL certification references 23 CFR 635.410 and BABA. No luminaire listings seen.",
+    "baba_notes": "Page returned CloudFront 403 'Request blocked' (not evaded). Search snippets: VTrans product submittal form asks for % of component cost manufactured in US and says selecting 'No' does not disqualify a product from the APL; VTrans reviews BA/BABA applicability per submittal; annual APL certification references 23 CFR 635.410 and BABA. No luminaire listings seen. Update 2026-11-14: readable in a browser. The approved list has no BABA column and no luminaire material.",
     "buy_america_guidance_url": "",
     "confidence": "low",
-    "last_reviewed": "2026-11-09"
+    "last_reviewed": "2026-11-14"
   },
   {
     "state": "WA",

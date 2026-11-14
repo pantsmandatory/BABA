@@ -78,7 +78,8 @@ def render_table(rows, columns):
     head = "".join(f"<th>{e(h)}</th>" for h, _, _ in columns)
     body = []
     for r in rows:
-        search = " ".join(str(r.get(k, "")) for k in ("state", "manufacturer", "model", "product", "part", "says", "missing", "source")).lower()
+        search = (" ".join(str(r.get(k, "")) for k in ("state", "manufacturer", "model", "product", "part", "says", "missing", "source"))
+                  + " " + STATE_NAMES.get(r.get("state", ""), "")).lower()
         tds = "".join(cell(src_cell(r), cls) if key == "_src" else
                       cell(f"<strong>{e(r.get(key) or '—')}</strong>" if key in ("state", "manufacturer") else e(r.get(key) or "—"), cls)
                       for _, key, cls in columns)
