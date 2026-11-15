@@ -13,8 +13,9 @@ import argparse
 import datetime as dt
 import json
 import pathlib
+import re
 
-from build_site import CSS, ROW_JS, STATE_NAMES, e, link, table, td
+from build_site import CSS, ROW_JS, STATE_NAMES, e, link, site_nav, table, td
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -38,35 +39,71 @@ EXTRA_CSS = """
 .chips{display:inline-flex;flex-wrap:wrap;gap:4px;vertical-align:middle}
 .chip{background:var(--info-bg);color:var(--info);border-radius:999px;padding:0 8px;font-size:11px;font-weight:600}
 .phases{display:flex;flex-wrap:wrap;gap:4px 14px;margin:4px 0}
+details.howto{padding:6px 14px}details.howto summary{cursor:pointer}details.howto p{margin:6px 0}
 button{font:inherit;font-weight:600;padding:5px 12px;border:1px solid var(--accent);border-radius:6px;background:var(--surface);color:var(--accent);cursor:pointer}
 button[aria-pressed="true"]{background:var(--accent);color:var(--surface)}
-table.fx .r{display:none}
+table.fx .r,table.fx .o3{display:none}
 body.ref table.fx .m{display:none}
 body.ref table.fx .r{display:table-cell}
 body.ref table.fx td.r{white-space:normal;overflow:visible}
-body.ref table.fx td.c-cat{white-space:normal;word-break:break-all}
+/* Every row is exactly two text lines tall in all three views; longer text is clamped and shows when the row is tapped. */
+table.fx .cl{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;height:2.6em;line-height:1.3}
+table.fx tr.open .cl{display:block;height:auto;min-height:2.6em;overflow:visible}
+/* View 3: order code, DOT reference, BABA status and BABA nuances. If the full order code cannot show in two lines,
+   the script adds body.short and the 4-character model code shows instead. */
+body.one table.fx .m{display:none}
+body.one table.fx .o3{display:table-cell}
+body.one table.fx td.c-l{max-width:200px}
+body.one table.fx td.o3.c-x{width:45%}
+.cs{display:none;font-weight:700}
+body.one.short .cf{display:none}
+body.one.short .cs{display:inline}
+.views{flex:1 1 100%;max-width:560px;margin-top:2px}
+body.compact .views{max-width:none}
+/* View 1: the six detail columns share one narrow width; on wide screens a last column points to the slider and takes the rest. */
+table.fx th.m,table.fx td.m{width:7em;min-width:7em;max-width:7em}
+body.compact table.fx th.m,body.compact table.fx td.m{min-width:0;max-width:none}
+table.fx .h1{width:99%;border-left:2px solid var(--border)}
+table.fx th.h1{white-space:normal;text-transform:none;letter-spacing:0;font-size:12px;color:var(--accent)}
+body.ref table.fx .h1,body.one table.fx .h1,body.compact table.fx .h1{display:none}
+/* Phones: the pointer is a header row across the table instead of a column. */
+table.fx tr.hintrow{display:none}
+body.compact:not(.ref):not(.one) table.fx tr.hintrow{display:table-row}
+table.fx tr.hintrow th{position:static;text-align:center;text-transform:none;letter-spacing:0;font-size:12px;color:var(--accent);white-space:normal}
+/* Sortable headers */
+table.fx tr.cols th{cursor:pointer;user-select:none}
+table.fx tr.cols th.h1{cursor:default}
+table.fx tr.cols th[data-dir]::after{content:" ▲";font-size:.8em;color:var(--accent)}
+table.fx tr.cols th[data-dir="desc"]::after{content:" ▼"}
+.vlabels{display:flex;justify-content:space-between;gap:8px;font-size:12px;font-weight:600;color:var(--muted)}
+.vlabels span{flex:1;cursor:pointer;line-height:1.2}
+.vlabels span:nth-child(2){text-align:center}.vlabels span:nth-child(3){text-align:right}
+.vlabels span.on{color:var(--accent)}
+#view{display:block;width:100%;min-width:0;padding:0;margin:4px 0 0;border:0;background:transparent;accent-color:var(--accent);height:26px}
 /* Every screen: cells wrap so a whole row shows with no sideways scrolling. The script below logs the screen
    size and steps the table text size down (--fx) until the table fits the window. */
 table.fx{font-size:var(--fx,12.5px)}
 table.fx th,table.fx td{white-space:normal;overflow:visible;max-width:none;min-width:0}
 table.fx td.c-cat,table.fx td.mono{overflow-wrap:anywhere;font-size:.92em}
-table.fx td.c-cat{min-width:150px}
-table.fx td.c-b,table.fx td.num{white-space:nowrap}
+table.fx td.c-cat{min-width:clamp(33ch,34vw,70ch)}
+table.fx td.c-cat .cl{word-break:break-all}
+table.fx td.num{white-space:nowrap}
+table.fx td.c-b .cl{display:flex;align-items:center}
 body.compact main{padding:8px 8px 32px}
 body.compact table.fx th,body.compact table.fx td{padding:2px 4px}
 body.compact table.fx th{font-size:9.5px;letter-spacing:0}
+body.compact.ref table.fx td.c-x{min-width:80px}
 body.compact table.fx td.c-cat,body.compact table.fx td.mono{word-break:break-all}
 #screeninfo{font-variant-numeric:tabular-nums}
-/* Phone held upright: oval banner with scrolling text asking the user to turn the phone sideways. */
-#turn{display:none;position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:20;width:min(88vw,360px);height:38px;
-border-radius:999px;background:var(--accent);color:var(--surface);font-weight:600;font-size:14px;line-height:38px;overflow:hidden;
-white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.3);border:0;padding:0;cursor:pointer}
+/* Phone held upright: a rotate-your-phone picture. First tap makes it half transparent, second tap removes it. */
+#turn{display:none;position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:20;width:112px;height:112px;border-radius:50%;
+background:var(--accent);color:var(--surface);border:0;padding:14px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3);transition:opacity .2s}
+#turn svg{width:100%;height:100%;display:block}
 body.turn #turn{display:block}
-#turn span{display:inline-block;padding-left:100%;animation:turnscroll 11s linear -4s infinite}
-@keyframes turnscroll{from{transform:translateX(0)}to{transform:translateX(-100%)}}
-@media (prefers-reduced-motion:reduce){#turn{height:auto;white-space:normal;line-height:1.3;padding:8px 16px;border-radius:22px;text-align:center}
-#turn span{padding-left:0;animation:none}}
-@media (max-height:520px){.table-wrap{max-height:none}th{position:static}}
+#turn.dim{opacity:.5}
+#turn .ph{transform-origin:32px 32px;animation:turnrot 2.6s ease-in-out infinite}
+@keyframes turnrot{0%,25%{transform:rotate(0)}60%,100%{transform:rotate(-90deg)}}
+@media (prefers-reduced-motion:reduce){#turn .ph{animation:none}}
 """
 
 JS = """
@@ -77,24 +114,45 @@ const ok=(!t||r.dataset.search.includes(t))&&(!y||r.dataset.type===y)&&(!s||r.da
 r.hidden=!ok;if(ok&&r.dataset.main)n++;});
 document.getElementById('count').textContent=n;}
 [q,ty,sf,ph].forEach(x=>x.addEventListener(x===q?'input':'change',apply));
-const rb=document.getElementById('refbtn');
-rb.addEventListener('click',()=>{const on=document.body.classList.toggle('ref');rb.setAttribute('aria-pressed',on);
-rb.textContent=on?'Back to fixture details':'Show BABA reference';fit();});
+const vw=document.getElementById('view'),vl=[...document.querySelectorAll('#vlabels span')];
+function setView(v){vw.value=v;document.body.classList.toggle('ref',v==2);document.body.classList.toggle('one',v==3);
+vl.forEach(x=>x.classList.toggle('on',x.dataset.v==v));fit();}
+vw.addEventListener('input',()=>setView(+vw.value));
+vl.forEach(x=>x.addEventListener('click',()=>setView(+x.dataset.v)));
+// Click a column header to sort by it; click again to reverse. Works in all three views. Blank and "—" cells go last.
+function sortKey(td){const t=(td?td.textContent:'').trim();if(!t||t==='—'||t==='request'||t==='unspecified'||t==='not printed')return null;
+const m=t.replace(/[,≈]/g,'').match(/^([0-9]+([.][0-9]+)?)(V|K|W)?([/–-][0-9.]+(V|K|W)?)?$/);return m?parseFloat(m[1]):t.toLowerCase();}
+document.querySelectorAll('table.fx tr.cols th:not(.h1)').forEach(th=>th.addEventListener('click',()=>{
+const tr=th.parentElement,i=th.cellIndex,tb=th.closest('table').tBodies[0],dir=th.dataset.dir==='asc'?'desc':'asc';
+tr.querySelectorAll('th').forEach(x=>delete x.dataset.dir);th.dataset.dir=dir;
+const rows=[...tb.rows].map((r,n)=>({r,n,k:sortKey(r.cells[i])}));
+rows.sort((a,b)=>{if(a.k===null||b.k===null)return a.k===b.k?a.n-b.n:(a.k===null?1:-1);
+if(typeof a.k!==typeof b.k)return typeof a.k==='number'?-1:1;
+let c=typeof a.k==='number'?a.k-b.k:String(a.k).localeCompare(String(b.k),undefined,{numeric:true});
+return (dir==='asc'?c:-c)||a.n-b.n;});
+rows.forEach(x=>tb.appendChild(x.r));}));
 // Phone check: the browser's own mobile flag when it has one, else a phone user agent on a small touch screen.
 function isPhone(){const sc=window.screen||{},small=Math.min(sc.width||9999,sc.height||9999)<=600;if(!small)return false;
 const ud=navigator.userAgentData;if(ud&&typeof ud.mobile==='boolean')return ud.mobile;
 return /Android.*Mobile|iPhone|iPod|Windows Phone/i.test(navigator.userAgent)&&navigator.maxTouchPoints>0;}
 let turnOff=false;
-document.getElementById('turn').addEventListener('click',()=>{turnOff=true;document.body.classList.remove('turn');});
+const tb=document.getElementById('turn');
+tb.addEventListener('click',()=>{if(tb.classList.contains('dim')){turnOff=true;document.body.classList.remove('turn');}else tb.classList.add('dim');});
 // Log the monitor / window size and fit the table to it, so desktop behaves like a phone held sideways.
 function fit(){const w=window.innerWidth,h=window.innerHeight,sc=window.screen||{},dpr=window.devicePixelRatio||1;
-document.body.classList.toggle('compact',w<1000);
-const sizes=w<1000?[11,10.5,10]:[12.5,12,11.5,11,10.5,10];let used=sizes[0],ok=false;
-const wraps=[...document.querySelectorAll('table.fx')].map(t=>t.parentElement);
-for(const fs of sizes){used=fs;document.body.style.setProperty('--fx',fs+'px');
-ok=wraps.every(x=>x.scrollWidth<=x.clientWidth+1);if(ok)break;}
+// Compact layout: narrow windows, short windows (a phone held sideways can be over 1000px wide) and detected phones.
+document.body.classList.toggle('compact',w<1000||h<=560||isPhone());
+const sizes=document.body.classList.contains('compact')?[11,10.5,10]:[12.5,12,11.5,11,10.5,10];let used=sizes[0],ok=false;
+const wraps=[...document.querySelectorAll('table.fx')].map(t=>t.parentElement),one=document.body.classList.contains('one');
+// In the one-line view a row "fits" only if nothing overflows and the notes column keeps some room.
+const room=()=>[...document.querySelectorAll('table.fx td.c-cat .cl')].every(c=>!c.offsetParent||c.scrollHeight<=c.clientHeight+2);
+const tryFit=()=>{for(const fs of sizes){used=fs;document.body.style.setProperty('--fx',fs+'px');
+ok=wraps.every(x=>x.scrollWidth<=x.clientWidth+1)&&room();if(ok)break;}};
+document.body.classList.remove('short');tryFit();
+if(one&&!ok){document.body.classList.add('short');tryFit();}
 const msg='Screen '+(sc.width||'?')+'×'+(sc.height||'?')+' · window '+w+'×'+h+' · pixel ratio '+(Math.round(dpr*100)/100)+
-' · table text '+used+'px · '+(ok?'row fits the window':'row is wider than the window, scroll sideways');
+' · table text '+used+'px · '+(ok?'row fits the window':'row is wider than the window, scroll sideways')+
+(document.body.classList.contains('short')?' · short model codes':'');
 const phone=isPhone();document.body.classList.toggle('turn',phone&&h>w&&!turnOff);
 const el=document.getElementById('screeninfo');if(el)el.textContent=msg+(phone?' · phone detected':'');
 if(msg!==fit.last){fit.last=msg;console.log('[BABA fixtures] '+msg);}}
@@ -149,21 +207,42 @@ def use_label(fx):
     return kind + (f" {app}" if app else "")
 
 
-# Column layout: fixture details first (optic, voltage, CCT, manufacturer ...), then the order code, then the BABA
-# reference columns. The reference columns stay hidden until the button is pressed; pressing it hides every
-# detail column except the order code, so a row always fits a phone held sideways.
-MAIN_HEADERS = ["Optic", "Voltage", "CCT", "Manufacturer", "Family", "Use", "W", "Lumens"]
-FILE_HEADERS = ["Cut sheet", ".ies"]
-REF_HEADERS = ["DOT list", "BABA status", "Catalog basis", "BABA notes"]
+# Column layout: voltage, watts, lumens, optic, CCT and the .ies link, then the order code. Everything else sits behind
+# the toggle button: pressing it keeps the exact order code and swaps the other columns for the cut sheet, the maker
+# and family, and the BABA reference (DOT list, status, basis, notes). Either view fits a phone held sideways.
+MAIN_HEADERS = ["Voltage", "W", "Lumens", "Optic", "CCT", ".ies"]
+REF_HEADERS = ["Cut sheet", "Manufacturer", "Family", "Use case", "DOT reference", "BABA status", "Order notes"]
+
+
+ONE_LINE = {"DOT reference", "BABA status"}
+# Notes about Buy America go in the last column of the third view ("BABA nuances"); everything else is an order note.
+BABA_NOTE = re.compile(r"BABA|\bBAA\b|Buy America|DOT wording|Phase inferred|AML authorization|Y2 code|USPOM|Gold Star", re.I)
+
+
+def short_code(fx):
+    """Four-character model designator (ATB0, ARCH, GCJ2 ...) for the one-line view when the full order code will not fit."""
+    cat = re.sub(r"^(Conventional Highway|Coventional Highway|Expressway)\s*[:\-–]\s*", "", fx.get("catalog") or "", flags=re.I)
+    cat = re.sub(r"^(BABA|BAA)[-\s]+", "", cat)
+    token = re.split(r"[-\s_/]", cat.strip(), maxsplit=1)[0]
+    return re.sub(r"[^A-Za-z0-9]", "", token)[:4].upper() or "—"
 
 
 def fixture_table(order_label, body, empty_msg, show_listed=False):
-    ref = REF_HEADERS + (["TxDOT-listed catalog (4000K)"] if show_listed else [])
+    ref = REF_HEADERS + (["Catalog basis", "TxDOT-listed catalog (4000K)"] if show_listed else [])
     head = ("".join(f'<th class="m">{e(h)}</th>' for h in MAIN_HEADERS) + f"<th>{e(order_label)}</th>"
-            + "".join(f'<th class="m">{e(h)}</th>' for h in FILE_HEADERS) + "".join(f'<th class="r">{e(h)}</th>' for h in ref))
+            + "".join(f'<th class="{"o3" if h in ONE_LINE else "r"}">{e(h)}</th>' for h in ref)
+            + '<th class="o3">BABA nuances</th>'
+            + '<th class="h1">See slider above for Cutsheet &amp; Order Notes as well as BABA Nuances</th>')
     if not body:
-        body = f'<tr><td colspan="{len(MAIN_HEADERS) + 1 + len(FILE_HEADERS) + len(ref)}" class="empty">{e(empty_msg)}</td></tr>'
-    return f'<div class="table-wrap"><table class="fx"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
+        body = f'<tr><td colspan="{len(MAIN_HEADERS) + 3 + len(ref)}" class="empty">{e(empty_msg)}</td></tr>'
+    hint = '<tr class="hintrow"><th colspan="40">See slider above for Cutsheet &amp; Order Notes as well as BABA Nuances</th></tr>'
+    return f'<div class="table-wrap"><table class="fx"><thead>{hint}<tr class="cols">{head}</tr></thead><tbody>{body}</tbody></table></div>'
+
+
+def ftd(content, cls="", full=None):
+    """Fixture-table cell: content sits in a block that is always exactly two text lines tall (clamped; tap the row to open)."""
+    title = f' title="{e(full)}"' if full else ""
+    return f'<td class="{cls}"{title}><div class="cl">{content}</div></td>'
 
 
 def row(fx, sources, show_listed, main, show_cct=False):
@@ -180,7 +259,10 @@ def row(fx, sources, show_listed, main, show_cct=False):
     lumens = fx.get("lumens")
     lm = (("≈" if fx.get("lumens_estimated") else "") + f"{lumens:,}") if isinstance(lumens, (int, float)) else "—"
     watts = fx.get("watts")
-    notes = " · ".join(fx.get("caveats", []))
+    caveats = fx.get("caveats", [])
+    notes = " · ".join(caveats)
+    order_notes = " · ".join(c for c in caveats if not BABA_NOTE.search(c)) or "—"
+    baba_notes = " · ".join(c for c in caveats if BABA_NOTE.search(c)) or "—"
     volt = "not shown" if fx.get("voltage_inferred") else volt_label(fx.get("voltage"))
     search = " ".join(str(x) for x in [fx.get("manufacturer"), fx.get("brand"), fx.get("family"), fx.get("catalog"),
                                        d.get("listed_catalog"), kind, st, STATE_NAMES.get(st, ""), notes] if x).lower()
@@ -189,22 +271,23 @@ def row(fx, sources, show_listed, main, show_cct=False):
     return (
         f'<tr data-search="{e(search)}" data-type="{e(fx.get("product_type"))}" data-state="{e(st)}" '
         f'data-phase="{e(d.get("phase", ""))}"{" data-main=1" if main else ""}>'
-        + td(e(fx.get("distribution") or "—"), "m c-s", fx.get("distribution"))
-        + td(e(volt), "m c-d", "Not shown on the DOT listing (placeholder voltage code); 480V is only an available option for the family" if fx.get("voltage_inferred") else None)
-        + td(e(cct_label(fx)), "m c-d", "Color temperature printed on the DOT listing")
-        + td(f"<strong>{e(fx.get('manufacturer'))}</strong>", "m c-m", who)
-        + td(e(fx.get("family")), "m c-s", fx.get("family"))
-        + td(e(kind), "m c-d")
-        + td(e(watts if watts not in (None, "") else "—"), "m num")
-        + td(e(lm), "m num", "Estimated" if fx.get("lumens_estimated") else None)
-        + td(e(fx.get("catalog")), "c-cat mono", fx.get("catalog"))
-        + td(sheet_cell(sheet), "m c-d", sheet.get("title"))
-        + td(ies_cell(fx), "m c-d", ies_title(fx))
-        + td(dot, "r c-l", f'{src.get("name", "")} · {d.get("table", "")}')
-        + td(f'<span class="badge {label[1]}">{e(label[0])}</span>', "r c-b", d.get("status"))
-        + td(badge_for(BASIS_BADGE, fx.get("basis")), "r c-b")
-        + td(e(notes), "r c-x muted", notes)
-        + (td(e(listed), "r c-l mono muted", listed) if show_listed else "")
+        + ftd(e(volt), "m c-d", "Not shown on the DOT listing (placeholder voltage code); 480V is only an available option for the family" if fx.get("voltage_inferred") else None)
+        + ftd(e(watts if watts not in (None, "") else "—"), "m num")
+        + ftd(e(lm), "m num", "Estimated" if fx.get("lumens_estimated") else None)
+        + ftd(e(fx.get("distribution") or "—"), "m c-s", fx.get("distribution"))
+        + ftd(e(cct_label(fx)), "m c-d", "Color temperature printed on the DOT listing")
+        + ftd(ies_cell(fx), "m c-d", ies_title(fx))
+        + ftd(f'<span class="cf">{e(fx.get("catalog"))}</span><span class="cs">{e(short_code(fx))}</span>', "c-cat mono", fx.get("catalog"))
+        + ftd(sheet_cell(sheet), "r c-d", sheet.get("title"))
+        + ftd(f"<strong>{e(fx.get('manufacturer'))}</strong>", "r c-m", who)
+        + ftd(e(fx.get("family")), "r c-s", fx.get("family"))
+        + ftd(e(kind), "r c-d")
+        + ftd(dot, "o3 c-l", f'{src.get("name", "")} · {d.get("table", "")}')
+        + ftd(f'<span class="badge {label[1]}">{e(label[0])}</span>', "o3 c-b", d.get("status"))
+        + ftd(e(order_notes), "r c-x muted", order_notes)
+        + (ftd(badge_for(BASIS_BADGE, fx.get("basis")), "r c-b") + ftd(e(listed), "r c-l mono muted", listed) if show_listed else "")
+        + ftd(e(baba_notes), "o3 c-x muted", baba_notes)
+        + '<td class="h1"></td>'
         + "</tr>"
     )
 
@@ -290,7 +373,7 @@ def nav(current, strict=False):
     pages = ([("fixtures-480v.html", "480V fixtures"), ("fixtures-120-277v.html", "120–277V fixtures")] if strict else []) + [
         ("fixtures-3k.html", "480V 3000K only" if strict else "Fixtures 3000K"),
         ("fixtures-4k.html", "480V 4000K only" if strict else "Fixtures 4000K"),
-        ("index.html", "Compliance index"), ("fiber.html", "Fiber products")]
+        ("compliance.html", "Compliance index"), ("fiber.html", "Fiber products")]
     return " · ".join(f"<strong>{e(t)}</strong>" if f == current else f'<a href="{f}">{e(t)}</a>' for f, t in pages)
 
 
@@ -325,6 +408,11 @@ def render(build_date, data, view):
         for s in sorted(sources.values(), key=lambda s: s["state"]) if s["id"] in used
     )
     show_listed = view.get("show_listed")
+    legacy_notes = "" if not unlisted else (
+        f'<span class="muted">Removed 2026-11-09: {data.get("removed_count", 0)} listings that are not Phase 2. They are kept in '
+        '<code>data/fixtures_removed.json</code>.</span><br><span class="muted">"As listed" = catalog number copied from the DOT list. '
+        '"CCT swapped" = TxDOT-listed number with the 3000K option substituted. The main table only includes listings that print a 480V '
+        'code; flagged listings with a placeholder voltage are in the second table.</span>')
     body = "\n".join(row(f, sources, show_listed, True, view.get("show_cct")) for f in shown)
     family_html = "" if not unlisted else f"""<h2>Flagged listings that don't show 480V or a color temperature</h2>
 <p class="small muted">These DOT entries are flagged for Buy America, but the listing itself does not print a 480V voltage code
@@ -346,31 +434,33 @@ option, but that is not evidence the listed configuration is 480V; for example, 
 <main>
 <h1>{e(view["title"])}</h1>
 <div class="muted">{e(view.get("volt_label", "480V"))} luminaires that state DOT product lists state are Phase 2 Buy America (BABA) compliant · Updated {e(build_date)}</div>
-<div class="small">{nav(view["file"], not unlisted)}</div>
+<div class="small">{nav(view["file"]) if unlisted else site_nav(view["file"])}</div>
 
 <div class="stats">
   <span class="chips">{chips}</span>
   <span><b id="count">{len(shown)}</b>configurations</span>
-  <span><b>{n_p2}</b>flagged Phase 2 (55%)</span>
+  {f"<span><b>{n_p2}</b>flagged Phase 2 (55%)</span>" if unlisted else ""}
   <span><b>{n_ies}</b>.ies files</span>
   <span><b>{len(states)}</b>states</span>
 </div>
 
-<div class="card">
-<strong>How to read this.</strong> {e(view.get("intro", ""))}
+<details class="card howto">
+<summary><strong>How to read this</strong> · sources: {e(", ".join(STATE_NAMES.get(x, x) for x in states))} <span class="muted">(tap to open)</span></summary>
+<p> {e(view.get("intro", ""))}</p>
 <div class="phases"><span>{badge_for(PHASE_BADGE, "phase2")} DOT says US final assembly and more than 55% domestic cost (projects obligated on/after Oct 1, 2026). Only these listings are shown.</span></div>
-<span class="muted">Removed 2026-11-09: {data.get("removed_count", 0)} listings that are not Phase 2 (final assembly only, "eligible" or "BAA" with no phase, TxDOT Compliant v4, or project-level certification). They are kept in <code>data/fixtures_removed.json</code>.</span><br>
-<span class="muted">{'"As listed" = catalog number copied from the DOT list. "CCT swapped" = TxDOT-listed number with the 3000K option substituted.' if unlisted else 'Every catalog number is copied from the state DOT list as printed; nothing is substituted or inferred.'}
-{'The main table only includes listings that print a 480V code (480, 8 for Cooper, HVOLT/HV); flagged listings with a placeholder voltage are in the second table.' if unlisted else ('Only listings that print a 120–277V code (MVOLT, MV, UNV, U, 0, or "120-277 VAC") are included. TxDOT labels its rows 120/240V. Listings with a placeholder voltage, or a voltage code that could not be confirmed as 120–277V, are left out.' if view.get("volt_label") == "120–277V" else 'Only listings that print a 480V code (480, 480 VAC, 8 for Cooper, HVOLT/HV) are included; listings with a placeholder voltage are left out.')} Fixture details come first; press <strong>Show BABA reference</strong> to swap them for the DOT list, BABA status and notes next to each order code. The table sizes itself to your screen so a whole row shows at once; on a phone, turn it sideways. The detected screen size is shown at the bottom of the page.</span>
+{legacy_notes}
 <ul>{src_items}</ul>
-</div>
+</details>
 
 <div class="controls">
   <input id="q" type="search" placeholder="Search manufacturer, family, catalog number, or state" aria-label="Search">
-  <select id="st" aria-label="Filter by state"><option value="">All states</option>{state_opts}</select>
-  <select id="ph" aria-label="Filter by BABA status"><option value="">All BABA statuses</option>{phase_opts}</select>
-  <select id="type" aria-label="Filter by type"><option value="">All types</option>{type_opts}</select>
-  <button id="refbtn" type="button" aria-pressed="false">Show BABA reference</button>
+  <select id="st" aria-label="Filter by state"><option value="">State</option>{state_opts}</select>
+  <select id="ph" aria-label="Filter by BABA status"><option value="">BABA status</option>{phase_opts}</select>
+  <select id="type" aria-label="Filter by use case"><option value="">Use case</option>{type_opts}</select>
+  <div class="views">
+    <div class="vlabels" id="vlabels"><span data-v="1" class="on">Fixture details</span><span data-v="2">Cutsheet &amp; Order Notes</span><span data-v="3">BABA nuances</span></div>
+    <input id="view" type="range" min="1" max="3" step="1" value="1" aria-label="Table view: 1 fixture details, 2 cut sheet and order notes, 3 BABA nuances">
+  </div>
 </div>
 
 {fixture_table(view["order_label"], body, "No fixtures match the filter.", show_listed)}
@@ -382,12 +472,13 @@ option, but that is not evidence the listed configuration is 480V; for example, 
 <footer>
 Generated by <code>scripts/build_fixtures.py</code> from <code>data/fixtures.json</code>. Photometric files and cut sheet
 copies are the manufacturers' published files, kept here for convenience; each links to its source. States researched with no
-Buy America-flagged luminaires are summarized on the <a href="index.html">compliance index</a>. This page is a research
+Buy America-flagged luminaires are summarized on the <a href="compliance.html">compliance index</a>. This page is a research
 aid, not a certification: get the manufacturer's project-specific Buy America certification for the exact catalog number you order.
+<div>Rule: <a href="compliance.html#cfr">23 CFR 635.410(c) references</a> for the Oct 1, 2026 deadline, the 55 percent threshold, transportation costs and US manufacture.</div>
 <div id="screeninfo" class="muted"></div>
 </footer>
 </main>
-<button id="turn" type="button" aria-label="Turn your phone sideways to see each whole row. Tap to dismiss."><span>↻ Turn your phone sideways to see each whole row at once &nbsp;·&nbsp; tap to dismiss</span></button>
+<button id="turn" type="button" aria-label="Turn your phone sideways to see each whole row. Tap once to fade this picture, twice to remove it." title="Turn your phone sideways"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ph"><rect x="23" y="14" width="18" height="36" rx="4"/><path d="M29.5 44.5h5"/></g><path d="M6.6 22.8A27 27 0 0 1 41.2 6.6"/><path d="M45.2 8.1L37.1 9.9L40.1 1.4Z" fill="currentColor" stroke-width="1"/><path d="M57.4 41.2A27 27 0 0 1 22.8 57.4"/><path d="M18.8 55.9L26.9 54.1L23.9 62.6Z" fill="currentColor" stroke-width="1"/></svg></button>
 <script>{JS}</script>
 </body>
 </html>
@@ -410,7 +501,7 @@ def chooser(build_date, unlisted=False):
 <div class="card"><ul>
 {items}
 </ul><p class="small muted">Only Phase 2 listings are shown{'' if unlisted else ', with the exact model number the state DOT prints'}.</p></div>
-<div class="small"><a href="index.html">Compliance index</a> · <a href="fiber.html">Fiber products</a></div>
+<div class="small">{site_nav("fixtures.html")}</div>
 </main></body></html>
 """
 
@@ -425,7 +516,8 @@ def main():
     for view in data["views"]:
         ROOT.joinpath(view["file"]).write_text(render(args.date, data, view), encoding="utf-8")
         print(f"Built {view['file']} for {args.date}")
-    ROOT.joinpath("fixtures.html").write_text(chooser(args.date, data["show_unlisted"]), encoding="utf-8")
+    if data["show_unlisted"]:  # in the strict design build_site.py writes fixtures.html (a copy of the start page)
+        ROOT.joinpath("fixtures.html").write_text(chooser(args.date, True), encoding="utf-8")
     if not data["show_unlisted"]:  # strict design: one full list per voltage, with no color temperature requirement
         for view in VOLT_VIEWS:
             ROOT.joinpath(view["file"]).write_text(render(args.date, data, view), encoding="utf-8")

@@ -1,19 +1,19 @@
 {
   "categories": [
     {
-      "id": "cabinet",
-      "name": "Splice housings for traffic / ITS cabinets",
-      "description": "Rack- and wall-mount housings, splice trays and cassettes that fit inside a signal or ITS field cabinet. These are manufactured products. Corning's catalog marks none of them BABA; FDOT lists them as 'BABA Eligible' for named projects only. Corning's BEAD-BABA hardware (2178 closures, FTH NIDs, GEN III cabinets) is outside-plant broadband gear, not cabinet hardware."
-    },
-    {
       "id": "mm",
-      "name": "Orange multimode cable (OM1 / OM2)",
-      "description": "Orange is the TIA-598 color for OM1 and OM2; OM3/OM4 are aqua. Only Corning's indoor MIC family ships orange; FREEDM and ALTOS multimode cables are black. Standard Corning jumpers/pigtails checked in eCatalog are flagged 'BEAD/BABA – Not Compliant', so none are listed here."
+      "name": "Multimode cable (62.5 µm OM1 and 50 µm OM2)",
+      "description": "Outside plant: Loose-tube 62.5/125 µm cable for signal interconnect and ITS runs that must splice to older 62.5 µm plant. Georgia DOT is the only state list found that names a 62.5 µm cable and flags it for Buy America. The flag means GDOT holds a manufacturer letter; the list does not say whether the letter covers the fiber preform and draw as well as the cable. Indoor: Orange is the TIA-598 color for OM1 and OM2; OM3/OM4 are aqua. Only Corning's indoor MIC family ships orange; FREEDM and ALTOS multimode cables are black. Standard Corning jumpers/pigtails checked in eCatalog are flagged 'BEAD/BABA – Not Compliant', so none are listed here."
     },
     {
       "id": "sm",
       "name": "G.652 single-mode cable",
       "description": "Corning fiber code E = single-mode OS2 (G.652.D); Z = SMF-28 Ultra (G.652.D and G.657.A1). The code is the 4th character of the part number. Order the '-US' suffix version for BABA builds."
+    },
+    {
+      "id": "cabinet",
+      "name": "Splice housings for traffic / ITS cabinets",
+      "description": "Rack- and wall-mount housings, splice trays and cassettes that fit inside a signal or ITS field cabinet. These are manufactured products. Corning's catalog marks none of them BABA; FDOT lists them as 'BABA Eligible' for named projects only. Corning's BEAD-BABA hardware (2178 closures, FTH NIDs, GEN III cabinets) is outside-plant broadband gear, not cabinet hardware."
     }
   ],
   "rule_notes_html": [
@@ -41,9 +41,50 @@
       "title": "FDOT Approved Product List – Fiber Optic Connection Hardware",
       "url": "https://path.fdot.gov/ProductTypes/Index/1291",
       "note": "Corning CCH, SPH, WIC, SCF, cassettes; 'BABA Eligible', project-limited."
+    },
+    {
+      "title": "GDOT Qualified Products List 48 – Fiber Optic System",
+      "url": "https://www.dot.ga.gov/PartnerSmart/Materials/Documents/qpl48.pdf",
+      "note": "Revised 10/01/26. Buy America column: flag = \"Build America Buy Act Letter Provided\". Lists Corning ALTOS OM1 (XXXKU4-T4730D20) and single-mode (XXXZU4-T4722D20) with the flag; Corning housings, cassettes and panels have a blank Buy America column."
     }
   ],
   "products": [
+    {
+      "id": "altos-om1-ku4",
+      "category": "mm",
+      "name": "ALTOS loose tube, gel-free, all-dielectric, FastAccess — OM1",
+      "part_number": "XXXKU4-T4730D20 (XXX = fiber count, e.g. 012KU4-T4730D20)",
+      "fiber": "62.5 µm OM1 (code K)",
+      "jacket": "Black",
+      "rating": "Outdoor, all-dielectric",
+      "counts": "6–288F (GDOT lists 06, 12, 24, 36, 48, 60, 72, 96, 144, 192, 216, 288)",
+      "basis": "Construction material (2 CFR 184): every manufacturing step in the US, including fiber preform and draw; no 55% test",
+      "corning_baba": "not stated",
+      "spec_sheet": {
+        "title": "Corning eCatalog product page 012KU4-T4730D20",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/Fiber-Optic-Cable/p/012KU4-T4730D20"
+      },
+      "dot_listings": [
+        {
+          "state": "GA",
+          "list_name": "GDOT QPL 48 – Section 935 Fiber Optic System (Revised 10/01/26), Buy America column flagged: \"Build America Buy Act Letter Provided\"",
+          "listing_id": "QPL 48 · Traffic Signal and ITS, 05/01/2024",
+          "url": "https://www.dot.ga.gov/PartnerSmart/Materials/Documents/qpl48.pdf"
+        }
+      ],
+      "evidence": [
+        {
+          "summary": "GDOT QPL 48 (Revised 10/01/26), page 6",
+          "url": "https://www.dot.ga.gov/PartnerSmart/Materials/Documents/qpl48.pdf"
+        }
+      ],
+      "notes": [
+        "GDOT prints: \"XXXKU4-T4730D20, xxx Fiber Count, 62.5 μm multimode (OM1)\"; approved for Traffic Signal and ITS, 05/01/2024.",
+        "GDOT's Buy America column shows its flag symbol on this row; the legend reads \"Build America Buy Act Letter Provided\".",
+        "Corning's eCatalog page for 012KU4-T4730D20 shows no BABA or BEAD-BABA field, and no -US variant exists (checked Nov 14, 2026). Ask Corning for the letter GDOT holds.",
+        "GDOT Section 935 keeps OM1 qualified to splice to \"the Department's existing legacy 62.5/125 µm MM fiber optic cable\"."
+      ]
+    },
     {
       "category": "cabinet",
       "name": "Closet Connector Housing CCH-01U (1U, 2 panels)",
@@ -423,8 +464,8 @@
       "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
       "corning_baba": "family",
       "spec_sheet": {
-        "title": "Corning eCatalog spec sheet 012K81-33130-A1",
-        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012K81-33130-A1.pdf"
+        "title": "Corning eCatalog product page 012K81-33130-A1 (the spec sheet PDF link for this part fails)",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/Fiber-Optic-Cable/p/012K81-33130-A1"
       },
       "dot_listings": [],
       "evidence": [
@@ -459,6 +500,12 @@
           "list_name": "FDOT APL – Fiber Optic Cable (Spec 633), BABA Eligible: Eligible",
           "listing_id": "633-002-001 · Construction Material – Optical Fiber; no project limit",
           "url": "https://path.fdot.gov/ProductTypes/Index/1015"
+        },
+        {
+          "state": "GA",
+          "list_name": "GDOT QPL 48 – Section 935 Fiber Optic System (Revised 10/01/26), Buy America column flagged: \"Build America Buy Act Letter Provided\"",
+          "listing_id": "QPL 48 · XXXZU4-T4722D20, SMF-28 Ultra (OS2); Traffic Signal and ITS, 03/01/2024",
+          "url": "https://www.dot.ga.gov/PartnerSmart/Materials/Documents/qpl48.pdf"
         }
       ],
       "evidence": [
@@ -469,11 +516,16 @@
         {
           "summary": "2 CFR 184.6",
           "url": "https://www.ecfr.gov/current/title-2/subtitle-A/chapter-I/part-184"
+        },
+        {
+          "summary": "GDOT QPL 48 (Revised 10/01/26), page 6",
+          "url": "https://www.dot.ga.gov/PartnerSmart/Materials/Documents/qpl48.pdf"
         }
       ],
       "notes": [
         "Strongest evidence on this page: FDOT lists the '-US' part numbers without a project limit.",
-        "The -US suffix marks Corning's BABA build; the standard PN (no -US) is not the listed item."
+        "The -US suffix marks Corning's BABA build; the standard PN (no -US) is not the listed item.",
+        "GDOT QPL 48 (Revised 10/01/26) lists XXXZU4-T4722D20 with its Buy America flag (\"Build America Buy Act Letter Provided\")."
       ]
     },
     {
@@ -517,8 +569,8 @@
       "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
       "corning_baba": "family",
       "spec_sheet": {
-        "title": "Corning eCatalog spec sheet 012ZUC-T4122D20",
-        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012ZUC-T4122D20.pdf"
+        "title": "Corning eCatalog product page 012ZUC-T4122D20 (the spec sheet PDF link for this part fails)",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/Fiber-Optic-Cable/p/012ZUC-T4122D20"
       },
       "dot_listings": [
         {
@@ -550,8 +602,8 @@
       "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
       "corning_baba": "family",
       "spec_sheet": {
-        "title": "Corning eCatalog spec sheet 024EUF-T4101D20",
-        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/024EUF-T4101D20.pdf"
+        "title": "Corning eCatalog product page 024EUF-T4101D20 (the spec sheet PDF link for this part fails)",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/Fiber-Optic-Cable/p/024EUF-T4101D20"
       },
       "dot_listings": [],
       "evidence": [
@@ -577,8 +629,8 @@
       "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
       "corning_baba": "family",
       "spec_sheet": {
-        "title": "Corning eCatalog spec sheet 012E8F-31131-29",
-        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012E8F-31131-29.pdf"
+        "title": "Corning eCatalog product page 012E8F-31131-29 (the spec sheet PDF link for this part fails)",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/Fiber-Optic-Cable/p/012E8F-31131-29"
       },
       "dot_listings": [],
       "evidence": [
@@ -629,8 +681,8 @@
       "basis": "Construction material (2 CFR 184.6(a)(4)–(5)): preform, draw, buffering, stranding, jacketing all in US",
       "corning_baba": "family",
       "spec_sheet": {
-        "title": "Corning eCatalog spec sheet 012ZM4-T3F22A20",
-        "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012ZM4-T3F22A20.pdf"
+        "title": "Corning eCatalog product page 012ZM4-T3F22A20 (the spec sheet PDF link for this part fails)",
+        "url": "https://ecatalog.corning.com/optical-communications/US/en/Fiber-Optic-Cable/p/012ZM4-T3F22A20"
       },
       "dot_listings": [],
       "evidence": [
