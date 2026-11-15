@@ -78,7 +78,7 @@ def render_table(rows, columns):
     head = "".join(f"<th>{e(h)}</th>" for h, _, _ in columns)
     body = []
     for r in rows:
-        search = (" ".join(str(r.get(k, "")) for k in ("state", "manufacturer", "model", "product", "part", "says", "missing", "source"))
+        search = (" ".join(str(r.get(k, "")) for k in ("state", "manufacturer", "model", "product", "part", "material", "says", "missing", "source"))
                   + " " + STATE_NAMES.get(r.get("state", ""), "")).lower()
         tds = "".join(cell(src_cell(r), cls) if key == "_src" else
                       cell(f"<strong>{e(r.get(key) or '—')}</strong>" if key in ("state", "manufacturer") else e(r.get(key) or "—"), cls)
@@ -95,9 +95,14 @@ FIB_COLS = [("State", "state", ""), ("Manufacturer", "manufacturer", ""), ("Prod
             ("What is missing", "missing", "wide"), ("Source", "_src", "")]
 
 
+CON_COLS = [("State", "state", ""), ("Manufacturer", "manufacturer", ""), ("Product", "product", ""),
+            ("Order code as printed", "part", "code"), ("Material", "material", ""), ("What the source says", "says", "wide"),
+            ("What is missing", "missing", "wide"), ("Source", "_src", "")]
+
+
 def render(build_date, data):
-    lum, fib = data.get("luminaires", []), data.get("fiber", [])
-    states = sorted({r.get("state") for r in lum + fib if r.get("state")})
+    lum, fib, con = data.get("luminaires", []), data.get("fiber", []), data.get("conduit", [])
+    states = sorted({r.get("state") for r in lum + fib + con if r.get("state")})
     state_opts = "".join(f'<option value="{e(s)}">{e(s)} – {e(STATE_NAMES.get(s, s))}</option>' for s in states)
     blocked = "".join(f"<li><strong>{e(b.get('state'))}</strong> – {link(b.get('url'), b.get('name'))}: {e(b.get('why'))}</li>"
                       for b in data.get("blocked", []))
@@ -117,9 +122,10 @@ def render(build_date, data):
 <div class="small">{site_nav("leads.html")}</div>
 
 <div class="stats">
-  <span><b id="count">{len(lum) + len(fib)}</b>leads</span>
+  <span><b id="count">{len(lum) + len(fib) + len(con)}</b>leads</span>
   <span><b>{len(lum)}</b>luminaire</span>
   <span><b>{len(fib)}</b>fiber</span>
+  <span><b>{len(con)}</b>conduit</span>
   <span><b>{len(states)}</b>states</span>
 </div>
 
@@ -136,6 +142,10 @@ def render(build_date, data):
 <h2 id="fiber">Fiber leads (62.5 µm multimode and related)</h2>
 <p class="small muted">{e(data.get("fiber_intro", ""))}</p>
 {render_table(fib, FIB_COLS)}
+
+<h2 id="conduit">Conduit leads (HDPE and rigid metal)</h2>
+<p class="small muted">{e(data.get("conduit_intro", ""))}</p>
+{render_table(con, CON_COLS)}
 
 {('<h2 id="blocked">Lists that could not be read</h2><div class="card"><ul>' + blocked + '</ul></div>') if blocked else ''}
 
