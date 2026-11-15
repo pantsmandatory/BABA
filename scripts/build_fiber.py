@@ -33,6 +33,7 @@ document.getElementById('count').textContent=n;}
 q.addEventListener('input',apply);cat.addEventListener('change',apply);
 """ + ROW_JS
 
+SLIDER_LABELS = ["Product details", "Spec sheet & DOT listing", "BABA nuances"]
 # (label, slider view): "" = always shown; 1 = product details, 2 = spec sheet and DOT listing, 3 = BABA nuances
 HEADERS = [("Product", ""), ("Part number / ordering", ""), ("Fiber", "1"), ("Jacket", "1"), ("Rating", "1"), ("Counts", "1"),
            ("Spec sheet", "2"), ("DOT listing", "2"), ("Sources", "2"), ("Maker BABA", "3"), ("BABA basis", "3"), ("Notes", "3")]
@@ -61,7 +62,7 @@ def row(p, cat_id):
         + vtd(e(p.get("jacket", "—")), "1")
         + vtd(e(p.get("rating", "—")), "1", "", p.get("rating"))
         + vtd(e(p.get("counts", "—")), "1", "", p.get("counts"))
-        + vtd(link(sheet.get("url"), "PDF") if sheet.get("url") else e(sheet.get("title") or "—"), "2", "", sheet.get("title"))
+        + vtd(link(sheet.get("url"), "PDF" if sheet.get("url", "").lower().endswith(".pdf") else "Product page") if sheet.get("url") else e(sheet.get("title") or "—"), "2", "", sheet.get("title"))
         + vtd(dot_cell, "2", "", dot_full)
         + vtd(numbered_links(ev), "2", "", " | ".join(x.get("summary", "") for x in ev))
         + vtd(label(p.get("corning_baba")), "3", "c-b", p.get("corning_quote"))
@@ -85,6 +86,7 @@ def render(build_date):
         sections.append(
             f'<section data-cat="{e(c["id"])}"><h2>{e(c["name"])}</h2>'
             f'<p class="small muted">{e(c.get("description", ""))}</p>'
+            f'{view_slider(SLIDER_LABELS)}'
             f'{view_table(HEADERS, rows, "No products with BABA documentation found yet.")}</section>'
         )
     rules = "".join(f"<li>{r}</li>" for r in data.get("rule_notes_html", []))
@@ -103,7 +105,7 @@ def render(build_date):
 <body class="view1">
 <main>
 <h1>BABA Fiber Products</h1>
-<div class="muted">Corning 62.5 µm multimode cable (outside-plant and orange indoor), G.652 single-mode cable, and splice housings for traffic and ITS cabinets · Updated {e(build_date)}</div>
+<div class="muted">Corning multimode cable (62.5 µm outside-plant and orange indoor), G.652 single-mode cable, and splice housings for traffic and ITS cabinets · Updated {e(build_date)}</div>
 <div class="small">{site_nav("fiber.html")}</div>
 
 <div class="stats">
@@ -119,13 +121,12 @@ def render(build_date):
 <ul>{rules}</ul>
 <strong>Documents used</strong>
 <ul>{docs}</ul>
-<div class="muted">Research aid, not a certification: get Corning's project-specific Buy America certificate for the exact part numbers you order. Use the slider above the tables to switch between product details, spec sheet and DOT listing, and BABA nuances. Rows are two lines each; tap a row to open it and a column header to sort.</div>
+<div class="muted">Research aid, not a certification: get Corning's project-specific Buy America certificate for the exact part numbers you order. Each table has its own slider, and moving one moves all three. Use it to switch between product details, spec sheet and DOT listing, and BABA nuances. Rows are two lines each; tap a row to open it and a column header to sort.</div>
 </details>
 
 <div class="controls">
   <input id="q" type="search" placeholder="Search product, part number, or fiber type" aria-label="Search">
   <select id="cat" aria-label="Filter by category"><option value="">Category</option>{cat_opts}</select>
-  {view_slider(["Product details", "Spec sheet & DOT listing", "BABA nuances"])}
 </div>
 
 {''.join(sections)}

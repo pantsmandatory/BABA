@@ -216,12 +216,13 @@ table.sv thead th{cursor:pointer;user-select:none}
 table.sv thead th[data-dir]::after{content:" ▲";font-size:.8em;color:var(--accent)}
 table.sv thead th[data-dir="desc"]::after{content:" ▼"}
 .views{flex:1 1 100%;max-width:560px;margin-top:2px}
+section .views{max-width:none;margin:6px 0}
 body.compact .views{max-width:none}
 .vlabels{display:flex;justify-content:space-between;gap:8px;font-size:12px;font-weight:600;color:var(--muted)}
 .vlabels span{flex:1;cursor:pointer;line-height:1.2}
 .vlabels span:nth-child(2){text-align:center}.vlabels span:nth-child(3){text-align:right}
 .vlabels span.on{color:var(--accent)}
-#view{display:block;width:100%;min-width:0;padding:0;margin:4px 0 0;border:0;background:transparent;accent-color:var(--accent);height:26px}
+input.view{display:block;flex:none;width:100%;min-width:0;padding:0;margin:4px 0 0;border:0;background:transparent;accent-color:var(--accent);height:26px}
 body.compact main{padding:8px 8px 32px}
 body.compact table.sv th,body.compact table.sv td{padding:2px 4px}
 body.compact table.sv th{font-size:9.5px;letter-spacing:0}
@@ -229,10 +230,10 @@ body.compact table.sv th{font-size:9.5px;letter-spacing:0}
 """
 
 SV_JS = """
-const vw=document.getElementById('view'),vl=[...document.querySelectorAll('#vlabels span')];
-function setView(v){vw.value=v;document.body.classList.remove('view1','view2','view3');document.body.classList.add('view'+v);
+const vws=[...document.querySelectorAll('input.view')],vl=[...document.querySelectorAll('.vlabels span')];
+function setView(v){vws.forEach(x=>{x.value=v;});document.body.classList.remove('view1','view2','view3');document.body.classList.add('view'+v);
 vl.forEach(x=>x.classList.toggle('on',x.dataset.v==v));fit();}
-vw.addEventListener('input',()=>setView(+vw.value));
+vws.forEach(x=>x.addEventListener('input',()=>setView(+x.value)));
 vl.forEach(x=>x.addEventListener('click',()=>setView(+x.dataset.v)));
 function sortKey(td){const t=(td?td.textContent:'').trim();if(!t||t==='—')return null;
 const m=t.replace(/[,≈]/g,'').match(/^([0-9]+([.][0-9]+)?)(V|K|W)?$/);return m?parseFloat(m[1]):t.toLowerCase();}
@@ -268,8 +269,9 @@ def view_table(headers, body, empty_msg):
 
 def view_slider(labels):
     spans = "".join(f'<span data-v="{n + 1}"{" class=\"on\"" if n == 0 else ""}>{e(l)}</span>' for n, l in enumerate(labels))
-    return (f'<div class="views"><div class="vlabels" id="vlabels">{spans}</div>'
-            f'<input id="view" type="range" min="1" max="3" step="1" value="1" aria-label="Table view: {e(", ".join(labels))}"></div>')
+    # A page may carry several sliders (one per table); the script keeps them all in step.
+    return (f'<div class="views"><div class="vlabels">{spans}</div>'
+            f'<input class="view" type="range" min="1" max="3" step="1" value="1" aria-label="Table view: {e(", ".join(labels))}"></div>')
 
 
 # One navigation bar for every page, so no page links to an out-of-date set of pages.

@@ -59,12 +59,13 @@ table.sv thead th{cursor:pointer;user-select:none}
 table.sv thead th[data-dir]::after{content:" ▲";font-size:.8em;color:var(--accent)}
 table.sv thead th[data-dir="desc"]::after{content:" ▼"}
 .views{flex:1 1 100%;max-width:560px;margin-top:2px}
+section .views{max-width:none;margin:6px 0}
 body.compact .views{max-width:none}
 .vlabels{display:flex;justify-content:space-between;gap:8px;font-size:12px;font-weight:600;color:var(--muted)}
 .vlabels span{flex:1;cursor:pointer;line-height:1.2}
 .vlabels span:nth-child(2){text-align:center}.vlabels span:nth-child(3){text-align:right}
 .vlabels span.on{color:var(--accent)}
-#view{display:block;width:100%;min-width:0;padding:0;margin:4px 0 0;border:0;background:transparent;accent-color:var(--accent);height:26px}
+input.view{display:block;flex:none;width:100%;min-width:0;padding:0;margin:4px 0 0;border:0;background:transparent;accent-color:var(--accent);height:26px}
 body.compact main{padding:8px 8px 32px}
 body.compact table.sv th,body.compact table.sv td{padding:2px 4px}
 body.compact table.sv th{font-size:9.5px;letter-spacing:0}
@@ -74,7 +75,7 @@ body.compact table.sv th{font-size:9.5px;letter-spacing:0}
 <body class="view1">
 <main>
 <h1>BABA Luminaire Index</h1>
-<div class="muted">Roadway &amp; area luminaires on state DOT approved product lists with documented FHWA Buy America compliance · Updated 2026-11-14</div>
+<div class="muted">Roadway &amp; area luminaires on state DOT approved product lists with documented FHWA Buy America compliance · Updated 2026-11-15</div>
 <div class="small"><a href="index.html">Start</a> · <a href="fixtures-480v.html">480V fixtures</a> · <a href="fixtures-120-277v.html">120–277V fixtures</a> · <a href="fixtures-3k.html">480V 3000K only</a> · <a href="fixtures-4k.html">480V 4000K only</a> · <a href="fiber.html">Fiber products</a> · <a href="leads.html">Leads to verify</a> · <strong>Rules &amp; state lists</strong></div>
 
 <div class="stats">
@@ -102,7 +103,7 @@ manufacturer's project-specific Buy America certification and confirm with the D
 <div class="controls">
   <input id="q" type="search" placeholder="Search manufacturer, model, or state" aria-label="Search">
   <select id="state" aria-label="Filter by state"><option value="">State</option><option value="AK">AK – Alaska</option><option value="AL">AL – Alabama</option><option value="AR">AR – Arkansas</option><option value="AZ">AZ – Arizona</option><option value="CA">CA – California</option><option value="CO">CO – Colorado</option><option value="CT">CT – Connecticut</option><option value="DC">DC – District of Columbia</option><option value="DE">DE – Delaware</option><option value="FL">FL – Florida</option><option value="GA">GA – Georgia</option><option value="HI">HI – Hawaii</option><option value="IA">IA – Iowa</option><option value="ID">ID – Idaho</option><option value="IL">IL – Illinois</option><option value="IN">IN – Indiana</option><option value="KS">KS – Kansas</option><option value="KY">KY – Kentucky</option><option value="LA">LA – Louisiana</option><option value="MA">MA – Massachusetts</option><option value="MD">MD – Maryland</option><option value="ME">ME – Maine</option><option value="MI">MI – Michigan</option><option value="MN">MN – Minnesota</option><option value="MO">MO – Missouri</option><option value="MS">MS – Mississippi</option><option value="MT">MT – Montana</option><option value="NC">NC – North Carolina</option><option value="ND">ND – North Dakota</option><option value="NE">NE – Nebraska</option><option value="NH">NH – New Hampshire</option><option value="NJ">NJ – New Jersey</option><option value="NM">NM – New Mexico</option><option value="NV">NV – Nevada</option><option value="NY">NY – New York</option><option value="OH">OH – Ohio</option><option value="OK">OK – Oklahoma</option><option value="OR">OR – Oregon</option><option value="PA">PA – Pennsylvania</option><option value="RI">RI – Rhode Island</option><option value="SC">SC – South Carolina</option><option value="SD">SD – South Dakota</option><option value="TN">TN – Tennessee</option><option value="TX">TX – Texas</option><option value="UT">UT – Utah</option><option value="VA">VA – Virginia</option><option value="VT">VT – Vermont</option><option value="WA">WA – Washington</option><option value="WI">WI – Wisconsin</option><option value="WV">WV – West Virginia</option><option value="WY">WY – Wyoming</option></select>
-  <div class="views"><div class="vlabels" id="vlabels"><span data-v="1" class="on">Compliance</span><span data-v="2">Evidence &amp; sources</span><span data-v="3">Notes</span></div><input id="view" type="range" min="1" max="3" step="1" value="1" aria-label="Table view: Compliance, Evidence &amp; sources, Notes"></div>
+  <div class="views"><div class="vlabels"><span data-v="1" class="on">Compliance</span><span data-v="2">Evidence &amp; sources</span><span data-v="3">Notes</span></div><input class="view" type="range" min="1" max="3" step="1" value="1" aria-label="Table view: Compliance, Evidence &amp; sources, Notes"></div>
 </div>
 
 <h2>Compliant luminaires</h2>
@@ -206,10 +207,10 @@ q.addEventListener('input',apply);st.addEventListener('change',apply);
 document.querySelectorAll('tbody tr[data-search]').forEach(r=>r.addEventListener('click',ev=>{
 if(ev.target.closest('a'))return;r.classList.toggle('open');}));
 
-const vw=document.getElementById('view'),vl=[...document.querySelectorAll('#vlabels span')];
-function setView(v){vw.value=v;document.body.classList.remove('view1','view2','view3');document.body.classList.add('view'+v);
+const vws=[...document.querySelectorAll('input.view')],vl=[...document.querySelectorAll('.vlabels span')];
+function setView(v){vws.forEach(x=>{x.value=v;});document.body.classList.remove('view1','view2','view3');document.body.classList.add('view'+v);
 vl.forEach(x=>x.classList.toggle('on',x.dataset.v==v));fit();}
-vw.addEventListener('input',()=>setView(+vw.value));
+vws.forEach(x=>x.addEventListener('input',()=>setView(+x.value)));
 vl.forEach(x=>x.addEventListener('click',()=>setView(+x.dataset.v)));
 function sortKey(td){const t=(td?td.textContent:'').trim();if(!t||t==='—')return null;
 const m=t.replace(/[,≈]/g,'').match(/^([0-9]+([.][0-9]+)?)(V|K|W)?$/);return m?parseFloat(m[1]):t.toLowerCase();}

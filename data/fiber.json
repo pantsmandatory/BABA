@@ -1,14 +1,9 @@
 {
   "categories": [
     {
-      "id": "mmosp",
-      "name": "Outside-plant multimode cable (62.5 µm OM1)",
-      "description": "Loose-tube 62.5/125 µm cable for signal interconnect and ITS runs that must splice to older 62.5 µm plant. Georgia DOT is the only state list found that names a 62.5 µm cable and flags it for Buy America. The flag means GDOT holds a manufacturer letter; the list does not say whether the letter covers the fiber preform and draw as well as the cable."
-    },
-    {
       "id": "mm",
-      "name": "Orange multimode cable (OM1 / OM2)",
-      "description": "Orange is the TIA-598 color for OM1 and OM2; OM3/OM4 are aqua. Only Corning's indoor MIC family ships orange; FREEDM and ALTOS multimode cables are black. Standard Corning jumpers/pigtails checked in eCatalog are flagged 'BEAD/BABA – Not Compliant', so none are listed here."
+      "name": "Multimode cable (62.5 µm OM1 and 50 µm OM2)",
+      "description": "Outside plant: Loose-tube 62.5/125 µm cable for signal interconnect and ITS runs that must splice to older 62.5 µm plant. Georgia DOT is the only state list found that names a 62.5 µm cable and flags it for Buy America. The flag means GDOT holds a manufacturer letter; the list does not say whether the letter covers the fiber preform and draw as well as the cable. Indoor: Orange is the TIA-598 color for OM1 and OM2; OM3/OM4 are aqua. Only Corning's indoor MIC family ships orange; FREEDM and ALTOS multimode cables are black. Standard Corning jumpers/pigtails checked in eCatalog are flagged 'BEAD/BABA – Not Compliant', so none are listed here."
     },
     {
       "id": "sm",
@@ -56,7 +51,7 @@
   "products": [
     {
       "id": "altos-om1-ku4",
-      "category": "mmosp",
+      "category": "mm",
       "name": "ALTOS loose tube, gel-free, all-dielectric, FastAccess — OM1",
       "part_number": "XXXKU4-T4730D20 (XXX = fiber count, e.g. 012KU4-T4730D20)",
       "fiber": "62.5 µm OM1 (code K)",
