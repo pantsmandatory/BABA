@@ -1,0 +1,268 @@
+{
+  "intro": "Conduit is not a manufactured product, so the Oct 1, 2026 rule with its 55 percent test does not apply to it. Galvanized steel rigid metal conduit is an iron or steel product: every manufacturing process, including galvanizing, must be in the United States (23 CFR 635.410(b)). HDPE conduit is a construction material: every manufacturing process, from combining the plastic inputs to the finished conduit, must be in the United States (2 CFR 184.6(a)(2)). The tables list only conduit that a state DOT list flags for Buy America; the CFR table at the bottom quotes the rules.",
+  "cfr_checked": "23 CFR 635.410 and 2 CFR part 184, current as of November 12, 2026",
+  "sources": [
+    {
+      "state": "TX",
+      "name": "TxDOT Material Producer List – Roadway Illumination and Electrical Supplies, Item 618 Conduit",
+      "url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "edition": "September 1, 2026",
+      "note": "\"Compliant v5\" = manufacturer certified through TxDOT's Gold Star Program for projects federally obligated on or after Oct 1, 2026. \"Compliant v4\" covers Oct 1, 2025 – Sept 30, 2026 only, and \"Project Level Certification Required\" means not pre-certified; those rows are on the leads page."
+    }
+  ],
+  "sections": [
+    {
+      "id": "hdpe",
+      "name": "2-inch HDPE conduit",
+      "description": "Construction material (plastic and polymer-based product). Order codes are copied from the state DOT list as printed."
+    },
+    {
+      "id": "rmc",
+      "name": "2-inch rigid metal conduit (RMC), galvanized steel",
+      "description": "Iron or steel product. Listings are by trade size range; the state lists print no part numbers."
+    }
+  ],
+  "rules": [
+    {
+      "id": "steel",
+      "applies_to": "Galvanized steel rigid metal conduit (iron or steel product)",
+      "cite": "23 CFR 635.410(b)(1)(ii)",
+      "url": "https://www.ecfr.gov/current/title-23/chapter-I/subchapter-G/part-635/subpart-D/section-635.410",
+      "short": "All manufacturing processes, including coating, in the US",
+      "text": "\"if iron or steel products are to be used, all manufacturing processes, including application of a coating, for these materials must occur in the United States. Coating includes all processes which protect or enhance the value of the material to which the coating is applied.\" Galvanizing is a coating. The statute behind this is 23 U.S.C. 313."
+    },
+    {
+      "id": "steel-def",
+      "applies_to": "What makes conduit an iron or steel product",
+      "cite": "23 CFR 635.410(c)(1)(iii) and (vi)",
+      "url": "https://www.ecfr.gov/current/title-23/chapter-I/subchapter-G/part-635/subpart-D/section-635.410",
+      "short": "Wholly or predominantly iron or steel",
+      "text": "(iii): \"articles, materials, or supplies that consist wholly or predominantly of iron or steel or a combination of both.\" (vi): predominantly means \"the cost of the iron and steel content exceeds 50 percent of the total cost of all its components.\""
+    },
+    {
+      "id": "steel-min",
+      "applies_to": "Steel conduit: small amounts of foreign steel",
+      "cite": "23 CFR 635.410(b)(4)",
+      "url": "https://www.ecfr.gov/current/title-23/chapter-I/subchapter-G/part-635/subpart-D/section-635.410",
+      "short": "Minimal use: 0.1% of contract or $2,500",
+      "text": "The rule does \"not prevent a minimal use of foreign iron or steel products, if the cost of such materials used does not exceed one-tenth of one percent (0.1 percent) of the total contract cost or $2,500, whichever is greater\", valued as delivered to the project."
+    },
+    {
+      "id": "hdpe",
+      "applies_to": "HDPE conduit, and PVC conduit (construction material)",
+      "cite": "2 CFR 184.6(a)(2)",
+      "url": "https://www.ecfr.gov/current/title-2/part-184/section-184.6",
+      "short": "All manufacturing processes from combining the plastic inputs to final form in the US",
+      "text": "\"Plastic and polymer-based products. All manufacturing processes, from initial combination of constituent plastic or polymer-based inputs, or, where applicable, constituent composite materials, until the item is in its final form, occurred in the United States.\" The requirement itself comes from the Build America, Buy America Act, section 70914 (Pub. L. 117-58)."
+    },
+    {
+      "id": "hdpe-def",
+      "applies_to": "What makes conduit a construction material",
+      "cite": "2 CFR 184.3 (Construction materials)",
+      "url": "https://www.ecfr.gov/current/title-2/part-184/section-184.3",
+      "short": "Plastic and polymer-based products",
+      "text": "The listed items include \"(ii) Plastic and polymer-based products (including polyvinylchloride, composite building materials, and polymers used in fiber optic cables)\". Also: \"Minor additions of articles, materials, supplies, or binding agents to a construction material do not change the categorization of the construction material.\""
+    },
+    {
+      "id": "alu",
+      "applies_to": "Aluminum rigid conduit (non-ferrous metal)",
+      "cite": "2 CFR 184.6(a)(1)",
+      "url": "https://www.ecfr.gov/current/title-2/part-184/section-184.6",
+      "short": "Smelting or melting through shaping, coating and assembly in the US",
+      "text": "\"Non-ferrous metals. All manufacturing processes, from initial smelting or melting through final shaping, coating, and assembly, occurred in the United States.\""
+    },
+    {
+      "id": "one",
+      "applies_to": "One category per item",
+      "cite": "2 CFR 184.4(e)–(f); 23 CFR 635.410(c)(2)",
+      "url": "https://www.ecfr.gov/current/title-2/part-184/section-184.4",
+      "short": "Classified once, as brought to the work site",
+      "text": "An item \"should only be classified into one\" category, \"based on its status at the time it is brought to the work site\", and \"must meet the Buy America Preference for only the single category in which it is classified.\" 23 CFR 635.410(c)(2) says the same for FHWA."
+    },
+    {
+      "id": "no55",
+      "applies_to": "No 55 percent test for conduit",
+      "cite": "23 CFR 635.410(c)(1)(iv)",
+      "url": "https://www.ecfr.gov/current/title-23/chapter-I/subchapter-G/part-635/subpart-D/section-635.410",
+      "short": "Not a manufactured product",
+      "text": "\"If an item is classified as an iron or steel product, an excluded material, or other product category as specified by law or in 2 CFR part 184, then it is not a manufactured product.\" The Oct 1, 2026 rule (US manufacture plus more than 55 percent domestic components) applies to manufactured products only."
+    }
+  ],
+  "rows": [
+    {
+      "section": "hdpe",
+      "manufacturer": "Blue Diamond Industries",
+      "order_code": "BDI215BK-UL",
+      "type": "HDPE, Schedule 40, black",
+      "size": "2 in.",
+      "location": "Lexington, KY (address printed)",
+      "state": "TX",
+      "list_short": "TxDOT MPL Table 51",
+      "list_name": "TxDOT Material Producer List – Roadway Illumination and Electrical Supplies, Item 618, Table 51",
+      "list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "status": "Compliant v5",
+      "status_tone": "ok",
+      "status_means": "TxDOT: manufacturer certified through the Gold Star Program for projects federally obligated on or after Oct 1, 2026.",
+      "edition": "Sept 1, 2026",
+      "rule": "hdpe",
+      "notes": [
+        "TxDOT lists 1/2 to 4 in. under the same status (BDI065BK-UL to BDI414BK-UL)."
+      ]
+    },
+    {
+      "section": "hdpe",
+      "manufacturer": "Dura-Line",
+      "order_code": "2” HDP 200 W SCHE40 SW UVS/UVS N EMPTD X(TXDOT APPROVED)",
+      "type": "HDPE, Schedule 40, black",
+      "size": "2 in.",
+      "location": "Knoxville, TN (address printed)",
+      "state": "TX",
+      "list_short": "TxDOT MPL Table 53",
+      "list_name": "TxDOT Material Producer List – Roadway Illumination and Electrical Supplies, Item 618, Table 53",
+      "list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "status": "Compliant v5",
+      "status_tone": "ok",
+      "status_means": "TxDOT: manufacturer certified through the Gold Star Program for projects federally obligated on or after Oct 1, 2026.",
+      "edition": "Sept 1, 2026",
+      "rule": "hdpe",
+      "notes": [
+        "TxDOT lists 1/2 to 6 in. Schedule 40 under the same status."
+      ]
+    },
+    {
+      "section": "hdpe",
+      "manufacturer": "Dura-Line",
+      "order_code": "2” HDP 050 W SCHE80 SW UVS/UVS N EMPTD X (TxDOT Approved)",
+      "type": "HDPE, Schedule 80, black",
+      "size": "2 in.",
+      "location": "Knoxville, TN (address printed)",
+      "state": "TX",
+      "list_short": "TxDOT MPL Table 53",
+      "list_name": "TxDOT Material Producer List – Roadway Illumination and Electrical Supplies, Item 618, Table 53",
+      "list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "status": "Compliant v5",
+      "status_tone": "ok",
+      "status_means": "TxDOT: manufacturer certified through the Gold Star Program for projects federally obligated on or after Oct 1, 2026.",
+      "edition": "Sept 1, 2026",
+      "rule": "hdpe",
+      "notes": [
+        "TxDOT prints \"HDP 050\" in every Schedule 80 row, including this 2-inch row; the Schedule 40 row prints \"HDP 200\". Confirm the Schedule 80 order code with Dura-Line."
+      ]
+    },
+    {
+      "section": "hdpe",
+      "manufacturer": "WL Plastics",
+      "order_code": "TX0200SC040S09642X03500T00 - IPS 2'' SCH 40 X 3500FT, 96\" X 42\" Single Reel, TxDOT",
+      "type": "HDPE, Schedule 40, black, reel",
+      "size": "2 in.",
+      "location": "Fort Worth, TX (address printed)",
+      "state": "TX",
+      "list_short": "TxDOT MPL Table 55",
+      "list_name": "TxDOT Material Producer List – Roadway Illumination and Electrical Supplies, Item 618, Table 55",
+      "list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "status": "Compliant v5",
+      "status_tone": "ok",
+      "status_means": "TxDOT: manufacturer certified through the Gold Star Program for projects federally obligated on or after Oct 1, 2026.",
+      "edition": "Sept 1, 2026",
+      "rule": "hdpe",
+      "notes": []
+    },
+    {
+      "section": "hdpe",
+      "manufacturer": "WL Plastics",
+      "order_code": "TX0200SC040S10242X04000T00 - IPS 2'' SCH 40 X 4000FT, 102” x 42” Single Reel, TxDOT",
+      "type": "HDPE, Schedule 40, black, reel",
+      "size": "2 in.",
+      "location": "Fort Worth, TX (address printed)",
+      "state": "TX",
+      "list_short": "TxDOT MPL Table 55",
+      "list_name": "TxDOT Material Producer List – Roadway Illumination and Electrical Supplies, Item 618, Table 55",
+      "list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "status": "Compliant v5",
+      "status_tone": "ok",
+      "status_means": "TxDOT: manufacturer certified through the Gold Star Program for projects federally obligated on or after Oct 1, 2026.",
+      "edition": "Sept 1, 2026",
+      "rule": "hdpe",
+      "notes": []
+    },
+    {
+      "section": "hdpe",
+      "manufacturer": "WL Plastics",
+      "order_code": "S0200SC040C28BKNS0050 – UL 2” SCH40 X 50FT BK_NS TxDOT",
+      "type": "HDPE, Schedule 40, black, 50 ft sticks",
+      "size": "2 in.",
+      "location": "Fort Worth, TX (address printed)",
+      "state": "TX",
+      "list_short": "TxDOT MPL Table 55",
+      "list_name": "TxDOT Material Producer List – Roadway Illumination and Electrical Supplies, Item 618, Table 55",
+      "list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "status": "Compliant v5",
+      "status_tone": "ok",
+      "status_means": "TxDOT: manufacturer certified through the Gold Star Program for projects federally obligated on or after Oct 1, 2026.",
+      "edition": "Sept 1, 2026",
+      "rule": "hdpe",
+      "notes": []
+    },
+    {
+      "section": "rmc",
+      "manufacturer": "Allied Tube & Conduit (Atkore)",
+      "order_code": "Galvanized Rigid Metal Conduit (RMC), Trade Sizes from 1/2\" to 6\"",
+      "type": "Galvanized steel RMC",
+      "size": "2 in. (listing covers 1/2 to 6 in.)",
+      "location": "Harvey, IL (address printed)",
+      "state": "TX",
+      "list_short": "TxDOT MPL Table 39",
+      "list_name": "TxDOT Material Producer List – Roadway Illumination and Electrical Supplies, Item 618, Table 39",
+      "list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "status": "Compliant v5",
+      "status_tone": "ok",
+      "status_means": "TxDOT: manufacturer certified through the Gold Star Program for projects federally obligated on or after Oct 1, 2026.",
+      "edition": "Sept 1, 2026",
+      "rule": "steel",
+      "notes": [
+        "TxDOT prints no part number; the listing is by trade size range."
+      ]
+    },
+    {
+      "section": "rmc",
+      "manufacturer": "Wheatland",
+      "order_code": "Galvanized Rigid Metal Conduit (RMC), Trade Sizes from 1/2\" to 6\"",
+      "type": "Galvanized steel RMC",
+      "size": "2 in. (listing covers 1/2 to 6 in.)",
+      "location": "900 Haddon Avenue, NJ 08108 (address printed)",
+      "state": "TX",
+      "list_short": "TxDOT MPL Table 40",
+      "list_name": "TxDOT Material Producer List – Roadway Illumination and Electrical Supplies, Item 618, Table 40",
+      "list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "status": "Compliant v5",
+      "status_tone": "ok",
+      "status_means": "TxDOT: manufacturer certified through the Gold Star Program for projects federally obligated on or after Oct 1, 2026.",
+      "edition": "Sept 1, 2026",
+      "rule": "steel",
+      "notes": [
+        "TxDOT prints no part number; the listing is by trade size range.",
+        "The printed address is an office; TxDOT does not print the mill."
+      ]
+    },
+    {
+      "section": "rmc",
+      "manufacturer": "Western Tube & Conduit",
+      "order_code": "Galvanized Rigid Metal Conduit (RMC), Trade Sizes from 1/2\" to 6\"",
+      "type": "Galvanized steel RMC",
+      "size": "2 in. (listing covers 1/2 to 6 in.)",
+      "location": "Long Beach, CA (address printed)",
+      "state": "TX",
+      "list_short": "TxDOT MPL Table 42",
+      "list_name": "TxDOT Material Producer List – Roadway Illumination and Electrical Supplies, Item 618, Table 42",
+      "list_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "status": "Compliant v5",
+      "status_tone": "ok",
+      "status_means": "TxDOT: manufacturer certified through the Gold Star Program for projects federally obligated on or after Oct 1, 2026.",
+      "edition": "Sept 1, 2026",
+      "rule": "steel",
+      "notes": [
+        "TxDOT prints no part number; the listing is by trade size range. Brand: Western Conduit."
+      ]
+    }
+  ]
+}

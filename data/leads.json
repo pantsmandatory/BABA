@@ -2651,5 +2651,73 @@
       "url": "https://ecatalog.corning.com/optical-communications/US/en/generate-product-specsheet/012KU4-T4730D20.pdf",
       "why": "Repeated HTTP 500 'Server Error Page' for 012KU4-T4730D20, 012KUC-T4130D20, 050502K5120003M, 95-000-51 spec-sheet PDFs; the corresponding HTML product pages were read instead."
     }
-  ]
+  ],
+  "conduit": [
+    {
+      "state": "TX",
+      "manufacturer": "Atkore (formerly United Poly Systems)",
+      "product": "2-inch HDPE conduit, Schedule 40, black",
+      "part": "2” Schedule 40 Black HDPE – D200IS40BKNN3NST096",
+      "material": "HDPE",
+      "says": "TxDOT FDMP Status: \"Compliant v4\" (projects federally obligated Oct 1, 2025 through Sept 30, 2026).",
+      "missing": "TxDOT has not moved this row to Compliant v5, which covers projects obligated on or after Oct 1, 2026.",
+      "source": "TxDOT MPL Item 618",
+      "source_short": "TxDOT MPL",
+      "source_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "read": "2026-11-15"
+    },
+    {
+      "state": "TX",
+      "manufacturer": "Petroflex North America",
+      "product": "2-inch HDPE conduit, Schedule 40",
+      "part": "2” P200SCH40UL-TXDOT",
+      "material": "HDPE",
+      "says": "TxDOT FDMP Status: \"Compliant v4\" (projects federally obligated Oct 1, 2025 through Sept 30, 2026).",
+      "missing": "TxDOT has not moved this row to Compliant v5, which covers projects obligated on or after Oct 1, 2026.",
+      "source": "TxDOT MPL Item 618",
+      "source_short": "TxDOT MPL",
+      "source_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "read": "2026-11-15"
+    },
+    {
+      "state": "TX",
+      "manufacturer": "OMNI",
+      "product": "2-inch HDPE conduit, Schedule 40, black",
+      "part": "2” S40 UL HDPE BLACK UA517010000000TX",
+      "material": "HDPE",
+      "says": "TxDOT FDMP Status: \"Compliant v4\" (projects federally obligated Oct 1, 2025 through Sept 30, 2026).",
+      "missing": "TxDOT has not moved this row to Compliant v5, which covers projects obligated on or after Oct 1, 2026.",
+      "source": "TxDOT MPL Item 618",
+      "source_short": "TxDOT MPL",
+      "source_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "read": "2026-11-15"
+    },
+    {
+      "state": "TX",
+      "manufacturer": "Draka Cableteq USA",
+      "product": "2-inch HDPE conduit, Schedule 40, black",
+      "part": "321659",
+      "material": "HDPE",
+      "says": "TxDOT FDMP Status: \"Project Level Certification Required\".",
+      "missing": "Not pre-certified by TxDOT; Buy America documents are checked project by project.",
+      "source": "TxDOT MPL Item 618",
+      "source_short": "TxDOT MPL",
+      "source_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "read": "2026-11-15"
+    },
+    {
+      "state": "TX",
+      "manufacturer": "Nucor Tubular Products (Republic Conduit)",
+      "product": "Galvanized rigid metal conduit, 1/2 to 6 in.",
+      "part": "Galvanized Rigid Metal Conduit (RMC), Trade Sizes from 1/2\" to 6\"",
+      "material": "Galvanized steel",
+      "says": "TxDOT FDMP Status: \"Project Level Certification Required\".",
+      "missing": "Not pre-certified by TxDOT; Buy America documents are checked project by project.",
+      "source": "TxDOT MPL Item 618",
+      "source_short": "TxDOT MPL",
+      "source_url": "https://www.txdot.gov/content/dam/docs/division/mtd/mpl/riaes.pdf",
+      "read": "2026-11-15"
+    }
+  ],
+  "conduit_intro": "Steel conduit is an iron or steel product (23 CFR 635.410(b): all manufacturing processes, including galvanizing, in the US). HDPE conduit is a construction material (2 CFR 184.6(a)(2): all manufacturing processes from combining the plastic inputs to final form in the US). Neither has a 55% test."
 }

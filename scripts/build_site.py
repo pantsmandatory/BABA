@@ -277,11 +277,12 @@ def view_slider(labels):
 # One navigation bar for every page, so no page links to an out-of-date set of pages.
 NAV_PAGES = [("index.html", "Start"), ("fixtures-480v.html", "480V fixtures"), ("fixtures-120-277v.html", "120–277V fixtures"),
              ("fixtures-3k.html", "480V 3000K only"), ("fixtures-4k.html", "480V 4000K only"),
-             ("fiber.html", "Fiber products"), ("leads.html", "Leads to verify"), ("compliance.html", "Rules & state lists")]
+             ("fiber.html", "Fiber products"), ("conduit.html", "Conduit"), ("leads.html", "Leads to verify"), ("compliance.html", "Rules & state lists")]
 
 
 def site_nav(current):
-    pages = [(f, t) for f, t in NAV_PAGES if f != "leads.html" or (DATA / "leads.json").exists()]
+    pages = [(f, t) for f, t in NAV_PAGES if (f != "leads.html" or (DATA / "leads.json").exists())
+             and (f != "conduit.html" or (DATA / "conduit.json").exists())]
     return " · ".join(f"<strong>{e(t)}</strong>" if f == current else f'<a href="{f}">{e(t)}</a>' for f, t in pages)
 
 
@@ -417,12 +418,16 @@ def render_home(build_date):
 
     fiber = load("fiber.json", {})
     leads = load("leads.json", {})
-    n_leads = len(leads.get("luminaires", [])) + len(leads.get("fiber", []))
+    n_leads = len(leads.get("luminaires", [])) + len(leads.get("fiber", [])) + len(leads.get("conduit", []))
     tiles = [
         ("fixtures-480v.html", "480V luminaires", "Roadway, high mast and underpass", count(480)),
         ("fixtures-120-277v.html", "120–277V luminaires", "Roadway, high mast and underpass", count("120-277")),
         ("fiber.html", "Fiber products", "Multimode 62.5 µm, single-mode and cabinet hardware", f'{len(fiber.get("products", []))} products'),
     ]
+    conduit = load("conduit.json", {})
+    if conduit:
+        tiles.append(("conduit.html", "Conduit", "2-inch HDPE and rigid metal conduit, with the rule for each material",
+                      f'{len(conduit.get("rows", []))} listings'))
     if leads:
         tiles.append(("leads.html", "Leads to verify", "Flagged by a DOT or maker, but not yet a Phase 2 statement",
                       f"{n_leads} leads, kept separate from the lists above"))
